@@ -1,0 +1,7 @@
+name = 'H2O_ads'
+DFT_binding_energy = [-1.89E-01, 'eV']
+heat_of_formation_0K = [-259.05, 'kJ/mol']
+composition = {'H':2, 'C':0, 'N':0, 'O':1, 'Pt':1}
+sites = 1
+adsorbate_mass = [18.02, 'amu']
+frequencies = [49.5, 68.6, 73.6, 102.0, 437.6, 452.9, 1596.3, 3675.6, 3787.0, 'cm-1']
