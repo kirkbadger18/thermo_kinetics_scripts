@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import glob
-
+import os
 
 # declare a class for molecules
 class Molecule:
@@ -31,14 +31,8 @@ class Molecule:
                         'NH3': data['NH3'].to_numpy() * self.rydberg_to_eV * self.scale_BEEF}
         self.molecular_mass_elements = {'H': 1.01, 'C': 12.01, 'N': 14, 'O': 16}
 
-
 def parse_input_file(inputfile, molecule):
-    import os
-    script_dir = ''
-    rel_path = str(script_dir) + str(inputfile)
-    abs_file_path = os.path.join(rel_path)
-
-    input_file = open(abs_file_path, 'r')
+    input_file = open(inputfile, 'r')
     lines = input_file.readlines()
     input_file.close()
 
@@ -61,6 +55,7 @@ def parse_input_file(inputfile, molecule):
             name = bits[1].strip().replace("'", "").replace('"', '')
             molecule.name = name
             error_name = False
+
         # now look for the DFT energy
         elif line.strip().startswith("DFT_energy"):
             bits = line.split('=')
@@ -88,6 +83,7 @@ def parse_input_file(inputfile, molecule):
             else:
                 print("ZPE energy is missing proper units!\n Please use 'eV'")
                 break
+
         # now look for the DFT energy
         elif line.strip().startswith("gas_DFT_energy"):
             bits = line.split('=')
@@ -115,6 +111,7 @@ def parse_input_file(inputfile, molecule):
             else:
                 print("gas ZPE energy is missing proper units!\n Please use 'eV'")
                 break
+
         # now look for the composition
         elif line.strip().startswith("composition"):
             bits = line.split('=')
@@ -144,7 +141,8 @@ def parse_input_file(inputfile, molecule):
             else:
                 print("The number of sample of the BEE is not 2000!\n Please check again!")
                 break
-                # now look for the gas BEE
+
+        # now look for the gas BEE
         elif line.strip().startswith("gas_BEE"):
             bits = line.split('=')
             gas_BEE_data_info = bits[1].strip().replace("[", "").replace("]", "").split(',')
@@ -165,17 +163,19 @@ def parse_input_file(inputfile, molecule):
         print("successfully parsed file %s" % (inputfile))
     return
 
-
 def compute_thermo(molecule):
     if molecule.name == 'H_ads':
         molecule.energy_gas = (molecule.DFT_energy_gas + molecule.ZPE_energy_gas + molecule.dHrxnatct[
-            'H2-2H'] / molecule.eV_to_kJpermole) / 2
+            'H2-2H'] / molecule.eV_to_kJpermole)
+        molecule.energy_gas /= 2
     elif molecule.name == 'O_ads':
         molecule.energy_gas = (molecule.DFT_energy_gas + molecule.ZPE_energy_gas + molecule.dHrxnatct[
-            'O2-2O'] / molecule.eV_to_kJpermole) / 2
+            'O2-2O'] / molecule.eV_to_kJpermole)
+        molecule.energy_gas /= 2
     elif molecule.name == 'N_ads':
         molecule.energy_gas = (molecule.DFT_energy_gas + molecule.ZPE_energy_gas + molecule.dHrxnatct[
-            'N2-2N'] / molecule.eV_to_kJpermole) / 2
+            'N2-2N'] / molecule.eV_to_kJpermole)
+        molecule.energy_gas /= 2
     else:
         molecule.energy_gas = molecule.DFT_energy_gas + molecule.ZPE_energy_gas
 
@@ -211,29 +211,29 @@ def compute_thermo_bee(molecule):
 
     molecule.ddHads_bee = np.zeros(molecule.N_BEE)
     molecule.ddHf_bee = np.zeros(molecule.N_BEE)
-    for i in range(molecule.N_BEE):
 
+    for i in range(molecule.N_BEE):
         if molecule.name == 'H_ads':
-            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[
-                i] * molecule.rydberg_to_eV * molecule.scale_BEEF + molecule.ZPE_energy_gas + molecule.dHrxnatct[
-                                              'H2-2H'] / molecule.eV_to_kJpermole) / 2
+            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[i] * molecule.rydberg_to_eV * molecule.scale_BEEF
+                                          + molecule.ZPE_energy_gas + molecule.dHrxnatct['H2-2H'] / molecule.eV_to_kJpermole)
+            molecule.energy_gas_bee[i] /= 2
         elif molecule.name == 'O_ads':
-            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[
-                i] * molecule.rydberg_to_eV * molecule.scale_BEEF + molecule.ZPE_energy_gas + molecule.dHrxnatct[
-                                              'O2-2O'] / molecule.eV_to_kJpermole) / 2
+            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[i] * molecule.rydberg_to_eV * molecule.scale_BEEF
+                                          + molecule.ZPE_energy_gas + molecule.dHrxnatct['O2-2O'] / molecule.eV_to_kJpermole)
+            molecule.energy_gas_bee[i] /= 2
         elif molecule.name == 'N_ads':
-            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[
-                i] * molecule.rydberg_to_eV * molecule.scale_BEEF + molecule.ZPE_energy_gas + molecule.dHrxnatct[
-                                              'N2-2N'] / molecule.eV_to_kJpermole) / 2
+            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[i] * molecule.rydberg_to_eV * molecule.scale_BEEF
+                                          + molecule.ZPE_energy_gas + molecule.dHrxnatct['N2-2N'] / molecule.eV_to_kJpermole)
+            molecule.energy_gas_bee[i] /= 2
         else:
-            molecule.energy_gas_bee[i] = molecule.DFT_energy_gas - molecule.gas_BEE_energies[
-                i] * molecule.rydberg_to_eV * molecule.scale_BEEF + molecule.ZPE_energy_gas
+            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[i] * molecule.rydberg_to_eV * molecule.scale_BEEF
+                                          + molecule.ZPE_energy_gas)
 
         molecule.energy_bee[i] = molecule.DFT_energy - molecule.BEE_energies[
             i] * molecule.rydberg_to_eV * molecule.scale_BEEF + molecule.ZPE_energy
 
         molecule.dHrxndftgas_bee[i] = (molecule.energy_gas_bee[i] - molecule.composition['C'] * (
-                    molecule.Eref['CH4'] - molecule.Erefbee['CH4'][i])
+                molecule.Eref['CH4'] - molecule.Erefbee['CH4'][i])
                                        - molecule.composition['O'] * (molecule.Eref['H2O'] - molecule.Erefbee['H2O'][i])
                                        - molecule.composition['N'] * (molecule.Eref['NH3'] - molecule.Erefbee['NH3'][i])
                                        - (molecule.composition['H'] / 2 - 2 * molecule.composition['C'] -
@@ -268,7 +268,7 @@ def compute_thermo_bee(molecule):
 
     return
 
-for filename in glob.iglob('dft-data/CH3OCO.dat'):
+for filename in glob.iglob('dft-data/*.dat'):
     print(filename)
     test = Molecule()
     parse_input_file(filename,test)
