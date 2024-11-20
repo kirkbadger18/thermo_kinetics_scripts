@@ -4,7 +4,6 @@ from sklearn.linear_model import LinearRegression
 import sys, os
 import glob
 
-
 # declare a class for molecules
 class Molecule:
 
@@ -16,7 +15,6 @@ class Molecule:
         self.is_twoD_gas = False
         self.tst_twoD_gas = False
         self.N_BEE = 2000
-
 
 def parse_input_file(inputfile, molecule):
     script_dir = 'dft-data/'
@@ -39,6 +37,7 @@ def parse_input_file(inputfile, molecule):
             name = bits[1].strip().replace("'", "").replace('"', '')
             molecule.name = name
             error_name = False
+
         # now look for the DFT energy
         elif line.strip().startswith("IS_SPE"):
             bits = line.split('=')
@@ -66,6 +65,7 @@ def parse_input_file(inputfile, molecule):
             else:
                 print("ZPE energy is missing proper units!\n Please use 'eV'")
                 break
+
         # now look for the DFT energy
         elif line.strip().startswith("TST_SPE"):
             bits = line.split('=')
@@ -94,7 +94,7 @@ def parse_input_file(inputfile, molecule):
                 print("gas ZPE energy is missing proper units!\n Please use 'eV'")
                 break
 
-                # now look for the BEE
+        # now look for the BEE
         elif line.strip().startswith("bee_IS"):
             bits = line.split('=')
             is_bee_data_info = bits[1].strip().replace("[", "").replace("]", "").split(',')
@@ -107,7 +107,8 @@ def parse_input_file(inputfile, molecule):
             else:
                 print("The number of sample of the IS BEE is not 2000!\n Please check again!")
                 break
-                # now look for the gas BEE
+
+        # now look for the gas BEE
         elif line.strip().startswith("bee_TS"):
             bits = line.split('=')
             tst_bee_data_info = bits[1].strip().replace("[", "").replace("]", "").split(',')
@@ -129,7 +130,6 @@ def parse_input_file(inputfile, molecule):
 
     return
 
-
 def compute_ensemble(molecule):
     N_BEE = molecule.N_BEE
     eV_to_kJpermole = molecule.eV_to_kJpermole
@@ -144,6 +144,7 @@ def compute_ensemble(molecule):
     molecule.tst_uq = np.zeros(molecule.N_BEE)
     molecule.ea_uq = np.zeros(molecule.N_BEE)
     molecule.delta_ea = np.zeros(molecule.N_BEE)
+
     for i in range(N_BEE):
         molecule.is_uq[i] = molecule.is_energy - molecule.is_bee_energies[i] * scale_BEEF * rydberg_to_eV
         molecule.is_uq[i] *= eV_to_kJpermole
@@ -160,9 +161,7 @@ def compute_ensemble(molecule):
         molecule.delta_ea[i] = molecule.ea_uq[i] - molecule.ea
 
     results_dir = 'beef-ensembles/'
-
     results_file = results_dir + molecule.output_file
-
     data = np.c_[molecule.ea_uq, molecule.delta_ea]
     names = ['Ea=' + str(molecule.ea), 'delta_Ea']
     df = pd.DataFrame(data, columns=[names])
