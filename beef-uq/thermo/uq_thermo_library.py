@@ -72,7 +72,7 @@ for k in range(N_BEE):
                              ##TODO: align names and RMG labels
                              filename='beef-ensembles/' + str(label[i]) + '_bee.txt'
                              data=pd.read_csv(filename, sep="\t", header=0)
-                             perturbation=data.iloc[k,3]  
+                             perturbation=data.iloc[k,1]
                              changed_H=initial_H+float(perturbation)/8.314e-3      
                          else:
                              changed_H=initial_H

@@ -163,106 +163,77 @@ def parse_input_file(inputfile, molecule):
         print("successfully parsed file %s" % (inputfile))
     return
 
+
 def compute_thermo(molecule):
-    if molecule.name == 'H_ads':
-        molecule.energy_gas = (molecule.DFT_energy_gas + molecule.ZPE_energy_gas + molecule.dHrxnatct[
-            'H2-2H'] / molecule.eV_to_kJpermole)
-        molecule.energy_gas /= 2
-    elif molecule.name == 'O_ads':
-        molecule.energy_gas = (molecule.DFT_energy_gas + molecule.ZPE_energy_gas + molecule.dHrxnatct[
-            'O2-2O'] / molecule.eV_to_kJpermole)
-        molecule.energy_gas /= 2
-    elif molecule.name == 'N_ads':
-        molecule.energy_gas = (molecule.DFT_energy_gas + molecule.ZPE_energy_gas + molecule.dHrxnatct[
-            'N2-2N'] / molecule.eV_to_kJpermole)
-        molecule.energy_gas /= 2
-    else:
-        molecule.energy_gas = molecule.DFT_energy_gas + molecule.ZPE_energy_gas
-
     molecule.energy = molecule.DFT_energy + molecule.ZPE_energy
+    molecule.energy *= molecule.eV_to_kJpermole
 
-    molecule.dHrxndftgas = (molecule.energy_gas - molecule.composition['C'] * molecule.Eref['CH4']
-                            - molecule.composition['O'] * molecule.Eref['H2O']
-                            - molecule.composition['N'] * molecule.Eref['NH3']
-                            - (molecule.composition['H'] / 2 - 2 * molecule.composition['C'] - molecule.composition[
-                'O'] - 3 / 2 * molecule.composition['N']) * molecule.Eref['H2'])
-    molecule.dHfgas = (molecule.composition['C'] * molecule.dHfatct['CH4']
-                       + molecule.composition['O'] * molecule.dHfatct['H2O']
-                       + molecule.composition['N'] * molecule.dHfatct['NH3']
-                       + (molecule.composition['H'] / 2 - 2 * molecule.composition['C'] - molecule.composition[
-                'O'] - 3 / 2 * molecule.composition['N']) * molecule.dHfatct['H2']
-                       + molecule.dHrxndftgas * molecule.eV_to_kJpermole)
+    sum_energy_ref = (-molecule.composition['C'] * molecule.Eref['CH4'] * molecule.eV_to_kJpermole
+                      - molecule.composition['O'] * molecule.Eref['H2O'] * molecule.eV_to_kJpermole
+                      - molecule.composition['N'] * molecule.Eref['NH3'] * molecule.eV_to_kJpermole
+                      - (molecule.composition['H'] / 2 - 2 * molecule.composition['C'] - molecule.composition[
+                'O'] - 3 / 2 * molecule.composition['N']) * molecule.Eref['H2'] * molecule.eV_to_kJpermole)
 
-    molecule.dHads = molecule.energy - molecule.energy_gas - molecule.Eslab
-    molecule.dHf = molecule.dHfgas + molecule.dHads * molecule.eV_to_kJpermole
+    sum_enthalpy_ref = (-molecule.composition['C'] * molecule.dHfatct['CH4']
+                        - molecule.composition['O'] * molecule.dHfatct['H2O']
+                        - molecule.composition['N'] * molecule.dHfatct['NH3']
+                        - (molecule.composition['H'] / 2 - 2 * molecule.composition['C'] - molecule.composition[
+                'O'] - 3 / 2 * molecule.composition['N']) * molecule.dHfatct['H2'])
+
+    slab_energy = molecule.Eslab * molecule.eV_to_kJpermole
+
+    molecule.dHf = molecule.energy - slab_energy + sum_energy_ref - sum_enthalpy_ref
+
     print(molecule.dHf)
+
     return
 
 
 def compute_thermo_bee(molecule):
     compute_thermo(test)
 
-    molecule.energy_gas_bee = np.zeros(molecule.N_BEE)
     molecule.energy_bee = np.zeros(molecule.N_BEE)
-    molecule.dHrxndftgas_bee = np.zeros(molecule.N_BEE)
-    molecule.dHfgas_bee = np.zeros(molecule.N_BEE)
-    molecule.dHads_bee = np.zeros(molecule.N_BEE)
+    slab_energy = np.zeros(molecule.N_BEE)
+    sum_energy_ref_bee = np.zeros(molecule.N_BEE)
+    sum_enthalpy_ref_bee = np.zeros(molecule.N_BEE)
     molecule.dHf_bee = np.zeros(molecule.N_BEE)
-
-    molecule.ddHads_bee = np.zeros(molecule.N_BEE)
     molecule.ddHf_bee = np.zeros(molecule.N_BEE)
 
     for i in range(molecule.N_BEE):
-        if molecule.name == 'H_ads':
-            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[i] * molecule.rydberg_to_eV * molecule.scale_BEEF
-                                          + molecule.ZPE_energy_gas + molecule.dHrxnatct['H2-2H'] / molecule.eV_to_kJpermole)
-            molecule.energy_gas_bee[i] /= 2
-        elif molecule.name == 'O_ads':
-            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[i] * molecule.rydberg_to_eV * molecule.scale_BEEF
-                                          + molecule.ZPE_energy_gas + molecule.dHrxnatct['O2-2O'] / molecule.eV_to_kJpermole)
-            molecule.energy_gas_bee[i] /= 2
-        elif molecule.name == 'N_ads':
-            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[i] * molecule.rydberg_to_eV * molecule.scale_BEEF
-                                          + molecule.ZPE_energy_gas + molecule.dHrxnatct['N2-2N'] / molecule.eV_to_kJpermole)
-            molecule.energy_gas_bee[i] /= 2
-        else:
-            molecule.energy_gas_bee[i] = (molecule.DFT_energy_gas - molecule.gas_BEE_energies[i] * molecule.rydberg_to_eV * molecule.scale_BEEF
-                                          + molecule.ZPE_energy_gas)
-
         molecule.energy_bee[i] = molecule.DFT_energy - molecule.BEE_energies[
             i] * molecule.rydberg_to_eV * molecule.scale_BEEF + molecule.ZPE_energy
+        molecule.energy_bee[i] *= molecule.eV_to_kJpermole
 
-        molecule.dHrxndftgas_bee[i] = (molecule.energy_gas_bee[i] - molecule.composition['C'] * (
-                molecule.Eref['CH4'] - molecule.Erefbee['CH4'][i])
-                                       - molecule.composition['O'] * (molecule.Eref['H2O'] - molecule.Erefbee['H2O'][i])
-                                       - molecule.composition['N'] * (molecule.Eref['NH3'] - molecule.Erefbee['NH3'][i])
-                                       - (molecule.composition['H'] / 2 - 2 * molecule.composition['C'] -
-                                          molecule.composition['O'] - 3 / 2 * molecule.composition['N']) * (
-                                                   molecule.Eref['H2'] - molecule.Erefbee['H2'][i]))
+        sum_energy_ref_bee[i] = (-molecule.composition['C'] * (
+                    molecule.Eref['CH4'] - molecule.Erefbee['CH4'][i]) * molecule.eV_to_kJpermole
+                                 - molecule.composition['O'] * (molecule.Eref['H2O'] - molecule.Erefbee['H2O'][
+                    i]) * molecule.eV_to_kJpermole
+                                 - molecule.composition['N'] * (molecule.Eref['NH3'] - molecule.Erefbee['NH3'][
+                    i]) * molecule.eV_to_kJpermole
+                                 - (molecule.composition['H'] / 2 - 2 * molecule.composition['C'] -
+                                    molecule.composition['O'] - 3 / 2 * molecule.composition['N']) * (
+                                             molecule.Eref['H2'] - molecule.Erefbee['H2'][
+                                         i]) * molecule.eV_to_kJpermole)
 
-        molecule.dHfgas_bee[i] = (molecule.composition['C'] * molecule.dHfatct['CH4']
-                                  + molecule.composition['O'] * molecule.dHfatct['H2O']
-                                  + molecule.composition['N'] * molecule.dHfatct['NH3']
-                                  + (molecule.composition['H'] / 2 - 2 * molecule.composition['C'] -
-                                     molecule.composition['O'] - 3 / 2 * molecule.composition['N']) * molecule.dHfatct[
-                                      'H2']
-                                  + molecule.dHrxndftgas_bee[i] * molecule.eV_to_kJpermole)
+        sum_enthalpy_ref_bee[i] = (-molecule.composition['C'] * molecule.dHfatct['CH4']
+                                   - molecule.composition['O'] * molecule.dHfatct['H2O']
+                                   - molecule.composition['N'] * molecule.dHfatct['NH3']
+                                   - (molecule.composition['H'] / 2 - 2 * molecule.composition['C'] -
+                                      molecule.composition['O'] - 3 / 2 * molecule.composition['N']) * molecule.dHfatct[
+                                       'H2'])
 
-        molecule.dHads_bee[i] = molecule.energy_bee[i] - molecule.energy_gas_bee[i] - (
-                    molecule.Eslab - molecule.Erefbeeslab[i])
+        slab_energy[i] = molecule.Eslab - molecule.Erefbeeslab[i]
+        slab_energy[i] *= molecule.eV_to_kJpermole
 
-        molecule.dHf_bee[i] = molecule.dHfgas_bee[i] + molecule.dHads_bee[i] * molecule.eV_to_kJpermole
+        molecule.dHf_bee[i] = molecule.energy_bee[i] - slab_energy[i] + sum_energy_ref_bee[i] - sum_enthalpy_ref_bee[i]
 
         molecule.ddHf_bee[i] = -molecule.dHf + molecule.dHf_bee[i]
-        molecule.ddHads_bee[i] = -molecule.dHads + molecule.dHads_bee[i]
-
-    import os
 
     results_dir = 'beef-ensembles/'
     rel_path = str(molecule.name) + '_bee.txt'
     output_file_path = results_dir + rel_path
-    data = np.c_[molecule.dHads_bee, molecule.dHf_bee, molecule.ddHads_bee, molecule.ddHf_bee]
-    names = ['Hads', 'Hf', 'deltaHads ref=' + str(molecule.dHads), 'deltaHf ref=' + str(molecule.dHf)]
+    data=np.c_[molecule.dHf_bee, molecule.ddHf_bee]
+    names=['Hf','deltaHf ref='+str(molecule.dHf)]
     df = pd.DataFrame(data, columns=[names])
     df.to_csv(output_file_path, sep="\t", index=False)
 
