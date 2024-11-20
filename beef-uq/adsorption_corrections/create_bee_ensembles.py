@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import pandas as pd
+import glob
 
 
 class Molecule:
@@ -18,26 +19,55 @@ def parse_input(species, molecule):
 
     return molecule.perturbation
 
-name = 'C*R*C*'
-list_of_species = 'nodes/species_list_' + name + '.dat'
-info = open(list_of_species, 'r')
-species_list = info.readlines()
-info.close()
+# name = 'CXRXCX'
+# list_of_species = 'nodes/species_list_' + name + '.dat'
+# info = open(list_of_species, 'r')
+# species_list = info.readlines()
+# info.close()
+#
+# array_list = []
+# counter = -1
+# for species in species_list:
+#     counter += 1
+#     filename = species.strip()
+#     print(filename)
+#
+#     test = Molecule()
+#     array_list.append(parse_input(filename, test))
+#
+# stacked = np.stack(array_list, axis=0)
+# avg = np.mean(stacked, axis=0)
+#
+# output_file = 'beef-ensembles/' + name + '_bee.txt'
+# column_names = ['averaged_values']
+# df = pd.DataFrame(avg, columns=[column_names])
+# df.to_csv(output_file, sep="\t", index=False)
 
-array_list = []
-counter = -1
-for species in species_list:
-    counter += 1
-    filename = species.strip()
-    print(filename)
+#list_of_species = 'nodes/species_list_' + name + '.dat'
 
-    test = Molecule()
-    array_list.append(parse_input(filename, test))
+for filename in glob.iglob('nodes/*.dat'):
 
-stacked = np.stack(array_list, axis=0)
-avg = np.mean(stacked, axis=0)
+    name=filename.replace('.dat','').split('_')[-1]
+    print(name)
 
-output_file = 'beef-ensembles/' + name + '_bee.txt'
-column_names = ['averaged_values']
-df = pd.DataFrame(avg, columns=[column_names])
-df.to_csv(output_file, sep="\t", index=False)
+    info = open(filename, 'r')
+    species_list = info.readlines()
+    info.close()
+
+    array_list = []
+    counter = -1
+    for species in species_list:
+        counter += 1
+        filename = species.strip()
+
+        test = Molecule()
+        array_list.append(parse_input(filename, test))
+
+    stacked = np.stack(array_list, axis=0)
+    avg = np.mean(stacked, axis=0)
+
+    output_file = 'beef-ensembles/' + name + '_bee.txt'
+    column_names = ['averaged_values']
+    df = pd.DataFrame(avg, columns=[column_names])
+    df.to_csv(output_file, sep="\t", index=False)
+

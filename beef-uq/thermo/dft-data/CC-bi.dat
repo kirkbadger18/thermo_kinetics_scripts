@@ -1,4 +1,4 @@
-name = 'CC_ads'
+name = 'CC-bi_ads'
 composition = {'H':0, 'C':2, 'N':0, 'O':0, 'Pt':1}
 DFT_energy = [-378130.498959777, 'eV']
 ZPE_energy = [0.193, 'eV']

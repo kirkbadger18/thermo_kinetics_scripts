@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 Name='adsorptionPt111'
-N_BEE=2
+N_BEE=1
 
 label=[]
 index=[]
@@ -28,8 +28,9 @@ for k in range(N_BEE):
         if line.startswith("    label"):
             old=line.strip()
             bits=line.split(" = ")
-            label.append(bits[1].replace(",","").replace("\n","").replace('"',""))
-                       
+            node_name = bits[1].replace(",","").replace("\n","").replace('"',"")
+            label.append(node_name.replace("*","X"))
+
         if line.startswith("    index"):
             old=line.strip()
             bits=line.split(" = ")
