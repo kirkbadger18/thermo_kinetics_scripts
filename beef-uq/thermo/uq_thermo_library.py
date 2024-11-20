@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 Name='surfaceThermoPt111'
-N_BEE=2000
+N_BEE=2
 
 for k in range(N_BEE):
     label=[]
@@ -38,7 +38,6 @@ for k in range(N_BEE):
     
     #The number of possible entries to modify is given by the number of collected labels
     no=len(label)    
-    print(no)
     for i in range(1,no): #
         #print(i)
         #print(label[i])
