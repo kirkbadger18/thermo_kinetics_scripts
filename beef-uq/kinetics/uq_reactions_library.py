@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 
-num_pts=2000
+num_pts=2
 
 name='reactions'
 

@@ -19,7 +19,7 @@ def parse_input_file(inputfile, molecule):
     script_dir = 'dft-data/'
     abs_file_path = script_dir + str(inputfile)
 
-    molecule.output_file = "".join((inputfile, '-bee.txt'))
+    molecule.output_file = "".join((inputfile.strip('.dat'), '-bee.txt'))
 
     input_file = open(abs_file_path, 'r')
     lines = input_file.readlines()
