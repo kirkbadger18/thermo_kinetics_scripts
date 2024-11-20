@@ -330,7 +330,7 @@ entry(
 
 entry(
     index = 12,
-    label = "CC_ads",
+    label = "CC-bi_ads",
     molecule =
 """
 1 X  u0  p0 c0 {3,D}
