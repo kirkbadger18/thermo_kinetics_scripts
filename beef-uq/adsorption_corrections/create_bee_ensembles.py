@@ -14,7 +14,7 @@ def parse_input(species, molecule):
     script_dir = '../thermo/beef-ensembles/'
     inputfile = str(script_dir) + str(species) + '_ads_bee.txt'
     data = pd.read_csv(inputfile, sep="\t", header=0)
-    molecule.perturbation = data.iloc[:, 3].to_numpy()
+    molecule.perturbation = data.iloc[:, 1].to_numpy()
 
     return molecule.perturbation
 
