@@ -5094,9 +5094,9 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.23075265E+00, 1.77836646E-02, -5.88154930E-06, -3.71240588E-09, 2.53490284E-12, -2.99123138E+06, -3.50238719E+00], Tmin=(298.0, 'K'), Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[1.29257481E+01, -1.05258288E-02, 1.88140143E-05, -1.00666038E-08, 1.80803508E-12, -2.99426956E+06, -5.91193041E+01], Tmin=(1000.0, 'K'), Tmax=(2000.0, 'K')),
-        ],
+            NASAPolynomial(coeffs=[2.23075265E+00, 1.77836646E-02, -5.88154930E-06, -3.71240588E-09, 2.53490284E-12, 5.00331286E+03, -3.17521175E+00], Tmin=(298.0, 'K'), Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[1.29257481E+01, -1.05258288E-02, 1.88140143E-05, -1.00666038E-08, 1.80803508E-12, 1.96513259E+03, -5.87921287E+01], Tmin=(1000.0, 'K'), Tmax=(2000.0, 'K')),
+        ],  
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
@@ -5106,14 +5106,12 @@ entry(
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
             kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',
             fmax=1e-3. DFT binding energy: -1.119 eV.
-
+        
             The two lowest frequencies, 60.4 and 70.3 cm-1, where replaced by the 2D gas model.
 """,
     metal = "Pt",
     facet = "111",
 )
-
-
 
 entry(
     index = 152,
