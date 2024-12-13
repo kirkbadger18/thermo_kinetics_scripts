@@ -67,7 +67,7 @@ for i in range(N_members):
             new_lines.append('             {}, {}, {}], Tmin=(298.0,\'K\'), Tmax=(1000.0, \'K\')),\n'.format(lowT[4], lowT[5], lowT[6]))
             new_lines.append('            NASAPolynomial(coeffs=[\n')
             new_lines.append('             {}, {}, {}, {},\n'.format(highT[0], highT[1], highT[2], highT[3]))
-            new_lines.append('             {}, {}, {}], Tmin=(298.0,\'K\'), Tmax=(1000.0, \'K\')),\n'.format(highT[4], highT[5], highT[6]))
+            new_lines.append('             {}, {}, {}], Tmin=(1000.0,\'K\'), Tmax=(2000.0, \'K\')),\n'.format(highT[4], highT[5], highT[6]))
             new_lines.append('        ],\n')
             l += 1
         elif j in skip:
