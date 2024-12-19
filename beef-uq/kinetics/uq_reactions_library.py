@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 
-N_members=5
+N_members=2
 name='reactions'
 
 N_reactions = 51
@@ -36,6 +36,7 @@ for k in range(N_members):
     Ea_line_nums = []
     for line_num, line in enumerate(original_lines):
         if N_found < len(indices) and "    index = {},".format(indices[N_found]) in line: 
+            new_lines.append(line)
             found_Ea = False
             tmp_line_num = line_num
             while not found_Ea:
