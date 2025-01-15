@@ -9,10 +9,15 @@ class Node:
 
     def get_all_species(self):
         all_children = self.get_all_children()
-        species = self.species
+        species = []
+
         for child in all_children:
-            for spec in child.species:
-                species.append(spec)
+            childspec = child.species
+            if childspec and isinstance(childspec,list):
+                for spec in childspec:
+                    species.append(spec)
+            elif childspec and isinstance(childspec,str):
+                species.append(childspec)
         return species
 
     def get_all_children(self):
