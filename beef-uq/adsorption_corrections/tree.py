@@ -1,3 +1,4 @@
+from pathlib import Path
 from node import Node
 
 RX = Node('RX', None,[
@@ -168,7 +169,7 @@ RX = Node('RX', None,[
              ),
         ]),
     ])
-from pathlib import Path
+
 
 all_spec = RX.get_all_species()
 for spec in all_spec:
