@@ -135,7 +135,7 @@ RX = Node('RX', None,[
                 ]),
             ]),
         ]),
-    Node('RXvdw',None,[
+    Node('RXvdW',None,[
         Node('(CR4)X','CH4X',[
             Node('(CR3CR3)X',['CH3CH3X','CH3CH2CH3X','CH3CH2OHX'],None),
             Node('(CR3N)X','CH3NH2X',None),
