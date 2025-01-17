@@ -1,3 +1,11 @@
+'''
+Here is a class that is used to represent nodes in a tree like
+data structure. Each node has a data element attached to it: 'species'
+and has a list of child nodes. The methods of this class allow for descending
+the tree to find all children from all levels below, and to find all
+species attached to a given node and from all levels below
+'''
+
 class Node:
     def __init__(self, name, species, children):
         self.name = name

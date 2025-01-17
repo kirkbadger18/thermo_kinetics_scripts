@@ -1,6 +1,14 @@
 from pathlib import Path
 from node import Node
 
+'''
+Here the adsorption correction tree is represented by a set of nested Node
+objects. Each Node object requires a name, which adsorbate species show up
+at the level of that node, and at now lower levels, and a list of child nodes.
+
+node = Node(node_name,[list of species], child_nodes)
+'''
+
 RX = Node('RX', None,[
     Node('RXbridged-bidentate',None,[
         Node('CXRCX',None,[
@@ -170,7 +178,7 @@ RX = Node('RX', None,[
         ]),
     ])
 
-
+# a check that there exists a file for each species in the tree
 all_spec = RX.get_all_species()
 for spec in all_spec:
     file = Path('../thermo/dft-data/' + str(spec) + '.dat')
