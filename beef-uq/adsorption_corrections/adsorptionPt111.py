@@ -15,7 +15,7 @@ TODO: Update adsorption corrections for N containing molecules.
 
 entry(
     index = 1,
-    label = "R*",
+    label = "RX",
     group=
 """
 1 R  ux
@@ -104,7 +104,7 @@ R*bidentate or R*single_chemisorbed and thus not R*vdW.
 
 entry(
     index = 3,
-    label = "(OR2)*",
+    label = "(OR2)X",
     group =
 """
 1 * X u0 p0 c0
@@ -136,7 +136,7 @@ entry(
 
 entry(
     index = 4,
-    label = "O-*R",
+    label = "O-XR",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -169,7 +169,7 @@ entry(
 
 entry(
     index = 5,
-    label = "(OROR)*",
+    label = "(OROR)X",
     group =
 """
 1 * X u0 p0 c0
@@ -204,7 +204,7 @@ entry(
 
 entry(
     index = 6,
-    label = "O*O*",
+    label = "OXOX",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -236,7 +236,7 @@ entry(
 
 entry(
     index = 7,
-    label = "O-*OR",
+    label = "O-XOR",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -270,7 +270,7 @@ entry(
 
 entry(
     index = 8,
-    label = "O=*",
+    label = "O=X",
     group =
 """
 1 * X u0 p0 c0 {2,D}
@@ -300,7 +300,7 @@ entry(
 
 entry(
     index = 9,
-    label = "O-*N",
+    label = "O-XN",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -332,7 +332,7 @@ entry(
 
 entry(
     index = 10,
-    label = "O-*CR3",
+    label = "O-XCR3",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -368,7 +368,7 @@ entry(
 
 entry(
     index = 11,
-    label = "(NR3)*",
+    label = "(NR3)X",
     group =
 """
 1 * X u0 p0 c0
@@ -399,7 +399,7 @@ entry(
 
 entry(
     index = 12,
-    label = "N-*R2",
+    label = "N-XR2",
     group =
 """
 1 * X u0 p0 c0 {2,[S,D]}
@@ -431,7 +431,7 @@ entry(
 
 entry(
     index = 13,
-    label = "N=*R",
+    label = "N=XR",
     group =
 """
 1 * X u0 p0 c0 {2,D}
@@ -459,36 +459,36 @@ entry(
     facet = "111",
 )
 
-entry(
-    index = 14,
-    label = "N#*",
-    group =
-"""
-1 * X u0 p0 c0 {2,T}
-2 N  u0 p1 c0 {1,T}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.93, -0.2, 0.19, 0.42, 0.66, 0.78, 0.9], 'cal/(mol*K)'),
-        H298=(-103.33, 'kcal/mol'),
-        S298=(-32.92, 'cal/(mol*K)'),
-    ),
-    shortDesc=u"""Came from XN triple-bonded on Pt(111)""",
-    longDesc=u"""Calculated by Katrin Blondal at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb). Based on DFT calculations by Jelena Jelic at KIT.
-            DFT binding energy: -4.352 eV.
-            Linear scaling parameters: ref_adatom_N = -4.352 eV, psi = 0.00000 eV, gamma_N(X) = 1.000.
-
-    N
-   |||
-***********
-""",
-    metal = "Pt",
-    facet = "111",
-)
+#entry(
+#    index = 14,
+#    label = "N#X",
+#    group =
+#"""
+#1 * X u0 p0 c0 {2,T}
+#2 N  u0 p1 c0 {1,T}
+#""",
+#    thermo=ThermoData(
+#        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+#        Cpdata=([-0.93, -0.2, 0.19, 0.42, 0.66, 0.78, 0.9], 'cal/(mol*K)'),
+#        H298=(-103.33, 'kcal/mol'),
+#        S298=(-32.92, 'cal/(mol*K)'),
+#    ),
+#    shortDesc=u"""Came from XN triple-bonded on Pt(111)""",
+#    longDesc=u"""Calculated by Katrin Blondal at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb). Based on DFT calculations by Jelena Jelic at KIT.
+#            DFT binding energy: -4.352 eV.
+#            Linear scaling parameters: ref_adatom_N = -4.352 eV, psi = 0.00000 eV, gamma_N(X) = 1.000.
+#
+#    N
+#   |||
+#***********
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
 
 entry(
     index = 15,
-    label = "(NO)*",
+    label = "(NO)X",
     group =
 """
 1 * X u0 p0 c0
@@ -548,7 +548,7 @@ entry(
 
 entry(
     index = 17,
-    label = "N-*ROR",
+    label = "N-XROR",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -580,7 +580,7 @@ entry(
 
 entry(
     index = 18,
-    label = "N-*R",
+    label = "N-XR",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -609,7 +609,7 @@ entry(
 
 entry(
     index = 19,
-    label = "N-*RO-*",
+    label = "N-XRO-X",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -641,7 +641,7 @@ entry(
 
 entry(
     index = 20,
-    label = "N=*OR",
+    label = "N=XOR",
     group =
 """
 1 * X u0 p0 c0 {2,D}
@@ -671,7 +671,7 @@ entry(
 )
 entry(
     index = 21,
-    label = "(NN)*",
+    label = "(NN)X",
     group =
 """
 1 * X u0 p0 c0
@@ -701,7 +701,7 @@ entry(
 
 entry(
     index = 22,
-    label = "(N=C)*",
+    label = "(N=C)X",
     group =
 """
 1 * X u0 p0 c0
@@ -759,7 +759,7 @@ entry(
 
 entry(
     index = 24,
-    label = "N-*RNR2",
+    label = "N-XRNR2",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -792,7 +792,7 @@ entry(
 
 entry(
     index = 25,
-    label = "N-*NR",
+    label = "N-XNR",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -825,7 +825,7 @@ entry(
 
 entry(
     index = 26,
-    label = "N=*N",
+    label = "N=XN",
     group =
 """
 1 * X u0 p0 c0 {2,D}
@@ -857,7 +857,7 @@ entry(
 
 entry(
     index = 27,
-    label = "N-*RN-*R",
+    label = "N-XRN-XR",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -889,7 +889,7 @@ entry(
 )
 entry(
     index = 28,
-    label = "N-*RCR3",
+    label = "N-XRCR3",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -923,7 +923,7 @@ entry(
 
 entry(
     index = 29,
-    label = "N-*CR2",
+    label = "N-XCR2",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -957,7 +957,7 @@ entry(
 
 entry(
     index = 30,
-    label = "N=*C-R",
+    label = "N=XC-R",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -1020,7 +1020,7 @@ entry(
 
 entry(
     index = 32,
-    label = "Cq*",
+    label = "CqX",
     group =
 """
 1 * X u0 p0 c0 {2,Q}
@@ -1050,7 +1050,7 @@ entry(
 
 entry(
     index = 33,
-    label = "C-*C-*",
+    label = "C-XC-X",
     group =
 """
 1 * X u0  p0 c0 {3,D}
@@ -1082,7 +1082,7 @@ entry(
 
 entry(
     index = 34,
-    label = "C=*(=R)",
+    label = "C=X(=R)",
     group =
 """
 1 * X  u0  p0 c0 {2,D}
@@ -1118,7 +1118,7 @@ not two, it is not a child of the C=*R2 node
 
 entry(
     index = 35,
-    label = "C#*CR3",
+    label = "C#XCR3",
     group =
 """
 1 * X u0 p0 c0 {3,T}
@@ -1154,7 +1154,7 @@ entry(
 
 entry(
     index = 36,
-    label = "C#*R",
+    label = "C#XR",
     group =
 """
 1 * X u0 p0 c0 {2,T}
@@ -1187,7 +1187,7 @@ entry(
 
 entry(
     index = 37,
-    label = "C=*RC=*R",
+    label = "C=XRC=XR",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -1221,7 +1221,7 @@ entry(
 
 entry(
     index = 38,
-    label = "C=*R2",
+    label = "C=XR2",
     group =
 """
 1 * X u0 p0 c0 {2,D}
@@ -1253,7 +1253,7 @@ entry(
 
 entry(
     index = 39,
-    label = "C-*R2C-*R2",
+    label = "C-XR2C-XR2",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -1289,7 +1289,7 @@ entry(
 
 entry(
     index = 40,
-    label = "C-*R3",
+    label = "C-XR3",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -1322,7 +1322,7 @@ entry(
 
 entry(
     index = 41,
-    label = "(CR3CR3)*",
+    label = "(CR3CR3)X",
     group =
 """
 1 * X u0 p0 c0
@@ -1359,7 +1359,7 @@ entry(
 
 entry(
     index = 42,
-    label = "(CR4)*",
+    label = "(CR4)X",
     group =
 """
 1 * X u0 p0 c0
@@ -1393,7 +1393,7 @@ entry(
 
 entry(
     index = 43,
-    label = "C-*RN=*",
+    label = "C-XRN=X",
     group =
 """
 1 X u0  p0 c0 {3,S}
@@ -1424,7 +1424,7 @@ entry(
 
 entry(
     index = 44,
-    label = "C=*(=NR)",
+    label = "C=X(=NR)",
     group =
 """
 1 * X u0  p0 c0 {2,D}
@@ -1457,7 +1457,7 @@ entry(
 
 entry(
     index = 45,
-    label = "C#*N",
+    label = "C#XN",
     group =
 """
 1 * X u0 p0 c0 {2,T}
@@ -1521,7 +1521,7 @@ entry(
 
 entry(
     index = 47,
-    label = "C#*OR",
+    label = "C#XOR",
     group =
 """
 1 * X u0 p0 c0 {2,T}
@@ -1555,7 +1555,7 @@ entry(
 
 entry(
     index = 48,
-    label = "C-*R2C=*R",
+    label = "C-XR2C=XR",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -1590,7 +1590,7 @@ entry(
 
 entry(
     index = 49,
-    label = "C-*R2CR3",
+    label = "C-XR2CR3",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -1628,7 +1628,7 @@ entry(
 
 entry(
     index = 50,
-    label = "(CR2N)*",
+    label = "(CR2N)X",
     group =
 """
 1 * X u0 p0 c0
@@ -1660,7 +1660,7 @@ entry(
 
 entry(
     index = 51,
-    label = "C-*R2N",
+    label = "C-XR2N",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -1694,7 +1694,7 @@ entry(
 
 entry(
     index = 52,
-    label = "(CR2O)*",
+    label = "(CR2O)X",
     group =
 """
 1 * X u0 p0 c0
@@ -1727,7 +1727,7 @@ entry(
 
 entry(
     index = 53,
-    label = "C-*R2OR",
+    label = "C-XR2OR",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -1763,7 +1763,7 @@ entry(
 
 entry(
     index = 54,
-    label = "(CR3N)*",
+    label = "(CR3N)X",
     group =
 """
 1 * X u0 p0 c0
@@ -1796,7 +1796,7 @@ entry(
 
 entry(
     index = 55,
-    label = "(CR3OR)*",
+    label = "(CR3OR)X",
     group =
 """
 1 * X u0 p0 c0
@@ -1831,7 +1831,7 @@ entry(
 
 entry(
     index = 56,
-    label = "C-*RC=*",
+    label = "C-XRC=X",
     group =
 """
 1 * X u0  p0 c0 {3,S}
@@ -1865,7 +1865,7 @@ entry(
 
 entry(
     index = 57,
-    label = "C-*RCR2",
+    label = "C-XRCR2",
     group =
 """
 1 * X u0  p0 c0 {2,S}
@@ -1901,7 +1901,7 @@ entry(
 
 entry(
     index = 58,
-    label = "C=*RCR3",
+    label = "C=XRCR3",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -1938,7 +1938,7 @@ entry(
 
 entry(
     index = 59,
-    label = "(CRN)*",
+    label = "(CRN)X",
     group =
 """
 1 * X u0  p0 c0
@@ -1969,7 +1969,7 @@ entry(
 
 entry(
     index = 60,
-    label = "C=*RN=*",
+    label = "C=XRN=X",
     group =
 """
 1 X u0 p0 c0 {3,D}
@@ -2003,7 +2003,7 @@ entry(
 
 entry(
     index = 61,
-    label = "C-*RNR",
+    label = "C-XRNR",
     group =
 """
 1 * X u0  p0 c0 {2,S}
@@ -2036,7 +2036,7 @@ entry(
 
 entry(
     index = 62,
-    label = "C=*RN-*R",
+    label = "C=XRN-XR",
     group =
 """
 1 X u0 p0 c0 {3,D}
@@ -2071,7 +2071,7 @@ entry(
 
 entry(
     index = 63,
-    label = "C=*RN",
+    label = "C=XRN",
     group =
 """
 1 * X u0 p0 c0 {2,D}
@@ -2104,7 +2104,7 @@ entry(
 
 entry(
     index = 64,
-    label = "C-*RO",
+    label = "C-XRO",
     group =
 """
 1 * X u0  p0 c0 {2,S}
@@ -2138,7 +2138,7 @@ entry(
 
 entry(
     index = 65,
-    label = "C=*RO-*",
+    label = "C=XRO-X",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -2173,7 +2173,7 @@ entry(
 
 entry(
     index = 66,
-    label = "C=*ROR",
+    label = "C=XROR",
     group =
 """
 1 * X u0 p0 c0 {2,D}
@@ -2208,7 +2208,7 @@ entry(
 
 entry(
     index = 67,
-    label = "C*",
+    label = "CX",
     group =
 """
 1 * X u0 {2,[S,D,T,Q]}
@@ -2235,7 +2235,7 @@ entry(
 
 entry(
     index = 68,
-    label = "N*",
+    label = "NX",
     group =
 """
 1 * X u0 {2,[S,D,T]}
@@ -2262,7 +2262,7 @@ entry(
 
 entry(
     index = 69,
-    label = "O*",
+    label = "OX",
     group =
 """
 1 * X u0 {2,[S,D]}
@@ -2289,7 +2289,7 @@ entry(
 
 entry(
     index = 70,
-    label = "R*single-chemisorbed",
+    label = "RXsingle-chemisorbed",
     group =
 """
 1 * X u0 {2,[S,D,T,Q]}
@@ -2316,7 +2316,7 @@ entry(
 
 entry(
     index = 71,
-    label = "C*C*",
+    label = "CXCX",
     group =
 """
 1 * X u0 {3,[S,D,T]}
@@ -2345,7 +2345,7 @@ entry(
 
 entry(
     index = 72,
-    label = "C*N*",
+    label = "CXNX",
     group =
 """
 1 X u0 p0 c0 {3,[S,D,T]}
@@ -2376,7 +2376,7 @@ entry(
 #Always 2 free electron pairs. BK 2023/1/10
 entry(
     index = 73,
-    label = "C*O*",
+    label = "CXOX",
     group =
 """
 1 * X u0 {3,[S,D,T]}
@@ -2405,7 +2405,7 @@ entry(
 
 entry(
     index = 74,
-    label = "N*N*",
+    label = "NXNX",
     group =
 """
 1 * X u0 {3,[S,D]}
@@ -2434,7 +2434,7 @@ entry(
 
 entry(
     index = 75,
-    label = "R*bidentate",
+    label = "RXbidentate",
     group =
 """
 1 * X  u0 p0 c0 {3,[S,D,T]}
@@ -2463,7 +2463,7 @@ entry(
 
 entry(
     index = 76,
-    label = "R*vdW",
+    label = "RXvdW",
     group =
 """
 1 * X u0
@@ -2490,7 +2490,7 @@ entry(
 
 entry(
     index = 77,
-    label = "N*O*",
+    label = "NXOX",
     group =
 """
 1 * X u0 p0 c0 {3,[S,D]}
@@ -2550,7 +2550,7 @@ entry(
 
 entry(
     index = 79,
-    label = "N#*",
+    label = "N#X",
     group =
 """
 1 * X u0 p0 {2,T}
@@ -2578,7 +2578,7 @@ entry(
 
 entry(
     index = 80,
-    label = "(CR3)*",
+    label = "(CR3)X",
     group =
 """
 1 * X  u0
@@ -2608,7 +2608,7 @@ entry(
 
 entry(
     index = 81,
-    label = "(CR2)*",
+    label = "(CR2)X",
     group =
 """
 1 * X  u0
@@ -2616,14 +2616,31 @@ entry(
 3 R!H u0 {2,T}
 4 R   u0 {2,S}
 """,
-    thermo=u'(CRCR)*',
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([1.69, 1.89, 2.02, 2.13, 2.46, 2.9, 3.96], 'J/(mol*K)'),
+        H298=(-59.58, 'kJ/mol'),
+        S298=(-115.19, 'J/(mol*K)'),
+    ),
+    shortDesc=u"""Came from averaged CHCHX and CHCCH3X on Pt(111)""",
+    longDesc=u"""Calculated by Bjarne Kreitz at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
+            Based on DFT calculations by Bjarne Kreitz from Brown University. DFT calculations were performed with Quantum Espresso
+            using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
+            following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=2.5e-2.
+            See Kreitz et al. 2023 (DOI:10.1021/acscatal.2c03378) for details on the DFT method. 
+
+  RC#CR
+    :
+***********
+""",
     metal = "Pt",
     facet = "111",
 )
 
 entry(
     index = 82,
-    label = "(NR2)*",
+    label = "(NR2)X",
     group =
 """
 1 * X u0 p0 c0
@@ -2655,7 +2672,7 @@ entry(
 
 entry(
     index = 83,
-    label = "N-*RN=*",
+    label = "N-XRN=X",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -2686,7 +2703,7 @@ entry(
 )
 entry(
     index = 84,
-    label = "(CRCR)*",
+    label = "(CRCR)X",
     group =
 """
 1 * X u0 p0 c0
@@ -2719,7 +2736,7 @@ entry(
 
 entry(
     index = 85,
-    label = "C-*R2N=*",
+    label = "C-XR2N=X",
     group =
 """
 1 X u0 p0 c0 {3,S}
@@ -2751,7 +2768,7 @@ entry(
 
 entry(
     index = 86,
-    label = "C-*R2N-*R",
+    label = "C-XR2N-XR",
     group =
 """
 1 X u0 p0 c0 {3,S}
@@ -2785,7 +2802,7 @@ R2C-NR
 
 entry(
     index = 87,
-    label = "C=*(=C)",
+    label = "C=X(=C)",
     group =
 """
 1 * X u0  p0 c0 {2,D}
@@ -2821,7 +2838,7 @@ not two, it is not a child of the C=*R2 node
 
 entry(
     index = 88,
-    label = "C-*R2O-*",
+    label = "C-XR2O-X",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -2855,7 +2872,7 @@ entry(
 
 entry(
     index = 89,
-    label = "(CR2CR)*",
+    label = "(CR2CR)X",
     group =
 """
 1 * X u0 p0 c0
@@ -2889,7 +2906,7 @@ entry(
 
 entry(
     index = 90,
-    label = "C=*RC-*R",
+    label = "C=XRC-XR",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -2922,7 +2939,7 @@ entry(
 
 entry(
     index = 91,
-    label = "C#*C-*R",
+    label = "C#XC-XR",
     group =
 """
 1 * X u0 p0 c0 {3,T}
@@ -2954,7 +2971,7 @@ entry(
 
 entry(
     index = 92,
-    label = "C#*C-*R2",
+    label = "C#XC-XR2",
     group =
 """
 1 * X u0 p0 c0 {3,T}
@@ -2988,7 +3005,7 @@ entry(
 
 entry(
     index = 93,
-    label = "C-*R2C-*R",
+    label = "C-XR2C-XR",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3022,7 +3039,7 @@ entry(
 
 entry(
     index = 95,
-    label = "C-*RC-*R",
+    label = "C-XRC-XR",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3055,7 +3072,7 @@ entry(
 
 entry(
     index = 96,
-    label = "C#*C=*R",
+    label = "C#XC=XR",
     group =
 """
 1 * X u0 p0 c0 {3,T}
@@ -3087,7 +3104,7 @@ entry(
 
 entry(
     index = 97,
-    label = "C=*=R-C-*R2",
+    label = "C=X=R-C-XR2",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -3121,7 +3138,7 @@ entry(
 
 entry(
     index = 98,
-    label = "R2C-*-R-C-*R2",
+    label = "R2C-X-R-C-XR2",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3157,7 +3174,7 @@ entry(
 
 entry(
     index = 99,
-    label = "RC=*-R=C-*R",
+    label = "RC=X-R=C-XR",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -3191,7 +3208,7 @@ entry(
 
 entry(
     index = 100,
-    label = "RC-*=R-C-*R2",
+    label = "RC-X=R-C-XR2",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3226,7 +3243,7 @@ entry(
 
 entry(
     index = 101,
-    label = "RC=*-R-C-*R2",
+    label = "RC=X-R-C-XR2",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -3261,7 +3278,7 @@ entry(
 
 entry(
     index = 102,
-    label = "RC-*=R=C-*R",
+    label = "RC-X=R=C-XR",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3295,7 +3312,7 @@ entry(
 
 entry(
     index = 103,
-    label = "RC-*=R=C=*",
+    label = "RC-X=R=C=X",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3328,7 +3345,7 @@ entry(
 
 entry(
     index = 104,
-    label = "O-*-C-O-*",
+    label = "O-X-C-O-X",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3360,7 +3377,7 @@ entry(
 
 entry(
     index = 105,
-    label = "RC-*=R-O-*",
+    label = "RC-X=R-O-X",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3393,7 +3410,7 @@ entry(
 
 entry(
     index = 106,
-    label = "C-*R2",
+    label = "C-XR2",
     group =
 """
 1 * X u0  p0 c0 {2,S}
@@ -3422,7 +3439,7 @@ entry(
 
 entry(
     index = 107,
-    label = "C=*RCR2",
+    label = "C=XRCR2",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -3458,7 +3475,7 @@ entry(
 
 entry(
     index = 108,
-    label = "C#*CR2",
+    label = "C#XCR2",
     group =
 """
 1 * X u0 p0 c0 {3,T}
@@ -3493,7 +3510,7 @@ entry(
 
 entry(
     index = 109,
-    label = "O-*CR2",
+    label = "O-XCR2",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3528,7 +3545,7 @@ entry(
 
 entry(
     index = 110,
-    label = "C*RC*",
+    label = "CXRCX",
     group =
 """
 1 * X u0 {3,[S,D,T]}
@@ -3558,7 +3575,7 @@ entry(
 
 entry(
     index = 111,
-    label = "R*bridged-bidentate",
+    label = "RXbridged-bidentate",
     group =
 """
 1 * X  u0 {3,[S,D,T]}
@@ -3588,7 +3605,7 @@ entry(
 
 entry(
     index = 112,
-    label = "C*RO*",
+    label = "CXROX",
     group =
 """
 1 * X u0 {3,[S,D,T]}
@@ -3617,7 +3634,7 @@ entry(
 
 entry(
     index = 113,
-    label = "O*RO*",
+    label = "OXROX",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -3649,7 +3666,7 @@ entry(
 
 entry(
     index = 114,
-    label = "C#*-R-C-*R2",
+    label = "C#X-R-C-XR2",
     group =
 """
 1 * X u0 p0 c0 {3,T}
@@ -3683,7 +3700,7 @@ entry(
 
 entry(
     index = 115,
-    label = "C#*-R=C-*R",
+    label = "C#X-R=C-XR",
     group =
 """
 1 * X u0 p0 c0 {3,T}
@@ -3716,7 +3733,7 @@ entry(
 
 entry(
     index = 116,
-    label = "C#*-R-C#*",
+    label = "C#X-R-C#X",
     group =
 """
 1 * X u0 p0 c0 {3,T}
@@ -3748,7 +3765,7 @@ entry(
 
 entry(
     index = 117,
-    label = "RC=*-R-C=*R",
+    label = "RC=X-R-C=XR",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -3782,7 +3799,7 @@ entry(
 
 entry(
     index = 118,
-    label = "C#*-R-C=*R",
+    label = "C#X-R-C=XR",
     group =
 """
 1 * X u0 p0 c0 {3,T}
@@ -3815,7 +3832,7 @@ entry(
 
 entry(
     index = 119,
-    label = "C-*RN-*",
+    label = "C-XRN-X",
     group =
 """
 1 X u0 p0 c0 {3,S}
@@ -3847,7 +3864,7 @@ entry(
 
 entry(
     index = 120,
-    label = "(OR)*",
+    label = "(OR)X",
     group =
 """
 1 * X u0 p0 c0
@@ -3877,7 +3894,7 @@ entry(
 
 entry(
     index = 121,
-    label = "(ONR)*",
+    label = "(ONR)X",
     group =
 """
 1 * X u0 p0 c0
@@ -3909,7 +3926,7 @@ entry(
 
 entry(
     index = 122,
-    label = "(ONOR)*",
+    label = "(ONOR)X",
     group =
 """
 1 * X u0 p0 c0
@@ -3941,7 +3958,7 @@ entry(
 
 entry(
     index = 123,
-    label = "(ONN)*",
+    label = "(ONN)X",
     group =
 """
 1 * X u0 p0 c0
@@ -3970,41 +3987,41 @@ entry(
 )
 
 
-entry(
-    index = 124,
-    label = "C=*(-CR2)",
-    group =
-"""
-1 * X u0  p0 c0 {2,D}
-2 C u0 p0 c0 {1,D} {3,D}
-3 C u0 p0 c0 {2,D} {4,S} {5,S}
-4 R u0 px c0 {3,S}
-5 R u0 px c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.0, 5.76, 9.53, 11.98, 14.68, 15.93, 16.88], 'J/(mol*K)'),
-        H298=(-457.3, 'kJ/mol'),
-        S298=(-222.49, 'J/(mol*K)'),
-    ),
-    shortDesc=u"""Came from XCHCH2XC single-bonded on Pt(111)""",
-    longDesc=u"""Calculated by Bjarne Kreitz at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
-            Based on DFT calculations by Bjarne Kreitz from Brown University. DFT calculations were performed with Quantum Espresso
-            using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
-            following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=2.5e-2.
-            See Kreitz et al. 2023 (DOI:10.1021/acscatal.2c03378) for details on the DFT method. 
-  C--R--CR
- |||    ||
-***********
-""",
-    metal = "Pt",
-    facet = "111",
-)
+#entry(
+#    index = 124,
+#    label = "C#X-R-C=XR",
+#    group =
+#"""
+#1 * X u0  p0 c0 {2,D}
+#2 C u0 p0 c0 {1,D} {3,D}
+#3 C u0 p0 c0 {2,D} {4,S} {5,S}
+#4 R u0 px c0 {3,S}
+#5 R u0 px c0 {3,S}
+#""",
+#    thermo=ThermoData(
+#        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+#        Cpdata=([-0.0, 5.76, 9.53, 11.98, 14.68, 15.93, 16.88], 'J/(mol*K)'),
+#        H298=(-457.3, 'kJ/mol'),
+#        S298=(-222.49, 'J/(mol*K)'),
+#    ),
+#    shortDesc=u"""Came from XCHCH2XC single-bonded on Pt(111)""",
+#    longDesc=u"""Calculated by Bjarne Kreitz at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
+#            Based on DFT calculations by Bjarne Kreitz from Brown University. DFT calculations were performed with Quantum Espresso
+#            using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
+#            following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
+#            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=2.5e-2.
+#            See Kreitz et al. 2023 (DOI:10.1021/acscatal.2c03378) for details on the DFT method. 
+# # C--R--CR
+# |||    ||
+#***********
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
 
 entry(
     index = 125,
-    label = "C-*RN-*R",
+    label = "C-XRN-XR",
     group =
 """
 1 X u0  p0 c0 {3,S}
@@ -4037,7 +4054,7 @@ entry(
 
 entry(
     index = 126,
-    label = "C-*RO-*",
+    label = "C-XRO-X",
     group =
 """
 1 * X u0  p0 c0 {3,S}
@@ -4069,7 +4086,7 @@ entry(
 
 entry(
     index = 127,
-    label = "N[+]=*R[-]O-*",
+    label = "N[+]=XR[-]O-X",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -4101,7 +4118,7 @@ entry(
 
 entry(
     index = 128,
-    label = "C-*RN",
+    label = "C-XRN",
     group =
 """
 1 * X u0  p0 c0 {2,S}
@@ -4134,7 +4151,7 @@ entry(
 
 entry(
     index = 129,
-    label = "N=*C#R",
+    label = "N=XC#R",
     group =
 """
 1 * X u0 p0 c0 {2,D}
@@ -4164,7 +4181,7 @@ entry(
 
 entry(
     index = 130,
-    label = "N-*RNR",
+    label = "N-XRNR",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -4196,7 +4213,7 @@ entry(
 
 entry(
     index = 131,
-    label = "N-*RCR",
+    label = "N-XRCR",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -4228,7 +4245,7 @@ entry(
 
 entry(
     index = 132,
-    label = "N[+]=*R[-]R",
+    label = "N[+]=XR[-]R",
     group =
 """
 1 * X u0 p0 c0 {2,D}
@@ -4259,7 +4276,7 @@ entry(
 
 entry(
     index = 133,
-    label = "N[+]-*R[-]R",
+    label = "N[+]-XR[-]R",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -4290,7 +4307,7 @@ entry(
 
 entry(
     index = 134,
-    label = "N-*CR",
+    label = "N-XCR",
     group =
 """
 1 * X u0 p0 c0 {2,S}
@@ -4323,7 +4340,7 @@ entry(
 
 entry(
     index = 135,
-    label = "(NC)*",
+    label = "(NC)X",
     group =
 """
 1 * X u0 p0 c0
@@ -4352,7 +4369,7 @@ entry(
 )
 entry(
     index = 136,
-    label = "N*C*",
+    label = "NXCX",
     group =
 """
 1 * X u0 p0 c0 {3,[S,D,T]}
@@ -4380,7 +4397,7 @@ entry(
 
 entry(
     index = 137,
-    label = "inv(C=*RN=*)",
+    label = "inv(C=XRN=X)",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -4413,7 +4430,7 @@ entry(
 
 entry(
     index = 138,
-    label = "inv(C-*R2N=*)",
+    label = "inv(C-XR2N=X)",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -4445,7 +4462,7 @@ entry(
 
 entry(
     index = 139,
-    label = "inv(C-*R2N-*R)",
+    label = "inv(C-XR2N-XR)",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -4478,7 +4495,7 @@ R2C-NR
 
 entry(
     index = 140,
-    label = "inv(C=*RN-*R)",
+    label = "inv(C=XRN-XR)",
     group =
 """
 1 * X u0 p0 c0 {3,D}
@@ -4512,7 +4529,7 @@ entry(
 
 entry(
     index = 141,
-    label = "inv(C-*RN-*)",
+    label = "inv(C-XRN-X)",
     group =
 """
 1 * X u0 p0 c0 {3,S}
@@ -4544,7 +4561,7 @@ entry(
 
 entry(
     index = 142,
-    label = "inv(C-*RN=*)",
+    label = "inv(C-XRN=X)",
     group =
 """
 1 * X u0  p0 c0 {3,S}
@@ -4575,7 +4592,7 @@ entry(
 
 entry(
     index = 143,
-    label = "inv(C-*RN-*R)",
+    label = "inv(C-XRN-XR)",
     group =
 """
 1 * X u0  p0 c0 {3,S}
@@ -4608,141 +4625,141 @@ entry(
 
 tree(
 """
-L1: R*
-    L2: R*bridged-bidentate
-        L3: C*RC*
-            L4: C=*=R-C-*R2
-            L4: R2C-*-R-C-*R2
-            L4: RC=*-R=C-*R
-            L4: RC-*=R-C-*R2
-            L4: RC=*-R-C-*R2
-            L4: RC-*=R=C-*R
-            L4: RC-*=R=C=*
-            L4: C#*-R-C-*R2
-            L4: C#*-R=C-*R
-            L4: C#*-R-C#*
-            L4: RC=*-R-C=*R
-            L4: C#*-R-C=*R
-        L3: C*RO*
-            L4: RC-*=R-O-*
-        L3: O*RO*
-            L4: O-*-C-O-*
-    L2: R*bidentate
-        L3: C*C*
-            L4: C-*C-*
-            L4: C=*RC=*R
-            L4: C-*R2C-*R2
-            L4: C-*R2C=*R
-            L4: C-*RC=*
-            L4: C=*RC-*R
-            L4: C#*C-*R
-            L4: C#*C-*R2
-            L4: C#*C=*R
-            L4: C-*R2C-*R
-            L4: C-*RC-*R
-	L3: N*C*
-            L4: inv(C=*RN=*)
-            L4: inv(C-*R2N=*)
-            L4: inv(C-*R2N-*R)
-            L4: inv(C=*RN-*R)
-            L4: inv(C-*RN-*)
-            L4: inv(C-*RN=*)
-            L4: inv(C-*RN-*R)
-        L3: C*N*
-            L4: C=*RN=*
-            L4: C-*R2N=*
-            L4: C-*R2N-*R
-            L4: C=*RN-*R
-            L4: C-*RN-*
-            L4: C-*RN=*
-            L4: C-*RN-*R
-        L3: C*O*
-            L4: C=*RO-*
-            L4: C-*R2O-*
-            L4: C-*RO-*
-        L3: N*N*
-            L4: N-*RN-*R
-            L4: N-*RN=*
-        L3: N*O*
-            L4: N-*RO-*
-            L4: N[+]=*R[-]O-*
-        L3: O*O*
-    L2: R*single-chemisorbed
-        L3: C*
-            L4: Cq*
-            L4: C#*R
-                L5: C#*CR3
-                L5: C#*N
-                L5: C#*OR
-                L5: C#*CR2
-            L4: C=*R2
-                L5: C=*RCR3
-                L5: C=*ROR
-                L5: C=*RN
-                L5: C=*RCR2
-            L4: C=*(=R)
-                L5: C=*(=C)
-                L5: C=*(=NR)
-            L4: C-*R3
-                L5: C-*R2CR3
-                L5: C-*R2N
-                L5: C-*R2OR
-            L4: C-*R2
-                L5: C-*RO
-                L5: C-*RCR2
-                L5: C-*RNR
-                L5: C-*RN
-        L3: N*
-            L4: N#*
-            L4: N=*R
-                L5: N=*C-R
-                L5: N=*N
-                L5: N=*OR
-                L5: N=*C#R
-            L4: N-*R2
-                L5: N-*RCR3
-                L5: N-*RNR2
-                L5: N-*ROR
-                L5: N-*RNR
-                L5: N-*RCR
-                L5: N[+]-*R[-]R
-                L5: N[+]=*R[-]R
+L1: RX
+    L2: RXbridged-bidentate
+        L3: CXRCX
+            L4: C=X=R-C-XR2
+            L4: R2C-X-R-C-XR2
+            L4: RC=X-R=C-XR
+            L4: RC-X=R-C-XR2
+            L4: RC=X-R-C-XR2
+            L4: RC-X=R=C-XR
+            L4: RC-X=R=C=X
+            L4: C#X-R-C-XR2
+            L4: C#X-R=C-XR
+            L4: C#X-R-C#X
+            L4: RC=X-R-C=XR
+            L4: C#X-R-C=XR
+        L3: CXROX
+            L4: RC-X=R-O-X
+        L3: OXROX
+            L4: O-X-C-O-X
+    L2: RXbidentate
+        L3: CXCX
+            L4: C-XC-X
+            L4: C=XRC=XR
+            L4: C-XR2C-XR2
+            L4: C-XR2C=XR
+            L4: C-XRC=X
+            L4: C=XRC-XR
+            L4: C#XC-XR
+            L4: C#XC-XR2
+            L4: C#XC=XR
+            L4: C-XR2C-XR
+            L4: C-XRC-XR
+	L3: NXCX
+            L4: inv(C=XRN=X)
+            L4: inv(C-XR2N=X)
+            L4: inv(C-XR2N-XR)
+            L4: inv(C=XRN-XR)
+            L4: inv(C-XRN-X)
+            L4: inv(C-XRN=X)
+            L4: inv(C-XRN-XR)
+        L3: CXNX
+            L4: C=XRN=X
+            L4: C-XR2N=X
+            L4: C-XR2N-XR
+            L4: C=XRN-XR
+            L4: C-XRN-X
+            L4: C-XRN=X
+            L4: C-XRN-XR
+        L3: CXOX
+            L4: C=XRO-X
+            L4: C-XR2O-X
+            L4: C-XRO-X
+        L3: NXNX
+            L4: N-XRN-XR
+            L4: N-XRN=X
+        L3: NXOX
+            L4: N-XRO-X
+            L4: N[+]=XR[-]O-X
+        L3: OXOX
+    L2: RXsingle-chemisorbed
+        L3: CX
+            L4: CqX
+            L4: C#XR
+                L5: C#XCR3
+                L5: C#XN
+                L5: C#XOR
+                L5: C#XCR2
+            L4: C=XR2
+                L5: C=XRCR3
+                L5: C=XROR
+                L5: C=XRN
+                L5: C=XRCR2
+            L4: C=X(=R)
+                L5: C=X(=C)
+                L5: C=X(=NR)
+            L4: C-XR3
+                L5: C-XR2CR3
+                L5: C-XR2N
+                L5: C-XR2OR
+            L4: C-XR2
+                L5: C-XRO
+                L5: C-XRCR2
+                L5: C-XRNR
+                L5: C-XRN
+        L3: NX
+            L4: N#X
+            L4: N=XR
+                L5: N=XC-R
+                L5: N=XN
+                L5: N=XOR
+                L5: N=XC#R
+            L4: N-XR2
+                L5: N-XRCR3
+                L5: N-XRNR2
+                L5: N-XROR
+                L5: N-XRNR
+                L5: N-XRCR
+                L5: N[+]-XR[-]R
+                L5: N[+]=XR[-]R
 
                 
-            L4: N-*R
-                L5: N-*CR2
-                L5: N-*NR
-                L5: N-*CR
-        L3: O*
-            L4: O=*
-            L4: O-*R
-                L5: O-*CR3
-                L5: O-*CR2
-                L5: O-*N
-                L5: O-*OR
-    L2: R*vdW
-        L3: (CR4)*
-            L4: (CR3CR3)*
-            L4: (CR3N)*
-            L4: (CR3OR)*
-        L3: (CR3)*
-            L4: (CR2N)*
-            L4: (CR2CR)*
-            L4: (CR2O)*
-        L3: (CR2)*
-            L4: (CRN)*
-            L4: (CRCR)*
-        L3: (NR3)*
-            L4: (NN)*
-            L4: (NO)*
-            L4: (NC)*
-        L3: (NR2)*
-            L4: (N=C)*
-        L3: (OR2)*
-            L4: (OROR)*
-        L3: (OR)*
-            L4: (ONR)*
-                L5: (ONOR)*
-                L5: (ONN)*
+            L4: N-XR
+                L5: N-XCR2
+                L5: N-XNR
+                L5: N-XCR
+        L3: OX
+            L4: O=X
+            L4: O-XR
+                L5: O-XCR3
+                L5: O-XCR2
+                L5: O-XN
+                L5: O-XOR
+    L2: RXvdW
+        L3: (CR4)X
+            L4: (CR3CR3)X
+            L4: (CR3N)X
+            L4: (CR3OR)X
+        L3: (CR3)X
+            L4: (CR2N)X
+            L4: (CR2CR)X
+            L4: (CR2O)X
+        L3: (CR2)X
+            L4: (CRN)X
+            L4: (CRCR)X
+        L3: (NR3)X
+            L4: (NN)X
+            L4: (NO)X
+            L4: (NC)X
+        L3: (NR2)X
+            L4: (N=C)X
+        L3: (OR2)X
+            L4: (OROR)X
+        L3: (OR)X
+            L4: (ONR)X
+                L5: (ONOR)X
+                L5: (ONN)X
 """,
 )
