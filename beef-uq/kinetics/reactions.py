@@ -774,3 +774,37 @@ entry(
     metal = "Pt",
     facet = "111",
 )
+
+#entry(
+#    index = 52,
+#    label = "N2 + Pt <=> XNN",
+#    kinetics = StickingCoefficient(
+#        A = 0.33,
+#        n = 0,
+#        Ea = (0, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Surface_Adsorption_Single""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#)
+
+#entry(
+#    index = 53,
+#    label = "XNN + Pt <=> XN + XN",
+#    kinetics = SurfaceArrhenius(
+#        A = (1.41E20, 'cm^2/(mol*s)'),  
+#        n = 0.0,
+#        Ea = (19, 'kcal/mol'),  
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
+
