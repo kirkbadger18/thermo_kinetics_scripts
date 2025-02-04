@@ -11,11 +11,9 @@ fam_lines, E0_list, E0_lines, a_list, a_lines = parse_rules(fam_path,fams)
 make_directories(fams)
 check_lengths(E0_list,a_list)
 sobol = np.asarray(generate_sobol_set(a_list,E0_list,N_members))
-print(len(fam_lines))
 for k in range(N_members):
     n, m = 0, 0
     for fam_num, lines in enumerate(fam_lines):
-        print(fams[fam_num])
         new_lines = []
         for num, line in enumerate(lines):
             if n < len(E0_lines) and num == E0_lines[n] and '    E0' in line:
