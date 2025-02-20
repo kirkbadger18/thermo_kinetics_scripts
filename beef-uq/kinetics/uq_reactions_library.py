@@ -44,7 +44,9 @@ for k in range(N_members):
                 tmp_line = original_lines[tmp_line_num]
                 if tmp_line.startswith("        Ea"):
                     old_Ea = float(tmp_line.split('(')[1].split(',')[0])
-                    Ea = old_Ea + beef_data[k,N_found]                    
+                    Ea = old_Ea + beef_data[k,N_found]
+                    if Ea < 0:
+                        Ea = 0
                     found_Ea = True
                     Ea_line = '        Ea = ({}, \'kJ/mol\'),\n'.format(str(Ea))
                     N_found += 1
