@@ -6,7 +6,7 @@ import pandas as pd
 N_members=2
 name='reactions'
 
-N_reactions = 51
+N_reactions = 50
 stick_coeff_indices = [1, 3, 4, 18, 19, 33, 34, 35, 36, 37, 38]
 no_data_indices = [27, 30, 31, 32]
 indices = []
@@ -18,7 +18,7 @@ beef_keys = ['O-CO','h2cch-h-diss','hc-ch2-diss','CH2-CH2','hcch2-h-diss',
              'hcch-h-diss','hc-ch-diss','h2cch2-h-diss','CHC-H','hc-c-diss',
              'CO-OH','HO-H','O-H','COOH-O','CH2-H','CH-H','HC-O','H-CO','CO-H',
              'C-OH','CH2-CH3','CCH-H-FS','CH2C-H-IS','XN-O','O-XNO','XN-OH',
-             'XOXNO_to_XNO2','H-XNH','XN-H','H-XNCH3','H-XNNH2','XNH-CH3',
+             'XOXNO_to_XNO2','H-XNH','XN-H','H-XNNH2','XNH-CH3',
              'XN-CH3','XN-CN','XC-N','XO-XNO']
 ### Read reaction file and store as list
 with open('reactions.py','r') as f:

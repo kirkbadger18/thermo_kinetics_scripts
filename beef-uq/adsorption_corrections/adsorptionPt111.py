@@ -379,24 +379,21 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.37, 5.63, 6.99, 7.84, 8.8, 9.28, 9.75], 'J/(mol*K)'),
-        H298=(-102.99, 'kJ/mol'),
-        S298=(-139.16, 'J/(mol*K)'),
+        Cpdata=([3.38, 5.63, 6.99, 7.84, 8.8, 9.27, 9.75], 'J/(mol*K)'),
+        H298=(-97.1, 'kJ/mol'),
+        S298=(-139.27, 'J/(mol*K)'),
     ),
     shortDesc=u"""Came from averaged on Pt(111)""",
     longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-     NR3
-     :
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
     facet = "111",
 )
-
 entry(
     index = 12,
     label = "N-XR2",
@@ -409,26 +406,21 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([5.13, 8.26, 10.06, 11.14, 12.25, 12.75, 13.24], 'J/(mol*K)'),
-        H298=(-210.52, 'kJ/mol'),
-        S298=(-174.57, 'J/(mol*K)'),
+        Cpdata=([5.15, 8.27, 10.07, 11.15, 12.26, 12.76, 13.24], 'J/(mol*K)'),
+        H298=(-204.99, 'kJ/mol'),
+        S298=(-174.39, 'J/(mol*K)'),
     ),
     shortDesc=u"""Came from averaged on Pt(111)""",
     longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-
-     NR2
-     |
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
     facet = "111",
 )
-
-
 entry(
     index = 13,
     label = "N=XR",
@@ -438,27 +430,23 @@ entry(
 2 N  u0 p1 c0 {1,D} {3,S}
 3 R  u0 px c0 {2,S}
 """,
-   thermo=ThermoData(
+    thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([2.43, 6.4, 8.43, 9.48, 10.34, 10.65, 11.14], 'J/(mol*K)'),
-        H298=(-324.83, 'kJ/mol'),
-        S298=(-167.02, 'J/(mol*K)'),
+        Cpdata=([2.52, 6.47, 8.48, 9.52, 10.36, 10.67, 11.14], 'J/(mol*K)'),
+        H298=(-317.26, 'kJ/mol'),
+        S298=(-166.61, 'J/(mol*K)'),
     ),
     shortDesc=u"""Came from averaged on Pt(111)""",
     longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-
-    NR
-    ||
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
     facet = "111",
 )
-
 #entry(
 #    index = 14,
 #    label = "N#X",
@@ -589,18 +577,16 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.48, 6.03, 7.43, 8.23, 9.04, 9.41, 9.83], 'J/(mol*K)'),
-        H298=(-217.64, 'kJ/mol'),
-        S298=(-161.94, 'J/(mol*K)'),
+        Cpdata=([3.49, 6.04, 7.43, 8.24, 9.04, 9.41, 9.83], 'J/(mol*K)'),
+        H298=(-212.68, 'kJ/mol'),
+        S298=(-161.57, 'J/(mol*K)'),
     ),
     shortDesc=u"""Came from averaged on Pt(111)""",
     longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-     NR
-     |
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
@@ -2243,23 +2229,21 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.34, 6.5, 8.23, 9.21, 10.12, 10.5, 10.88], 'J/(mol*K)'),
-        H298=(-226.68, 'kJ/mol'),
-        S298=(-169.61, 'J/(mol*K)'),
+        Cpdata=([3.37, 6.52, 8.25, 9.22, 10.13, 10.51, 10.88], 'J/(mol*K)'),
+        H298=(-220.67, 'kJ/mol'),
+        S298=(-169.34, 'J/(mol*K)'),
     ),
     shortDesc=u"""Came from averaged on Pt(111)""",
     longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
     facet = "111",
 )
-
 entry(
     index = 69,
     label = "OX",
@@ -2353,25 +2337,24 @@ entry(
 3 C u0 p0 c0 {1,[S,D,T]} {4,[S,D]}
 4 N u0 p[0,1] c[0,+1] {2,[S,D]} {3,[S,D]}
 """,
+
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.36, 9.29, 11.64, 13.06, 14.42, 14.92, 15.16], 'J/(mol*K)'),
-        H298=(-201.39, 'kJ/mol'),
-        S298=(-187.87, 'J/(mol*K)'),
+        H298=(-199.47, 'kJ/mol'),
+        S298=(-187.83, 'J/(mol*K)'),
     ),
     shortDesc=u"""Came from averaged on Pt(111)""",
     longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
     facet = "111",
 )
-
-
 #Changed the adjacency list because O can only have a single bond to the surface and another atom. 
 #Always 2 free electron pairs. BK 2023/1/10
 entry(
@@ -2415,23 +2398,21 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([7.07, 10.54, 12.42, 13.41, 14.15, 14.31, 14.36], 'J/(mol*K)'),
-        H298=(-161.84, 'kJ/mol'),
-        S298=(-180.98, 'J/(mol*K)'),
+        Cpdata=([7.11, 10.57, 12.44, 13.42, 14.15, 14.31, 14.36], 'J/(mol*K)'),
+        H298=(-157.15, 'kJ/mol'),
+        S298=(-180.77, 'J/(mol*K)'),
     ),
     shortDesc=u"""Came from averaged on Pt(111)""",
     longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
     facet = "111",
 )
-
 entry(
     index = 75,
     label = "RXbidentate",
@@ -2500,22 +2481,21 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([4.82, 8.98, 11.06, 12.02, 12.53, 12.5, 12.33], 'J/(mol*K)'),
-        H298=(-189.95, 'kJ/mol'),
-        S298=(-167.0, 'J/(mol*K)'),
+        Cpdata=([4.83, 8.98, 11.07, 12.03, 12.53, 12.5, 12.34], 'J/(mol*K)'),
+        H298=(-185.12, 'kJ/mol'),
+        S298=(-167.01, 'J/(mol*K)'),
     ),
     shortDesc=u"""Came from averaged on Pt(111)""",
     longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-***************
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
+***********
 """,
     metal = "Pt",
     facet = "111",
 )
-
 #entry(
 #    index = 78,
 #    label = "O*O*",
@@ -2659,16 +2639,12 @@ entry(
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-
-   R=N-R
-     :
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
     facet = "111",
 )
-
 
 entry(
     index = 83,
@@ -2757,9 +2733,7 @@ entry(
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
- R2C-N
-   | ||
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
@@ -2790,9 +2764,7 @@ entry(
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-R2C-NR
-   | |
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
@@ -3852,10 +3824,7 @@ entry(
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
- 
-  RC=N
-   | |
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
@@ -3873,19 +3842,16 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.0, 5.76, 9.53, 11.98, 14.68, 15.93, 16.88], 'J/(mol*K)'),
-        H298=(-457.3, 'kJ/mol'),
-        S298=(-222.49, 'J/(mol*K)'),
+        Cpdata=([4.71, 6.01, 6.79, 7.3, 7.93, 8.27, 8.56], 'J/(mol*K)'),
+        H298=(-137.32, 'kJ/mol'),
+        S298=(-141.39, 'J/(mol*K)'),
     ),
-    shortDesc=u"""Came from XCHCH2XC single-bonded on Pt(111)""",
-    longDesc=u"""Calculated by Bjarne Kreitz at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
-            Based on DFT calculations by Bjarne Kreitz from Brown University. DFT calculations were performed with Quantum Espresso
+    shortDesc=u"""Came from averaged on Pt(111)""",
+    longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
+            Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=2.5e-2.
-            See Kreitz et al. 2023 (DOI:10.1021/acscatal.2c03378) for details on the DFT method. 
-  C--R--CR
- |||    ||
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
@@ -3902,7 +3868,7 @@ entry(
 3 N u0 p1 c0 {2,D} {4,S}
 4 R u0 px c0 {3,S}
 """,
-    thermo=ThermoData(
+       thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.71, 6.01, 6.79, 7.3, 7.93, 8.27, 8.56], 'J/(mol*K)'),
         H298=(-137.32, 'kJ/mol'),
@@ -3913,16 +3879,12 @@ entry(
             Based on DFT calculations by Kirk Badger from Brown University. DFT calculations were performed with Quantum Espresso
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-
-    O=NR
-     :
+            kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-3.
 ***********
 """,
     metal = "Pt",
     facet = "111",
 )
-
 
 entry(
     index = 122,
@@ -4657,7 +4619,7 @@ L1: RX
             L4: C#XC=XR
             L4: C-XR2C-XR
             L4: C-XRC-XR
-	L3: NXCX
+	    L3: NXCX
             L4: inv(C=XRN=X)
             L4: inv(C-XR2N=X)
             L4: inv(C-XR2N-XR)
