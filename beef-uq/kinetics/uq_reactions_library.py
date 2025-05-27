@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 
-N_members=2
+N_members=2000
 name='reactions'
 
 N_reactions = 50
 stick_coeff_indices = [1, 3, 4, 18, 19, 33, 34, 35, 36, 37, 38]
-no_data_indices = [27, 30, 31, 32]
+no_data_indices = [31, 32, 42, 50]
 indices = []
 for i in range(1,N_reactions+1):
     if i not in stick_coeff_indices and i not in no_data_indices:
@@ -17,9 +17,15 @@ for i in range(1,N_reactions+1):
 beef_keys = ['O-CO','h2cch-h-diss','hc-ch2-diss','CH2-CH2','hcch2-h-diss',
              'hcch-h-diss','hc-ch-diss','h2cch2-h-diss','CHC-H','hc-c-diss',
              'CO-OH','HO-H','O-H','COOH-O','CH2-H','CH-H','HC-O','H-CO','CO-H',
-             'C-OH','CH2-CH3','CCH-H-FS','CH2C-H-IS','XN-O','O-XNO','XN-OH',
-             'XOXNO_to_XNO2','H-XNH','XN-H','H-XNNH2','XNH-CH3',
-             'XN-CH3','XN-CN','XC-N','XO-XNO']
+             'C-OH','CH2-CH3',
+             'XC-XC',
+             'CCH-H-FS','CH2C-H-IS', 'XCCH2-H',
+             #'CH2CH2X_to_bi',
+             'XN-O','O-XNO','XN-OH',
+             'H-XNH','XN-H', 
+             'H-XNNH2','XNH-CH3',
+             'XN-CH3','XN-CN','XC-N',
+             ]
 ### Read reaction file and store as list
 with open('reactions.py','r') as f:
     original_lines = f.readlines()

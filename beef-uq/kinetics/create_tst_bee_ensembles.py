@@ -16,7 +16,7 @@ class Molecule:
         self.N_BEE = 2000
 
 def parse_input_file(inputfile, molecule):
-    script_dir = 'N-dft-data/'
+    script_dir = 'NOX-paper-dft-data/'
     abs_file_path = script_dir + str(inputfile)
 
     molecule.output_file = "".join((inputfile.strip('.dat'), '-bee.txt'))
@@ -168,7 +168,7 @@ def compute_ensemble(molecule):
 
     return
 
-for filename in glob.iglob('N-dft-data/*.dat'):
+for filename in glob.iglob('NOX-paper-dft-data/*.dat'):
     print(filename)
     test = Molecule()
     parse_input_file(filename.split('/')[1],test)

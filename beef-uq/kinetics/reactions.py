@@ -374,19 +374,19 @@ entry(
     longDesc = u"""my value"""
 )
 
-#entry(
-#    index = 27,
-#    label = "XCXC <=> XC + XC",
-#    kinetics = SurfaceArrhenius(
-#        A=(4.22E12, '1/s'),
-#        n = 0.0,
-#        Ea=(104, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Default""",
-#    longDesc = u"""DFT value from Katrin Blondal"""
-#)
+entry(
+    index = 27,
+    label = "XCXC <=> XC + XC",
+    kinetics = SurfaceArrhenius(
+        A=(4.22E12, '1/s'),
+        n = 0.0,
+        Ea=(104, 'kJ/mol'), #104 #189
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Default""",
+    longDesc = u"""DFT value from Katrin Blondal"""
+)
 
 entry(
     index = 28,
@@ -416,33 +416,33 @@ entry(
     longDesc = u"""my value"""
 )
 
-#entry(
-#    index = 30,
-#    label = "XCCH3 + Pt + Pt <=> XCXCH2 + XH",
-#    kinetics = SurfaceArrhenius(
-#        A=(1.07E+30, 'cm^4/(mol^2*s)'),
-#        n = 0,
-#        Ea=(103, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Default""",
-#    longDesc = u"""my value, it is endothermic, but kept in this direction, since we are going to switch it later afterwards due to the coverage dependence of CCH3"""
-#)
+entry(
+    index = 30,
+    label = "XCCH3 + Pt + Pt <=> XCXCH2 + XH",
+    kinetics = SurfaceArrhenius(
+        A=(1.07E+30, 'cm^4/(mol^2*s)'),
+        n = 0,
+        Ea=(103, 'kJ/mol'), #103 #174
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Default""",
+    longDesc = u"""my value, it is endothermic, but kept in this direction, since we are going to switch it later afterwards due to the coverage dependence of CCH3"""
+)
 
-#entry(
-#    index = 31,
-#    label = "CHCHX + Pt <=> XCHXCH",
-#    kinetics = SurfaceArrhenius(
-#        A=(5.0E21, 'cm^2/(mol*s)'),
-#        n = 0.0,
-#        Ea=(0.0, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Default""",
-#    longDesc = u"""Barrierless according to DFT calculations by Katrin Blondal"""
-#)
+entry(
+     index = 31,
+    label = "CHCHX + Pt <=> XCHXCH",
+    kinetics = SurfaceArrhenius(
+        A=(5.0E21, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea=(5.0, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Default""",
+    longDesc = u"""Barrierless according to DFT calculations by Katrin Blondal"""
+)
 
 #entry(
 #    index = 32,
@@ -450,7 +450,7 @@ entry(
 #    kinetics = SurfaceArrhenius(
 #        A=(1.78E21, 'cm^2/(mol*s)'),
 #        n = 0.0,
-#        Ea=(12, 'kJ/mol'),
+#        Ea=(12, 'kJ/mol'), #12 #51
 #        Tmin = (200, 'K'),
 #        Tmax = (3000, 'K'),
 #    ),
@@ -511,7 +511,7 @@ entry(
     index = 36,
     label = "NNO + Pt <=> XNNO",
     kinetics = StickingCoefficient(
-        A = .005,
+        A = .1,
         n = 0,
         Ea = (0, 'J/mol'),
         Tmin = (200, 'K'),
@@ -545,7 +545,7 @@ entry(
     kinetics = StickingCoefficient(
         A = 0.0001,
         n = 0,
-        Ea = (154, 'kJ/mol'),
+        Ea = (176, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -571,6 +571,7 @@ entry(
     metal = "Pt",
     facet = "111",
 )
+
 entry(
     index = 40,
     label = "XNO2 + Pt <=> XNO + XO",
@@ -605,22 +606,22 @@ entry(
     facet = "111",
 )
 
-entry(
-    index = 42,
-    label = "XOXNO  <=> XNO2 + Pt",
-    kinetics = SurfaceArrhenius(
-        A = (6.63E11, 'cm^2/(mol*s)'),  
-        n = 0.0,
-        Ea = (6, 'kJ/mol'),  
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Nitrogen/51""",
-    longDesc = u"""
-""",
-    metal = "Pt",
-    facet = "111",
-)
+#entry(
+#    index = 42,
+#    label = "XOXNO  <=> XNO2 + Pt",
+#    kinetics = SurfaceArrhenius(
+#        A = (6.63E11, 'cm^2/(mol*s)'),  
+#        n = 0.0,
+#        Ea = (6, 'kJ/mol'),  
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Nitrogen/51""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
 
 entry(
     index = 43,
@@ -741,20 +742,20 @@ entry(
     facet = "111",
 )
 
-entry(
-    index = 50,
-    label = "XOXNO <=> XNO + XO",
-    kinetics = SurfaceArrhenius(
-        A = (3.30E12, 'cm^2/(mol*s)'),  
-        n = 0.0,
-        Ea = (62, 'kJ/mol'),  
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
-    longDesc = u"""
-""",
-    metal = "Pt",
-    facet = "111",
-)
+#entry(
+#    index = 50,
+#    label = "XOXNO <=> XNO + XO",
+#    kinetics = SurfaceArrhenius(
+#        A = (3.30E12, 'cm^2/(mol*s)'),  
+#        n = 0.0,
+#        Ea = (62, 'kJ/mol'),  
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
 
