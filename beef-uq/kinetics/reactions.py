@@ -509,7 +509,7 @@ entry(
 
 entry(
     index = 36,
-    label = "NNO + Pt <=> XNNO",
+    label = "NNO + Pt <=> NNOX",
     kinetics = StickingCoefficient(
         A = .1,
         n = 0,
@@ -527,7 +527,7 @@ entry(
     index = 37,
     label = "NH3 + Pt <=> NH3X",
     kinetics = StickingCoefficient(
-        A = .73,
+        A = .8,
         n = 0,
         Ea = (0, 'J/mol'),
         Tmin = (200, 'K'),
@@ -758,4 +758,73 @@ entry(
 #    metal = "Pt",
 #    facet = "111",
 #)
+
+entry(
+    index = 51,
+    label = "XNOH + Pt <=> XNO + XH",
+    kinetics = SurfaceArrhenius(
+        A = (4.18e17, 'm^2/(mol*s)'),  
+        n = 0.0,
+        Ea = (98, 'kJ/mol'),  
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 52,
+    label = "HXNO + Pt <=> XNO + XH",
+    kinetics = SurfaceArrhenius(
+        A = (4.18e17, 'm^2/(mol*s)'),  
+        n = 0.0,
+        Ea = (59, 'kJ/mol'),  
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 53,
+    label = "HXNO + Pt <=> XO + XNH",
+    kinetics = SurfaceArrhenius(
+        A = (4.18e17, 'm^2/(mol*s)'),  
+        n = 0.0,
+        Ea = (142, 'kJ/mol'),  
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 54,
+    label = "NNOX + Pt <=> XNO + XN",
+    kinetics = SurfaceArrhenius(
+        A = (4.18e17, 'm^2/(mol*s)'),  
+        n = 0.0,
+        Ea = (97, 'kJ/mol'),  
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
 

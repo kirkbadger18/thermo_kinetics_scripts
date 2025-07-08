@@ -8,7 +8,7 @@ name='reactions'
 
 N_reactions = 50
 stick_coeff_indices = [1, 3, 4, 18, 19, 33, 34, 35, 36, 37, 38]
-no_data_indices = [31, 32, 42, 50]
+no_data_indices = [31, 32, 42, 50,51,52,53,54]
 indices = []
 for i in range(1,N_reactions+1):
     if i not in stick_coeff_indices and i not in no_data_indices:
