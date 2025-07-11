@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 
-N_members=2000
+N_members=5
 name='reactions'
 
-N_reactions = 50
+N_reactions = 54
 stick_coeff_indices = [1, 3, 4, 18, 19, 33, 34, 35, 36, 37, 38]
-no_data_indices = [31, 32, 42, 50,51,52,53,54]
+no_data_indices = [31, 32, 42, 50,54]
 indices = []
 for i in range(1,N_reactions+1):
     if i not in stick_coeff_indices and i not in no_data_indices:
@@ -25,6 +25,7 @@ beef_keys = ['O-CO','h2cch-h-diss','hc-ch2-diss','CH2-CH2','hcch2-h-diss',
              'H-XNH','XN-H', 
              'H-XNNH2','XNH-CH3',
              'XN-CH3','XN-CN','XC-N',
+             'XNO-H', 'H-XNO', 'HXN-O',
              ]
 ### Read reaction file and store as list
 with open('reactions.py','r') as f:
