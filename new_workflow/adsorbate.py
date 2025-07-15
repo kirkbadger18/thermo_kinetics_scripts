@@ -1,12 +1,14 @@
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+from matplotlib.ticker import NullFormatter, MaxNLocator, LogLocator
 
 class Adsorbate:
 
     def __init__(self, 
                  adsorbate_dict,
                  reference_dict,
-                 slab_energy,
-                 unit_cell_area, 
+                 slab_dict,
                  P_ref = 1.0E5,  #Pa
                  NASA7_T_switch = 1000.0,  #K
                  twoD_gas_cutoff_frequency = 100.0,  #cm^{-1}
@@ -46,11 +48,16 @@ class Adsorbate:
         self.frequencies = adsorbate_dict['frequencies']
         self.sites_occupied = adsorbate_dict['sites_occupied']
         self.beef_energies = adsorbate_dict['beef_energies']
+        self.connectivity = adsorbate_dict['connectivity']
+
         self.reference_compositions = reference_dict['reference_compositions']
         self.reference_energies = reference_dict['reference_energies']
         self.reference_EOF = reference_dict['reference_EOF']
-        self.unit_cell_area = unit_cell_area
-        self.slab_energy = slab_energy
+        
+        self.unit_cell_area = slab_dict['unit_cell_area']
+        self.slab_energy = slab_dict['slab_energy']
+        self.metal = slab_dict['metal']
+        self.facet = slab_dict['facet']
 
         self.P_ref = P_ref
         self.NASA7_T_switch = NASA7_T_switch
@@ -98,7 +105,8 @@ class Adsorbate:
 
     def _check_if_2D_gas(self):
         freq = self.frequencies
-        if np.min(freq[0:2]) <= 100:
+        self.twoD_gas = False
+        if np.max(freq[0:2]) <= 100:
             self.twoD_gas = True
         return
 
@@ -211,21 +219,191 @@ class Adsorbate:
         dH = dH_t + dH_v 
         Cp = Cp_t + Cv_v
         HOF_0K = self.get_0K_heat_of_formation()
-        HOF_298K = HOF_0K + dH[0] - HOF_correction
-        H = HOF_298K + dH - dH[0] 
+        self.HOF_298K = HOF_0K + dH[0] - HOF_correction
+        H = self.HOF_298K + dH - dH[0] 
         return Q, S, H, Cp
 
     def fit_NASA7_polynomial(self):
-        '''write me'''
-        return params
+        R = self.R
+        Q, S, H, Cp = self.get_thermo()
+        H0 = H[0]
+        S0 = S[0]
+        T_switch = self.NASA7_T_switch
+        temps=self.temperatures
+
+        i_switch = -1
+        for i in range(len(temps)):
+            if temps[i]==T_switch:
+                i_switch = i
+        if i_switch==-1:
+            print("We have a problem! Cannot find switching temperature")
+        
+    
+        #start by creating the independent variable matrix for the low-temperature fit
+        YT = np.array([np.ones(len(temps[:i_switch+1])),
+                       temps[:i_switch+1],
+                       temps[:i_switch+1]**2.0,
+                       temps[:i_switch+1]**3.0,
+                       temps[:i_switch+1]**4.0,
+                       ],
+                    dtype=np.float64,
+                    )
+        Y = YT.T
+
+        b = Cp[:i_switch+1] / R  
+        a_low = np.linalg.lstsq(Y, b, rcond=None)[0]
+
+        T_ref = 298.15
+        #now determine the enthalpy coefficient for the low-T region
+        subtract = a_low[0] + a_low[1]/2.0*T_ref + a_low[2]/3.0*T_ref**2.0 + a_low[3]/4.0*T_ref**3.0  + a_low[4]/5.0*T_ref**4.0
+        a_low = np.append(a_low, H0 / R - subtract * T_ref)
+        #now determine the entropy coefficient for the low-T region
+        subtract = a_low[0] * np.log(T_ref) + a_low[1]*T_ref     + a_low[2]/2.0*T_ref**2.0  + a_low[3]/3.0*T_ref**3.0  + a_low[4]/4.0*T_ref**4.0
+        a_low = np.append(a_low, S0 / R - subtract )
+
+        #
+        # NOW SWITCH TO HIGH-TEMPERATURE REGIME!
+        #
+        T_ref = T_switch
+        #compute the heat capacity, enthalpy, and entropy at the switching point
+        Cp_switch = a_low[0] + a_low[1]*T_ref + a_low[2]*T_ref**2.0  + a_low[3]*T_ref**3.0  + a_low[4]*T_ref**4.0
+        H_switch = a_low[0]*T_ref + a_low[1]/2.0*T_ref**2.0 + a_low[2]/3.0*T_ref**3.0  + a_low[3]/4.0*T_ref**4.0  + a_low[4]/5.0*T_ref**5.0 + a_low[5]
+        S_switch = a_low[0]*np.log(T_ref) + a_low[1]*T_ref + a_low[2]/2.0*T_ref**2.0  + a_low[3]/3.0*T_ref**3.0  + a_low[4]/4.0*T_ref**4.0 + a_low[6]
+    
+        #now repeat the process for the high-temperature regime
+        a_high = [0.0]
+        YT = np.array([temps[i_switch:],
+                       temps[i_switch:]**2.0,
+                       temps[i_switch:]**3.0,
+                       temps[i_switch:]**4.0,
+                       ],
+                      dtype=np.float64,
+                      )
+        Y = YT.transpose()
+
+        b = Cp[i_switch:] / R - Cp_switch
+        a_high = np.append(a_high, np.linalg.lstsq(Y, b, rcond=None)[0])
+        a_high[0] = Cp_switch - (a_high[0] + a_high[1]*T_switch + a_high[2]*T_switch**2.0  + a_high[3]*T_switch**3.0  + a_high[4]*T_switch**4.0)
+    
+        a_high = np.append(a_high, H_switch - (a_high[0] + a_high[1]/2.0*T_ref + a_high[2]/3.0*T_ref**2.0  + a_high[3]/4.0*T_ref**3.0  + a_high[4]/5.0*T_ref**4.0)*T_ref )
+        a_high = np.append(a_high, S_switch - (a_high[0]*np.log(T_ref) + a_high[1]*T_ref + a_high[2]/2.0*T_ref**2.0  + a_high[3]/3.0*T_ref**3.0  + a_high[4]/4.0*T_ref**4.0) )
+
+    
+        line = '    thermo = NASA(\n'
+        line += "        polynomials = [\n"
+        line += "            NASAPolynomial(coeffs=[%.8E, %.8E, %.8E, %.8E, %.8E, %.8E, %.8E], Tmin=(%.1F, 'K'), Tmax=(%.1F, 'K')), \n"%(a_low[0], a_low[1], a_low[2], a_low[3], a_low[4], a_low[5], a_low[6], 298.0, 1000.0)
+        line += "            NASAPolynomial(coeffs=[%.8E, %.8E, %.8E, %.8E, %.8E, %.8E, %.8E], Tmin=(%.1F, 'K'), Tmax=(%.1F, 'K')), \n"%(a_high[0], a_high[1], a_high[2], a_high[3], a_high[4], a_high[5], a_high[6], 1000.0, max(temps))
+        line += "        ],\n"
+        line += "        Tmin = (%.1F,'K'),\n"%(298)
+        line += "        Tmax = (%.1F,'K'),\n"%(max(temps))
+        line += "    ),\n"
+    
+    
+        #molecule.thermo_lines = line
+        #molecule.a_low = a_low
+        #molecule.a_high = a_high
+
+        return a_low, a_high
+
+    def get_thermo_from_NASA(self):
+        a_low, a_high = self.fit_NASA7_polynomial()
+        R = self.R
+        T_switch = self.NASA7_T_switch
+        temps = self.temperatures
+        i_switch = -1
+        for i in range(len(temps)):
+            if temps[i]==T_switch:
+                i_switch = i
+    
+        cp_fit = np.zeros(len(temps))
+        h_fit = np.zeros(len(temps))
+        s_fit = np.zeros(len(temps))
+
+        for (i,temp) in enumerate(temps):
+            if temp <= T_switch:
+                cp_fit[i] = a_low[0] + a_low[1]*temp + a_low[2]*temp**2.0  + a_low[3]*temp**3.0  + a_low[4]*temp**4.0
+                h_fit[i] = a_low[0]*temp + a_low[1]/2.0*temp**2.0 + a_low[2]/3.0*temp**3.0  + a_low[3]/4.0*temp**4.0  + a_low[4]/5.0*temp**5.0 + a_low[5]
+                s_fit[i] = a_low[0]*np.log(temp) + a_low[1]*temp + a_low[2]/2.0*temp**2.0  + a_low[3]/3.0*temp**3.0  + a_low[4]/4.0*temp**4.0 + a_low[6]
+            else:
+                cp_fit[i] = a_high[0] + a_high[1]*temp + a_high[2]*temp**2.0  + a_high[3]*temp**3.0  + a_high[4]*temp**4.0
+                h_fit[i] = a_high[0]*temp + a_high[1]/2.0*temp**2.0 + a_high[2]/3.0*temp**3.0  + a_high[3]/4.0*temp**4.0  + a_high[4]/5.0*temp**5.0 + a_high[5]
+                s_fit[i] = a_high[0]*np.log(temp) + a_high[1]*temp + a_high[2]/2.0*temp**2.0  + a_high[3]/3.0*temp**3.0  + a_high[4]/4.0*temp**4.0 + a_high[6]
+
+        cp_fit *= R        
+        h_fit *= R  
+        s_fit *= R
+
+        return s_fit, h_fit, cp_fit
 
     def plot_NASA_fit(self):
-        '''write me'''
+        
+        S_fit, H_fit, Cp_fit = self.get_thermo_from_NASA()
+        Q, S, H, Cp = self.get_thermo()
+        HOF_298 = self.HOF_298K
+        fig = plt.figure(dpi=300,figsize=(12,4))
+        gs = gridspec.GridSpec(1, 3)
+        gs.update(wspace=0.5, hspace=0.4)
+        ax0 = plt.subplot(gs[0])
+        ax1 = plt.subplot(gs[1])
+        ax2 = plt.subplot(gs[2])
+        temps = self.temperatures
+        ax0.plot(temps, Cp, marker='o', markeredgecolor='r',color='w',alpha=0.5,linestyle='None',label='stat. mech.')
+        ax0.plot(temps, Cp_fit, 'b', linewidth=2,label='NASA')
+        ax1.semilogy(temps, H - HOF_298, marker='o', markeredgecolor='r',color='w',alpha=0.5,linestyle='None')
+        ax1.semilogy(temps, H_fit - HOF_298, 'b', linewidth=2)
+        ax2.semilogy(temps, S, marker='o', markeredgecolor='r',color='w',alpha=0.5,linestyle='None')
+        ax2.semilogy(temps, S_fit, 'b', linewidth=2)
+        ax0.set_ylim(min(Cp_fit)*0.9, max(Cp_fit)*1.025)
+        ax1.set_ylim(top=max(H - HOF_298)*1.025)
+        ax2.set_ylim(10e-3*0.9, max(S_fit)*1.025)
+        ax1.yaxis.set_major_locator(LogLocator(base=10.0, numticks=4))
+        ax2.yaxis.set_major_locator(LogLocator(base=10.0, numticks=4))
+       
+        for ax in [ax0, ax1, ax2]:
+            ax.set_xlim(min(temps)*0.95, max(temps)*1.025)
+            ax.xaxis.set_major_locator(MaxNLocator(4))
+            ax.tick_params(axis='both', which='major', labelsize=12)
+            ax.set_xlabel("temperature (K)", fontsize=12)
+
+        ax0.legend()
+        ax0.set_ylabel(r'$\text{heat capacity}\, (\text{JK}^{-1}\text{mol}^{-1})$', fontsize=12)
+        ax1.set_ylabel(r'$\text{change in enthalpy}\, (\text{Jmol}^{-1})$', fontsize=12)
+        ax2.set_ylabel(r'$\text{entropy}\, (\text{JK}^{-1}\text{mol}^{-1})$', fontsize=12)
+    
+        plt.savefig('Parameterized_NASA7_fit.png',bbox_inches='tight',dpi=300,transparent=False)
         return None
 
-    def get_RMG_thermo_database_entry(self):
-        '''write me'''
-        return string
+    def get_RMG_thermo_database_entry(self, index, long_description):
+       
+        al, ah = self.fit_NASA7_polynomial()
+        str_l = 'coeffs={}'.format(str(al))
+        str_h = 'coeffs={}'.format(str(ah))
+        f0 = str(round(self.frequencies[0],2))
+        f1 = str(round(self.frequencies[1],2))
+        line = 'entry(\n'
+        line += '    index = {},\n'.format(str(index))
+        line += '    label = {},\n'.format(self.adsorbate_name)
+        line += '    molecule = \n'
+        line += '\"\"\"'
+        line += self.connectivity + '\n'
+        line += '\"\"\",\n'
+        line += '    thermo = NASA(\n'
+        line += '        polynomials = [\n'
+        line += '            NASAPolynomial(' + str_l + ', Tmin=(298.0, \'K\'), Tmax=(1000.0, \'K\')),\n'
+        line += '            NASAPolynomial(' + str_h + ', Tmin=(1000.0, \'K\'), Tmax=(2000.0, \'K\')),\n'
+        line += '        ],\n'
+        line += '        Tmin = (298.0,\'K\'),\n'
+        line += '        Tmax = (2000.0,\'K\'),\n'
+        line += '    ),\n' 
+        line += 'longDesc = u\"\"\"'
+        line += long_description + '\n'
+        if self.twoD_gas:
+            line += 'The two lowest frequencies, {} and {}, where replaced by the 2D gas model.\n'.format(f0,f1)
+        line += '""",\n'
+        line += '    metal = \"{}\",\n'.format(self.metal)
+        line += '    facet = \"{}\",\n)\n'.format(self.facet) 
+
+        return line
 
     """
     to do:
