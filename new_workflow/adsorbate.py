@@ -4,53 +4,54 @@ class Adsorbate:
 
     def __init__(self, 
                  adsorbate_dict,
-                 metal_dict,
+                 reference_dict,
+                 slab_energy,
+                 unit_cell_area, 
                  P_ref = 1.0E5,  #Pa
                  NASA7_T_switch = 1000.0,  #K
                  twoD_gas_cutoff_frequency = 100.0,  #cm^{-1}
 ):
         """
-        This dictionary should be structured like:
-        Adsorbate_dict = dict(
-                            name= NAME,
-                            dft_energy = E,
-                            zpe = ZPE,
-                            frequencies = FREQUENCIES,
-                            sites = Sites,
-                            beef_energies = Beef_Energies,
-                            composition = dict(C=a,H=b,O=c,N=d),
+        These dictionarys should be structured like:
+        adsorbate_dict = dict(
+                            adsorbate_name= string,
+                            dft_energy = float,
+                            zpe = float,
+                            frequencies = list,
+                            sites_occupied = float,
+                            beef_energies = list,
+                            adsorbate_composition = {"C": int,  "O": int, "H": int, "N": int},
                             )    
-        and Metal_dict should look like:
-        Pt_data = dict(
-                reference_compositions={"CH4": {"C": 1,  "O": 0, "H":4, "Pt": 0},
-                                        "H2O": {"C": 0, "O": 1, "H":2, "Pt": 0},
-                                        "H2": {"C": 0, "O": 0, "H":2, "Pt": 0},
-                                        "X": {"C": 0, "O": 0, "H":0, "Pt": 1},
+        reference_dict = dict(
+                reference_compositions={"CH4": {"C": int,  "O": int, "H": int, "N": int},
+                                        "H2O": {"C": int, "O": int, "H":2, "N": int},
+                                        "H2": {"C": int, "O": int, "H":2, "N": int},
                                         },
-                reference_energies= {"CH4":-324.294,
-                                     "H2O":-611.0186083,
-                                     "H2": -32.6984442,
-                                     "Pt":-377616.072,
+                reference_energies= {"CH4":float,
+                                     "H2O":float,
+                                     "H2": float,
+                                     "NH3: float,
                                     },
-                reference_EOF={"CH4":-66.557,
-                               "H2O":-238.929,
-                               "H2":0,
-                               "Pt":0,
+                reference_EOF={"CH4": float,
+                               "H2O": float,
+                               "H2": float,
+                               "NH3": float
                               },
-                unit_cell_area = 62.105e-20/9.0,
                 )
         """                    
-        self.name = adsorbate_dict['name']
-        self.composition = adsorbate_dict['composition']
+        self.adsorbate_name = adsorbate_dict['adsorbate_name']
+        self.adsorbate_composition = adsorbate_dict['adsorbate_composition']
         self.dft_energy = adsorbate_dict['dft_energy']
         self.zpe = adsorbate_dict['zpe']
         self.frequencies = adsorbate_dict['frequencies']
-        self.sites = adsorbate_dict['sites']
+        self.sites_occupied = adsorbate_dict['sites_occupied']
         self.beef_energies = adsorbate_dict['beef_energies']
-        self.reference_compositions = metal_dict
-        self.reference_energies = metal_dict['reference_energies']
-        self.unit_cell_area = metal_dict['unit_cell_area']
-       
+        self.reference_compositions = reference_dict['reference_compositions']
+        self.reference_energies = reference_dict['reference_energies']
+        self.reference_EOF = reference_dict['reference_EOF']
+        self.unit_cell_area = unit_cell_area
+        self.slab_energy = slab_energy
+
         self.P_ref = P_ref
         self.NASA7_T_switch = NASA7_T_switch
         self.twoD_gas_cutoff_frequency = twoD_gas_cutoff_frequency
@@ -65,7 +66,7 @@ class Adsorbate:
 
     def _get_adsorbate_mass(self):
         masses={'H': 1.01, 'C': 12.01, 'N': 14, 'O': 16}
-        comp = self.composition
+        comp = self.adsorbate_composition
         self.adsorbate_mass=comp['H']*masses['H']
         self.adsorbate_mass+=comp['O']*masses['O']
         self.adsorbate_mass+=comp['C']*masses['C']
@@ -93,7 +94,6 @@ class Adsorbate:
         self.hartree_to_kcalpermole = 627.5095 #convert hartree/molecule to kcal/mol
         self.hartree_to_kJpermole = 2627.25677 #convert hartree/molecule to kJ/mol
         self.eV_to_kJpermole = 96.485 #convert eV/molecule to kJ/mol
-        self.eV_to_kJpermole = 96.485 #convert eV/molecule to kJ/mol
         return
 
     def _check_if_2D_gas(self):
@@ -102,10 +102,41 @@ class Adsorbate:
             self.twoD_gas = True
         return
 
+    def get_0K_heat_of_formation(self):
+
+        comp = self.adsorbate_composition
+        comp_keys = list(comp.keys())
+        ref_comp = self.reference_compositions 
+        ref_mol_keys=list(ref_comp.keys())
+        
+        num_elements = len(comp_keys)
+        num_references = len(ref_mol_keys)
+
+        N = np.zeros(num_elements)
+        for i, key in enumerate(comp_keys):
+            N[i] = comp[key]
+
+        N_R = np.zeros((num_references, num_elements))
+        for i, mol_key in enumerate(ref_mol_keys):
+            for j, key in enumerate(comp_keys):
+                N_R[i,j] = ref_comp[mol_key][key]
+
+        M=-N.dot(np.linalg.inv(N_R))
+
+        H_ref=np.array(list(self.reference_EOF.values()))
+        E_ref=np.array(list(self.reference_energies.values()))
+
+        E=self.dft_energy[0]+self.zpe[0] - self.slab_energy
+        E_kJ = E * self.eV_to_kJpermole
+        E_ref_term = M.dot(E_ref) * self.eV_to_kJpermole
+        H_ref_term = M.dot(H_ref)
+        HOF_0K = (E_kJ + E_ref_term - H_ref_term)
+        return HOF_0K
+
     def get_2D_translational_thermo(self):
         
         area = self.unit_cell_area
-        sites = self.sites
+        sites = self.sites_occupied
         pi = np.pi
         temps = self.temperatures
         m = self.adsorbate_mass
@@ -118,13 +149,12 @@ class Adsorbate:
         S_trans  = np.zeros(len(temps))
         dH_trans  = np.zeros(len(temps))
         Cp_trans  = np.zeros(len(temps))
-
-        for i, T in enumerate(temps):
-            
-            q_trans[i] = (2*pi*m*amu*kB*T/h**2) * area * sites
-            S_trans[i] = R * (2.0 + np.log(q_trans[i]))
-            Cp_trans[i] = R
-            dH_trans[i] = R * T            
+        if self.twoD_gas:
+            for i, T in enumerate(temps):    
+                q_trans[i] = (2*pi*m*amu*kB*T/h**2) * area * sites
+                S_trans[i] = R * (2.0 + np.log(q_trans[i]))
+                Cp_trans[i] = R
+                dH_trans[i] = R * T            
    
         return q_trans, S_trans, dH_trans, Cp_trans
 
@@ -160,8 +190,30 @@ class Adsorbate:
         return q_vib, S_vib, dH_vib, Cv_vib
 
     def get_thermo(self):
-        '''write me'''
-        return Q, S, dH, Cp
+
+        h_correction = 4.234 #kJ/mol. enthalpy_H(298) - enthalpy_H(0)
+        c_correction = 1.051 #kJ/mol. enthalpy_C(298) - enthalpy_C(0)
+        n_correction = 4.335 #kJ/mol. enthalpy_N(298) - enthalpy_N(0)
+        o_correction = 4.340 #kJ/mol. enthalpy_O(298) - enthalpy_O(0)
+    
+        HOF_correction = 0.0
+        comp = self.adsorbate_composition
+        HOF_correction += comp['H'] * h_correction
+        HOF_correction += comp['C'] * c_correction    
+        HOF_correction += comp['N'] * n_correction
+        HOF_correction += comp['O'] * o_correction        
+   
+        q_t, S_t, dH_t, Cp_t = self.get_2D_translational_thermo()
+        q_v, S_v, dH_v, Cv_v = self.get_vibrational_thermo()
+
+        Q = q_v * q_t
+        S = S_t + S_v 
+        dH = dH_t + dH_v 
+        Cp = Cp_t + Cv_v
+        HOF_0K = self.get_0K_heat_of_formation()
+        HOF_298K = HOF_0K + dH[0] - HOF_correction
+        H = HOF_298K + dH - dH[0] 
+        return Q, S, H, Cp
 
     def fit_NASA7_polynomial(self):
         '''write me'''
