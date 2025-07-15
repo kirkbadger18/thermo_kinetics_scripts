@@ -9,6 +9,7 @@ class Adsorbate:
                  adsorbate_dict,
                  reference_dict,
                  slab_dict,
+                 long_description,
                  P_ref = 1.0E5,  #Pa
                  NASA7_T_switch = 1000.0,  #K
                  twoD_gas_cutoff_frequency = 100.0,  #cm^{-1}
@@ -59,10 +60,11 @@ class Adsorbate:
         self.metal = slab_dict['metal']
         self.facet = slab_dict['facet']
 
+        self.long_description = long_description
         self.P_ref = P_ref
         self.NASA7_T_switch = NASA7_T_switch
         self.twoD_gas_cutoff_frequency = twoD_gas_cutoff_frequency
-
+        
         self._load_constants()
         self._get_adsorbate_mass()
         self._get_temperatures()
@@ -373,7 +375,7 @@ class Adsorbate:
         plt.savefig('Parameterized_NASA7_fit.png',bbox_inches='tight',dpi=300,transparent=False)
         return None
 
-    def get_RMG_thermo_database_entry(self, index, long_description):
+    def get_RMG_thermo_database_entry(self, index):
        
         al, ah = self.fit_NASA7_polynomial()
         str_l = 'coeffs={}'.format(str(al))
@@ -396,7 +398,7 @@ class Adsorbate:
         line += '        Tmax = (2000.0,\'K\'),\n'
         line += '    ),\n' 
         line += 'longDesc = u\"\"\"'
-        line += long_description + '\n'
+        line += self.long_description + '\n'
         if self.twoD_gas:
             line += 'The two lowest frequencies, {} and {}, where replaced by the 2D gas model.\n'.format(f0,f1)
         line += '""",\n'

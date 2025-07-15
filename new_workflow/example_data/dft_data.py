@@ -9,7 +9,7 @@ by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were app
 kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
 fmax=2.5e-2.'''
 
-OXCXCH2 = dict(
+adsorbate_dict = dict(
             adsorbate_name = 'OXCXCH2',
             adsorbate_composition = {'H':2, 'C':2, 'N':0, 'O':1},
             dft_energy = [-378744.484815, 'eV'],

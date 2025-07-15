@@ -1,4 +1,4 @@
-Pt111_data = dict(
+slab_dict = dict(
         slab_energy = -377616.072,
         metal = 'Pt',
         facet = '111',

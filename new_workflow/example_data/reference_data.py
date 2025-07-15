@@ -1,4 +1,4 @@
-reference_data = dict(
+reference_dict = dict(
                 reference_compositions={"CH4": {"C": 1,  "O": 0, "H":4, "N": 0},
                                         "H2O": {"C": 0, "O": 1, "H":2, "N": 0},
                                         "H2": {"C": 0, "O": 0, "H":2, "N": 0},
