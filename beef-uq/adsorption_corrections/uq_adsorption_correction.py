@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 Name='adsorptionPt111'
-N_members=2000
+N_members=25
 
 
 key1 = '    label' 
