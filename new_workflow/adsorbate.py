@@ -48,7 +48,6 @@ class Adsorbate:
         self.zpe = adsorbate_dict['zpe']
         self.frequencies = adsorbate_dict['frequencies']
         self.sites_occupied = adsorbate_dict['sites_occupied']
-        self.beef_energies = adsorbate_dict['beef_energies']
         self.connectivity = adsorbate_dict['connectivity']
 
         self.reference_compositions = reference_dict['reference_compositions']
@@ -407,12 +406,36 @@ class Adsorbate:
 
         return line
 
-    """
-    to do:
-        - write the "write mes"
-        - add some functions to get beef ensemble of NASA7 polynomials
-        - think of file format to store and read in beef_energies, 
-          maybe with np.savetxt, np.loadtxt, or maybe pandas
-        - Create a class Adsorbates, which can handle lists of adsorbate_dicts,
-          and make RMG thermo files entirely.
-    """
+class Adsorbates:
+       
+    def __init__(self,
+                 adsorbate_list,
+                 reference_dict,                                                                                                                                                                                                  slab_dict,
+                 long_description,
+                 P_ref = 1.0E5,  #Pa
+                 NASA7_T_switch = 1000.0,  #K
+                 twoD_gas_cutoff_frequency = 100.0,  #cm^{-1}
+                 ):   
+        
+    
+        self.adsorbate_list = []
+        for ads_dict in adsorbate_list:
+            ads = Adsorbate(ads_dict, reference_dict, slab_dict, long_description,
+                            P_ref,NASA7_T_switch,twoD_gas_cutoff_frequency)
+            self.adsorbate_list.append(ads)
+            
+        return
+
+    def plot_fits(self):
+        for ads in self.adsorbate_list:
+            ads.plot_NASA_fit()
+        return
+
+    def get_RMG_entries(self):
+        string_tot = ''
+        for i, ads in enumerate(self.adsorbate_list):
+            i += 1
+            rmg_str = ads.get_RMG_thermo_database_entry(i) + '\n'
+            string_tot += rmg_str
+        return string_tot
+
