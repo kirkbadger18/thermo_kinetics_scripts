@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 Name='surfaceThermoPt111'
-N_members=25
+N_members=10
 
 key1 = 'NASAPolynomial(coeffs=[' 
 key2 = '        Tmin'
