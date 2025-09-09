@@ -5,7 +5,7 @@ from functions import *
 fam_path = '/home/kirk/Projects/development/RMG/RMG-database/input/kinetics/families/'
 Delta_a = 0.1
 Delta_E0 = 15
-N_members = 25
+N_members = 10
 
 fam_lines, E0_list, E0_lines, a_list, a_lines = parse_rules(fam_path,fams) 
 make_directories(fams)
