@@ -1,19 +1,21 @@
 import numpy as np
+from numpy.linalg import inv
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
-from matplotlib.ticker import NullFormatter, MaxNLocator, LogLocator
+from matplotlib.ticker import MaxNLocator, LogLocator
+
 
 class Adsorbate:
 
-    def __init__(self, 
+    def __init__(self,
                  adsorbate_dict,
                  reference_dict,
                  slab_dict,
                  long_description,
-                 P_ref = 1.0E5,  #Pa
-                 NASA7_T_switch = 1000.0,  #K
-                 twoD_gas_cutoff_frequency = 100.0,  #cm^{-1}
-):
+                 P_ref=1.0E5,  # Pa
+                 NASA7_T_switch=1000.0,  # K
+                 twoD_gas_cutoff_frequency=100.0,  # cm^{-1}
+                 ):
         """
         These dictionarys should be structured like:
         adsorbate_dict = dict(
@@ -23,12 +25,16 @@ class Adsorbate:
                             frequencies = list,
                             sites_occupied = float,
                             beef_energies = list,
-                            adsorbate_composition = {"C": int,  "O": int, "H": int, "N": int},
-                            )    
+                            adsorbate_composition = {"C": int,  "O": int,
+                                                     "H": int, "N": int},
+                            )
         reference_dict = dict(
-                reference_compositions={"CH4": {"C": int,  "O": int, "H": int, "N": int},
-                                        "H2O": {"C": int, "O": int, "H":2, "N": int},
-                                        "H2": {"C": int, "O": int, "H":2, "N": int},
+                reference_compositions={"CH4": {"C": int,  "O": int,
+                                        "H": int, "N": int},
+                                        "H2O": {"C": int, "O": int,
+                                        "H":2, "N": int},
+                                        "H2": {"C": int, "O": int,
+                                        "H":2, "N": int},
                                         },
                 reference_energies= {"CH4":float,
                                      "H2O":float,
@@ -41,7 +47,7 @@ class Adsorbate:
                                "NH3": float
                               },
                 )
-        """                    
+        """
         self.adsorbate_name = adsorbate_dict['adsorbate_name']
         self.adsorbate_composition = adsorbate_dict['adsorbate_composition']
         self.dft_energy = adsorbate_dict['dft_energy']
@@ -53,9 +59,8 @@ class Adsorbate:
         self.reference_compositions = reference_dict['reference_compositions']
         self.reference_energies = reference_dict['reference_energies']
         self.reference_EOF = reference_dict['reference_EOF']
-        
         self.unit_cell_area = slab_dict['unit_cell_area']
-        self.slab_energy = slab_dict['slab_energy']
+        # self.slab_energy = slab_dict['slab_energy']
         self.metal = slab_dict['metal']
         self.facet = slab_dict['facet']
 
@@ -63,7 +68,7 @@ class Adsorbate:
         self.P_ref = P_ref
         self.NASA7_T_switch = NASA7_T_switch
         self.twoD_gas_cutoff_frequency = twoD_gas_cutoff_frequency
-        
+
         self._load_constants()
         self._get_adsorbate_mass()
         self._get_temperatures()
@@ -73,12 +78,12 @@ class Adsorbate:
         return self.name
 
     def _get_adsorbate_mass(self):
-        masses={'H': 1.01, 'C': 12.01, 'N': 14, 'O': 16}
+        masses = {'H': 1.01, 'C': 12.01, 'N': 14, 'O': 16}
         comp = self.adsorbate_composition
-        self.adsorbate_mass=comp['H']*masses['H']
-        self.adsorbate_mass+=comp['O']*masses['O']
-        self.adsorbate_mass+=comp['C']*masses['C']
-        self.adsorbate_mass+=comp['N']*masses['N']
+        self.adsorbate_mass = comp['H']*masses['H']
+        self.adsorbate_mass += comp['O']*masses['O']
+        self.adsorbate_mass += comp['C']*masses['C']
+        self.adsorbate_mass += comp['N']*masses['N']
         return
 
     def _get_temperatures(self):
@@ -86,22 +91,22 @@ class Adsorbate:
         T0 = [298.15]
         T_low = 300.0
         T_high = 2000.0
-        dT = 10.0 #temperature increment
+        dT = 10.0  # temperature increment
         self.temperatures = np.append(T0, np.arange(T_low, T_high+dT, dT))
         return
 
     def _load_constants(self):
-        self.R = 8.3144621E-3 #ideal Gas constant in kJ/mol-K
-        self.kB = 1.38065e-23 #Boltzmann constant in J/K
-        self.h = 6.62607e-34 #Planck constant in J*s
-        self.c = 2.99792458e8 #speed of light in m/s
-        self.amu = 1.6605e-27 #atomic mass unit in kg
-        self.Avogadro = 6.0221E23 #mole^-1
-        self.GHz_to_Hz = 1.0E9 #convert rotational constants from GHz to Hz
-        self.invcm_to_invm = 1.0E2 #convert cm^-1 to m^-1, for frequencies
-        self.hartree_to_kcalpermole = 627.5095 #convert hartree/molecule to kcal/mol
-        self.hartree_to_kJpermole = 2627.25677 #convert hartree/molecule to kJ/mol
-        self.eV_to_kJpermole = 96.485 #convert eV/molecule to kJ/mol
+        self.R = 8.3144621E-3  # ideal Gas constant in kJ/mol-K
+        self.kB = 1.38065e-23  # Boltzmann constant in J/K
+        self.h = 6.62607e-34  # Planck constant in J*s
+        self.c = 2.99792458e8  # speed of light in m/s
+        self.amu = 1.6605e-27  # atomic mass unit in kg
+        self.Avogadro = 6.0221E23  # mole^-1
+        self.GHz_to_Hz = 1.0E9  # convert rotational constants from GHz to Hz
+        self.invcm_to_invm = 1.0E2  # convert cm^-1 to m^-1, for frequencies
+        self.hartree_to_kcalpermole = 627.5095
+        self.hartree_to_kJpermole = 2627.25677
+        self.eV_to_kJpermole = 96.485  # convert eV/molecule to kJ/mol
         return
 
     def _check_if_2D_gas(self):
@@ -113,32 +118,33 @@ class Adsorbate:
 
     def get_0K_heat_of_formation(self):
 
-        comp = self.adsorbate_composition
-        comp_keys = list(comp.keys())
-        ref_comp = self.reference_compositions 
-        ref_mol_keys=list(ref_comp.keys())
-        
-        num_elements = len(comp_keys)
-        num_references = len(ref_mol_keys)
+        ads_comp_dict = self.adsorbate_composition
+        ads_comp_keys = list(ads_comp_dict.keys())
+        ref_species_dict = self.reference_compositions
+        ref_species_keys = list(ref_species_dict.keys())
 
-        N = np.zeros(num_elements)
-        for i, key in enumerate(comp_keys):
-            N[i] = comp[key]
+        num_ads_elements = len(ads_comp_keys)
+        num_ref_species = len(ref_species_keys)
+        assert num_ads_elements == num_ref_species
 
-        N_R = np.zeros((num_references, num_elements))
-        for i, mol_key in enumerate(ref_mol_keys):
-            for j, key in enumerate(comp_keys):
-                N_R[i,j] = ref_comp[mol_key][key]
+        ads_comp_vector = np.zeros(num_ads_elements)
+        for i, elmnt_key in enumerate(ads_comp_keys):
+            ads_comp_vector[i] = ads_comp_dict[elmnt_key]
 
-        M=-N.dot(np.linalg.inv(N_R))
+        ref_comp_matrix = np.zeros((num_ref_species, num_ref_species))
+        for i, spec_key in enumerate(ref_species_keys):
+            for j, elmnt_key in enumerate(ads_comp_keys):
+                ref_comp_matrix[j, i] = ref_species_dict[spec_key][elmnt_key]
 
-        H_ref=np.array(list(self.reference_EOF.values()))
-        E_ref=np.array(list(self.reference_energies.values()))
+        stoich_vector = -np.matmul(inv(ref_comp_matrix), ads_comp_vector)
 
-        E=self.dft_energy[0]+self.zpe[0] - self.slab_energy
+        H_ref = np.array(list(self.reference_EOF.values()))
+        E_ref = np.array(list(self.reference_energies.values()))
+
+        E = self.dft_energy[0]+self.zpe[0]  # - self.slab_energy
         E_kJ = E * self.eV_to_kJpermole
-        E_ref_term = M.dot(E_ref) * self.eV_to_kJpermole
-        H_ref_term = M.dot(H_ref)
+        E_ref_term = stoich_vector.dot(E_ref) * self.eV_to_kJpermole
+        H_ref_term = stoich_vector.dot(H_ref)
         HOF_0K = (E_kJ + E_ref_term - H_ref_term)
         return HOF_0K
 
