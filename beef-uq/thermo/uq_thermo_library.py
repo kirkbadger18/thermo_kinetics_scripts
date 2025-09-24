@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import os
+import glob
 
 Name='surfaceThermoPt111'
 N_members=10
@@ -27,7 +28,14 @@ for i, line in enumerate(original_lines):
         if j % 2 == 0:
             NASA_lines.append(i)
         j += 1
-
+files = glob.glob('dft-data/*.dat')
+adsnames = []
+for file in files:
+    endfile = file.split('data/')[1]
+    adsnames.append(endfile.split('.dat')[0])
+missing = [ads for ads in adsnames if ads not in labels]
+assert missing == []
+ 
 beef_data = np.zeros([N_members,len(labels)])
 for i in range(len(labels)):
     filename='beef-ensembles/' + str(labels[i]) + '_bee.txt'
