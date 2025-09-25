@@ -385,7 +385,7 @@ class Adsorbate:
     def get_RMG_thermo_database_entry(self, index):
         al, ah = self.fit_NASA7_polynomial()
         str_l = 'coeffs=[{}]'.format(", ".join(map(str, al)))
-        str_h = 'coeffs=[{}]'.format(", ".join(map(str, al)))
+        str_h = 'coeffs=[{}]'.format(", ".join(map(str, ah)))
         f0 = str(round(self.frequencies[0],2))
         f1 = str(round(self.frequencies[1],2))
         line = 'entry(\n'
