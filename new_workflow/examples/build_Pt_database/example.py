@@ -1,4 +1,4 @@
-lfrom data.Pt111_ads_data import Pt111_ads_data
+from data.Pt111_ads_data import Pt111_ads_data
 from data.reference_data import reference_dict
 from data.slab_data import slab_dict
 import sys
