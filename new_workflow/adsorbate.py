@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from matplotlib.ticker import MaxNLocator, LogLocator
 import textwrap
+import warnings
 
 
 class Adsorbate:
@@ -382,15 +383,14 @@ class Adsorbate:
         return None
 
     def get_RMG_thermo_database_entry(self, index):
-       
         al, ah = self.fit_NASA7_polynomial()
-        str_l = 'coeffs={}'.format(str(al))
-        str_h = 'coeffs={}'.format(str(ah))
+        str_l = 'coeffs=[{}]'.format(", ".join(map(str, al)))
+        str_h = 'coeffs=[{}]'.format(", ".join(map(str, al)))
         f0 = str(round(self.frequencies[0],2))
         f1 = str(round(self.frequencies[1],2))
         line = 'entry(\n'
         line += '    index = {},\n'.format(str(index))
-        line += '    label = {},\n'.format(self.adsorbate_name)
+        line += '    label = \"{}\",\n'.format(self.adsorbate_name)
         line += '    molecule = \n'
         line += '\"\"\"\n'
         line += self.connectivity
