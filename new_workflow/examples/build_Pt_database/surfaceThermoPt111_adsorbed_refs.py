@@ -1,14 +1,45 @@
+
+#!/usr/bin/env python
+# encoding: utf-8
+name = " "
+shortDesc = u" "
+longDesc = u"""
+    
+"""
+
 entry(
     index = 1,
+    label = "vacant",
+    molecule =
+"""
+1 X  u0 p0 c0
+""",
+    thermo = NASA(
+        polynomials = [
+            NASAPolynomial(coeffs=[
+            0.000000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00,
+            0.000000000E+00,   0.000000000E+00,   0.000000000E+00], Tmin=(298.0,'K'), Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[
+            0.000000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00,
+            0.000000000E+00,   0.000000000E+00,   0.000000000E+00], Tmin=(1000.0,'K'), Tmax=(3000.0, 'K')),
+        ],
+        Tmin = (298.0, 'K'),
+        Tmax = (3000.0, 'K'),
+    ),
+    metal = "Pt",
+    facet = "111",
+)
+entry(
+    index = 2,
     label = XOC(OH)O,
     molecule = 
-"""1 O u0 p2 c0 {4,S} {6,S}
+"""
+1 O u0 p2 c0 {4,S} {6,S}
 2 O u0 p2 c0 {4,S} {5,S}
 3 O u0 p2 c0 {4,D}
 4 C u0 p0 c0 {1,S} {2,S} {3,D}
 5 H u0 p0 c0 {2,S}
 6 X u0 p0 c0 {1,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -33,17 +64,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 2,
+    index = 3,
     label = OHXCXNH,
     molecule = 
-"""1 X  u0  p0  c0  {5,D}
+"""
+1 X  u0  p0  c0  {5,D}
 2 X  u0  p0  c0  {6,S}
 3 H  u0  p0  c0  {4,S}
 4 O  u0  p2  c0  {3,S} {5,S}
 5 C  u0  p0  c0  {1,D} {4,S} {6,S}
 6 N  u0  p1  c0  {2,S} {5,S} {7,S}
 7 H  u0  p0  c0  {6,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -68,14 +99,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 3,
+    index = 4,
     label = XNH2,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 N  u0 p1 c0 {1,S} {3,S} {4,S}
 3 H  u0 p0 c0 {2,S}
 4 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -100,15 +131,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 4,
+    index = 5,
     label = HOOHX,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 O  u0 p2 c0 {3,S} {4,S}
 3 O  u0 p2 c0 {2,S} {5,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -134,10 +165,11 @@ The two lowest frequencies, 12 and 47.7, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 5,
+    index = 6,
     label = H2C(OH)OHX,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 O u0 p2 c0 {1,S} {6,S} 
 3 O u0 p2 c0 {1,S} {7,S}
 4 H u0 p0 c0 {1,S}
@@ -145,7 +177,6 @@ entry(
 6 H u0 p0 c0 {2,S}
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0 
-
 """,
     thermo = NASA(
         polynomials = [
@@ -171,15 +202,15 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 6,
+    index = 7,
     label = XCHNH,
     molecule = 
-"""1 X  u0  p0 c0 {2,S}
+"""
+1 X  u0  p0 c0 {2,S}
 2 C  u0  p0 c0 {1,S} {3,D} {4,S}
 3 N  u0  p1 c0 {2,D} {5,S}
 4 H  u0  p0 c0 {2,S}
 5 H  u0  p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -205,10 +236,11 @@ The two lowest frequencies, 35.45 and 72.61, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 7,
+    index = 8,
     label = CHCCH3X,
     molecule = 
-"""1 C u0 p0 c0 {2,T} {4,S}
+"""
+1 C u0 p0 c0 {2,T} {4,S}
 2 C u0 p0 c0 {1,T} {3,S}
 3 C u0 p0 c0 {2,S} {5,S} {6,S} {7,S}
 4 H u0 p0 c0 {1,S}
@@ -216,7 +248,6 @@ entry(
 6 H u0 p0 c0 {3,S}
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0 
-
 """,
     thermo = NASA(
         polynomials = [
@@ -242,10 +273,11 @@ The two lowest frequencies, 51.8 and 63.4, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 8,
+    index = 9,
     label = CH3CH3X,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 C  u0 p0 c0 {2,S} {7,S} {8,S} {9,S}
 4 H  u0 p0 c0 {2,S}
@@ -254,7 +286,6 @@ entry(
 7 H  u0 p0 c0 {3,S}
 8 H  u0 p0 c0 {3,S}
 9 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -280,10 +311,11 @@ The two lowest frequencies, 12 and 77.2, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 9,
+    index = 10,
     label = CH2CCH2X,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,D} {4,S} {5,S}
 2 C u0 p0 c0 {1,D} {3,D} 
 3 C u0 p0 c0 {2,D} {6,S} {7,S}
 4 H u0 p0 c0 {1,S}
@@ -291,7 +323,6 @@ entry(
 6 H u0 p0 c0 {3,S}
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -317,13 +348,13 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 10,
+    index = 11,
     label = XCO,
     molecule = 
-"""1 X  u0  p0 c0 {2,D}
+"""
+1 X  u0  p0 c0 {2,D}
 2 C  u0  p0 c0 {1,D} {3,D}
 3 O  u0  p2 c0 {2,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -348,14 +379,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 11,
+    index = 12,
     label = HXNO,
     molecule = 
-"""1 X  u0  p0 c0  {3,D}
+"""
+1 X  u0  p0 c0  {3,D}
 2 H  u0  p0 c0  {3,S}
 3 N  u0  p0 c+1  {1,D} {2,S} {4,S}
 4 O  u0  p3 c-1  {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -381,14 +412,14 @@ The two lowest frequencies, 38.5 and 75.09, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 12,
+    index = 13,
     label = XCHO,
     molecule = 
-"""1 X  u0  p0 c0 {2,S}
+"""
+1 X  u0  p0 c0 {2,S}
 2 C  u0  p0 c0 {1,S} {3,D} {4,S}
 3 O  u0  p2 c0 {2,D}
 4 H  u0  p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -413,16 +444,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 13,
+    index = 14,
     label = XCH2XO,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 X  u0 p0 c0 {4,S}
 3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
 4 O  u0 p2 c0 {2,S} {3,S}
 5 H  u0 p0 c0 {3,S}
 6 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -447,13 +478,13 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 14,
+    index = 15,
     label = XCH,
     molecule = 
-"""1 X  u0 p0 c0 {2,T}
+"""
+1 X  u0 p0 c0 {2,T}
 2 C  u0 p0 c0 {1,T} {3,S}
 3 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -478,16 +509,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 15,
+    index = 16,
     label = CH2NHX,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 C  u0 p0 c0 {3,D} {4,S} {5,S}
 3 N  u0 p1 c0 {2,D} {6,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -513,17 +544,17 @@ The two lowest frequencies, 57.54 and 70.14, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 16,
+    index = 17,
     label = CH2CH2X,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {3,S} {4,S}
+"""
+1 C u0 p0 c0 {2,D} {3,S} {4,S}
 2 C u0 p0 c0 {1,D} {5,S} {6,S}
 3 H u0 p0 c0 {1,S}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {2,S}
 6 H u0 p0 c0 {2,S}
 7 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -549,10 +580,11 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 17,
+    index = 18,
     label = XNXNCH3,
     molecule = 
-"""1 X  u0 p0 c0 {3,D}
+"""
+1 X  u0 p0 c0 {3,D}
 2 X  u0 p0 c0 {4,S}
 3 N  u0 p1 c0 {1,D} {4,S}
 4 N  u0 p1 c0 {2,S} {3,S} {5,S}
@@ -560,7 +592,6 @@ entry(
 6 H  u0 p0 c0 {5,S}
 7 H  u0 p0 c0 {5,S}
 8 H  u0 p0 c0 {5,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -585,17 +616,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 18,
+    index = 19,
     label = XOXONXO,
     molecule = 
-"""1 X  u0  p0 c0  {4,S}
+"""
+1 X  u0  p0 c0  {4,S}
 2 X  u0  p0 c0  {5,S}
 3 X  u0  p0 c0  {7,S}
 4 O  u0  p2 c0  {1,S} {6,S}
 5 O  u0  p2 c0  {2,S} {6,S}
 6 N  u0  p1 c0  {4,S} {5,S} {7,S}
 7 O  u0  p2 c0  {3,S} {6,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -621,10 +652,11 @@ The two lowest frequencies, 71.1 and 71.28, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 19,
+    index = 20,
     label = XCH2CH2OH,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {8,S}
+"""
+1 O u0 p2 c0 {2,S} {8,S}
 2 C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 C u0 p0 c0 {2,S} {6,S} {7,S} {9,S}
 4 H u0 p0 c0 {2,S}
@@ -633,7 +665,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 H u0 p0 c0 {1,S}
 9 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -659,17 +690,17 @@ The two lowest frequencies, 12 and 93.4, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 20,
+    index = 21,
     label = XCCHCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {3,S} {4,S}
+"""
+1 C u0 p0 c0 {2,D} {3,S} {4,S}
 2 C u0 p0 c0 {1,D} {5,S} {6,S}
 3 C u0 p0 c0 {1,S} {7,T}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {2,S}
 6 H u0 p0 c0 {2,S}
 7 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -694,16 +725,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 21,
+    index = 22,
     label = XCCH3,
     molecule = 
-"""1 X  u0 p0 c0 {3,T}
+"""
+1 X  u0 p0 c0 {3,T}
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 C  u0 p0 c0 {1,T} {2,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -728,17 +759,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 22,
+    index = 23,
     label = OHXCNH2,
     molecule = 
-"""1 X  u0  p0  c0  {4,D}
+"""
+1 X  u0  p0  c0  {4,D}
 2 H  u0  p0  c0  {3,S}
 3 O  u0  p2  c0  {2,S} {4,S}
 4 C  u0  p0  c0  {1,D} {3,S} {5,S}
 5 N  u0  p1  c0  {4,S} {6,S} {7,S}
 6 H  u0  p0  c0  {5,S}
 7 H  u0  p0  c0  {5,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -764,10 +795,11 @@ The two lowest frequencies, 35.97 and 69.6, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 23,
+    index = 24,
     label = XCH2XCOH,
     molecule = 
-"""1 O u0 p2 c0 {3,S} {6,S}
+"""
+1 O u0 p2 c0 {3,S} {6,S}
 2 C u0 p0 c0 {3,S} {4,S} {5,S} {7,S}
 3 C u0 p0 c0 {1,S} {2,S} {8,D}
 4 H u0 p0 c0 {2,S}
@@ -775,7 +807,6 @@ entry(
 6 H u0 p0 c0 {1,S}
 7 X u0 p0 c0 {2,S}
 8 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -800,10 +831,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 24,
+    index = 25,
     label = XCHCH2CH3,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
 3 C u0 p0 c0 {1,S} {9,S} {10,D}
 4 H u0 p0 c0 {1,S}
@@ -813,7 +845,6 @@ entry(
 8 H u0 p0 c0 {2,S}
 9 H u0 p0 c0 {3,S}
 10 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -839,15 +870,15 @@ The two lowest frequencies, 12 and 74.1, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 25,
+    index = 26,
     label = XCHXN,
     molecule = 
-"""1 X  u0 p0 c0 {3,D}
+"""
+1 X  u0 p0 c0 {3,D}
 2 X  u0 p0 c0 {4,D}
 3 C  u0 p0 c0 {1,D} {4,S} {5,S}
 4 N  u0 p1 c0 {2,D} {3,S}
 5 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -872,17 +903,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 26,
+    index = 27,
     label = NHXCXNH,
     molecule = 
-"""1 X  u0  p0  c0  {5,S}
+"""
+1 X  u0  p0  c0  {5,S}
 2 X  u0  p0  c0  {6,S}
 3 H  u0  p0  c0  {4,S}
 4 N  u0  p1  c0  {3,S} {5,D}
 5 C  u0  p0  c0  {1,S} {4,D} {6,S}
 6 N  u0  p1  c0  {2,S} {5,S} {7,S}
 7 H  u0  p0  c0  {6,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -907,10 +938,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 27,
+    index = 28,
     label = XCH2CH2CH3,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,S} {7,S} {11,S}
 3 C u0 p0 c0 {1,S} {8,S} {9,S} {10,S}
 4 H u0 p0 c0 {1,S}
@@ -921,7 +953,6 @@ entry(
 9 H u0 p0 c0 {3,S}
 10 H u0 p0 c0 {3,S}
 11 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -946,15 +977,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 28,
+    index = 29,
     label = XNXCO,
     molecule = 
-"""1 X  u0  p0  c0  {3,D}
+"""
+1 X  u0  p0  c0  {3,D}
 2 X  u0  p0  c0  {4,S}
 3 N  u0  p1  c0  {1,D} {4,S}
 4 C  u0  p0  c0  {2,S} {3,S} {5,D}
 5 O  u0  p2  c0  {4,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -979,16 +1010,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 29,
+    index = 30,
     label = XCXCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,T}
 3 H u0 p0 c0 {1,S}
 4 H u0 p0 c0 {1,S}
 5 X u0 p0 c0 {1,S}
 6 X u0 p0 c0 {2,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1013,16 +1044,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 30,
+    index = 31,
     label = XCHCH2,
     molecule = 
-"""1 X  u0  p0 c0 {2,S}
+"""
+1 X  u0  p0 c0 {2,S}
 2 C  u0  p0 c0 {1,S} {3,D} {4,S}
 3 C  u0  p0 c0 {2,D} {5,S} {6,S}
 4 H  u0  p0 c0 {2,S}
 5 H  u0  p0 c0 {3,S}
 6 H  u0  p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1047,15 +1078,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 31,
+    index = 32,
     label = CHCHX,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 C  u0 p0 c0 {3,T} {4,S}
 3 C  u0 p0 c0 {2,T} {5,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1081,17 +1112,17 @@ The two lowest frequencies, 12 and 90.3, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 32,
+    index = 33,
     label = NH2NH2X,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 N  u0 p1 c0 {3,S} {4,S} {5,S}
 3 N  u0 p1 c0 {2,S} {6,S} {7,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {3,S}
 7 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1117,15 +1148,15 @@ The two lowest frequencies, 12 and 78.71, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 33,
+    index = 34,
     label = OCNHX,
     molecule = 
-"""1 X  u0  p0  c0
+"""
+1 X  u0  p0  c0
 2 O  u0  p2  c0  {3,D}
 3 C  u0  p0  c0  {2,D} {4,D}
 4 N  u0  p1  c0  {3,D} {5,S}
 5 H  u0  p0  c0  {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1151,17 +1182,17 @@ The two lowest frequencies, 26.05 and 32.19, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 34,
+    index = 35,
     label = XCH2XCH,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 X  u0 p0 c0 {4,D}
 3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
 4 C  u0 p0 c0 {2,D} {3,S} {7,S}
 5 H  u0 p0 c0 {3,S}
 6 H  u0 p0 c0 {3,S}
 7 H  u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1186,15 +1217,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 35,
+    index = 36,
     label = CH2OX,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 C  u0 p0 c0 {3,D} {4,S} {5,S}
 3 O  u0 p2 c0 {2,D}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1220,17 +1251,17 @@ The two lowest frequencies, 12 and 51.8, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 36,
+    index = 37,
     label = NH2XCNH,
     molecule = 
-"""1 X  u0  p0  c0  {5,S}
+"""
+1 X  u0  p0  c0  {5,S}
 2 H  u0  p0  c0  {4,S}
 3 H  u0  p0  c0  {4,S}
 4 N  u0  p1  c0  {2,S} {3,S} {5,S}
 5 C  u0  p0  c0  {1,S} {4,S} {6,D}
 6 N  u0  p1  c0  {5,D} {7,S}
 7 H  u0  p0  c0  {6,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1256,16 +1287,16 @@ The two lowest frequencies, 37.45 and 56.05, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 37,
+    index = 38,
     label = HCOOHX,
     molecule = 
-"""1 O u0 p2 c0 {3,S} {5,S}
+"""
+1 O u0 p2 c0 {3,S} {5,S}
 2 O u0 p2 c0 {3,D}
 3 C u0 p0 c0 {1,S} {2,D} {4,S}
 4 H u0 p0 c0 {3,S}
 5 H u0 p0 c0 {1,S}
 6 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1291,17 +1322,17 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 38,
+    index = 39,
     label = CH3OHX,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 O  u0 p2 c0 {2,S} {7,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {2,S}
 7 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1326,14 +1357,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 39,
+    index = 40,
     label = XCXC,
     molecule = 
-"""1 X  u0  p0 c0 {3,D}
+"""
+1 X  u0  p0 c0 {3,D}
 2 X  u0  p0 c0 {4,D}
 3 C  u0  p0 c0 {1,D} {4,D}
 4 C  u0  p0 c0 {2,D} {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1358,17 +1389,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 40,
+    index = 41,
     label = XCXCHXC,
     molecule = 
-"""1 C u0 p0 c0 {5,T} {2,S}
+"""
+1 C u0 p0 c0 {5,T} {2,S}
 2 C u0 p0 c0 {1,S} {3,S} {4,S} {6,S}
 3 C u0 p0 c0 {2,S} {7,T}
 4 H u0 p0 c0 {2,S}
 5 X u0 p0 c0 {1,T}
 6 X u0 p0 c0 {2,S}
 7 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1393,15 +1424,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 41,
+    index = 42,
     label = XCHXC,
     molecule = 
-"""1 X  u0  p0 c0 {3,S}
+"""
+1 X  u0  p0 c0 {3,S}
 2 X  u0  p0 c0 {4,D}
 3 C  u0  p0 c0 {1,S} {4,D} {5,S}
 4 C  u0  p0 c0 {2,D} {3,D}
 5 H  u0  p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1426,10 +1457,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 42,
+    index = 43,
     label = NH2XCNH2,
     molecule = 
-"""1 X  u0  p0  c0  {5,D}
+"""
+1 X  u0  p0  c0  {5,D}
 2 H  u0  p0  c0  {4,S}
 3 H  u0  p0  c0  {4,S}
 4 N  u0  p1  c0  {2,S} {3,S} {5,S}
@@ -1437,7 +1469,6 @@ entry(
 6 N  u0  p1  c0  {5,S} {7,S} {8,S}
 7 H  u0  p0  c0  {6,S}
 8 H  u0  p0  c0  {6,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1463,14 +1494,14 @@ The two lowest frequencies, 12.72 and 84.97, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 43,
+    index = 44,
     label = XOOH,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 O  u0 p2 c0 {1,S} {3,S}
 3 O  u0 p2 c0 {2,S} {4,S}
 4 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1496,16 +1527,16 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 44,
+    index = 45,
     label = NHCNHX,
     molecule = 
-"""1 X  u0  p0  c0
+"""
+1 X  u0  p0  c0
 2 H  u0  p0  c0  {3,S}
 3 N  u0  p1  c0  {2,S} {4,D}
 4 C  u0  p0  c0  {3,D} {5,D}
 5 N  u0  p1  c0  {4,D} {6,S}
 6 H  u0  p0  c0  {5,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1531,10 +1562,11 @@ The two lowest frequencies, 24.23 and 51.07, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 45,
+    index = 46,
     label = NH2NCH3CH3X,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 N  u0 p1 c0 {6,S} {7,S} {3,S}
 3 N  u0 p1 c0 {2,S} {4,S} {5,S}
 4 C  u0 p0 c0 {3,S} {8,S} {9,S} {10,S}
@@ -1547,7 +1579,6 @@ entry(
 11 H  u0 p0 c0 {5,S}
 12 H  u0 p0 c0 {5,S}
 13 H  u0 p0 c0 {5,S}
-
 
 """,
     thermo = NASA(
@@ -1574,15 +1605,15 @@ The two lowest frequencies, 37.85 and 59.82, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 46,
+    index = 47,
     label = XNNH2,
     molecule = 
-"""1 X  u0 p0 c0 {2,D}
+"""
+1 X  u0 p0 c0 {2,D}
 2 N  u0 p1 c0 {1,D} {3,S}
 3 N  u0 p1 c0 {2,S} {4,S} {5,S}
 4 H  u0 p0 c0 {3,S}
 5 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1607,10 +1638,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 47,
+    index = 48,
     label = XOCH2CH3,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {9,S}
+"""
+1 O u0 p2 c0 {2,S} {9,S}
 2 C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 C u0 p0 c0 {2,S} {6,S} {7,S} {8,S}
 4 H u0 p0 c0 {2,S}
@@ -1619,7 +1651,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 H u0 p0 c0 {3,S}
 9 X u0 p0 c0 {1,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1645,17 +1676,17 @@ The two lowest frequencies, 12 and 92.3, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 48,
+    index = 49,
     label = H2C(XO)XO,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {6,S}
+"""
+1 O u0 p2 c0 {2,S} {6,S}
 2 C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 H u0 p0 c0 {2,S}
 4 H u0 p0 c0 {2,S}
 5 O u0 p2 c0 {2,S} {7,S}
 6 X u0 p0 c0 {1,S}
 7 X u0 p0 c0 {5,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1680,15 +1711,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 49,
+    index = 50,
     label = XCNH2,
     molecule = 
-"""1 X  u0 p0 c0 {2,T}
+"""
+1 X  u0 p0 c0 {2,T}
 2 C  u0 p0 c0 {1,T} {3,S}
 3 N  u0 p1 c0 {2,S} {4,S} {5,S}
 4 H  u0 p0 c0 {3,S}
 5 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1713,16 +1744,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 50,
+    index = 51,
     label = XNXCOH,
     molecule = 
-"""1 X  u0  p0  c0  {3,D}
+"""
+1 X  u0  p0  c0  {3,D}
 2 X  u0  p0  c0  {4,D}
 3 N  u0  p1  c0  {1,D} {4,S}
 4 C  u0  p0  c0  {2,D} {3,S} {5,S}
 5 O  u0  p2  c0  {4,S} {6,S}
 6 H  u0  p0  c0  {5,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1747,15 +1778,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 51,
+    index = 52,
     label = XNCH2,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 C  u0 p0 c0 {3,D} {4,S} {5,S}
 3 N  u0 p1 c0 {1,S} {2,D}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1780,10 +1811,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 52,
+    index = 53,
     label = XCH2XCCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {8,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {8,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {9,S} {3,D}
 3 C u0 p0 c0 {2,D} {6,S} {7,S} 
 4 H u0 p0 c0 {1,S}
@@ -1792,7 +1824,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0 {1,S}
 9 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1817,16 +1848,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 53,
+    index = 54,
     label = XNXCNH,
     molecule = 
-"""1 X  u0  p0  c0  {3,D}
+"""
+1 X  u0  p0  c0  {3,D}
 2 X  u0  p0  c0  {4,S}
 3 N  u0  p1  c0  {1,D} {4,S}
 4 C  u0  p0  c0  {2,S} {3,S} {5,D}
 5 N  u0  p1  c0  {4,D} {6,S}
 6 H  u0  p0  c0  {5,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1851,15 +1882,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 54,
+    index = 55,
     label = XCCHO,
     molecule = 
-"""1 O u0 p2 c0 {2,D}
+"""
+1 O u0 p2 c0 {2,D}
 2 C u0 p0 c0 {1,D} {3,S} {4,S}
 3 C u0 p0 c0 {2,S} {5,T}
 4 H u0 p0 c0 {2,S}
 5 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1885,14 +1916,14 @@ The two lowest frequencies, 20.1 and 76.7, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 55,
+    index = 56,
     label = XCOH,
     molecule = 
-"""1 X  u0 p0 c0 {2,T}
+"""
+1 X  u0 p0 c0 {2,T}
 2 C  u0 p0 c0 {1,T} {3,S}
 3 O  u0 p2 c0 {2,S} {4,S}
 4 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1917,15 +1948,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 56,
+    index = 57,
     label = XCXCO,
     molecule = 
-"""1 O u0 p2 c0 {2,D}
+"""
+1 O u0 p2 c0 {2,D}
 2 C u0 p0 c0 {1,D} {3,S} {4,S}
 3 C u0 p0 c0 {2,S} {5,T}
 4 X u0 p0 c0 {2,S}
 5 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1950,10 +1981,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 57,
+    index = 58,
     label = H2C(XO)OCH3,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {10,S}
+"""
+1 O u0 p2 c0 {2,S} {10,S}
 2 C u0 p0 c0 {1,S} {3,S} {4,S} {9,S}
 3 H u0 p0 c0 {2,S}
 4 O u0 p2 c0 {2,S} {5,S}
@@ -1963,7 +1995,6 @@ entry(
 8 H u0 p0 c0 {5,S}
 9 H u0 p0 c0 {2,S}
 10 X u0 p0 c0 {1,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -1988,15 +2019,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 58,
+    index = 59,
     label = ONOHX,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 O  u0 p2 c0 {3,D}
 3 N  u0 p1 c0 {2,D} {4,S}
 4 O  u0 p2 c0 {3,S} {5,S}
 5 H  u0 p0 c0 {4,S}
-
 
 
 """,
@@ -2024,15 +2055,15 @@ The two lowest frequencies, 29.74 and 57.23, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 59,
+    index = 60,
     label = NH3X,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 N  u0 p1 c0 {3,S} {4,S} {5,S}
 3 H  u0 p0 c0 {2,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2057,13 +2088,13 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 60,
+    index = 61,
     label = XCN,
     molecule = 
-"""1 X  u0  p0 c0 {2,S}
+"""
+1 X  u0  p0 c0 {2,S}
 2 C  u0  p0 c0 {1,S} {3,T}
 3 N  u0  p1 c0 {2,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2088,17 +2119,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 61,
+    index = 62,
     label = XNHCH3,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 N  u0 p1 c0 {1,S} {2,S} {7,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {2,S}
 7 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2123,16 +2154,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 62,
+    index = 63,
     label = XNHCHO,
     molecule = 
-"""1 X  u0  p0  c0  {3,S}
+"""
+1 X  u0  p0  c0  {3,S}
 2 H  u0  p0  c0  {3,S}
 3 N  u0  p1  c0  {1,S} {2,S} {5,S}
 4 H  u0  p0  c0  {5,S}
 5 C  u0  p0  c0  {3,S} {4,S} {6,D}
 6 O  u0  p2  c0  {5,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2157,15 +2188,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 63,
+    index = 64,
     label = XCHOH,
     molecule = 
-"""1 X  u0 p0 c0 {2,D}
+"""
+1 X  u0 p0 c0 {2,D}
 2 C  u0 p0 c0 {1,D} {3,S} {4,S}
 3 O  u0 p2 c0 {2,S} {5,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2191,10 +2222,11 @@ The two lowest frequencies, 12 and 58.4, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 64,
+    index = 65,
     label = XCXCCH3,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {7,T} 
+"""
+1 C u0 p0 c0 {2,S} {7,T} 
 2 C u0 p0 c0 {1,S} {8,D} {3,S}
 3 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S} 
 4 H u0 p0 c0 {3,S}
@@ -2202,7 +2234,6 @@ entry(
 6 H u0 p0 c0 {3,S}
 7 X u0 p0 c0 {1,T}
 8 X u0 p0 c0 {2,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2228,10 +2259,11 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 65,
+    index = 66,
     label = CH3CH2CH3X,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
 3 C u0 p0 c0 {1,S} {9,S} {10,S} {11,S}
 4 H u0 p0 c0 {1,S}
@@ -2243,7 +2275,6 @@ entry(
 10 H u0 p0 c0 {3,S}
 11 H u0 p0 c0 {3,S}
 12 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2268,10 +2299,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 66,
+    index = 67,
     label = CH2XCCH3,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
+"""
+1 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
 2 C u0 p0 c0 {1,S} {3,D} {9,S}
 3 C u0 p0 c0 {2,D} {7,S} {8,S}
 4 H u0 p0 c0 {1,S}
@@ -2280,7 +2312,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 H u0 p0 c0 {3,S}
 9 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2305,10 +2336,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 67,
+    index = 68,
     label = XCH2CH2XCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,S} {7,S} {10,S}
 3 C u0 p0 c0 {1,S} {8,S} {9,S} {11,S}
 4 H u0 p0 c0 {1,S}
@@ -2319,7 +2351,6 @@ entry(
 9 H u0 p0 c0 {3,S}
 10 X u0 p0 c0 {2,S}
 11 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2344,10 +2375,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 68,
+    index = 69,
     label = CH3OCH3X,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {3,S}
+"""
+1 O u0 p2 c0 {2,S} {3,S}
 2 C u0 p0 c0 {1,S} {4,S} {5,S} {9,S}
 3 C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
 4 H u0 p0 c0 {2,S}
@@ -2357,7 +2389,6 @@ entry(
 8 H u0 p0 c0 {3,S}
 9 H u0 p0 c0 {2,S}
 10 X u0 p0 c0 
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2383,16 +2414,16 @@ The two lowest frequencies, 12 and 67.3, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 69,
+    index = 70,
     label = OHXCNH,
     molecule = 
-"""1 X  u0  p0  c0  {4,S}
+"""
+1 X  u0  p0  c0  {4,S}
 2 H  u0  p0  c0  {3,S}
 3 O  u0  p2  c0  {2,S} {4,S}
 4 C  u0  p0  c0  {1,S} {3,S} {5,D}
 5 N  u0  p1  c0  {4,D} {6,S}
 6 H  u0  p0  c0  {5,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2418,10 +2449,11 @@ The two lowest frequencies, 15.1 and 62.25, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 70,
+    index = 71,
     label = CH3XCHXCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
+"""
+1 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
 2 C u0 p0 c0 {1,S} {3,S} {7,S} {10,S}
 3 C u0 p0 c0 {2,S} {8,S} {9,S} {11,S}
 4 H u0 p0 c0 {1,S}
@@ -2432,7 +2464,6 @@ entry(
 9 H u0 p0 c0 {3,S}
 10 X u0 p0 c0 {2,S}
 11 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2457,14 +2488,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 71,
+    index = 72,
     label = XCH2,
     molecule = 
-"""1 X  u0 p0 c0 {2,D}
+"""
+1 X  u0 p0 c0 {2,D}
 2 C  u0 p0 c0 {1,D} {3,S} {4,S}
 3 H  u0 p0 c0 {2,S}
 4 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2489,15 +2520,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 72,
+    index = 73,
     label = XCHCO,
     molecule = 
-"""1 O u0 p2 c0 {3,D}
+"""
+1 O u0 p2 c0 {3,D}
 2 C u0 p0 c0 {3,D} {4,S} {5,S}
 3 C u0 p0 c0 {1,D} {2,D}
 4 H u0 p0 c0 {2,S}
 5 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2523,17 +2554,17 @@ The two lowest frequencies, 38.0 and 95.1, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 73,
+    index = 74,
     label = XCHXCXC,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {5,D} {4,S}
+"""
+1 C u0 p0 c0 {2,S} {5,D} {4,S}
 2 C u0 p0 c0 {1,S} {3,S} {6,D}
 3 C u0 p0 c0 {2,S} {7,T}
 4 H u0 p0 c0 {1,S}
 5 X u0 p0 c0 {1,D}
 6 X u0 p0 c0 {2,D}
 7 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2558,16 +2589,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 74,
+    index = 75,
     label = XNCH3,
     molecule = 
-"""1 X  u0 p0 c0 {3,D}
+"""
+1 X  u0 p0 c0 {3,D}
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 N  u0 p1 c0 {1,D} {2,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2592,14 +2623,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 75,
+    index = 76,
     label = XNNO,
     molecule = 
-"""1 X  u0  p0  c0  {2,D}
+"""
+1 X  u0  p0  c0  {2,D}
 2 N  u0  p1  c0  {1,D} {3,S}
 3 N  u0  p1  c0  {2,S} {4,D}
 4 O  u0  p2  c0  {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2624,16 +2655,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 76,
+    index = 77,
     label = XNHXCO,
     molecule = 
-"""1 X  u0  p0  c0  {4,S}
+"""
+1 X  u0  p0  c0  {4,S}
 2 X  u0  p0  c0  {5,S}
 3 H  u0  p0  c0  {4,S}
 4 N  u0  p1  c0  {1,S} {3,S} {5,S}
 5 C  u0  p0  c0  {2,S} {4,S} {6,D}
 6 O  u0  p2  c0  {5,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2658,10 +2689,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 77,
+    index = 78,
     label = XCHCHCH3,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
+"""
+1 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
 2 C u0 p0 c0 {1,S} {3,D} {7,S}
 3 C u0 p0 c0 {2,D} {8,S} {9,S}
 4 H u0 p0 c0 {1,S}
@@ -2670,7 +2702,6 @@ entry(
 7 H u0 p0 c0 {2,S}
 8 H u0 p0 c0 {3,S}
 9 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2696,12 +2727,12 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 78,
+    index = 79,
     label = XO,
     molecule = 
-"""1 X  u0 p0 c0 {2,D}
+"""
+1 X  u0 p0 c0 {2,D}
 2 O  u0 p2 c0 {1,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2726,17 +2757,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 79,
+    index = 80,
     label = CH3XCO,
     molecule = 
-"""1 O u0 p2 c0 {3,D}
+"""
+1 O u0 p2 c0 {3,D}
 2 C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 C u0 p0 c0 {1,D} {2,S} {7,S}
 4 H u0 p0 c0 {2,S}
 5 H u0 p0 c0 {2,S}
 6 H u0 p0 c0 {2,S}
 7 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2762,12 +2793,12 @@ The two lowest frequencies, 23.8 and 88.9, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 80,
+    index = 81,
     label = XC,
     molecule = 
-"""1 X  u0 p0 c0 {2,Q}
+"""
+1 X  u0 p0 c0 {2,Q}
 2 C  u0 p0 c0 {1,Q}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2792,14 +2823,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 81,
+    index = 82,
     label = CO2X,
     molecule = 
-"""1 O u0 p2 c0 {3,D}
+"""
+1 O u0 p2 c0 {3,D}
 2 O u0 p2 c0 {3,D}
 3 C u0 p0 c0 {1,D} {2,D}
 4 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2825,13 +2856,13 @@ The two lowest frequencies, 10.8 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 82,
+    index = 83,
     label = H2X,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 H  u0 p0 c0 {3,S}
 3 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2857,10 +2888,11 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 83,
+    index = 84,
     label = ONNCH3CH3X,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 O  u0 p2 c0 {3,D}
 3 N  u0 p1 c0 {2,D} {4,S}
 4 N  u0 p1 c0 {3,S} {5,S} {6,S}
@@ -2872,7 +2904,6 @@ entry(
 10 H  u0 p0 c0 {6,S}
 11 H  u0 p0 c0 {6,S}
 12 H  u0 p0 c0 {6,S}
-
 
 """,
     thermo = NASA(
@@ -2899,14 +2930,14 @@ The two lowest frequencies, 41.92 and 44.79, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 84,
+    index = 85,
     label = XOXO,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 X  u0 p0 c0 {4,S}
 3 O  u0 p2 c0 {1,S} {4,S}
 4 O  u0 p2 c0 {2,S} {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2931,10 +2962,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 85,
+    index = 86,
     label = CH3NXNOH,
     molecule = 
-"""1 X  u0  p0  c0  {7,D}
+"""
+1 X  u0  p0  c0  {7,D}
 2 N  u0  p2  c-1  {3,S} {7,S}
 3 C  u0  p0  c0  {2,S} {4,S} {5,S} {6,S}
 4 H  u0  p0  c0  {3,S}
@@ -2943,7 +2975,6 @@ entry(
 7 N  u0  p0  c+1  {1,D} {2,S} {8,S}
 8 O  u0  p2  c0  {7,S} {9,S}
 9 H  u0  p0  c0  {8,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -2969,16 +3000,16 @@ The two lowest frequencies, 11.99 and 57.8, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 86,
+    index = 87,
     label = H2NOHX,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 N  u0 p1 c0 {3,S} {4,S} {5,S}
 3 O  u0 p2 c0 {2,S} {6,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3004,10 +3035,11 @@ The two lowest frequencies, 21.45 and 69.68, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 87,
+    index = 88,
     label = XCH2XCH2,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 X  u0 p0 c0 {4,S}
 3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
 4 C  u0 p0 c0 {2,S} {3,S} {7,S} {8,S}
@@ -3015,7 +3047,6 @@ entry(
 6 H  u0 p0 c0 {3,S}
 7 H  u0 p0 c0 {4,S}
 8 H  u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3040,17 +3071,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 88,
+    index = 89,
     label = OCHNH2X,
     molecule = 
-"""1 X  u0  p0  c0
+"""
+1 X  u0  p0  c0
 2 O  u0  p2  c0  {3,D}
 3 C  u0  p0  c0  {2,D} {4,S} {5,S}
 4 H  u0  p0  c0  {3,S}
 5 N  u0  p1  c0  {3,S} {6,S} {7,S}
 6 H  u0  p0  c0  {5,S}
 7 H  u0  p0  c0  {5,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3076,10 +3107,11 @@ The two lowest frequencies, 29.77 and 83.13, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 89,
+    index = 90,
     label = XCHXCHXCH,
     molecule = 
-"""1 C u0 p0 c0 {7,D} {2,S} {4,S}
+"""
+1 C u0 p0 c0 {7,D} {2,S} {4,S}
 2 C u0 p0 c0 {8,S} {1,S} {3,S} {5,S}
 3 C u0 p0 c0 {9,D} {2,S} {6,S}
 4 H u0 p0 c0 {1,S} 
@@ -3088,7 +3120,6 @@ entry(
 7 X u0 p0 c0 {1,D}
 8 X u0 p0 c0 {2,S}
 9 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3113,15 +3144,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 90,
+    index = 91,
     label = XCHXO,
     molecule = 
-"""1 X  u0 p0 c0 {3,D}
+"""
+1 X  u0 p0 c0 {3,D}
 2 X  u0 p0 c0 {4,S}
 3 C  u0 p0 c0 {1,D} {4,S} {5,S}
 4 O  u0 p2 c0 {2,S} {3,S}
 5 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3146,14 +3177,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 91,
+    index = 92,
     label = XCNH,
     molecule = 
-"""1 X  u0  p0 c0 {2,D}
+"""
+1 X  u0  p0 c0 {2,D}
 2 C  u0  p0 c0 {1,D} {3,D}
 3 N  u0  p1 c0 {2,D} {4,S}
 4 H  u0  p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3178,10 +3209,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 92,
+    index = 93,
     label = XCCHXCH2,
     molecule = 
-"""1 C u0 p0 c0 {7,D} {2,D}
+"""
+1 C u0 p0 c0 {7,D} {2,D}
 2 C u0 p0 c0 {1,D} {3,S} {4,S}
 3 C u0 p0 c0 {2,S} {8,S} {5,S} {6,S}
 4 H u0 p0 c0 {2,S}
@@ -3189,7 +3221,6 @@ entry(
 6 H u0 p0 c0 {3,S}
 7 X u0 p0 c0 {1,D}
 8 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3214,10 +3245,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 93,
+    index = 94,
     label = XCHXCXCH,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {6,D} {4,S}
+"""
+1 C u0 p0 c0 {2,S} {6,D} {4,S}
 2 C u0 p0 c0 {1,S} {3,S} {7,D}
 3 C u0 p0 c0 {2,S} {8,D} {5,S}
 4 H u0 p0 c0 {1,S}
@@ -3225,7 +3257,6 @@ entry(
 6 X u0 p0 c0 {1,D}
 7 X u0 p0 c0 {2,D}
 8 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3250,16 +3281,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 94,
+    index = 95,
     label = CH4X,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 H  u0 p0 c0 {2,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3285,17 +3316,17 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 95,
+    index = 96,
     label = XCHCH3,
     molecule = 
-"""1 X  u0 p0 c0 {3,D}
+"""
+1 X  u0 p0 c0 {3,D}
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 C  u0 p0 c0 {1,D} {2,S} {7,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {2,S}
 7 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3320,15 +3351,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 96,
+    index = 97,
     label = HC(O)XO,
     molecule = 
-"""1 O u0 p2 c0 {3,D}
+"""
+1 O u0 p2 c0 {3,D}
 2 O u0 p2 c0 {3,S} {5,S}
 3 C u0 p0 c0 {1,D} {2,S} {4,S}
 4 H u0 p0 c0 {3,S}
 5 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3353,10 +3384,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 97,
+    index = 98,
     label = CH3XCOH,
     molecule = 
-"""1 O u0 p2 c0 {3,S} {7,S}
+"""
+1 O u0 p2 c0 {3,S} {7,S}
 2 C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 C u0 p0 c0 {1,S} {2,S} {8,D}
 4 H u0 p0 c0 {2,S}
@@ -3364,7 +3396,6 @@ entry(
 6 H u0 p0 c0 {2,S}
 7 H u0 p0 c0 {1,S}
 8 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3390,16 +3421,16 @@ The two lowest frequencies, 12 and 58.0, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 98,
+    index = 99,
     label = XCHCHO,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {4,S} {6,D}
+"""
+1 C u0 p0 c0 {2,S} {4,S} {6,D}
 2 C u0 p0 c0 {1,S} {3,D} {5,S}
 3 O u0 p2 c0 {2,D} 
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {2,S}
 6 X u0 p0 c0 {1,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3425,10 +3456,11 @@ The two lowest frequencies, 12 and 98.6, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 99,
+    index = 100,
     label = XCXCHCH3,
     molecule = 
-"""1 C u0 p0 c0 {8,T} {2,S}
+"""
+1 C u0 p0 c0 {8,T} {2,S}
 2 C u0 p0 c0 {1,S} {9,S} {3,S} {4,S}
 3 C u0 p0 c0 {2,S} {5,S} {6,S} {7,S} 
 4 H u0 p0 c0 {2,S}
@@ -3437,7 +3469,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0 {1,T}
 9 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3462,14 +3493,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 100,
+    index = 101,
     label = XCNO,
     molecule = 
-"""1 X  u0  p0  c0  {2,T}
+"""
+1 X  u0  p0  c0  {2,T}
 2 C  u0  p0  c0  {1,T}, {3,S}
 3 N  u0  p1  c0  {2,S} {4,D}
 4 O  u0  p2  c0  {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3495,10 +3526,11 @@ The two lowest frequencies, 67.9 and 67.9, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 101,
+    index = 102,
     label = CH3NH2X,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 N  u0 p1 c0 {2,S} {7,S} {8,S}
 4 H  u0 p0 c0 {2,S}
@@ -3506,7 +3538,6 @@ entry(
 6 H  u0 p0 c0 {2,S}
 7 H  u0 p0 c0 {3,S}
 8 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3532,14 +3563,14 @@ The two lowest frequencies, 12 and 95.95, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 102,
+    index = 103,
     label = XNNH,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 N  u0 p1 c0 {1,S} {3,D}
 3 N  u0 p1 c0 {2,D} {4,S}
 4 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3564,13 +3595,13 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 103,
+    index = 104,
     label = XNN,
     molecule = 
-"""1 X  u0  p0  c0  {2,D}
+"""
+1 X  u0  p0  c0  {2,D}
 2 N  u0  p0  c+1  {1,D}, {3,D}
 3 N  u0  p2  c-1  {2,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3596,10 +3627,11 @@ The two lowest frequencies, 56.8 and 56.8, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 104,
+    index = 105,
     label = XCHXCHCH3,
     molecule = 
-"""1 C u0 p0 c0 {9,D} {2,S} {4,S}
+"""
+1 C u0 p0 c0 {9,D} {2,S} {4,S}
 2 C u0 p0 c0 {1,S} {3,S} {10,S} {5,S}
 3 C u0 p0 c0 {2,S} {6,S} {7,S} {8,S}
 4 H u0 p0 c0 {1,S}
@@ -3609,7 +3641,6 @@ entry(
 8 H u0 p0 c0 {3,S}
 9 X u0 p0 c0 {1,D}
 10 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3634,17 +3665,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 105,
+    index = 106,
     label = XOCHCH2,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {7,S}
+"""
+1 O u0 p2 c0 {2,S} {7,S}
 2 C u0 p0 c0 {1,S} {3,D} {4,S}
 3 C u0 p0 c0 {2,D} {5,S} {6,S}
 4 H u0 p0 c0 {2,S}
 5 H u0 p0 c0 {3,S}
 6 H u0 p0 c0 {3,S}
 7 X u0 p0 c0 {1,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3669,10 +3700,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 106,
+    index = 107,
     label = XNHXCXNH,
     molecule = 
-"""1 X  u0  p0  c0  {5,S}
+"""
+1 X  u0  p0  c0  {5,S}
 2 X  u0  p0  c0  {6,D}
 3 X  u0  p0  c0  {7,S}
 4 H  u0  p0  c0  {5,S}
@@ -3680,7 +3712,6 @@ entry(
 6 C  u0  p0  c0  {2,D} {5,S} {7,S}
 7 N  u0  p1  c0  {3,S} {6,S} {8,S}
 8 H  u0  p0  c0  {7,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3705,10 +3736,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 107,
+    index = 108,
     label = XCH2CHCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {4,S} {5,S} {9,S}
+"""
+1 C u0 p0 c0 {2,S} {4,S} {5,S} {9,S}
 2 C u0 p0 c0 {1,S} {3,D} {6,S}
 3 C u0 p0 c0 {2,D} {7,S} {8,S}
 4 H u0 p0 c0 {1,S}
@@ -3717,7 +3749,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 H u0 p0 c0 {3,S}
 9 X u0 p0 c0 {1,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3743,16 +3774,16 @@ The two lowest frequencies, 12 and 74.2, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 108,
+    index = 109,
     label = XOXCNH,
     molecule = 
-"""1 X  u0  p0  c0  {3,S}
+"""
+1 X  u0  p0  c0  {3,S}
 2 X  u0  p0  c0  {4,S}
 3 O  u0  p2  c0  {1,S} {4,S}
 4 C  u0  p0  c0  {2,S} {3,S} {5,D}
 5 N  u0  p1  c0  {4,D} {6,S}
 6 H  u0  p0  c0  {5,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3777,16 +3808,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 109,
+    index = 110,
     label = OXCNH2,
     molecule = 
-"""1 X  u0  p0  c0  {3,S}
+"""
+1 X  u0  p0  c0  {3,S}
 2 O  u0  p2  c0  {3,D}
 3 C  u0  p0  c0  {1,S} {2,D} {4,S}
 4 N  u0  p1  c0  {3,S} {5,S} {6,S}
 5 H  u0  p0  c0  {4,S}
 6 H  u0  p0  c0  {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3812,10 +3843,11 @@ The two lowest frequencies, 37.01 and 60.96, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 110,
+    index = 111,
     label = HCO2CH3X,
     molecule = 
-"""1 O u0 p2 c0 {2,D}
+"""
+1 O u0 p2 c0 {2,D}
 2 C u0 p0 c0 {1,D} {3,S} {4,S}
 3 H u0 p0 c0 {2,S}
 4 O u0 p2 c0 {2,S} {5,S}
@@ -3824,7 +3856,6 @@ entry(
 7 H u0 p0 c0 {5,S}
 8 H u0 p0 c0 {5,S}
 9 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3850,10 +3881,11 @@ The two lowest frequencies, 62.9 and 75.5, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 111,
+    index = 112,
     label = CH3XNXNOH,
     molecule = 
-"""1 X  u0  p0  c0  {7,S}
+"""
+1 X  u0  p0  c0  {7,S}
 2 X  u0  p0  c0  {8,S}
 3 C  u0  p0  c0  {7,S} {4,S} {5,S} {6,S}
 4 H  u0  p0  c0  {3,S}
@@ -3863,7 +3895,6 @@ entry(
 8 N  u0  p1  c0  {2,S} {7,S} {9,S}
 9 O  u0  p2  c0  {8,S} {10,S}
 10 H  u0  p0  c0  {9,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3889,15 +3920,15 @@ The two lowest frequencies, 43.28 and 91.29, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 112,
+    index = 113,
     label = XONH2,
     molecule = 
-"""1 X  u0  p0  c0  {2,S}
+"""
+1 X  u0  p0  c0  {2,S}
 2 O  u0  p2  c0  {1,S} {3,S}
 3 N  u0  p1  c0  {2,S} {4,S} {5,S}
 4 H  u0  p0  c0  {3,S}
 5 H  u0  p0  c0  {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3923,15 +3954,15 @@ The two lowest frequencies, 32.89 and 61.93, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 113,
+    index = 114,
     label = OXNNH,
     molecule = 
-"""1 X  u0  p0 c0  {3,S}
+"""
+1 X  u0  p0 c0  {3,S}
 2 O  u0  p3 c-1  {3,S}
 3 N  u0  p0 c+1  {1,S} {2,S} {4,D}  
 4 N  u0  p1 c0  {3,D} {5,S}
 5 H  u0  p0 c0  {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3956,14 +3987,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 114,
+    index = 115,
     label = XNCO,
     molecule = 
-"""1 X  u0  p0  c0  {2,S}
+"""
+1 X  u0  p0  c0  {2,S}
 2 N  u0  p1  c0  {1,S} {3,D}
 3 C  u0  p0  c0  {2,D} {4,D}
 4 O  u0  p2  c0  {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -3989,15 +4020,15 @@ The two lowest frequencies, 79.59 and 79.64, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 115,
+    index = 116,
     label = XCCH2,
     molecule = 
-"""1 X  u0  p0 c0 {2,D}
+"""
+1 X  u0  p0 c0 {2,D}
 2 C  u0  p0 c0 {1,D} {3,D}
 3 C  u0  p0 c0 {2,D} {4,S} {5,S}
 4 H  u0  p0 c0 {3,S}
 5 H  u0  p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4022,17 +4053,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 116,
+    index = 117,
     label = XCXCCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,D} {4,S} {5,S}
 2 C u0 p0 c0 {1,D} {3,S} {6,S}
 3 C u0 p0 c0 {2,S} {7,T}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {1,S}
 6 X u0 p0 c0 {2,S}
 7 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4057,17 +4088,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 117,
+    index = 118,
     label = XCH2CHO,
     molecule = 
-"""1 O u0 p2 c0 {3,D}
+"""
+1 O u0 p2 c0 {3,D}
 2 C u0 p0 c0 {3,S} {4,S} {5,S} {7,S}
 3 C u0 p0 c0 {1,D} {2,S} {6,S}
 4 H u0 p0 c0 {2,S}
 5 H u0 p0 c0 {2,S}
 6 H u0 p0 c0 {3,S}
 7 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4093,13 +4124,13 @@ The two lowest frequencies, 58.8 and 75.3, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 118,
+    index = 119,
     label = XNO,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 N  u0 p1 c0 {1,S} {3,D}
 3 O  u0 p2 c0 {2,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4124,10 +4155,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 119,
+    index = 120,
     label = CH3OCH2OHX,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {5,S} {6,S} {7,S}
+"""
+1 C u0 p0 c0 {2,S} {5,S} {6,S} {7,S}
 2 O u0 p2 c0 {1,S} {3,S}
 3 C u0 p0 c0 {2,S} {4,S} {8,S} {9,S}
 4 O u0 p2 c0 {3,S} {10,S}
@@ -4138,7 +4170,6 @@ entry(
 9 H u0 p0 c0 {3,S}
 10 H u0 p0 c0 {4,S}
 11 X u0 p0 c0 
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4164,16 +4195,16 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 120,
+    index = 121,
     label = XOC(O)XO,
     molecule = 
-"""1  C u0 p0 c0 {2,D} {3,S} {4,S}
+"""
+1  C u0 p0 c0 {2,D} {3,S} {4,S}
 2  O u0 p2 c0 {1,D} 
 3  O u0 p2 c0 {1,S} {5,S}
 4  O u0 p2 c0 {1,S} {6,S}
 5  X u0 p0 c0 {3,S}
 6  X u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4199,16 +4230,16 @@ The two lowest frequencies, 89.5 and 92.5, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 121,
+    index = 122,
     label = CH2COX,
     molecule = 
-"""1 O u0 p2 c0 {3,D}
+"""
+1 O u0 p2 c0 {3,D}
 2 C u0 p0 c0 {3,D} {4,S} {5,S}
 3 C u0 p0 c0 {1,D} {2,D}
 4 H u0 p0 c0 {2,S}
 5 H u0 p0 c0 {2,S}
 6 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4234,13 +4265,13 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 122,
+    index = 123,
     label = XOH,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 O  u0 p2 c0 {1,S} {3,S}
 3 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4266,10 +4297,11 @@ The two lowest frequencies, 80.8 and 80.8, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 123,
+    index = 124,
     label = XCH2CH3,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 C  u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 C  u0 p0 c0 {2,S} {6,S} {7,S} {8,S}
 4 H  u0 p0 c0 {2,S}
@@ -4277,7 +4309,6 @@ entry(
 6 H  u0 p0 c0 {3,S}
 7 H  u0 p0 c0 {3,S}
 8 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4302,17 +4333,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 124,
+    index = 125,
     label = XCH2NH2,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 C  u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 N  u0 p1 c0 {2,S} {6,S} {7,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {3,S}
 7 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4338,15 +4369,15 @@ The two lowest frequencies, 12 and 76.79, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 125,
+    index = 126,
     label = XOXNO,
     molecule = 
-"""1 X  u0  p0 c0  {3,S}
+"""
+1 X  u0  p0 c0  {3,S}
 2 X  u0  p0 c0  {4,D}
 3 O  u0  p2 c0  {1,S} {4,S}
 4 N  u0  p0 c+1  {3,S} {2,D} {5,S}
 5 O  u0  p3 c-1  {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4372,10 +4403,11 @@ The two lowest frequencies, 63.4 and 94.07, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 126,
+    index = 127,
     label = CH3CHOX,
     molecule = 
-"""1 O u0 p2 c0 {3,D}
+"""
+1 O u0 p2 c0 {3,D}
 2 C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 C u0 p0 c0 {1,D} {2,S} {7,S}
 4 H u0 p0 c0 {2,S}
@@ -4383,7 +4415,6 @@ entry(
 6 H u0 p0 c0 {2,S}
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4409,15 +4440,15 @@ The two lowest frequencies, 30.5 and 72.0, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 127,
+    index = 128,
     label = XNXNO,
     molecule = 
-"""1 X  u0  p0  c0  {3,D}
+"""
+1 X  u0  p0  c0  {3,D}
 2 X  u0  p0  c0  {4,D}
 3 N  u0  p1  c0  {1,D} {4,S} 
 4 N  u0  p0  c+1  {2,D} {3,S} {5,S}
 5 O  u0  p3  c-1  {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4442,10 +4473,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 128,
+    index = 129,
     label = CH3CH2OHX,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {9,S}
+"""
+1 O u0 p2 c0 {2,S} {9,S}
 2 C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 C u0 p0 c0 {2,S} {6,S} {7,S} {8,S}
 4 H u0 p0 c0 {2,S}
@@ -4455,7 +4487,6 @@ entry(
 8 H u0 p0 c0 {3,S}
 9 H u0 p0 c0 {1,S}
 10 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4481,15 +4512,15 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 129,
+    index = 130,
     label = XNCNH,
     molecule = 
-"""1 X  u0  p0  c0  {2,S}
+"""
+1 X  u0  p0  c0  {2,S}
 2 N  u0  p1  c0  {1,S} {3,D}
 3 C  u0  p0  c0  {2,D} {4,D}
 4 N  u0  p1  c0  {3,D} {5,S}
 5 H  u0  p0  c0  {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4515,17 +4546,17 @@ The two lowest frequencies, 54.13 and 75.02, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 130,
+    index = 131,
     label = XNNCH3,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 N  u0 p1 c0 {1,S} {3,D}
 3 N  u0 p1 c0 {2,D} {4,S}
 4 C  u0 p0 c0 {3,S} {5,S} {6,S} {7,S}
 5 H  u0 p0 c0 {4,S}
 6 H  u0 p0 c0 {4,S}
 7 H  u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4551,16 +4582,16 @@ The two lowest frequencies, 60.41 and 70.27, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 131,
+    index = 132,
     label = XOCH3,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 O  u0 p2 c0 {1,S} {2,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4586,10 +4617,11 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 132,
+    index = 133,
     label = CH3XCHOH,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {8,S}
+"""
+1 O u0 p2 c0 {2,S} {8,S}
 2 C u0 p0 c0 {1,S} {3,S} {4,S} {9,S}
 3 C u0 p0 c0 {2,S} {5,S} {6,S} {7,S}
 4 H u0 p0 c0 {2,S}
@@ -4598,7 +4630,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 H u0 p0 c0 {1,S}
 9 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4624,17 +4655,17 @@ The two lowest frequencies, 12 and 96.1, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 133,
+    index = 134,
     label = XCH2XNH,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 X  u0 p0 c0 {4,S}
 3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
 4 N  u0 p1 c0 {2,S} {3,S} {7,S}
 5 H  u0 p0 c0 {3,S}
 6 H  u0 p0 c0 {3,S}
 7 H  u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4659,10 +4690,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 134,
+    index = 135,
     label = CH3XNNOH,
     molecule = 
-"""1 X  u0  p0  c0  {2,D}
+"""
+1 X  u0  p0  c0  {2,D}
 2 N  u0  p0  c+1  {1,D} {3,S} {7,S}
 3 C  u0  p0  c0  {2,S} {4,S} {5,S} {6,S}
 4 H  u0  p0  c0  {3,S}
@@ -4671,7 +4703,6 @@ entry(
 7 N  u0  p2  c-1  {2,S} {8,S}
 8 O  u0  p2  c0  {7,S} {9,S}
 9 H  u0  p0  c0  {8,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4697,16 +4728,16 @@ The two lowest frequencies, 26.19 and 53.11, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 135,
+    index = 136,
     label = XNHXNH,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 X  u0 p0 c0 {4,S}
 3 N  u0 p1 c0 {1,S} {4,S} {5,S}
 4 N  u0 p1 c0 {2,S} {3,S} {6,S}
 5 H  u0 p0 c0 {3,S}
 6 H  u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4731,10 +4762,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 136,
+    index = 137,
     label = CH3CH2XCO,
     molecule = 
-"""1 O u0 p2 c0 {4,D}
+"""
+1 O u0 p2 c0 {4,D}
 2 C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 3 C u0 p0 c0 {2,S} {7,S} {8,S} {9,S}
 4 C u0 p0 c0 {1,D} {2,S} {10,S}
@@ -4744,7 +4776,6 @@ entry(
 8 H u0 p0 c0 {3,S}
 9 H u0 p0 c0 {3,S}
 10 X u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4770,10 +4801,11 @@ The two lowest frequencies, 12 and 63.5, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 137,
+    index = 138,
     label = XCHCH2XCH,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,S} {8,D}
 3 C u0 p0 c0 {1,S} {7,S} {9,D}
 4 H u0 p0 c0 {1,S}
@@ -4782,7 +4814,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0 {2,D}
 9 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4807,17 +4838,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 138,
+    index = 139,
     label = OC(OH)OHX,
     molecule = 
-"""1 O u0 p2 c0 {4,S} {5,S}
+"""
+1 O u0 p2 c0 {4,S} {5,S}
 2 O u0 p2 c0 {4,S} {6,S}
 3 O u0 p2 c0 {4,D}
 4 C u0 p0 c0 {1,S} {2,S} {3,D}
 5 H u0 p0 c0 {1,S}
 6 H u0 p0 c0 {2,S}
 7 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4843,15 +4874,15 @@ The two lowest frequencies, 12 and 37.3, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 139,
+    index = 140,
     label = XNHXN,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 X  u0 p0 c0 {4,D}
 3 N  u0 p1 c0 {1,S} {4,S} {5,S}
 4 N  u0 p1 c0 {2,D} {3,S}
 5 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4876,17 +4907,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 140,
+    index = 141,
     label = OXCXCH2,
     molecule = 
-"""1 X u0 p0 c0 {3,S}
+"""
+1 X u0 p0 c0 {3,S}
 2 X u0 p0 c0 {4,S}
 3 C u0 p0 c0 {1,S} {4,S} {5,D}
 4 C u0 p0 c0 {2,S} {3,S} {6,S} {7,S}
 5 O u0 p2 c0 {3,D}
 6 H u0 p0 c0 {4,S}
 7 H u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4911,17 +4942,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 141,
+    index = 142,
     label = XCCH2OH,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {6,S}
+"""
+1 O u0 p2 c0 {2,S} {6,S}
 2 C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 C u0 p0 c0 {2,S} {7,T}
 4 H u0 p0 c0 {2,S}
 5 H u0 p0 c0 {2,S}
 6 H u0 p0 c0 {1,S}
 7 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4947,15 +4978,15 @@ The two lowest frequencies, 12 and 51.0, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 142,
+    index = 143,
     label = XNHOH,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 N  u0 p1 c0 {1,S} {3,S} {4,S}
 3 O  u0 p2 c0 {2,S} {5,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -4980,17 +5011,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 143,
+    index = 144,
     label = XCHCHXC,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {3,S} {4,S}
+"""
+1 C u0 p0 c0 {2,D} {3,S} {4,S}
 2 C u0 p0 c0 {1,D} {5,S} {6,S}
 3 C u0 p0 c0 {1,S} {7,T}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {2,S}
 6 X u0 p0 c0 {2,S}
 7 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5015,16 +5046,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 144,
+    index = 145,
     label = XCHXCO,
     molecule = 
-"""1 O u0 p2 c0 {3,D}
+"""
+1 O u0 p2 c0 {3,D}
 2 C u0 p0 c0 {3,S} {4,S} {5,D}
 3 C u0 p0 c0 {1,D} {2,S} {6,S}
 4 H u0 p0 c0 {2,S}
 5 X u0 p0 c0 {2,D}
 6 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5049,14 +5080,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 145,
+    index = 146,
     label = NNOX,
     molecule = 
-"""1 X  u0  p0  c0
+"""
+1 X  u0  p0  c0
 2 N  u0  p2  c-1  {3,D}
 3 N  u0  p0  c+1  {2,D} {4,D}
 4 O  u0  p2  c0  {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5082,10 +5113,11 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 146,
+    index = 147,
     label = XCHCHXCH2,
     molecule = 
-"""1 C u0 p0 c0 {8,S} {2,D} {4,S}
+"""
+1 C u0 p0 c0 {8,S} {2,D} {4,S}
 2 C u0 p0 c0 {1,D} {3,S} {5,S}
 3 C u0 p0 c0 {2,S} {9,S} {6,S} {7,S}
 4 H u0 p0 c0 {1,S}
@@ -5094,7 +5126,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0 {1,S}
 9 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5119,10 +5150,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 147,
+    index = 148,
     label = XCHCHXCH,
     molecule = 
-"""1 C u0 p0 c0 {7,D} {2,S} {4,S}
+"""
+1 C u0 p0 c0 {7,D} {2,S} {4,S}
 2 C u0 p0 c0 {1,S} {3,D} {5,S}
 3 C u0 p0 c0 {8,S} {2,D} {6,S}
 4 H u0 p0 c0 {1,S} 
@@ -5130,7 +5162,6 @@ entry(
 6 H u0 p0 c0 {3,S} 
 7 X u0 p0 c0 {1,D}
 8 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5155,17 +5186,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 148,
+    index = 149,
     label = CH2XCOH,
     molecule = 
-"""1 O u0 p2 c0 {2,S} {6,S}
+"""
+1 O u0 p2 c0 {2,S} {6,S}
 2 C u0 p0 c0 {1,S} {3,D} {7,S}
 3 C u0 p0 c0 {2,D} {4,S} {5,S}
 4 H u0 p0 c0 {3,S}
 5 H u0 p0 c0 {3,S}
 6 H u0 p0 c0 {1,S}
 7 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5191,15 +5222,15 @@ The two lowest frequencies, 12 and 12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 149,
+    index = 150,
     label = XCOOH,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {3,S} {5,S}
+"""
+1 C u0 p0 c0 {2,D} {3,S} {5,S}
 2 O u0 p2 c0 {1,D}
 3 O u0 p2 c0 {1,S} {4,S}
 4 H u0 p0 c0 {3,S}
 5 X u0 p0 c0 {1,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5225,15 +5256,15 @@ The two lowest frequencies, 36.7 and 64.6, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 150,
+    index = 151,
     label = XOXNH,
     molecule = 
-"""1 X  u0  p0  c0  {3,S}
+"""
+1 X  u0  p0  c0  {3,S}
 2 X  u0  p0  c0  {4,S}
 3 O  u0  p2  c0  {1,S} {4,S}
 4 N  u0  p1  c0  {2,S} {3,S} {5,S}
 5 H  u0  p0  c0  {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5258,10 +5289,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 151,
+    index = 152,
     label = XCHCH2XCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,S} {7,S} {9,S}
 3 C u0 p0 c0 {1,S} {8,S} {10,D}
 4 H u0 p0 c0 {1,S}
@@ -5271,7 +5303,6 @@ entry(
 8 H u0 p0 c0 {3,S}
 9 X u0 p0 c0 {2,S}
 10 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5296,10 +5327,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 152,
+    index = 153,
     label = XCCH2XCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
 3 C u0 p0 c0 {1,S} {9,T}
 4 H u0 p0 c0 {1,S}
@@ -5308,7 +5340,6 @@ entry(
 7 H u0 p0 c0 {2,S}
 8 X u0 p0 c0 {2,S}
 9 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5333,10 +5364,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 153,
+    index = 154,
     label = CH3XCCH3,
     molecule = 
-"""1 C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+"""
+1 C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
 2 C u0 p0 c0 {3,S} {7,S} {8,S} {9,S}
 3 C u0 p0 c0 {1,S} {2,S} {10,D}
 4 H u0 p0 c0 {1,S}
@@ -5346,7 +5378,6 @@ entry(
 8 H u0 p0 c0 {2,S}
 9 H u0 p0 c0 {2,S}
 10 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5371,14 +5402,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 154,
+    index = 155,
     label = H2OX,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 O  u0 p2 c0 {3,S} {4,S}
 3 H  u0 p0 c0 {2,S}
 4 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5404,14 +5435,14 @@ The two lowest frequencies, 12 and 62.1, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 155,
+    index = 156,
     label = XNCN,
     molecule = 
-"""1 X  u0  p0  c0  {2,D}
+"""
+1 X  u0  p0  c0  {2,D}
 2 N  u0  p1  c0  {1,D} {3,S}
 3 C  u0  p0  c0  {2,S} {4,T}
 4 N  u0  p1  c0  {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5437,17 +5468,17 @@ The two lowest frequencies, 88.08 and 88.09, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 156,
+    index = 157,
     label = XCHCCH2,
     molecule = 
-"""1 C u0 p0 c0 {3,D} {4,S} {7,S}
+"""
+1 C u0 p0 c0 {3,D} {4,S} {7,S}
 2 C u0 p0 c0 {3,D} {5,S} {6,S}
 3 C u0 p0 c0 {1,D} {2,D}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {2,S}
 6 H u0 p0 c0 {2,S}
 7 X u0 p0 c0 {1,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5472,16 +5503,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 157,
+    index = 158,
     label = XCHNH2,
     molecule = 
-"""1 X  u0 p0 c0 {2,D}
+"""
+1 X  u0 p0 c0 {2,D}
 2 C  u0 p0 c0 {1,D} {3,S} {4,S}
 3 N  u0 p1 c0 {2,S} {5,S} {6,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {3,S}
 6 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5507,17 +5538,17 @@ The two lowest frequencies, 24.5 and 55.12, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 158,
+    index = 159,
     label = XOCH2OH,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 O u0 p2 c0 {1,S} {7,S} 
 3 O u0 p2 c0 {1,S} {6,S}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {1,S}
 6 H u0 p0 c0 {3,S}
 7 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5543,10 +5574,11 @@ The two lowest frequencies, 42 and 64.2, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 159,
+    index = 160,
     label = XCHCH2XC,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,S} {7,D}
 3 C u0 p0 c0 {1,S} {8,T}
 4 H u0 p0 c0 {1,S}
@@ -5554,7 +5586,6 @@ entry(
 6 H u0 p0 c0 {2,S}
 7 X u0 p0 c0 {2,D}
 8 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5579,15 +5610,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 160,
+    index = 161,
     label = NCOHX,
     molecule = 
-"""1 X  u0  p0  c0
+"""
+1 X  u0  p0  c0
 2 N  u0  p1  c0  {3,T}
 3 C  u0  p0  c0  {2,T} {4,S}
 4 O  u0  p2  c0  {3,S} {5,S}
 5 H  u0  p0  c0  {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5613,16 +5644,16 @@ The two lowest frequencies, 46.11 and 61.53, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 161,
+    index = 162,
     label = XCH2OH,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 C  u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 O  u0 p2 c0 {2,S} {6,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
 6 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5648,17 +5679,17 @@ The two lowest frequencies, 25.3 and 72.1, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 162,
+    index = 163,
     label = XCCH2XC,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,T}
 3 C u0 p0 c0 {1,S} {7,T}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {1,S}
 6 X u0 p0 c0 {2,T}
 7 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5683,14 +5714,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 163,
+    index = 164,
     label = XNOH,
     molecule = 
-"""1 X  u0 p0 c0 {2,D}
+"""
+1 X  u0 p0 c0 {2,D}
 2 N  u0 p1 c0 {1,D} {3,S}
 3 O  u0 p2 c0 {2,S} {4,S}
 4 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5715,16 +5746,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 164,
+    index = 165,
     label = XCHXNH,
     molecule = 
-"""1 X  u0 p0 c0 {3,D}
+"""
+1 X  u0 p0 c0 {3,D}
 2 X  u0 p0 c0 {4,S}
 3 C  u0 p0 c0 {1,D} {4,S} {5,S}
 4 N  u0 p1 c0 {2,S} {3,S} {6,S}
 5 H  u0 p0 c0 {3,S}
 6 H  u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5749,10 +5780,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 165,
+    index = 166,
     label = XCCH2CH3,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
 3 C u0 p0 c0 {1,S} {9,T}
 4 H u0 p0 c0 {1,S}
@@ -5761,7 +5793,6 @@ entry(
 7 H u0 p0 c0 {2,S}
 8 H u0 p0 c0 {2,S}
 9 X u0 p0 c0 {3,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5786,12 +5817,12 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 166,
+    index = 167,
     label = XN,
     molecule = 
-"""1 X  u0 p0 c0 {2,T}
+"""
+1 X  u0 p0 c0 {2,T}
 2 N  u0 p1 c0 {1,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5816,15 +5847,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 167,
+    index = 168,
     label = XCH3,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 C  u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 H  u0 p0 c0 {2,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5849,16 +5880,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 168,
+    index = 169,
     label = ONNH2X,
     molecule = 
-"""1 X  u0 p0 c0
+"""
+1 X  u0 p0 c0
 2 O  u0 p2 c0 {3,D}
 3 N  u0 p1 c0 {2,D} {4,S}
 4 N  u0 p1 c0 {3,S} {5,S} {6,S}
 5 H  u0 p0 c0 {4,S}
 6 H  u0 p0 c0 {4,S}
-
 
 
 """,
@@ -5886,12 +5917,12 @@ The two lowest frequencies, 18.68 and 56.21, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 169,
+    index = 170,
     label = XH,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 H  u0 p0 c0 {1,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5916,15 +5947,15 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 170,
+    index = 171,
     label = XNHNO,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 N  u0 p1 c0 {1,S} {3,S} {5,S}
 3 N  u0 p1 c0 {2,S} {4,D}
 4 O  u0 p2 c0 {3,D}
 5 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5949,14 +5980,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 171,
+    index = 172,
     label = XCCO,
     molecule = 
-"""1 O u0 p2 c0 {3,D}
+"""
+1 O u0 p2 c0 {3,D}
 2 C u0 p0 c0 {3,D} {4,D}
 3 C u0 p0 c0 {1,D} {2,D}
 4 X u0 p0 c0 {2,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -5981,10 +6012,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 172,
+    index = 173,
     label = XCH2XCHXCH2,
     molecule = 
-"""1  C u0 p0 c0 {2,S} {4,S} {5,S} {9,S}
+"""
+1  C u0 p0 c0 {2,S} {4,S} {5,S} {9,S}
 2  C u0 p0 c0 {1,S} {3,S} {6,S} {10,S}
 3  C u0 p0 c0 {2,S} {7,S} {8,S} {11,S}
 4  H u0 p0 c0 {1,S}
@@ -5995,7 +6027,6 @@ entry(
 9  X u0 p0 c0 {1,S}
 10 X u0 p0 c0 {2,S}
 11 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6020,13 +6051,13 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 173,
+    index = 174,
     label = XNH,
     molecule = 
-"""1 X  u0 p0 c0 {2,D}
+"""
+1 X  u0 p0 c0 {2,D}
 2 N  u0 p1 c0 {1,D} {3,S}
 3 H  u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6051,13 +6082,13 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 174,
+    index = 175,
     label = NNX,
     molecule = 
-"""1 X  u0 p0 c0 
+"""
+1 X  u0 p0 c0 
 2 N  u0 p1 c0 {3,T}
 3 N  u0 p1 c0 {2,T}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6083,17 +6114,17 @@ The two lowest frequencies, 12 and 9.93, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 175,
+    index = 176,
     label = XNXCXNH,
     molecule = 
-"""1 X  u0  p0  c0  {4,D}
+"""
+1 X  u0  p0  c0  {4,D}
 2 X  u0  p0  c0  {5,D}
 3 X  u0  p0  c0  {6,S}
 4 N  u0  p1  c0  {1,D} {5,S}
 5 C  u0  p0  c0  {2,D} {4,S} {6,S}
 6 N  u0  p1  c0  {3,S} {5,S} {7,S}
 7 H  u0  p0  c0  {6,S} 
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6118,16 +6149,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 176,
+    index = 177,
     label = XCHXCH,
     molecule = 
-"""1 X  u0 p0 c0 {3,D}
+"""
+1 X  u0 p0 c0 {3,D}
 2 X  u0 p0 c0 {4,D}
 3 C  u0 p0 c0 {1,D} {4,S} {5,S}
 4 C  u0 p0 c0 {2,D} {3,S} {6,S}
 5 H  u0 p0 c0 {3,S}
 6 H  u0 p0 c0 {4,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6152,10 +6183,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 177,
+    index = 178,
     label = CH3XCHCH3,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,S} {4,S} {11,S}
+"""
+1 C u0 p0 c0 {2,S} {3,S} {4,S} {11,S}
 2 C u0 p0 c0 {1,S} {5,S} {6,S} {7,S}
 3 C u0 p0 c0 {1,S} {8,S} {9,S} {10,S}
 4 H u0 p0 c0 {1,S}
@@ -6166,7 +6198,6 @@ entry(
 9 H u0 p0 c0 {3,S}
 10 H u0 p0 c0 {3,S}
 11 X u0 p0 c0 {1,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6191,10 +6222,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 178,
+    index = 179,
     label = XCHCHCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {3,D} {4,S}
+"""
+1 C u0 p0 c0 {2,S} {3,D} {4,S}
 2 C u0 p0 c0 {1,S} {5,S} {8,D}
 3 C u0 p0 c0 {1,D} {6,S} {7,S}
 4 H u0 p0 c0 {1,S}
@@ -6202,7 +6234,6 @@ entry(
 6 H u0 p0 c0 {3,S}
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0 {2,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6227,16 +6258,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 179,
+    index = 180,
     label = XCH2XN,
     molecule = 
-"""1 X  u0 p0 c0 {3,S}
+"""
+1 X  u0 p0 c0 {3,S}
 2 X  u0 p0 c0 {4,D}
 3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
 4 N  u0 p1 c0 {2,D} {3,S}
 5 H  u0 p0 c0 {3,S}
 6 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6261,16 +6292,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 180,
+    index = 181,
     label = XCCCH2,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {4,S} {5,S}
+"""
+1 C u0 p0 c0 {2,D} {4,S} {5,S}
 2 C u0 p0 c0 {1,D} {3,D}
 3 C u0 p0 c0 {2,D} {6,D}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {1,S}
 6 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6296,16 +6327,16 @@ The two lowest frequencies, 12 and 99.7, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 181,
+    index = 182,
     label = XCHCXC,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {5,S} {4,S}
+"""
+1 C u0 p0 c0 {2,D} {5,S} {4,S}
 2 C u0 p0 c0 {1,D} {3,D}
 3 C u0 p0 c0 {2,D} {6,D}
 4 H u0 p0 c0 {1,S}
 5 X u0 p0 c0 {1,S}
 6 X u0 p0 c0 {3,D}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6330,10 +6361,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 182,
+    index = 183,
     label = XCHXCCH3,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {4,S} {8,S}
+"""
+1 C u0 p0 c0 {2,D} {4,S} {8,S}
 2 C u0 p0 c0 {1,D} {3,S} {9,S}  
 3 C u0 p0 c0 {2,S} {5,S} {6,S} {7,S}
 4 H u0 p0 c0 {1,S}
@@ -6342,7 +6374,6 @@ entry(
 7 H u0 p0 c0 {3,S}
 8 X u0 p0 c0 {1,S}
 9 X u0 p0 c0 {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6367,10 +6398,11 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 183,
+    index = 184,
     label = CH3CHCH2X,
     molecule = 
-"""1 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
+"""
+1 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
 2 C u0 p0 c0 {1,S} {3,D} {7,S}
 3 C u0 p0 c0 {2,D} {8,S} {9,S}
 4 H u0 p0 c0 {1,S}
@@ -6380,7 +6412,6 @@ entry(
 8 H u0 p0 c0 {3,S}
 9 H u0 p0 c0 {3,S}
 10 X u0 p0 c0
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6405,16 +6436,16 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 184,
+    index = 185,
     label = XNHNH2,
     molecule = 
-"""1 X  u0 p0 c0 {2,S}
+"""
+1 X  u0 p0 c0 {2,S}
 2 N  u0 p1 c0 {1,S} {3,S} {4,S}
 3 N  u0 p1 c0 {2,S} {5,S} {6,S}
 4 H  u0 p0 c0 {2,S}
 5 H  u0 p0 c0 {3,S}
 6 H  u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6439,17 +6470,17 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 185,
+    index = 186,
     label = XCHCXCH,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {6,S} {4,S}
+"""
+1 C u0 p0 c0 {2,D} {6,S} {4,S}
 2 C u0 p0 c0 {1,D} {3,D}
 3 C u0 p0 c0 {2,D} {7,S} {5,S}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {3,S}
 6 X u0 p0 c0 {1,S}
 7 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6474,14 +6505,14 @@ fmax=2.5e-2.
 )
 
 entry(
-    index = 186,
+    index = 187,
     label = XNO2,
     molecule = 
-"""1 X  u0  p0 c0  {2,S}
+"""
+1 X  u0  p0 c0  {2,S}
 2 N  u0  p0 c+1  {1,S} {3,D} {4,S}
 3 O  u0  p2 c0  {2,D}
 4 O  u0  p3 c-1  {2,S}
-
 """,
     thermo = NASA(
         polynomials = [
@@ -6507,17 +6538,17 @@ The two lowest frequencies, 31.35 and 43.35, where replaced by the 2D gas model.
 )
 
 entry(
-    index = 187,
+    index = 188,
     label = XCHCHXO,
     molecule = 
-"""1 C u0 p0 c0 {2,D} {4,S} {6,S}
+"""
+1 C u0 p0 c0 {2,D} {4,S} {6,S}
 2 C u0 p0 c0 {1,D} {3,S} {5,S}
 3 O u0 p2 c0 {2,S} {7,S}
 4 H u0 p0 c0 {1,S}
 5 H u0 p0 c0 {2,S}
 6 X u0 p0 c0 {1,S}
 7 X u0 p0 c0 {3,S}
-
 """,
     thermo = NASA(
         polynomials = [

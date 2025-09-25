@@ -3,6 +3,7 @@ from numpy.linalg import inv
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from matplotlib.ticker import MaxNLocator, LogLocator
+import textwrap
 
 
 class Adsorbate:
@@ -391,8 +392,8 @@ class Adsorbate:
         line += '    index = {},\n'.format(str(index))
         line += '    label = {},\n'.format(self.adsorbate_name)
         line += '    molecule = \n'
-        line += '\"\"\"'
-        line += self.connectivity + '\n'
+        line += '\"\"\"\n'
+        line += self.connectivity
         line += '\"\"\",\n'
         line += '    thermo = NASA(\n'
         line += '        polynomials = [\n'
@@ -413,35 +414,91 @@ class Adsorbate:
         return line
 
 class Adsorbates:
-       
+
+
     def __init__(self,
                  adsorbate_list,
-                 reference_dict,                                                                                                                                                                                                  slab_dict,
+                 reference_dict, 
+                 slab_dict,
                  long_description,
                  P_ref = 1.0E5,  #Pa
                  NASA7_T_switch = 1000.0,  #K
                  twoD_gas_cutoff_frequency = 100.0,  #cm^{-1}
                  ):   
         
-    
+        self.slab_dict = slab_dict
         self.adsorbate_list = []
         for ads_dict in adsorbate_list:
             ads = Adsorbate(ads_dict, reference_dict, slab_dict, long_description,
                             P_ref,NASA7_T_switch,twoD_gas_cutoff_frequency)
             self.adsorbate_list.append(ads)
-            
+       
         return
+
+    def _get_vacantX_str(self):
+        first_part = textwrap.dedent(
+        """
+        entry(
+            index = 1,
+            label = "vacant",
+            molecule =
+        \"\"\"
+        1 X  u0 p0 c0
+        \"\"\",
+            thermo = NASA(
+                polynomials = [
+                    NASAPolynomial(coeffs=[
+                    0.000000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00,
+                    0.000000000E+00,   0.000000000E+00,   0.000000000E+00], Tmin=(298.0,'K'), Tmax=(1000.0, 'K')),
+                    NASAPolynomial(coeffs=[
+                    0.000000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00,
+                    0.000000000E+00,   0.000000000E+00,   0.000000000E+00], Tmin=(1000.0,'K'), Tmax=(3000.0, 'K')),
+                ],
+                Tmin = (298.0, 'K'),
+                Tmax = (3000.0, 'K'),
+            ),
+        """
+        )
+        metal_type = self.slab_dict['metal']
+        facet = self.slab_dict['facet']
+        metal_str = "    metal = \"" + metal_type + '\",\n'
+        facet_str = "    facet = \"" + facet + '\",\n)\n'
+        return first_part + metal_str + facet_str
 
     def plot_fits(self):
         for ads in self.adsorbate_list:
             ads.plot_NASA_fit()
         return
 
-    def get_RMG_entries(self):
+    def get_RMG_entries(self, start_idx=1):
         string_tot = ''
         for i, ads in enumerate(self.adsorbate_list):
-            i += 1
+            i += start_idx
             rmg_str = ads.get_RMG_thermo_database_entry(i) + '\n'
             string_tot += rmg_str
         return string_tot
+    
+    def write_RMG_thermolib(self,
+                            filename,
+                            libname=' ',
+                            short_description=' ',
+                            long_description='    \n',
+                            ):
+        
+        main_str = self.get_RMG_entries(start_idx=2)
+        header_str = textwrap.dedent(
+        """
+        #!/usr/bin/env python
+        # encoding: utf-8
+        """
+        )
+        name_str = 'name = \"' + libname + '\"\n'
+        short_desc_str = 'shortDesc = u\"' + short_description + '\"\n'
+        long_desc_str = 'longDesc = u\"\"\"\n' + long_description + '\"\"\"\n'
+        vacantx_str = self._get_vacantX_str()
+        file_str = header_str + name_str + short_desc_str + long_desc_str + vacantx_str + main_str
+        with open(filename, 'w') as f:
+            f.writelines(file_str)
+
+
 
