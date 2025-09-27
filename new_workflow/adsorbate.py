@@ -413,26 +413,26 @@ class Adsorbate:
 
         return line
 
-class Adsorbates:
 
+class Adsorbates:
 
     def __init__(self,
                  adsorbate_list,
-                 reference_dict, 
+                 reference_dict,
                  slab_dict,
                  long_description,
                  P_ref = 1.0E5,  #Pa
                  NASA7_T_switch = 1000.0,  #K
                  twoD_gas_cutoff_frequency = 100.0,  #cm^{-1}
-                 ):   
-        
+                 ):
+
         self.slab_dict = slab_dict
         self.adsorbate_list = []
         for ads_dict in adsorbate_list:
             ads = Adsorbate(ads_dict, reference_dict, slab_dict, long_description,
                             P_ref,NASA7_T_switch,twoD_gas_cutoff_frequency)
             self.adsorbate_list.append(ads)
-       
+
         return
 
     def _get_vacantX_str(self):
@@ -501,4 +501,60 @@ class Adsorbates:
             f.writelines(file_str)
 
 
+class AdsorbatesEnsemble(Adsorbates):
+    def __init__(self,
+                 adsorbate_list,
+                 reference_dict,
+                 slab_dict,
+                 long_description,
+                 ensemble_energies_array,
+                 reference_ensemble,
+                 ensemble_scale=0.683,
+                 P_ref=100000,
+                 NASA7_T_switch=1000,
+                 twoD_gas_cutoff_frequency=100):
+        super().__init__(adsorbate_list,
+                         reference_dict,
+                         slab_dict,
+                         long_description,
+                         P_ref,
+                         NASA7_T_switch,
+                         twoD_gas_cutoff_frequency)
 
+        self.ensemble_energies_array = ensemble_energies_array
+        self.ref_ensemble = reference_ensemble
+        self.ensemble_scale = ensemble_scale
+        self.original_ads_list = self.adsorbate_list.copy()
+        self.reference_dict = reference_dict
+        self.original_ref_dict = self.reference_dict.copy()
+        self.rydberg_to_eV = 13.6056980659
+
+    def write_ensemble_of_thermodatabase_files(
+            self,
+            directory="./",
+            file_prefix="database",
+            max_members=None,
+            ):
+        names = [ads.adsorbate_name for ads in self.adsorbate_list]
+        ref_names = list(self.ref_ensemble.keys())
+        if max_members:
+            N_members = max_members
+        else:
+            N_members = len(self.ensemble_energies_array[names[0]])
+        for i in range(N_members):
+            for j, name in enumerate(names):
+                dE = self.ensemble_energies_array[name][i]
+                dE *= self.rydberg_to_eV * self.ensemble_scale
+                oldE = self.original_ads_list[j].dft_energy[0]
+                newE = oldE - dE
+                self.adsorbate_list[j].dft_energy[0] = newE
+            for j, name in enumerate(ref_names):
+                dE = self.ref_ensemble[name][i]
+                dE *= self.rydberg_to_eV * self.ensemble_scale
+                oldE = self.original_ref_dict['reference_energies'][name]
+                newE = oldE - dE
+                self.reference_dict['reference_energies'][name] = newE
+            """ loop to do same for refs"""
+            name = directory + file_prefix + "_{}.py".format(str(i))
+            self.write_RMG_thermolib(name)
+        return None
