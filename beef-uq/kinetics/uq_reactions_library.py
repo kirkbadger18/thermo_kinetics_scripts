@@ -4,12 +4,12 @@ import os
 import pandas as pd
 from torch.quasirandom import SobolEngine
 
-N_members=25
+N_members=10
 name='reactions'
 
 N_reactions = 54
-stick_coeff_indices = [1, 4, 33, 34, 35, 36, 37]
-stick_arr_indices = [3, 18, 19, 38]
+stick_coeff_indices = [1, 3, 4, 33, 34, 35, 36, 37]
+stick_arr_indices = [18, 19, 38]
 no_data_indices = [31, 32, 42, 50, 54]
 indices = []
 
