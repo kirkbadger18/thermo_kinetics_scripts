@@ -32,21 +32,23 @@ class Adsorbate:
                             )
         reference_dict = dict(
                 reference_compositions={"CH4": {"C": int,  "O": int,
-                                        "H": int, "N": int},
+                                        "H": int, "N": int, "slab": int},
                                         "H2O": {"C": int, "O": int,
-                                        "H":2, "N": int},
+                                        "H":2, "N": int, "slab": int},
                                         "H2": {"C": int, "O": int,
-                                        "H":2, "N": int},
+                                        "H":2, "N": int, "slab": int},
                                         },
                 reference_energies= {"CH4":float,
                                      "H2O":float,
                                      "H2": float,
                                      "NH3: float,
+                                     "slab": float
                                     },
                 reference_EOF={"CH4": float,
                                "H2O": float,
                                "H2": float,
-                               "NH3": float
+                               "NH3": float,
+                               "slab": float
                               },
                 )
         """
