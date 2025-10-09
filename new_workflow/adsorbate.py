@@ -120,37 +120,49 @@ class Adsorbate:
             self.twoD_gas = True
         return
 
-    def get_0K_heat_of_formation(self):
+    def get_enthalpy_of_formation_at_0K(self):
 
-        ads_comp_dict = self.adsorbate_composition
-        ads_comp_keys = list(ads_comp_dict.keys())
-        ref_species_dict = self.reference_compositions
-        ref_species_keys = list(ref_species_dict.keys())
+        """
+        General linear algebra framework to calculate the enthalpy (of formation) of a target (e.g., adsorbate)
+        from a set of reference species (e.g., gas-phase species, adsorbates). The method is completely flexible and
+        can be used with the conventional approach (using elements) or
+        with more complex error cancellation methods (e.g., isodesmic reactions). Details for this method are provided
+        in Kreitz et al., Chem. Soc. Rev., 2025, 54, 560-589, DOI: 10.1039/D4CS00768A
+        """
 
-        num_ads_elements = len(ads_comp_keys)
-        num_ref_species = len(ref_species_keys)
-        assert num_ads_elements == num_ref_species
+        target_composition_dict = self.adsorbate_composition
+        target_composition_keys = list(target_composition_dict.keys())
+        references_composition_dict = self.reference_compositions
+        references_composition_keys = list(references_composition_dict.keys())
 
-        ads_comp_vector = np.zeros(num_ads_elements)
-        for i, elmnt_key in enumerate(ads_comp_keys):
-            ads_comp_vector[i] = ads_comp_dict[elmnt_key]
+        number_target_features = len(target_composition_keys)
+        number_reference_features = len(references_composition_keys)
+        assert number_target_features == number_reference_features
 
-        ref_comp_matrix = np.zeros((num_ref_species, num_ref_species))
-        for i, spec_key in enumerate(ref_species_keys):
-            for j, elmnt_key in enumerate(ads_comp_keys):
-                ref_comp_matrix[j, i] = ref_species_dict[spec_key][elmnt_key]
+        target_feature_vector = np.zeros(number_target_features)
+        for i, feature_key in enumerate(target_composition_keys):
+            target_feature_vector[i] = target_composition_dict[feature_key]
 
-        stoich_vector = -np.matmul(inv(ref_comp_matrix), ads_comp_vector)
+        reference_feature_matrix = np.zeros((number_reference_features, number_reference_features))
+        for i, species_key in enumerate(references_composition_keys):
+            for j, feature_key in enumerate(target_composition_keys):
+                reference_feature_matrix[j, i] = references_composition_dict[species_key][feature_key]
 
-        H_ref = np.array(list(self.reference_EOF.values()))
-        E_ref = np.array(list(self.reference_energies.values()))
+        target_reference_vector = -np.matmul(inv(reference_feature_matrix), target_feature_vector)
 
-        E = self.dft_energy[0]+self.zpe[0]  # - self.slab_energy
-        E_kJ = E * self.eV_to_kJpermole
-        E_ref_term = stoich_vector.dot(E_ref) * self.eV_to_kJpermole
-        H_ref_term = stoich_vector.dot(H_ref)
-        HOF_0K = (E_kJ + E_ref_term - H_ref_term)
-        return HOF_0K
+        references_enthalpies_of_formation_at_0K = np.array(list(self.reference_EOF.values()))
+
+        references_dft_energies = np.array(list(self.reference_energies.values()))
+        references_dft_energies *= self.eV_to_kJpermole
+
+        target_dft_energy = self.dft_energy[0] + self.zpe[0]
+        target_dft_energy *= self.eV_to_kJpermole
+
+        enthalpy_of_formation_0K = target_dft_energy
+        enthalpy_of_formation_0K += target_reference_vector.dot(references_dft_energies)
+        enthalpy_of_formation_0K -= target_reference_vector.dot(references_enthalpies_of_formation_at_0K)
+
+        return enthalpy_of_formation_0K
 
     def get_2D_translational_thermo(self):
         
@@ -229,7 +241,7 @@ class Adsorbate:
         S = S_t + S_v 
         dH = dH_t + dH_v 
         Cp = Cp_t + Cv_v
-        HOF_0K = self.get_0K_heat_of_formation()
+        HOF_0K = self.get_enthalpy_of_formation_at_0K()
         self.HOF_298K = HOF_0K + dH[0] - HOF_correction
         H = self.HOF_298K + dH - dH[0] 
         return Q, S, H, Cp
