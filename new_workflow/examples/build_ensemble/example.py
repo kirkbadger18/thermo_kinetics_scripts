@@ -23,9 +23,5 @@ ads_list = AdsorbatesEnsemble(Pt111_ads_data,
                               beefdict,
                               refbeefdict,
                               )
-ads_list.write_RMG_thermolib('database_ensemble/surfaceThermoPt111_adsorbed_refs.py')
-
-#ads_list.write_ensemble_of_thermodatabase_files(directory='database_ensemble/',
-#                                                file_prefix="surfaceThermoPt111_adsorbed_refs",
-#                                                max_members=10,
-#                                                )
+ads_list.write_ensemble_of_RMG_thermodatabase_files('database_ensemble/surfaceThermoPt111_adsorbed_refs.py',
+                                                    max_members=2)

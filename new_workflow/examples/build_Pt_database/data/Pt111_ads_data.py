@@ -1954,7 +1954,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2XCCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 3,
             "N": 0,
@@ -1998,7 +1998,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNXCNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 2,
@@ -2033,7 +2033,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCCHO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 2,
             "N": 0,
@@ -2068,7 +2068,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 0,
@@ -2100,7 +2100,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCXCO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 2,
             "N": 0,
@@ -2132,7 +2132,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "H2C(XO)OCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 2,
             "N": 0,
@@ -2182,7 +2182,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "ONOHX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 1,
@@ -2217,7 +2217,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "NH3X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 0,
             "N": 1,
@@ -2252,7 +2252,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCN",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 1,
             "N": 1,
@@ -2281,7 +2281,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNHCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 1,
             "N": 1,
@@ -2322,7 +2322,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNHCHO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 1,
             "N": 1,
@@ -2360,7 +2360,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 1,
             "N": 0,
@@ -2395,7 +2395,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCXCCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 3,
             "N": 0,
@@ -2436,7 +2436,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3CH2CH3X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 8,
             "C": 3,
             "N": 0,
@@ -2492,7 +2492,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH2XCCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 3,
             "N": 0,
@@ -2539,7 +2539,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2CH2XCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 6,
             "C": 3,
             "N": 0,
@@ -2589,7 +2589,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3OCH3X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 6,
             "C": 2,
             "N": 0,
@@ -2639,7 +2639,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "OHXCNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 1,
             "N": 1,
@@ -2677,7 +2677,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3XCHXCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 6,
             "C": 3,
             "N": 0,
@@ -2727,7 +2727,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 1,
             "N": 0,
@@ -2759,7 +2759,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 2,
             "N": 0,
@@ -2794,7 +2794,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHXCXC",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 3,
             "N": 0,
@@ -2829,7 +2829,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 1,
             "N": 1,
@@ -2867,7 +2867,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNNO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 2,
@@ -2899,7 +2899,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNHXCO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 1,
@@ -2934,7 +2934,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCHCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 3,
             "N": 0,
@@ -2981,7 +2981,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 0,
@@ -3007,7 +3007,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3XCO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 2,
             "N": 0,
@@ -3048,7 +3048,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XC",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 1,
             "N": 0,
@@ -3074,7 +3074,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CO2X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 1,
             "N": 0,
@@ -3106,7 +3106,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "H2X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 0,
             "N": 0,
@@ -3135,7 +3135,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "ONNCH3CH3X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 6,
             "C": 2,
             "N": 2,
@@ -3191,7 +3191,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XOXO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 0,
@@ -3220,7 +3220,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3NXNOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 1,
             "N": 2,
@@ -3267,7 +3267,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "H2NOHX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 0,
             "N": 1,
@@ -3305,7 +3305,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2XCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 2,
             "N": 0,
@@ -3346,7 +3346,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "OCHNH2X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 1,
             "N": 1,
@@ -3387,7 +3387,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHXCHXCH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 3,
             "N": 0,
@@ -3428,7 +3428,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHXO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 0,
@@ -3460,7 +3460,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 1,
@@ -3492,7 +3492,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCCHXCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 3,
             "N": 0,
@@ -3533,7 +3533,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHXCXCH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 3,
             "N": 0,
@@ -3571,7 +3571,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH4X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 1,
             "N": 0,
@@ -3609,7 +3609,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 2,
             "N": 0,
@@ -3650,7 +3650,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "HC(O)XO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 0,
@@ -3685,7 +3685,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3XCOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 2,
             "N": 0,
@@ -3729,7 +3729,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCHO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 2,
             "N": 0,
@@ -3767,7 +3767,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCXCHCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 3,
             "N": 0,
@@ -3811,7 +3811,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCNO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 1,
             "N": 1,
@@ -3843,7 +3843,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3NH2X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 1,
             "N": 1,
@@ -3887,7 +3887,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 2,
@@ -3919,7 +3919,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNN",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 2,
@@ -3948,7 +3948,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHXCHCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 3,
             "N": 0,
@@ -3995,7 +3995,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XOCHCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 2,
             "N": 0,
@@ -4036,7 +4036,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNHXCXNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 1,
             "N": 2,
@@ -4074,7 +4074,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2CHCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 3,
             "N": 0,
@@ -4121,7 +4121,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XOXCNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 1,
@@ -4156,7 +4156,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "OXCNH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 1,
             "N": 1,
@@ -4194,7 +4194,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "HCO2CH3X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 2,
             "N": 0,
@@ -4241,7 +4241,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3XNXNOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 1,
             "N": 2,
@@ -4288,7 +4288,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XONH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 0,
             "N": 1,
@@ -4323,7 +4323,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "OXNNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 2,
@@ -4358,7 +4358,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNCO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 1,
             "N": 1,
@@ -4390,7 +4390,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 2,
             "N": 0,
@@ -4425,7 +4425,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCXCCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 3,
             "N": 0,
@@ -4463,7 +4463,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2CHO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 2,
             "N": 0,
@@ -4504,7 +4504,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 1,
@@ -4533,7 +4533,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3OCH2OHX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 6,
             "C": 2,
             "N": 0,
@@ -4586,7 +4586,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XOC(O)XO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 1,
             "N": 0,
@@ -4621,7 +4621,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH2COX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 2,
             "N": 0,
@@ -4659,7 +4659,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 0,
@@ -4688,7 +4688,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2CH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 2,
             "N": 0,
@@ -4732,7 +4732,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2NH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 1,
             "N": 1,
@@ -4773,7 +4773,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XOXNO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 1,
@@ -4805,7 +4805,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3CHOX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 2,
             "N": 0,
@@ -4849,7 +4849,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNXNO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 2,
@@ -4881,7 +4881,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3CH2OHX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 6,
             "C": 2,
             "N": 0,
@@ -4931,7 +4931,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNCNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 2,
@@ -4966,7 +4966,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNNCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 0,
             "N": 2,
@@ -5007,7 +5007,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XOCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 1,
             "N": 0,
@@ -5045,7 +5045,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3XCHOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 2,
             "N": 0,
@@ -5092,7 +5092,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2XNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 1,
             "N": 1,
@@ -5130,7 +5130,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3XNNOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 1,
             "N": 2,
@@ -5177,7 +5177,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNHXNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 0,
             "N": 2,
@@ -5212,7 +5212,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3CH2XCO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 3,
             "N": 0,
@@ -5262,7 +5262,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCH2XCH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 3,
             "N": 0,
@@ -5306,7 +5306,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "OC(OH)OHX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 1,
             "N": 0,
@@ -5347,7 +5347,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNHXN",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 2,
@@ -5379,7 +5379,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "OXCXCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 2,
             "N": 0,
@@ -5417,7 +5417,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCCH2OH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 2,
             "N": 0,
@@ -5458,7 +5458,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNHOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 0,
             "N": 1,
@@ -5493,7 +5493,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCHXC",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 3,
             "N": 0,
@@ -5531,7 +5531,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHXCO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 2,
             "N": 0,
@@ -5566,7 +5566,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "NNOX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 2,
@@ -5598,7 +5598,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCHXCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 3,
             "N": 0,
@@ -5642,7 +5642,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCHXCH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 3,
             "N": 0,
@@ -5683,7 +5683,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH2XCOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 2,
             "N": 0,
@@ -5724,7 +5724,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCOOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 0,
@@ -5759,7 +5759,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XOXNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 1,
@@ -5791,7 +5791,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCH2XCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 3,
             "N": 0,
@@ -5838,7 +5838,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCCH2XCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 3,
             "N": 0,
@@ -5882,7 +5882,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3XCCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 6,
             "C": 3,
             "N": 0,
@@ -5932,7 +5932,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "H2OX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 0,
             "N": 0,
@@ -5964,7 +5964,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNCN",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 1,
             "N": 2,
@@ -5996,7 +5996,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 3,
             "N": 0,
@@ -6037,7 +6037,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHNH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 1,
             "N": 1,
@@ -6075,7 +6075,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XOCH2OH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 1,
             "N": 0,
@@ -6116,7 +6116,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCH2XC",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 3,
             "N": 0,
@@ -6157,7 +6157,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "NCOHX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 1,
@@ -6192,7 +6192,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2OH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 1,
             "N": 0,
@@ -6230,7 +6230,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCCH2XC",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 3,
             "N": 0,
@@ -6268,7 +6268,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNOH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 1,
@@ -6300,7 +6300,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHXNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 1,
             "N": 1,
@@ -6335,7 +6335,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCCH2CH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 3,
             "N": 0,
@@ -6382,7 +6382,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XN",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 1,
@@ -6408,7 +6408,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 1,
             "N": 0,
@@ -6443,7 +6443,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "ONNH2X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 0,
             "N": 2,
@@ -6481,7 +6481,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 0,
@@ -6507,7 +6507,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNHNO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 2,
@@ -6542,7 +6542,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCCO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 2,
             "N": 0,
@@ -6574,7 +6574,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2XCHXCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 5,
             "C": 3,
             "N": 0,
@@ -6621,7 +6621,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 0,
             "N": 1,
@@ -6650,7 +6650,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "NNX",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 2,
@@ -6679,7 +6679,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNXCXNH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 1,
             "N": 2,
@@ -6714,7 +6714,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHXCH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 2,
             "N": 0,
@@ -6749,7 +6749,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3XCHCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 7,
             "C": 3,
             "N": 0,
@@ -6802,7 +6802,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCHCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 3,
             "N": 0,
@@ -6846,7 +6846,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCH2XN",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 1,
             "N": 1,
@@ -6881,7 +6881,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCCCH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 3,
             "N": 0,
@@ -6919,7 +6919,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCXC",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 1,
             "C": 3,
             "N": 0,
@@ -6954,7 +6954,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHXCCH3",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 4,
             "C": 3,
             "N": 0,
@@ -6998,7 +6998,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "CH3CHCH2X",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 6,
             "C": 3,
             "N": 0,
@@ -7048,7 +7048,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNHNH2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 3,
             "C": 0,
             "N": 2,
@@ -7086,7 +7086,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCXCH",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 3,
             "N": 0,
@@ -7124,7 +7124,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XNO2",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 0,
             "C": 0,
             "N": 1,
@@ -7156,7 +7156,7 @@ Pt111_ads_data = [
     },
     {
         "adsorbate_name": "XCHCHXO",
-        "adsorbate_composition": {
+        "atomic_composition": {
             "H": 2,
             "C": 2,
             "N": 0,

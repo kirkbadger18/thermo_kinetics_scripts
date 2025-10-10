@@ -18,4 +18,4 @@ ads_list = Adsorbates(Pt111_ads_data,
                       slab_dict,
                       long_description)
 
-ads_list.write_RMG_thermolib("surfaceThermoPt111_adsorbed_refs.py")
+ads_list.write_RMG_thermodatabase_file("surfaceThermoPt111_adsorbed_refs.py")
