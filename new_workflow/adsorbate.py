@@ -53,7 +53,7 @@ class Adsorbate:
                 )
         """
         self.adsorbate_name = adsorbate_dict['adsorbate_name']
-        self.adsorbate_composition = adsorbate_dict['adsorbate_composition']
+        self.adsorbate_atomic_composition = adsorbate_dict['adsorbate_composition']
         self.dft_energy = adsorbate_dict['dft_energy']
         self.zpe = adsorbate_dict['zpe']
         self.frequencies = adsorbate_dict['frequencies']
@@ -74,20 +74,20 @@ class Adsorbate:
         self.twoD_gas_cutoff_frequency = twoD_gas_cutoff_frequency
 
         self._load_constants()
-        self._get_adsorbate_mass()
+        self._get_adsorbate_molecular_mass()
         self._get_temperatures()
         self._check_if_2D_gas()
 
     def __repr__(self):
         return self.name
 
-    def _get_adsorbate_mass(self):
-        masses = {'H': 1.01, 'C': 12.01, 'N': 14, 'O': 16}
-        comp = self.adsorbate_composition
-        self.adsorbate_mass = comp['H']*masses['H']
-        self.adsorbate_mass += comp['O']*masses['O']
-        self.adsorbate_mass += comp['C']*masses['C']
-        self.adsorbate_mass += comp['N']*masses['N']
+    def _get_adsorbate_molecular_mass(self):
+        molecular_masses = {'H': 1.01, 'C': 12.01, 'N': 14, 'O': 16}
+        atomic_composition = self.adsorbate_atomic_composition
+        self.adsorbate_molecular_mass = atomic_composition['H'] * molecular_masses['H']
+        self.adsorbate_molecular_mass += atomic_composition['O'] * molecular_masses['O']
+        self.adsorbate_molecular_mass += atomic_composition['C'] * molecular_masses['C']
+        self.adsorbate_molecular_mass += atomic_composition['N'] * molecular_masses['N']
         return
 
     def _get_temperatures(self):
@@ -130,7 +130,7 @@ class Adsorbate:
         in Kreitz et al., Chem. Soc. Rev., 2025, 54, 560-589, DOI: 10.1039/D4CS00768A
         """
 
-        target_composition_dict = self.adsorbate_composition
+        target_composition_dict = self.adsorbate_atomic_composition
         target_composition_keys = list(target_composition_dict.keys())
         references_composition_dict = self.reference_compositions
         references_composition_keys = list(references_composition_dict.keys())
@@ -170,7 +170,7 @@ class Adsorbate:
         sites = self.sites_occupied
         pi = np.pi
         temps = self.temperatures
-        m = self.adsorbate_mass
+        m = self.adsorbate_molecular_mass
         h = self.h
         amu = self.amu
         kB = self.kB
@@ -196,7 +196,7 @@ class Adsorbate:
         kB = self.kB
         h = self.h
         P_ref = self.P_ref
-        mass = self.adsorbate_mass
+        mass = self.adsorbate_molecular_mass
         temps = self.temperatures
         
         q_vib  = np.ones(len(temps))
@@ -228,7 +228,7 @@ class Adsorbate:
         o_correction = 4.340 #kJ/mol. enthalpy_O(298) - enthalpy_O(0)
     
         HOF_correction = 0.0
-        comp = self.adsorbate_composition
+        comp = self.adsorbate_atomic_composition
         HOF_correction += comp['H'] * h_correction
         HOF_correction += comp['C'] * c_correction    
         HOF_correction += comp['N'] * n_correction
