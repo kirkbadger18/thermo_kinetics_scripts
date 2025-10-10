@@ -221,18 +221,25 @@ class Adsorbate:
         return q_vib, S_vib, dH_vib, Cv_vib
 
     def get_thermo(self):
+        """
+        The enthalpy of formation of is derived from the DFT data at 0K. We need to correct the enthalpy of formation to
+        298K, which includes a correction based on the partition functions, but also an additional correction that is based
+        on correcting the reference species (see Ruscic and Bross, Computer Aided Chemical Engineering, 45, 3-114, 2019,
+        DOI:10.1016/B978-0-444-64087-1.00001-2, page 75). If you are reading this, you should probably read the whole paper!
+        """
 
+        #Values from Ruscic and Bross (see above), page 75
         h_correction = 4.234 #kJ/mol. enthalpy_H(298) - enthalpy_H(0)
         c_correction = 1.051 #kJ/mol. enthalpy_C(298) - enthalpy_C(0)
         n_correction = 4.335 #kJ/mol. enthalpy_N(298) - enthalpy_N(0)
         o_correction = 4.340 #kJ/mol. enthalpy_O(298) - enthalpy_O(0)
     
-        HOF_correction = 0.0
-        comp = self.adsorbate_atomic_composition
-        HOF_correction += comp['H'] * h_correction
-        HOF_correction += comp['C'] * c_correction    
-        HOF_correction += comp['N'] * n_correction
-        HOF_correction += comp['O'] * o_correction        
+        enthalpy_of_formation_reference_correction = 0.0
+        atomic_composition = self.adsorbate_atomic_composition
+        enthalpy_of_formation_reference_correction += atomic_composition['H'] * h_correction
+        enthalpy_of_formation_reference_correction += atomic_composition['C'] * c_correction
+        enthalpy_of_formation_reference_correction += atomic_composition['N'] * n_correction
+        enthalpy_of_formation_reference_correction += atomic_composition['O'] * o_correction
    
         q_t, S_t, dH_t, Cp_t = self.get_2D_translational_thermo()
         q_v, S_v, dH_v, Cv_v = self.get_vibrational_thermo()
@@ -241,9 +248,11 @@ class Adsorbate:
         S = S_t + S_v 
         dH = dH_t + dH_v 
         Cp = Cp_t + Cv_v
-        HOF_0K = self.get_enthalpy_of_formation_at_0K()
-        self.HOF_298K = HOF_0K + dH[0] - HOF_correction
-        H = self.HOF_298K + dH - dH[0] 
+        enthalpy_of_formation_at_0K = self.get_enthalpy_of_formation_at_0K()
+        self.enthalpy_of_formation_at_298K = enthalpy_of_formation_at_0K
+        self.enthalpy_of_formation_at_298K += dH[0]
+        self.enthalpy_of_formation_at_298K -= enthalpy_of_formation_reference_correction
+        H = self.enthalpy_of_formation_at_298K + dH - dH[0]
         return Q, S, H, Cp
 
     def fit_NASA7_polynomial(self):
@@ -362,7 +371,7 @@ class Adsorbate:
         
         S_fit, H_fit, Cp_fit = self.get_thermo_from_NASA()
         Q, S, H, Cp = self.get_thermo()
-        HOF_298 = self.HOF_298K
+        HOF_298 = self.enthalpy_of_formation_at_298K
         fig = plt.figure(dpi=300,figsize=(12,4))
         gs = gridspec.GridSpec(1, 3)
         gs.update(wspace=0.5, hspace=0.4)
