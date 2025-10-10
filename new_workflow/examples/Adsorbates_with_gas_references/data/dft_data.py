@@ -11,7 +11,8 @@ fmax=2.5e-2.'''
 
 adsorbate = dict(
             adsorbate_name = 'OXCXCH2',
-            adsorbate_composition = {'H':2, 'C':2, 'N':0, 'O':1, 'slab': 1},
+            atomic_composition = {'H':2, 'C':2, 'N':0, 'O':1, 'slab': 1},
+            bond_composition = {},
             dft_energy = [-378744.484815, 'eV'],
             zpe = [0.930, 'eV'],
             frequencies = [58.5,150.3,163.9,284.7,443.7,445.6,618.1,682.8,894.5,1032.6,1050.4,1361.4,1738.5,3001.1,3074.3, 'cm-1'],
@@ -34,7 +35,8 @@ adsorbate = dict(
 adsorbate_list = [
         dict(
             adsorbate_name = 'OXCXCH2',
-            adsorbate_composition = {'H':2, 'C':2, 'N':0, 'O':1, 'slab': 1},
+            atomic_composition = {'H':2, 'C':2, 'N':0, 'O':1, 'slab': 1},
+            bond_composition = {},
             dft_energy = [-378744.484815, 'eV'],
             zpe = [0.930, 'eV'],
             frequencies = [58.5,150.3,163.9,284.7,443.7,445.6,618.1,682.8,894.5,1032.6,1050.4,1361.4,1738.5,3001.1,3074.3, 'cm-1'],
@@ -53,7 +55,8 @@ adsorbate_list = [
         ),
         dict(
             adsorbate_name = 'XNO',
-            adsorbate_composition = {'H':0, 'C':0, 'N':1, 'O':1, 'slab': 1},
+            atomic_composition = {'H':0, 'C':0, 'N':1, 'O':1, 'slab': 1},
+            bond_composition = {},
             dft_energy = [-378586.3267, 'eV'],
             zpe = [0.18, 'eV'],
             frequencies = [155.09, 155.14, 290.49, 412.18, 412.21, 1473.12, 'cm-1'],
@@ -68,7 +71,8 @@ adsorbate_list = [
         ),
         dict(
             adsorbate_name = 'XNO2',
-            adsorbate_composition = {'H':0, 'C':0, 'N':1, 'O':2, 'slab': 1},
+            atomic_composition = {'H':0, 'C':0, 'N':1, 'O':2, 'slab': 1},
+            bond_composition = {},
             dft_energy = [-379163.0881, 'eV'],
             zpe = [0.288, 'eV'],
             frequencies = [31.35, 43.35, 60.55, 234.48, 272.57, 520.52, 766.17, 1249.65, 1461.41, 'cm-1'],

@@ -27,7 +27,7 @@ class Adsorbate:
                             frequencies = list,
                             sites_occupied = float,
                             beef_energies = list,
-                            adsorbate_composition = {"C": int,  "O": int,
+                            atomic_composition = {"C": int,  "O": int,
                                                      "H": int, "N": int},
                             )
         reference_dict = dict(
@@ -53,7 +53,8 @@ class Adsorbate:
                 )
         """
         self.adsorbate_name = adsorbate_dict['adsorbate_name']
-        self.adsorbate_atomic_composition = adsorbate_dict['adsorbate_composition']
+        self.adsorbate_atomic_composition = adsorbate_dict['atomic_composition']
+        #self.adsorbate_bond_composition = adsorbate_dict['bond_composition']
         self.dft_energy = adsorbate_dict['dft_energy']
         self.zpe = adsorbate_dict['zpe']
         self.frequencies = adsorbate_dict['frequencies']
