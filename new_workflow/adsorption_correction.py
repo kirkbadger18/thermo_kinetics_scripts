@@ -82,7 +82,7 @@ class Group:
         lines += '        S298=({}, \'J/(mol*K)\'),\n'.format(str(dS))
         lines += '    ),\n'
         lines += 'shortDesc=u\"\"\"{}\"\"\",\n'.format(self.short_description)
-        lines += 'shortDesc=u\"\"\"{}\n'.format(self.long_description)
+        lines += 'longDesc=u\"\"\"{}\n'.format(self.long_description)
         lines += '\"\"\",\n'
         lines += '    metal = \"{}\",\n'.format(self.slab_dict['metal'])
         lines += '    facet = \"{}\",\n'.format(self.slab_dict['facet'])

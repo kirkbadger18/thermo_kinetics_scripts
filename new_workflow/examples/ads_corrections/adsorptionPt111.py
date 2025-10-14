@@ -36,7 +36,7 @@ entry(
         S298=(-168.673, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -59,7 +59,7 @@ entry(
         S298=(-186.501, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -82,7 +82,7 @@ entry(
         S298=(-195.899, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -107,7 +107,7 @@ entry(
         S298=(-184.879, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -132,7 +132,7 @@ entry(
         S298=(-211.081, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -155,7 +155,7 @@ entry(
         S298=(-172.682, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -181,7 +181,7 @@ entry(
         S298=(-214.968, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -207,7 +207,7 @@ entry(
         S298=(-191.92, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -234,7 +234,7 @@ entry(
         S298=(-192.345, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -258,7 +258,7 @@ entry(
         S298=(-193.307, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -283,7 +283,7 @@ entry(
         S298=(-194.29, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -307,7 +307,7 @@ entry(
         S298=(-152.622, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -331,7 +331,7 @@ entry(
         S298=(-204.353, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -356,7 +356,7 @@ entry(
         S298=(-201.882, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -379,7 +379,7 @@ entry(
         S298=(-186.3, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -403,7 +403,7 @@ entry(
         S298=(-175.675, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -428,7 +428,7 @@ entry(
         S298=(-195.23, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -453,7 +453,7 @@ entry(
         S298=(-193.314, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -479,7 +479,7 @@ entry(
         S298=(-197.829, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -503,7 +503,7 @@ entry(
         S298=(-188.758, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -527,7 +527,7 @@ entry(
         S298=(-171.411, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -552,7 +552,7 @@ entry(
         S298=(-183.708, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -575,7 +575,7 @@ entry(
         S298=(-170.773, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -599,7 +599,7 @@ entry(
         S298=(-167.729, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -624,7 +624,7 @@ entry(
         S298=(-170.273, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -648,7 +648,7 @@ entry(
         S298=(-174.316, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -671,7 +671,7 @@ entry(
         S298=(-186.3, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -695,7 +695,7 @@ entry(
         S298=(-175.675, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -720,7 +720,7 @@ entry(
         S298=(-195.23, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -745,7 +745,7 @@ entry(
         S298=(-193.314, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -771,7 +771,7 @@ entry(
         S298=(-197.829, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -795,7 +795,7 @@ entry(
         S298=(-188.758, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -819,7 +819,7 @@ entry(
         S298=(-171.411, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -844,7 +844,7 @@ entry(
         S298=(-183.708, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -867,7 +867,7 @@ entry(
         S298=(-177.885, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -891,7 +891,7 @@ entry(
         S298=(-196.22, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -916,7 +916,7 @@ entry(
         S298=(-159.55, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -939,7 +939,7 @@ entry(
         S298=(-164.124, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -963,7 +963,7 @@ entry(
         S298=(-186.753, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -987,7 +987,7 @@ entry(
         S298=(-141.494, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1010,7 +1010,7 @@ entry(
         S298=(-176.349, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1034,7 +1034,7 @@ entry(
         S298=(-205.343, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1058,7 +1058,7 @@ entry(
         S298=(-209.129, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1084,7 +1084,7 @@ entry(
         S298=(-217.923, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1109,7 +1109,7 @@ entry(
         S298=(-202.293, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1134,7 +1134,7 @@ entry(
         S298=(-222.487, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1160,7 +1160,7 @@ entry(
         S298=(-200.61, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1184,7 +1184,7 @@ entry(
         S298=(-243.646, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1212,7 +1212,7 @@ entry(
         S298=(-209.34, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1238,7 +1238,7 @@ entry(
         S298=(-200.988, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1264,7 +1264,7 @@ entry(
         S298=(-203.938, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1291,7 +1291,7 @@ entry(
         S298=(-196.129, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1316,7 +1316,7 @@ entry(
         S298=(-188.069, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1342,7 +1342,7 @@ entry(
         S298=(-196.347, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1369,7 +1369,7 @@ entry(
         S298=(-227.783, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1394,7 +1394,7 @@ entry(
         S298=(-211.148, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1419,7 +1419,7 @@ entry(
         S298=(-211.148, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1443,7 +1443,7 @@ entry(
         S298=(-179.723, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1467,7 +1467,7 @@ entry(
         S298=(-179.723, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1488,7 +1488,7 @@ entry(
         S298=(-167.699, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1509,7 +1509,7 @@ entry(
         S298=(-169.455, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1531,7 +1531,7 @@ entry(
         S298=(-170.526, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1553,7 +1553,7 @@ entry(
         S298=(-171.763, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1576,7 +1576,7 @@ entry(
         S298=(-166.816, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1599,7 +1599,7 @@ entry(
         S298=(-165.599, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1624,7 +1624,7 @@ entry(
         S298=(-179.047, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1650,7 +1650,7 @@ entry(
         S298=(-179.041, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1673,7 +1673,7 @@ entry(
         S298=(-144.277, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1697,7 +1697,7 @@ entry(
         S298=(-146.569, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1720,7 +1720,7 @@ entry(
         S298=(-166.429, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1745,7 +1745,7 @@ entry(
         S298=(-182.514, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1768,7 +1768,7 @@ entry(
         S298=(-153.59, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1792,7 +1792,7 @@ entry(
         S298=(-151.565, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1815,7 +1815,7 @@ entry(
         S298=(-164.4, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1839,7 +1839,7 @@ entry(
         S298=(-177.467, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1866,7 +1866,7 @@ entry(
         S298=(-192.287, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1890,7 +1890,7 @@ entry(
         S298=(-143.176, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1915,7 +1915,7 @@ entry(
         S298=(-157.564, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1937,7 +1937,7 @@ entry(
         S298=(-175.05, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1961,7 +1961,7 @@ entry(
         S298=(-183.565, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -1986,7 +1986,7 @@ entry(
         S298=(-174.235, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2008,7 +2008,7 @@ entry(
         S298=(-161.835, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2031,7 +2031,7 @@ entry(
         S298=(-187.544, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2052,7 +2052,7 @@ entry(
         S298=(-168.306, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2074,7 +2074,7 @@ entry(
         S298=(-168.676, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2097,7 +2097,7 @@ entry(
         S298=(-176.565, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2120,7 +2120,7 @@ entry(
         S298=(-142.031, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2142,7 +2142,7 @@ entry(
         S298=(-174.51, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2165,7 +2165,7 @@ entry(
         S298=(-178.708, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2187,7 +2187,7 @@ entry(
         S298=(-165.284, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2210,7 +2210,7 @@ entry(
         S298=(-145.417, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2234,7 +2234,7 @@ entry(
         S298=(-180.636, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2257,7 +2257,7 @@ entry(
         S298=(-164.071, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2280,7 +2280,7 @@ entry(
         S298=(-171.405, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2304,7 +2304,7 @@ entry(
         S298=(-216.907, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2330,7 +2330,7 @@ entry(
         S298=(-167.995, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2354,7 +2354,7 @@ entry(
         S298=(-189.56, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2379,7 +2379,7 @@ entry(
         S298=(-188.5, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2403,7 +2403,7 @@ entry(
         S298=(-189.451, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2426,7 +2426,7 @@ entry(
         S298=(-143.039, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2449,7 +2449,7 @@ entry(
         S298=(-163.298, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2470,7 +2470,7 @@ entry(
         S298=(-155.727, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2492,7 +2492,7 @@ entry(
         S298=(-151.553, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2516,7 +2516,7 @@ entry(
         S298=(-194.234, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2541,7 +2541,7 @@ entry(
         S298=(-149.812, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2564,7 +2564,7 @@ entry(
         S298=(-134.71, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2587,7 +2587,7 @@ entry(
         S298=(-120.712, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2608,7 +2608,7 @@ entry(
         S298=(-128.976, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2631,7 +2631,7 @@ entry(
         S298=(-120.514, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2655,7 +2655,7 @@ entry(
         S298=(-119.645, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2678,7 +2678,7 @@ entry(
         S298=(-122.254, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2702,7 +2702,7 @@ entry(
         S298=(-130.966, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2727,7 +2727,7 @@ entry(
         S298=(-143.863, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2751,7 +2751,7 @@ entry(
         S298=(-135.288, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2775,7 +2775,7 @@ entry(
         S298=(-122.364, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2800,7 +2800,7 @@ entry(
         S298=(-118.627, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2828,7 +2828,7 @@ entry(
         S298=(-137.338, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2853,7 +2853,7 @@ entry(
         S298=(-141.215, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2879,7 +2879,7 @@ entry(
         S298=(-139.363, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2902,7 +2902,7 @@ entry(
         S298=(-122.197, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2924,7 +2924,7 @@ entry(
         S298=(-122.197, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2948,7 +2948,7 @@ entry(
         S298=(-136.79, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2970,7 +2970,7 @@ entry(
         S298=(-138.501, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -2992,7 +2992,7 @@ entry(
         S298=(-150.696, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -3014,7 +3014,7 @@ entry(
         S298=(-132.089, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -3037,7 +3037,7 @@ entry(
         S298=(-98.276, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -3061,7 +3061,7 @@ entry(
         S298=(-110.352, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -3083,7 +3083,7 @@ entry(
         S298=(-141.385, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -3106,7 +3106,7 @@ entry(
         S298=(-141.385, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -3129,7 +3129,7 @@ entry(
         S298=(-139.884, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
@@ -3153,7 +3153,7 @@ entry(
         S298=(-144.387, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
-shortDesc=u""" 
+longDesc=u""" 
 """,
     metal = "Pt",
     facet = "111",
