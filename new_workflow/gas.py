@@ -1,9 +1,7 @@
 import numpy as np
-from numpy.linalg import inv
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from matplotlib.ticker import MaxNLocator, LogLocator
-import textwrap
 
 
 class Gas:
@@ -20,8 +18,6 @@ class Gas:
         gas_dict = dict(
                             gas_name= string,
                             heat_of_formation_0K=[float, 'kJ/mol'],
-                            dft_energy = float,
-                            zpe = float,
                             frequencies = list,
                             symmetry_number = int,
                             electronic_degeneracy = int,
@@ -51,8 +47,6 @@ class Gas:
         """
         self.gas_name_name = gas_dict['gas_name']
         self.gas_composition = gas_dict['gas_composition']
-        self.dft_energy = gas_dict['dft_energy']
-        self.zpe = gas_dict['zpe']
         self.frequencies = gas_dict['frequencies']
         self.symmetry_number = gas_dict['symmetry_number']
         self.electronic_degeneracy = gas_dict['electronic_degeneracy']
