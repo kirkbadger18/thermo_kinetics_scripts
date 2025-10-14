@@ -246,9 +246,10 @@ class AdsorptionCorrectionTree:
         entry1 = self.get_first_entry()
         lines.extend(entry1)
         for i, node_id in enumerate(self.tree.expand_tree()):
-            tmpgroup = self.tree[node_id].data['Group']
-            entry_str = tmpgroup.get_RMG_group_entry(idx=i+2)
-            lines.extend(entry_str)
+            if node_id != 'RX':
+                tmpgroup = self.tree[node_id].data['Group']
+                entry_str = tmpgroup.get_RMG_group_entry(idx=i+1)
+                lines.extend(entry_str)
         tree_str = self._get_tree_str()
         lines.extend(tree_str)
         with open(filename, 'w') as f:
