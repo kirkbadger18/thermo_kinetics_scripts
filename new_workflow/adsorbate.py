@@ -12,7 +12,7 @@ class Adsorbate:
                  adsorbate_dict: dict,
                  reference_dict: dict,
                  slab_dict: dict,
-                 long_description: str,
+                 long_description: str = ' ',
                  P_ref: float = 1.0E5,  # Pa
                  NASA7_T_switch: float = 1000.0,  # K
                  twoD_gas_cutoff_frequency: float = 100.0,  # cm^{-1}

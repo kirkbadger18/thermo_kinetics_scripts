@@ -13,30 +13,31 @@ class Group:
                  reference_dict,
                  slab_dict,
                  connectivity_string,
-                 long_description=' ',
-                 short_description=' ',
+                 group_long_description=' ',
+                 group_short_description=' ',
                  P_ref=1.0E5,  # Pa
                  NASA7_T_switch=1000.0,  # K
                  twoD_gas_cutoff_frequency=100.0,
                  ):
 
         self.group_name = group_name
-        self.long_description = long_description
-        self.short_description = short_description
+        self.group_long_description = group_long_description
+        self.group_short_description = group_short_description
         self.slab_dict = slab_dict
         self.connectivity_string = connectivity_string
+        cutoff = twoD_gas_cutoff_frequency
 
         self.adsorbate_list = []
         for ads_dict in adsorbate_list:
             ads = Adsorbate(ads_dict, reference_dict, slab_dict,
-                            long_description, P_ref, NASA7_T_switch,
-                            twoD_gas_cutoff_frequency)
+                            P_ref=P_ref, NASA7_T_switch=NASA7_T_switch,
+                            twoD_gas_cutoff_frequency=cutoff)
             self.adsorbate_list.append(ads)
 
         self.gas_list = []
         for gas_dict in gas_list:
-            gas = Gas(gas_dict, reference_dict, long_description, P_ref,
-                      NASA7_T_switch)
+            gas = Gas(gas_dict, reference_dict, P_ref=P_ref,
+                      NASA7_T_switch=cutoff)
             self.gas_list.append(gas)
         return
 
@@ -68,6 +69,8 @@ class Group:
         dH, dS, dcP = self.get_group_correction()
         str_dcP = '{}'.format(", ".join(map(str, dcP)))
         str_T = '300, 400, 500, 600, 800, 1000, 1500'
+        shortdesc = self.group_short_description
+        longdesc = self.group_long_description
         lines = 'entry(\n'
         lines += '    index = {},\n'.format(str(idx))
         lines += '    label = \"{}\",\n'.format(str(self.group_name))
@@ -81,8 +84,8 @@ class Group:
         lines += '        H298=({}, \'kJ/mol\'),\n'.format(str(dH))
         lines += '        S298=({}, \'J/(mol*K)\'),\n'.format(str(dS))
         lines += '    ),\n'
-        lines += 'shortDesc=u\"\"\"{}\"\"\",\n'.format(self.short_description)
-        lines += 'longDesc=u\"\"\"{}\n'.format(self.long_description)
+        lines += 'shortDesc=u\"\"\"{}\"\"\",\n'.format(shortdesc)
+        lines += 'longDesc=u\"\"\"{}\n'.format(longdesc)
         lines += '\"\"\",\n'
         lines += '    metal = \"{}\",\n'.format(self.slab_dict['metal'])
         lines += '    facet = \"{}\",\n'.format(self.slab_dict['facet'])
@@ -99,7 +102,8 @@ class AdsorptionCorrectionTree:
                  gas_lib=None,
                  reference_dict=None,
                  slab_dict=None,
-                 long_description=' ',
+                 group_long_description=' ',
+                 group_short_description=' ',
                  P_ref=1.0E5,  # Pa
                  NASA7_T_switch=1000.0,  # K
                  twoD_gas_cutoff_frequency=100.0,
@@ -110,11 +114,11 @@ class AdsorptionCorrectionTree:
         self.gas_lib = gas_lib
         self.slab_dict = slab_dict
         self.reference_dict = reference_dict
-        self.long_description = long_description
         self.P_ref = P_ref
         self.NASA_T_switch = NASA7_T_switch
         self.twoD_cutoff_frequency = twoD_gas_cutoff_frequency
-
+        self.group_long_description = group_long_description
+        self.group_short_description = group_short_description
         self._construct_tree()
         self._assign_group_data()
         self._add_Group_object_as_data()
@@ -168,15 +172,17 @@ class AdsorptionCorrectionTree:
                                              adsorbate_names,
                                              adsorbate_list,
                                              node_id)
+            longdesc = self.group_long_description
+            shortdesc = self.group_short_description
             group = Group(group_name=node_id,
                           adsorbate_list=adsorbate_list,
                           gas_list=gas_list,
                           reference_dict=self.reference_dict,
                           slab_dict=self.slab_dict,
                           connectivity_string=con_str,
-                          long_description=' ',
-                          short_description=' ',
-            )
+                          group_long_description=longdesc,
+                          group_short_description=shortdesc,
+                          )
             self.tree[node_id].data['Group'] = group
         return
 
@@ -191,13 +197,8 @@ class AdsorptionCorrectionTree:
         except AssertionError:
             print("ads ERROR")
             print(node_id)
-            print(len(adsorbate_names),len(adsorbate_list))
-            list_names = [ads['adsorbate_name'] for ads in adsorbate_list]
-            missing = [n for n in adsorbate_names if n not in list_names]
+            print(len(adsorbate_names), len(adsorbate_list))
             print(adsorbate_names)
-            #print(list_names)
-            #print(missing)
-
         try:
             assert len(gas_names) == len(gas_list)
         except AssertionError:
@@ -206,7 +207,8 @@ class AdsorptionCorrectionTree:
             assert len(gas_list) == len(adsorbate_list)
         except AssertionError:
             print('adslist and gaslist not equal')
-            print(len(gas_list),len(adsorbate_list))
+            print(len(gas_list), len(adsorbate_list))
+
     def get_first_entry(self):
         lines = []
         lines += 'entry(\n'
@@ -229,15 +231,17 @@ class AdsorptionCorrectionTree:
     def write_RMG_adsorption_correction_file(self,
                                              filename,
                                              file_title,
-                                             long_description=' ',
-                                             short_description=' ',
+                                             file_long_description=' ',
+                                             file_short_description=' ',
                                              ):
+        shortdesc = file_short_description
+        longdesc = file_long_description
         lines = []
         lines += '#!/usr/bin/env python\n# encoding: utf-8\n'
         lines += 'name = \"{}\"\n'.format(str(file_title))
-        lines += 'shortDesc = u\"{}\"\n'.format(short_description)
+        lines += 'shortDesc = u\"{}\"\n'.format(shortdesc)
         lines += 'longDesc = u\"\"\"\n'
-        lines += '{}\n'.format(str(long_description))
+        lines += '{}\n'.format(str(longdesc))
         lines += '\"\"\"\n'
         entry1 = self.get_first_entry()
         lines.extend(entry1)
