@@ -1,5 +1,5 @@
 import numpy as np
-
+import math
 
 class Gas:
 
@@ -42,7 +42,7 @@ class Gas:
                               },
                 )
         """
-        self.gas_name_name = gas_dict['gas_name']
+        self.gas_name = gas_dict['gas_name']
         self.gas_composition = gas_dict['gas_composition']
         self.frequencies = gas_dict['frequencies']
         self.symmetry_number = gas_dict['symmetry_number']
@@ -63,7 +63,7 @@ class Gas:
         self._get_temperatures()
         self._check_monoatomic()
         self._check_linear()
-
+        self.thermo = self.get_thermo()
     def __repr__(self):
         return self.name
 
@@ -132,7 +132,7 @@ class Gas:
         for i, T in enumerate(temps):
             V = kB*T/P_ref
             q_trans[i] = (2*pi*m*amu*kB*T/h**2) ** 1.5 * V
-            S_trans[i] = R * (2.5 + np.log(q_trans[i]))
+            S_trans[i] = R * (2.5 + math.log(q_trans[i]))
             Cp_trans[i] = 2.5 * R
             dH_trans[i] = 2.5 * R * T
 
@@ -151,11 +151,11 @@ class Gas:
             for t, temp in enumerate(temps):
                 for (n, nu) in enumerate(self.frequencies[0:-1]):
                     x = nu * units / temp  # cm^-1 * K cm / K = dimensionless
-                    q_vib[t] *= 1.0 / (1.0 - np.exp(-x))
-                    qterm = 1.0 - np.exp(-x)
-                    S_vib[t] += -np.log(qterm) + x * np.exp(-x) / qterm
-                    dH_vib[t] += x * np.exp(-x) / qterm
-                    Cv_vib[t] += x ** 2.0 * np.exp(-x) / qterm ** 2.0
+                    q_vib[t] *= 1.0 / (1.0 - math.exp(-x))
+                    qterm = 1.0 - math.exp(-x)
+                    S_vib[t] += -math.log(qterm) + x * math.exp(-x) / qterm
+                    dH_vib[t] += x * math.exp(-x) / qterm
+                    Cv_vib[t] += x ** 2.0 * math.exp(-x) / qterm ** 2.0
                 S_vib[t] *= self.R
                 dH_vib[t] *= self.R * temp
                 Cv_vib[t] *= self.R
@@ -190,7 +190,7 @@ class Gas:
                 if 0 == 1:  # self.linear:
                     rot_T = self.rotational_constants[0] * 1e9 * h / kB
                     q_rot[i] = T / rot_T / sigma
-                    S_rot[i] = R * (np.log(q_rot[i]) + 1.0)
+                    S_rot[i] = R * (math.log(q_rot[i]) + 1.0)
                     Cv_rot[i] = R * 1.0
                     dH_rot[i] = R * 1.0 * T
                 else:
@@ -198,7 +198,7 @@ class Gas:
                     for rot_const in self.rotational_constants[0:-1]:
                         rot_T = rot_const * 1e9 * h / kB
                         q_rot[i] *= (T / rot_T) ** 0.5
-                    S_rot[i] = R * (np.log(q_rot[i]) + 1.5)
+                    S_rot[i] = R * (math.log(q_rot[i]) + 1.5)
                     Cv_rot[i] = R * 1.5
                     dH_rot[i] = R * 1.5 * T
         return q_rot, S_rot, dH_rot, Cv_rot

@@ -3,21 +3,16 @@ from gas import Gas
 import numpy as np
 from treelib import Tree
 
-
 class Group:
 
     def __init__(self,
                  group_name,
                  adsorbate_list,
                  gas_list,
-                 reference_dict,
                  slab_dict,
                  connectivity_string,
                  group_long_description=' ',
                  group_short_description=' ',
-                 P_ref=1.0E5,  # Pa
-                 NASA7_T_switch=1000.0,  # K
-                 twoD_gas_cutoff_frequency=100.0,
                  ):
 
         self.group_name = group_name
@@ -25,29 +20,18 @@ class Group:
         self.group_short_description = group_short_description
         self.slab_dict = slab_dict
         self.connectivity_string = connectivity_string
-        cutoff = twoD_gas_cutoff_frequency
 
-        self.adsorbate_list = []
-        for ads_dict in adsorbate_list:
-            ads = Adsorbate(ads_dict, reference_dict, slab_dict,
-                            P_ref=P_ref, NASA7_T_switch=NASA7_T_switch,
-                            twoD_gas_cutoff_frequency=cutoff)
-            self.adsorbate_list.append(ads)
-
-        self.gas_list = []
-        for gas_dict in gas_list:
-            gas = Gas(gas_dict, reference_dict, P_ref=P_ref,
-                      NASA7_T_switch=cutoff)
-            self.gas_list.append(gas)
+        self.adsorbate_list = adsorbate_list
+        self.gas_list = gas_list
         return
 
     def get_group_correction(self):
         dH_list, dS_list = [], []
         dcP_array = np.zeros([7, len(self.adsorbate_list)])
         for i, ads in enumerate(self.adsorbate_list):
-            Qa, Sa, Ha, cPa = ads.get_thermo()
+            Qa, Sa, Ha, cPa = ads.thermo
             gas = self.gas_list[i]
-            Qg, Sg, Hg, cPg = gas.get_thermo()
+            Qg, Sg, Hg, cPg = gas.thermo
             dH_list.append(float(Ha[0] - Hg[0]))
             if np.abs(dH_list[-1]) > 700:
                 print(ads.adsorbate_name)
@@ -121,6 +105,7 @@ class AdsorptionCorrectionTree:
         self.group_short_description = group_short_description
         self._construct_tree()
         self._assign_group_data()
+        self._load_Ads_and_Gas()
         self._add_Group_object_as_data()
         self._get_tree_str()
         return
@@ -144,6 +129,24 @@ class AdsorptionCorrectionTree:
             self.tree[node_id].data = group_data
             pass
 
+    def _load_Ads_and_Gas(self):
+        self.adsorbate_list = []
+        cutoff = self.twoD_cutoff_frequency
+        for ads_dict in self.adsorbate_lib:
+            ads = Adsorbate(ads_dict,
+                            self.reference_dict,
+                            self.slab_dict,
+                            P_ref=self.P_ref,
+                            NASA7_T_switch=self.NASA_T_switch,
+                            twoD_gas_cutoff_frequency=cutoff)
+            self.adsorbate_list.append(ads)
+        self.gas_list = []
+        for gas_dict in self.gas_lib:
+            gas = Gas(gas_dict, self.reference_dict,
+                      P_ref=self.P_ref,
+                      NASA7_T_switch=self.NASA_T_switch)
+            self.gas_list.append(gas)
+
     def _add_Group_object_as_data(self):
         for node_id in self.tree.expand_tree():
             adsorbate_names = self.tree[node_id].data['adsorbates']
@@ -158,14 +161,14 @@ class AdsorptionCorrectionTree:
 
             adsorbate_list = []
             for name in adsorbate_names:
-                for ads_dict in self.adsorbate_lib:
-                    if ads_dict['adsorbate_name'] == name:
-                        adsorbate_list.append(ads_dict)
+                for ads in self.adsorbate_list:
+                    if ads.adsorbate_name == name:
+                        adsorbate_list.append(ads)
             gas_list = []
             for name in gas_names:
-                for gas_dict in self.gas_lib:
-                    if gas_dict['gas_name'] == name:
-                        gas_list.append(gas_dict)
+                for gas in self.gas_list:
+                    if gas.gas_name == name:
+                        gas_list.append(gas)
 
             self._check_data_passed_to_group(gas_names,
                                              gas_list,
@@ -177,7 +180,6 @@ class AdsorptionCorrectionTree:
             group = Group(group_name=node_id,
                           adsorbate_list=adsorbate_list,
                           gas_list=gas_list,
-                          reference_dict=self.reference_dict,
                           slab_dict=self.slab_dict,
                           connectivity_string=con_str,
                           group_long_description=longdesc,

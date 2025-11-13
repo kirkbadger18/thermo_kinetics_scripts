@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from matplotlib.ticker import MaxNLocator, LogLocator
 import textwrap
-
+import math
 
 class Adsorbate:
 
@@ -82,6 +82,7 @@ class Adsorbate:
         self._get_adsorbate_molecular_mass()
         self._get_temperatures()
         self._check_if_2D_gas()
+        self.thermo = self.get_thermo()
 
     def __repr__(self):
         """
@@ -222,7 +223,7 @@ class Adsorbate:
         if self.twoD_gas:
             for i, T in enumerate(temps):
                 q_trans[i] = (2*pi*m*amu*kB*T/h**2) * area * sites
-                S_trans[i] = R * (2.0 + np.log(q_trans[i]))
+                S_trans[i] = R * (2.0 + math.log(q_trans[i]))
                 Cp_trans[i] = R
                 dH_trans[i] = R * T
 
@@ -239,18 +240,19 @@ class Adsorbate:
         S_vib = np.zeros(len(temps))
         dH_vib = np.zeros(len(temps))
         Cv_vib = np.zeros(len(temps))
-
+        
         for t, temp in enumerate(temps):
             for n, nu in enumerate(self.frequencies[0:-1]):
                 if self.twoD_gas and n <= 1:
                     pass
                 else:
+                    pass
                     x = nu * units / temp  # cm^-1 * K cm / K = dimensionless
-                    q_vib[t] *= 1.0 / (1.0 - np.exp(-x))
-                    qterm = 1.0 - np.exp(-x)
-                    S_vib[t] += -np.log(qterm) + x * np.exp(-x) / qterm
-                    dH_vib[t] += x * np.exp(-x) / qterm
-                    Cv_vib[t] += x ** 2.0 * np.exp(-x) / qterm ** 2.0
+                    q_vib[t] *= 1.0 / (1.0 - math.exp(-x))
+                    qterm = 1.0 - math.exp(-x)
+                    S_vib[t] += -math.log(qterm) + x * math.exp(-x) / qterm
+                    dH_vib[t] += x * math.exp(-x) / qterm
+                    Cv_vib[t] += x ** 2.0 * math.exp(-x) / qterm ** 2.0
             S_vib[t] *= self.R
             dH_vib[t] *= self.R * temp
             Cv_vib[t] *= self.R
@@ -266,7 +268,6 @@ class Adsorbate:
         DOI:10.1016/B978-0-444-64087-1.00001-2, page 75). If you are reading
         this, you should probably read the whole paper!
         """
-
         # Values from Ruscic and Bross (see above), page 75
         h_correction = 4.234  # kJ/mol. enthalpy_H(298) - enthalpy_H(0)
         c_correction = 1.051  # kJ/mol. enthalpy_C(298) - enthalpy_C(0)
@@ -281,7 +282,6 @@ class Adsorbate:
 
         q_t, S_t, dH_t, Cp_t = self.get_2D_translational_thermo()
         q_v, S_v, dH_v, Cv_v = self.get_vibrational_thermo()
-
         Q = q_v * q_t
         S = S_t + S_v
         dH = dH_t + dH_v

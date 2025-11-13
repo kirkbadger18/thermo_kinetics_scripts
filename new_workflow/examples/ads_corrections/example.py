@@ -6,8 +6,9 @@ from data.gas_data import gas_lib
 from data.Pt111_ads_data import Pt111_ads_lib
 from data.tree import RX
 from data.group_data import group_data
-
 from adsorption_correction import AdsorptionCorrectionTree
+import time
+t0 = time.time()
 
 tree = AdsorptionCorrectionTree(RX,
                                 group_data,
@@ -19,3 +20,4 @@ tree = AdsorptionCorrectionTree(RX,
 tree.write_RMG_adsorption_correction_file('adsorptionPt111.py',
                                           ' ',
                                           )
+print('time: ', time.time() - t0)
