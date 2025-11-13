@@ -69,21 +69,20 @@ longDesc=u"""
 
 entry(
     index = 4,
-    label = "CDXRCDXR",
+    label = "C#XC-XR",
     group=
 """
-1 * X u0 p0 c0 {3,D}
-2 X u0 p0 c0 {4,D}
-3 C  u0 p0 c0 {1,D} {4,S} {5,S}
-4 C  u0 p0 c0 {2,D} {3,S} {6,S}
-5 R  u0 px c0 {3,S}
-6 R  u0 px c0 {4,S}
+1 * X u0 p0 c0 {3,T}
+2 X u0 p0 c0 {4,S}
+3 C  u0 p0 c0 {1,T} {4,S}
+4 C  u0 p0 c0 {2,S} {3,S} {5,D}
+5 R!H  u0 px c0 {4,D}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-9.568, -4.218, -0.109, 2.801, 6.219, 7.87, 9.08], 'J/(mol*K)'),
-        H298=(-222.51, 'kJ/mol'),
-        S298=(-184.879, 'J/(mol*K)'),
+        Cpdata=([2.406, 8.303, 11.6, 13.474, 15.227, 15.907, 16.407], 'J/(mol*K)'),
+        H298=(-440.281, 'kJ/mol'),
+        S298=(-204.353, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -94,21 +93,21 @@ longDesc=u"""
 
 entry(
     index = 5,
-    label = "CDXRCSXR",
+    label = "C#XC-XR2",
     group=
 """
-1 * X u0 p0 c0 {3,D}
+1 * X u0 p0 c0 {3,T}
 2 X u0 p0 c0 {4,S}
-3 C  u0 p0 c0 {1,D} {4,S} {5,S}
-4 C  u0 p0 c0 {2,S} {3,S} {6,D}
-5 R  u0 px c0 {3,S}
-6 R!H  u0 px c0 {4,D}
+3 C  u0 p0 c0 {1,T} {4,S}
+4 C  u0 p0 c0 {2,S} {3,S} {5,S} {6,S}
+5 R  u0 px c0 {4,S}
+6 R  u0 px c0 {4,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-9.522, -3.487, 0.526, 3.158, 6.094, 7.472, 8.537], 'J/(mol*K)'),
-        H298=(-397.591, 'kJ/mol'),
-        S298=(-211.081, 'J/(mol*K)'),
+        Cpdata=([-0.902, 4.58, 8.212, 10.593, 13.246, 14.529, 15.765], 'J/(mol*K)'),
+        H298=(-436.462, 'kJ/mol'),
+        S298=(-201.882, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -119,7 +118,31 @@ longDesc=u"""
 
 entry(
     index = 6,
-    label = "CSXCSX",
+    label = "C#XC=XR",
+    group=
+"""
+1 * X u0 p0 c0 {3,T}
+2 X u0 p0 c0 {4,D}
+3 C  u0 p0 c0 {1,T} {4,S}
+4 C  u0 p0 c0 {2,D} {3,S} {5,S}
+5 R  u0 px c0 {4,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([-1.997, 1.292, 3.271, 4.542, 5.969, 6.69, 7.482], 'J/(mol*K)'),
+        H298=(-488.525, 'kJ/mol'),
+        S298=(-152.622, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 7,
+    label = "C-XC-X",
     group=
 """
 1 * X u0  p0 c0 {3,D}
@@ -141,34 +164,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 7,
-    label = "CSXR2CDXR",
-    group=
-"""
-1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {4,D}
-3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
-4 C  u0 p0 c0 {2,D} {3,S} {7,S}
-5 R  u0 px c0 {3,S}
-6 R  u0 px c0 {3,S}
-7 R  u0 px c0 {4,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([0.737, 6.176, 9.658, 11.873, 14.279, 15.412, 16.395], 'J/(mol*K)'),
-        H298=(-330.811, 'kJ/mol'),
-        S298=(-214.968, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
     index = 8,
-    label = "CSXR2CSXR",
+    label = "C-XR2C-XR",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -194,7 +191,7 @@ longDesc=u"""
 
 entry(
     index = 9,
-    label = "CSXR2CSXR2",
+    label = "C-XR2C-XR2",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -221,20 +218,22 @@ longDesc=u"""
 
 entry(
     index = 10,
-    label = "CSXRCDX",
+    label = "C-XR2C=XR",
     group=
 """
-1 * X u0  p0 c0 {3,S}
-2 X u0  p0 c0 {4,D}
-3 C  u0  p0 c0 {1,S} {4,D} {5,S}
-4 C  u0  p0 c0 {2,D} {3,D}
-5 R  u0  px c0 {3,S}
+1 * X u0 p0 c0 {3,S}
+2 X u0 p0 c0 {4,D}
+3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4 C  u0 p0 c0 {2,D} {3,S} {7,S}
+5 R  u0 px c0 {3,S}
+6 R  u0 px c0 {3,S}
+7 R  u0 px c0 {4,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-5.689, -0.923, 1.99, 3.824, 5.844, 6.836, 7.789], 'J/(mol*K)'),
-        H298=(-441.761, 'kJ/mol'),
-        S298=(-193.307, 'J/(mol*K)'),
+        Cpdata=([0.737, 6.176, 9.658, 11.873, 14.279, 15.412, 16.395], 'J/(mol*K)'),
+        H298=(-330.811, 'kJ/mol'),
+        S298=(-214.968, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -245,7 +244,7 @@ longDesc=u"""
 
 entry(
     index = 11,
-    label = "CSXRCSXR",
+    label = "C-XRC-XR",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -270,20 +269,20 @@ longDesc=u"""
 
 entry(
     index = 12,
-    label = "CTXCDXR",
+    label = "C-XRC=X",
     group=
 """
-1 * X u0 p0 c0 {3,T}
-2 X u0 p0 c0 {4,D}
-3 C  u0 p0 c0 {1,T} {4,S}
-4 C  u0 p0 c0 {2,D} {3,S} {5,S}
-5 R  u0 px c0 {4,S}
+1 * X u0  p0 c0 {3,S}
+2 X u0  p0 c0 {4,D}
+3 C  u0  p0 c0 {1,S} {4,D} {5,S}
+4 C  u0  p0 c0 {2,D} {3,D}
+5 R  u0  px c0 {3,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-1.997, 1.292, 3.271, 4.542, 5.969, 6.69, 7.482], 'J/(mol*K)'),
-        H298=(-488.525, 'kJ/mol'),
-        S298=(-152.622, 'J/(mol*K)'),
+        Cpdata=([-5.689, -0.923, 1.99, 3.824, 5.844, 6.836, 7.789], 'J/(mol*K)'),
+        H298=(-441.761, 'kJ/mol'),
+        S298=(-193.307, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -294,20 +293,21 @@ longDesc=u"""
 
 entry(
     index = 13,
-    label = "CTXCSXR",
+    label = "C=XRC-XR",
     group=
 """
-1 * X u0 p0 c0 {3,T}
+1 * X u0 p0 c0 {3,D}
 2 X u0 p0 c0 {4,S}
-3 C  u0 p0 c0 {1,T} {4,S}
-4 C  u0 p0 c0 {2,S} {3,S} {5,D}
-5 R!H  u0 px c0 {4,D}
+3 C  u0 p0 c0 {1,D} {4,S} {5,S}
+4 C  u0 p0 c0 {2,S} {3,S} {6,D}
+5 R  u0 px c0 {3,S}
+6 R!H  u0 px c0 {4,D}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([2.406, 8.303, 11.6, 13.474, 15.227, 15.907, 16.407], 'J/(mol*K)'),
-        H298=(-440.281, 'kJ/mol'),
-        S298=(-204.353, 'J/(mol*K)'),
+        Cpdata=([-9.522, -3.487, 0.526, 3.158, 6.094, 7.472, 8.537], 'J/(mol*K)'),
+        H298=(-397.591, 'kJ/mol'),
+        S298=(-211.081, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -318,21 +318,21 @@ longDesc=u"""
 
 entry(
     index = 14,
-    label = "CTXCSXR2",
+    label = "C=XRC=XR",
     group=
 """
-1 * X u0 p0 c0 {3,T}
-2 X u0 p0 c0 {4,S}
-3 C  u0 p0 c0 {1,T} {4,S}
-4 C  u0 p0 c0 {2,S} {3,S} {5,S} {6,S}
-5 R  u0 px c0 {4,S}
+1 * X u0 p0 c0 {3,D}
+2 X u0 p0 c0 {4,D}
+3 C  u0 p0 c0 {1,D} {4,S} {5,S}
+4 C  u0 p0 c0 {2,D} {3,S} {6,S}
+5 R  u0 px c0 {3,S}
 6 R  u0 px c0 {4,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.902, 4.58, 8.212, 10.593, 13.246, 14.529, 15.765], 'J/(mol*K)'),
-        H298=(-436.462, 'kJ/mol'),
-        S298=(-201.882, 'J/(mol*K)'),
+        Cpdata=([-9.568, -4.218, -0.109, 2.801, 6.219, 7.87, 9.08], 'J/(mol*K)'),
+        H298=(-222.51, 'kJ/mol'),
+        S298=(-184.879, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -366,81 +366,7 @@ longDesc=u"""
 
 entry(
     index = 16,
-    label = "CDXRNDX",
-    group=
-"""
-1 X u0 p0 c0 {3,D}
-2 * X u0 p0 c0 {4,D}
-3 C  u0 p0 c0 {1,D} {4,S} {5,S}
-4 N  u0 p1 c0 {2,D} {3,S}
-5 R  u0 p0 c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
-        H298=(-126.275, 'kJ/mol'),
-        S298=(-175.675, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 17,
-    label = "CDXRNSXR",
-    group=
-"""
-1 X u0 p0 c0 {3,D}
-2 * X u0 p0 c0 {4,S}
-3 C  u0 p0 c0 {1,D} {4,S} {5,S}
-4 N  u0 p1 c0 {2,S} {3,S} {6,S}
-5 R  u0 p0 c0 {3,S}
-6 R  u0 p0 c0 {4,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
-        H298=(-314.384, 'kJ/mol'),
-        S298=(-195.23, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 18,
-    label = "CSXR2NDX",
-    group=
-"""
-1 X u0 p0 c0 {3,S}
-2 * X u0 p0 c0 {4,D}
-3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
-4 N  u0 p1 c0 {2,D} {3,S}
-5 R  u0 p0 c0 {3,S}
-6 R  u0 p0 c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
-        H298=(-215.485, 'kJ/mol'),
-        S298=(-193.314, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 19,
-    label = "CSXR2NSXR",
+    label = "C-XR2N-XR",
     group=
 """
 1 X u0 p0 c0 {3,S}
@@ -465,8 +391,82 @@ longDesc=u"""
 )
 
 entry(
+    index = 17,
+    label = "C-XR2N=X",
+    group=
+"""
+1 X u0 p0 c0 {3,S}
+2 * X u0 p0 c0 {4,D}
+3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4 N  u0 p1 c0 {2,D} {3,S}
+5 R  u0 p0 c0 {3,S}
+6 R  u0 p0 c0 {3,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
+        H298=(-215.485, 'kJ/mol'),
+        S298=(-193.314, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 18,
+    label = "C-XRN-X",
+    group=
+"""
+1 X u0 p0 c0 {3,S}
+2 * X u0 p0 c0 {5,S}
+3 C u0 p0 c0 {1,S} {4,S} {5,D}
+4 R u0 px c0 {3,S}
+5 N u0 p2 c0 {2,S} {3,D}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
+        H298=(-97.117, 'kJ/mol'),
+        S298=(-171.411, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 19,
+    label = "C-XRN-XR",
+    group=
+"""
+1 X u0  p0 c0 {3,S}
+2 * X u0  p0 c0 {4,S}
+3 C  u0  p0 c0 {1,S} {4,S} {5,D}
+4 N  u0  p1 c0 {2,S} {3,S} {6,S}
+5 R!H u0 px c0 {3,D}
+6 R u0 px c0 {4,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
+        H298=(-125.07, 'kJ/mol'),
+        S298=(-183.708, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
     index = 20,
-    label = "CSXRNDX",
+    label = "C-XRN=X",
     group=
 """
 1 X u0  p0 c0 {3,S}
@@ -490,20 +490,21 @@ longDesc=u"""
 
 entry(
     index = 21,
-    label = "CSXRNSX",
+    label = "C=XRN-XR",
     group=
 """
-1 X u0 p0 c0 {3,S}
-2 * X u0 p0 c0 {5,S}
-3 C u0 p0 c0 {1,S} {4,S} {5,D}
-4 R u0 px c0 {3,S}
-5 N u0 p2 c0 {2,S} {3,D}
+1 X u0 p0 c0 {3,D}
+2 * X u0 p0 c0 {4,S}
+3 C  u0 p0 c0 {1,D} {4,S} {5,S}
+4 N  u0 p1 c0 {2,S} {3,S} {6,S}
+5 R  u0 p0 c0 {3,S}
+6 R  u0 p0 c0 {4,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
-        H298=(-97.117, 'kJ/mol'),
-        S298=(-171.411, 'J/(mol*K)'),
+        Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
+        H298=(-314.384, 'kJ/mol'),
+        S298=(-195.23, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -514,21 +515,20 @@ longDesc=u"""
 
 entry(
     index = 22,
-    label = "CSXRNSXR",
+    label = "C=XRN=X",
     group=
 """
-1 X u0  p0 c0 {3,S}
-2 * X u0  p0 c0 {4,S}
-3 C  u0  p0 c0 {1,S} {4,S} {5,D}
-4 N  u0  p1 c0 {2,S} {3,S} {6,S}
-5 R!H u0 px c0 {3,D}
-6 R u0 px c0 {4,S}
+1 X u0 p0 c0 {3,D}
+2 * X u0 p0 c0 {4,D}
+3 C  u0 p0 c0 {1,D} {4,S} {5,S}
+4 N  u0 p1 c0 {2,D} {3,S}
+5 R  u0 p0 c0 {3,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
-        H298=(-125.07, 'kJ/mol'),
-        S298=(-183.708, 'J/(mol*K)'),
+        Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
+        H298=(-126.275, 'kJ/mol'),
+        S298=(-175.675, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -562,31 +562,7 @@ longDesc=u"""
 
 entry(
     index = 24,
-    label = "CDXROSX",
-    group=
-"""
-1 * X u0 p0 c0 {3,D}
-2 X u0 p0 c0 {4,S}
-3 C  u0 p0 c0 {1,D} {4,S} {5,S}
-4 O  u0 p2 c0 {2,S} {3,S}
-5 R  u0 px c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([5.909, 10.268, 12.842, 14.274, 15.451, 15.809, 16.096], 'J/(mol*K)'),
-        H298=(-238.166, 'kJ/mol'),
-        S298=(-167.729, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 25,
-    label = "CSXR2OSX",
+    label = "C-XR2O-X",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -610,8 +586,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 26,
-    label = "CSXROSX",
+    index = 25,
+    label = "C-XRO-X",
     group=
 """
 1 * X u0  p0 c0 {3,S}
@@ -625,6 +601,30 @@ entry(
         Cpdata=([10.817, 13.644, 15.48, 16.629, 17.68, 17.938, 17.721], 'J/(mol*K)'),
         H298=(-48.308, 'kJ/mol'),
         S298=(-174.316, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 26,
+    label = "C=XRO-X",
+    group=
+"""
+1 * X u0 p0 c0 {3,D}
+2 X u0 p0 c0 {4,S}
+3 C  u0 p0 c0 {1,D} {4,S} {5,S}
+4 O  u0 p2 c0 {2,S} {3,S}
+5 R  u0 px c0 {3,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([5.909, 10.268, 12.842, 14.274, 15.451, 15.809, 16.096], 'J/(mol*K)'),
+        H298=(-238.166, 'kJ/mol'),
+        S298=(-167.729, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -658,81 +658,7 @@ longDesc=u"""
 
 entry(
     index = 28,
-    label = "invCDXRNDX",
-    group=
-"""
-1 * X u0 p0 c0 {3,D}
-2 X u0 p0 c0 {4,D}
-3 C  u0 p0 c0 {1,D} {4,S} {5,S}
-4 N  u0 p1 c0 {2,D} {3,S}
-5 R  u0 p0 c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
-        H298=(-126.275, 'kJ/mol'),
-        S298=(-175.675, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 29,
-    label = "invCDXRNSXR",
-    group=
-"""
-1 * X u0 p0 c0 {3,D}
-2 X u0 p0 c0 {4,S}
-3 C  u0 p0 c0 {1,D} {4,S} {5,S}
-4 N  u0 p1 c0 {2,S} {3,S} {6,S}
-5 R  u0 p0 c0 {3,S}
-6 R  u0 p0 c0 {4,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
-        H298=(-314.384, 'kJ/mol'),
-        S298=(-195.23, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 30,
-    label = "invCSXR2NDX",
-    group=
-"""
-1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {4,D}
-3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
-4 N  u0 p1 c0 {2,D} {3,S}
-5 R  u0 p0 c0 {3,S}
-6 R  u0 p0 c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
-        H298=(-215.485, 'kJ/mol'),
-        S298=(-193.314, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 31,
-    label = "invCSXR2NSXR",
+    label = "inv(C-XR2N-XR)",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -757,8 +683,82 @@ longDesc=u"""
 )
 
 entry(
+    index = 29,
+    label = "inv(C-XR2N=X)",
+    group=
+"""
+1 * X u0 p0 c0 {3,S}
+2 X u0 p0 c0 {4,D}
+3 C  u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4 N  u0 p1 c0 {2,D} {3,S}
+5 R  u0 p0 c0 {3,S}
+6 R  u0 p0 c0 {3,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
+        H298=(-215.485, 'kJ/mol'),
+        S298=(-193.314, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 30,
+    label = "inv(C-XRN-X)",
+    group=
+"""
+1 * X u0 p0 c0 {3,S}
+2 X u0 p0 c0 {5,S}
+3 C u0 p0 c0 {1,S} {4,S} {5,D}
+4 R u0 px c0 {3,S}
+5 N u0 p2 c0 {2,S} {3,D}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
+        H298=(-97.117, 'kJ/mol'),
+        S298=(-171.411, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 31,
+    label = "inv(C-XRN-XR)",
+    group=
+"""
+1 * X u0  p0 c0 {3,S}
+2 X u0  p0 c0 {4,S}
+3 C  u0  p0 c0 {1,S} {4,S} {5,D}
+4 N  u0  p1 c0 {2,S} {3,S} {6,S}
+5 R!H u0 px c0 {3,D}
+6 R u0 px c0 {4,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
+        H298=(-125.07, 'kJ/mol'),
+        S298=(-183.708, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
     index = 32,
-    label = "invCSXRNDX",
+    label = "inv(C-XRN=X)",
     group=
 """
 1 * X u0  p0 c0 {3,S}
@@ -782,20 +782,21 @@ longDesc=u"""
 
 entry(
     index = 33,
-    label = "invCSXRNSX",
+    label = "inv(C=XRN-XR)",
     group=
 """
-1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {5,S}
-3 C u0 p0 c0 {1,S} {4,S} {5,D}
-4 R u0 px c0 {3,S}
-5 N u0 p2 c0 {2,S} {3,D}
+1 * X u0 p0 c0 {3,D}
+2 X u0 p0 c0 {4,S}
+3 C  u0 p0 c0 {1,D} {4,S} {5,S}
+4 N  u0 p1 c0 {2,S} {3,S} {6,S}
+5 R  u0 p0 c0 {3,S}
+6 R  u0 p0 c0 {4,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
-        H298=(-97.117, 'kJ/mol'),
-        S298=(-171.411, 'J/(mol*K)'),
+        Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
+        H298=(-314.384, 'kJ/mol'),
+        S298=(-195.23, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -806,21 +807,20 @@ longDesc=u"""
 
 entry(
     index = 34,
-    label = "invCSXRNSXR",
+    label = "inv(C=XRN=X)",
     group=
 """
-1 * X u0  p0 c0 {3,S}
-2 X u0  p0 c0 {4,S}
-3 C  u0  p0 c0 {1,S} {4,S} {5,D}
-4 N  u0  p1 c0 {2,S} {3,S} {6,S}
-5 R!H u0 px c0 {3,D}
-6 R u0 px c0 {4,S}
+1 * X u0 p0 c0 {3,D}
+2 X u0 p0 c0 {4,D}
+3 C  u0 p0 c0 {1,D} {4,S} {5,S}
+4 N  u0 p1 c0 {2,D} {3,S}
+5 R  u0 p0 c0 {3,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
-        H298=(-125.07, 'kJ/mol'),
-        S298=(-183.708, 'J/(mol*K)'),
+        Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
+        H298=(-126.275, 'kJ/mol'),
+        S298=(-175.675, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -854,31 +854,7 @@ longDesc=u"""
 
 entry(
     index = 36,
-    label = "NSXRNDX",
-    group=
-"""
-1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {4,D}
-3 N  u0 p1 c0 {1,S} {4,S} {5,S}
-4 N  u0 p1 c0 {2,D} {3,S}
-5 R  u0 p0 c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([5.588, 9.475, 11.847, 13.288, 14.692, 15.266, 15.833], 'J/(mol*K)'),
-        H298=(-192.372, 'kJ/mol'),
-        S298=(-196.22, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 37,
-    label = "NSXRNSXR",
+    label = "N-XRN-XR",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -893,6 +869,30 @@ entry(
         Cpdata=([8.625, 11.666, 13.041, 13.56, 13.614, 13.356, 12.881], 'J/(mol*K)'),
         H298=(-121.936, 'kJ/mol'),
         S298=(-159.55, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 37,
+    label = "N-XRN=X",
+    group=
+"""
+1 * X u0 p0 c0 {3,S}
+2 X u0 p0 c0 {4,D}
+3 N  u0 p1 c0 {1,S} {4,S} {5,S}
+4 N  u0 p1 c0 {2,D} {3,S}
+5 R  u0 p0 c0 {3,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([5.588, 9.475, 11.847, 13.288, 14.692, 15.266, 15.833], 'J/(mol*K)'),
+        H298=(-192.372, 'kJ/mol'),
+        S298=(-196.22, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -926,7 +926,7 @@ longDesc=u"""
 
 entry(
     index = 39,
-    label = "NSXROSX",
+    label = "N-XRO-X",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -950,7 +950,7 @@ longDesc=u"""
 
 entry(
     index = 40,
-    label = "NpDXRnOSX",
+    label = "N[+]=XR[-]O-X",
     group=
 """
 1 * X u0 p0 c0 {3,D}
@@ -1045,33 +1045,7 @@ longDesc=u"""
 
 entry(
     index = 44,
-    label = "CDXDRSCSXR2",
-    group=
-"""
-1 * X u0 p0 c0 {3,D}
-2 X u0 p0 c0 {5,S}
-3 C  u0 p0 c0 {1,D} {4,D}
-4 R!H  u0 px c0 {3,D} {5,S}
-5 C  u0 p0 c0 {2,S} {4,S} {6,S} {7,S}
-6 R  u0 px c0 {5,S}
-7 R  u0 px c0 {5,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-3.015, 2.841, 6.845, 9.501, 12.496, 13.988, 15.496], 'J/(mol*K)'),
-        H298=(-543.247, 'kJ/mol'),
-        S298=(-217.923, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 45,
-    label = "CTXSRDCSXR",
+    label = "C#XSRDC-XR",
     group=
 """
 1 * X u0 p0 c0 {3,T}
@@ -1095,22 +1069,21 @@ longDesc=u"""
 )
 
 entry(
-    index = 46,
-    label = "CTXSRSCDXR",
+    index = 45,
+    label = "C#XSRSC#X",
     group=
 """
 1 * X u0 p0 c0 {3,T}
-2 X u0 p0 c0 {5,D}
+2 X u0 p0 c0 {5,T}
 3 C  u0 p0 c0 {1,T} {4,S}
 4 R!H  u0 px c0 {3,S} {5,S}
-5 C  u0 p0 c0 {2,D} {4,S} {6,S}
-6 R  u0 p0 c0 {5,S}
+5 C  u0 p0 c0 {2,T} {4,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.004, 5.764, 9.532, 11.978, 14.676, 15.929, 16.877], 'J/(mol*K)'),
-        H298=(-457.304, 'kJ/mol'),
-        S298=(-222.487, 'J/(mol*K)'),
+        Cpdata=([-4.884, 4.756, 10.174, 13.182, 15.816, 16.675, 17.026], 'J/(mol*K)'),
+        H298=(-671.164, 'kJ/mol'),
+        S298=(-243.646, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1120,8 +1093,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 47,
-    label = "CTXSRSCSXR2",
+    index = 46,
+    label = "C#XSRSC-XR2",
     group=
 """
 1 * X u0 p0 c0 {3,T}
@@ -1146,21 +1119,48 @@ longDesc=u"""
 )
 
 entry(
-    index = 48,
-    label = "CTXSRSCTX",
+    index = 47,
+    label = "C#XSRSC=XR",
     group=
 """
 1 * X u0 p0 c0 {3,T}
-2 X u0 p0 c0 {5,T}
+2 X u0 p0 c0 {5,D}
 3 C  u0 p0 c0 {1,T} {4,S}
 4 R!H  u0 px c0 {3,S} {5,S}
-5 C  u0 p0 c0 {2,T} {4,S}
+5 C  u0 p0 c0 {2,D} {4,S} {6,S}
+6 R  u0 p0 c0 {5,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-4.884, 4.756, 10.174, 13.182, 15.816, 16.675, 17.026], 'J/(mol*K)'),
-        H298=(-671.164, 'kJ/mol'),
-        S298=(-243.646, 'J/(mol*K)'),
+        Cpdata=([-0.004, 5.764, 9.532, 11.978, 14.676, 15.929, 16.877], 'J/(mol*K)'),
+        H298=(-457.304, 'kJ/mol'),
+        S298=(-222.487, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 48,
+    label = "C=XDRSC-XR2",
+    group=
+"""
+1 * X u0 p0 c0 {3,D}
+2 X u0 p0 c0 {5,S}
+3 C  u0 p0 c0 {1,D} {4,D}
+4 R!H  u0 px c0 {3,D} {5,S}
+5 C  u0 p0 c0 {2,S} {4,S} {6,S} {7,S}
+6 R  u0 px c0 {5,S}
+7 R  u0 px c0 {5,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([-3.015, 2.841, 6.845, 9.501, 12.496, 13.988, 15.496], 'J/(mol*K)'),
+        H298=(-543.247, 'kJ/mol'),
+        S298=(-217.923, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1171,7 +1171,7 @@ longDesc=u"""
 
 entry(
     index = 49,
-    label = "R2CSXSRSCSXR2",
+    label = "R2C-XSRSC-XR2",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -1199,7 +1199,85 @@ longDesc=u"""
 
 entry(
     index = 50,
-    label = "RCDXSRDCSXR",
+    label = "RC-XDRDC-XR",
+    group=
+"""
+1 * X u0 p0 c0 {3,S}
+2 X u0 p0 c0 {5,S}
+3 C  u0 p0 c0 {1,S} {4,D} {6,S}
+4 R!H  u0 p0 c0 {3,D} {5,D}
+5 C  u0 p0 c0 {2,S} {4,D} {7,S}
+6 R  u0 px c0 {3,S}
+7 R  u0 px c0 {5,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([3.013, 7.654, 10.526, 12.323, 14.255, 15.167, 16.031], 'J/(mol*K)'),
+        H298=(-370.786, 'kJ/mol'),
+        S298=(-196.347, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 51,
+    label = "RC-XDRDC=X",
+    group=
+"""
+1 * X u0 p0 c0 {3,S}
+2 X u0 p0 c0 {5,D}
+3 C  u0 p0 c0 {1,S} {4,D} {6,S}
+4 R!H  u0 p0 c0 {3,D} {5,D}
+5 C  u0 p0 c0 {2,D} {4,D}
+6 R  u0 px c0 {3,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([-3.349, -0.277, 2.079, 3.785, 5.883, 6.983, 8.012], 'J/(mol*K)'),
+        H298=(-434.172, 'kJ/mol'),
+        S298=(-188.069, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 52,
+    label = "RC-XDRSC-XR2",
+    group=
+"""
+1 * X u0 p0 c0 {3,S}
+2 X u0 p0 c0 {5,S}
+3 C  u0 p0 c0 {1,S} {4,D} {6,S}
+4 R!H  u0 px c0 {3,D} {5,S}
+5 C  u0 p0 c0 {2,S} {4,S} {7,S} {8,S}
+6 R  u0 px c0 {3,S}
+7 R  u0 px c0 {5,S}
+8 R  u0 px c0 {5,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([0.123, 6.048, 9.544, 11.637, 13.776, 14.754, 15.729], 'J/(mol*K)'),
+        H298=(-426.75, 'kJ/mol'),
+        S298=(-227.783, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 53,
+    label = "RC=XSRDC-XR",
     group=
 """
 1 * X u0 p0 c0 {3,D}
@@ -1224,34 +1302,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 51,
-    label = "RCDXSRSCDXR",
-    group=
-"""
-1 * X u0 p0 c0 {3,D}
-2 X u0 p0 c0 {5,D}
-3 C  u0 p0 c0 {1,D} {4,S} {6,S}
-4 R!H  u0 px c0 {3,S} {5,S}
-5 C  u0 p0 c0 {2,D} {4,S} {7,S}
-6 R  u0 px c0 {3,S}
-7 R  u0 px c0 {5,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([5.897, 10.63, 13.334, 14.983, 16.737, 17.487, 17.796], 'J/(mol*K)'),
-        H298=(-230.024, 'kJ/mol'),
-        S298=(-203.938, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 52,
-    label = "RCDXSRSCSXR2",
+    index = 54,
+    label = "RC=XSRSC-XR2",
     group=
 """
 1 * X u0 p0 c0 {3,D}
@@ -1277,75 +1329,23 @@ longDesc=u"""
 )
 
 entry(
-    index = 53,
-    label = "RCSXDRDCDX",
-    group=
-"""
-1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {5,D}
-3 C  u0 p0 c0 {1,S} {4,D} {6,S}
-4 R!H  u0 p0 c0 {3,D} {5,D}
-5 C  u0 p0 c0 {2,D} {4,D}
-6 R  u0 px c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-3.349, -0.277, 2.079, 3.785, 5.883, 6.983, 8.012], 'J/(mol*K)'),
-        H298=(-434.172, 'kJ/mol'),
-        S298=(-188.069, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 54,
-    label = "RCSXDRDCSXR",
-    group=
-"""
-1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {5,S}
-3 C  u0 p0 c0 {1,S} {4,D} {6,S}
-4 R!H  u0 p0 c0 {3,D} {5,D}
-5 C  u0 p0 c0 {2,S} {4,D} {7,S}
-6 R  u0 px c0 {3,S}
-7 R  u0 px c0 {5,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.013, 7.654, 10.526, 12.323, 14.255, 15.167, 16.031], 'J/(mol*K)'),
-        H298=(-370.786, 'kJ/mol'),
-        S298=(-196.347, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
     index = 55,
-    label = "RCSXDRSCSXR2",
+    label = "RC=XSRSC=XR",
     group=
 """
-1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {5,S}
-3 C  u0 p0 c0 {1,S} {4,D} {6,S}
-4 R!H  u0 px c0 {3,D} {5,S}
-5 C  u0 p0 c0 {2,S} {4,S} {7,S} {8,S}
+1 * X u0 p0 c0 {3,D}
+2 X u0 p0 c0 {5,D}
+3 C  u0 p0 c0 {1,D} {4,S} {6,S}
+4 R!H  u0 px c0 {3,S} {5,S}
+5 C  u0 p0 c0 {2,D} {4,S} {7,S}
 6 R  u0 px c0 {3,S}
 7 R  u0 px c0 {5,S}
-8 R  u0 px c0 {5,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([0.123, 6.048, 9.544, 11.637, 13.776, 14.754, 15.729], 'J/(mol*K)'),
-        H298=(-426.75, 'kJ/mol'),
-        S298=(-227.783, 'J/(mol*K)'),
+        Cpdata=([5.897, 10.63, 13.334, 14.983, 16.737, 17.487, 17.796], 'J/(mol*K)'),
+        H298=(-230.024, 'kJ/mol'),
+        S298=(-203.938, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1381,7 +1381,7 @@ longDesc=u"""
 
 entry(
     index = 57,
-    label = "RCSXDRSOSX",
+    label = "RC-XDRSO-X",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -1430,7 +1430,7 @@ longDesc=u"""
 
 entry(
     index = 59,
-    label = "OSXSCSOSX",
+    label = "O-XSCSO-X",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -1496,18 +1496,18 @@ longDesc=u"""
 
 entry(
     index = 62,
-    label = "CDXDR",
+    label = "C#XR",
     group=
 """
-1 * X  u0  p0 c0 {2,D}
-2 C   u0  p0 c0 {1,D} {3,D}
-3 R!H u0  px c0 {2,D}
+1 * X u0 p0 c0 {2,T}
+2 C  u0 p0 c0 {1,T} {3,S}
+3 R  u0 px c0 {2,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([1.636, 4.766, 6.547, 7.637, 8.832, 9.428, 10.027], 'J/(mol*K)'),
-        H298=(-373.622, 'kJ/mol'),
-        S298=(-170.526, 'J/(mol*K)'),
+        Cpdata=([-2.337, 1.347, 3.717, 5.276, 7.07, 8.028, 9.212], 'J/(mol*K)'),
+        H298=(-547.473, 'kJ/mol'),
+        S298=(-175.05, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1518,18 +1518,20 @@ longDesc=u"""
 
 entry(
     index = 63,
-    label = "CDXDC",
+    label = "C#XCR2",
     group=
 """
-1 * X u0  p0 c0 {2,D}
-2 C  u0  p0 c0 {1,D} {3,D}
-3 C  u0  p0 c0 {2,D}
+1 * X u0 p0 c0 {3,T}
+2 C  u0 p0 c0 {3,S} {4,S} {5,D}
+3 C  u0 p0 c0 {1,T} {2,S}
+4 R  u0 px c0 {2,S}
+5 R!H  u0 px c0 {2,D}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([1.558, 4.879, 6.698, 7.792, 9.007, 9.649, 10.379], 'J/(mol*K)'),
-        H298=(-430.199, 'kJ/mol'),
-        S298=(-171.763, 'J/(mol*K)'),
+        Cpdata=([-4.055, -1.187, 0.947, 2.528, 4.593, 5.79, 7.154], 'J/(mol*K)'),
+        H298=(-565.742, 'kJ/mol'),
+        S298=(-183.565, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1540,19 +1542,21 @@ longDesc=u"""
 
 entry(
     index = 64,
-    label = "CDXDNR",
+    label = "C#XCR3",
     group=
 """
-1 * X u0  p0 c0 {2,D}
-2 C  u0  p0 c0 {1,D} {3,D}
-3 N  u0  p1 c0 {2,D} {4,S}
-4 R  u0  px c0 {3,S}
+1 * X u0 p0 c0 {3,T}
+2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3 C  u0 p0 c0 {1,T} {2,S}
+4 R  u0 px c0 {2,S}
+5 R  u0 px c0 {2,S}
+6 R  u0 px c0 {2,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([1.872, 4.427, 6.095, 7.174, 8.304, 8.763, 8.972], 'J/(mol*K)'),
-        H298=(-203.888, 'kJ/mol'),
-        S298=(-166.816, 'J/(mol*K)'),
+        Cpdata=([-1.907, 1.584, 4.181, 6.073, 8.471, 9.861, 11.631], 'J/(mol*K)'),
+        H298=(-594.901, 'kJ/mol'),
+        S298=(-174.235, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1563,19 +1567,18 @@ longDesc=u"""
 
 entry(
     index = 65,
-    label = "CDXR2",
+    label = "C#XN",
     group=
 """
-1 * X u0 p0 c0 {2,D}
-2 C  u0 p0 c0 {1,D} {3,S} {4,S}
-3 R  u0 px c0 {2,S}
-4 R  u0 px c0 {2,S}
+1 * X u0 p0 c0 {2,T}
+2 C  u0 p0 c0 {1,T} {3,S}
+3 N  u0 p1 c0 {2,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([0.584, 3.971, 6.027, 7.341, 8.844, 9.648, 10.583], 'J/(mol*K)'),
-        H298=(-353.276, 'kJ/mol'),
-        S298=(-165.599, 'J/(mol*K)'),
+        Cpdata=([3.513, 5.534, 6.472, 6.944, 7.314, 7.431, 7.609], 'J/(mol*K)'),
+        H298=(-426.965, 'kJ/mol'),
+        S298=(-161.835, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1586,21 +1589,19 @@ longDesc=u"""
 
 entry(
     index = 66,
-    label = "CDXRCR2",
+    label = "C#XOR",
     group=
 """
-1 * X u0 p0 c0 {3,D}
-2 C  u0 p0 c0 {3,S} {4,S} {5,D}
-3 C  u0 p0 c0 {1,D} {2,S} {6,S}
-4 R  u0 px c0 {2,S}
-5 R!H  u0 px c0 {2,D}
-6 R  u0 px c0 {3,S}
+1 * X u0 p0 c0 {2,T}
+2 C  u0 p0 c0 {1,T} {3,S}
+3 O  u0 p2 c0 {2,S} {4,S}
+4 R  u0 px c0 {3,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([0.813, 4.083, 6.234, 7.704, 9.498, 10.486, 11.571], 'J/(mol*K)'),
-        H298=(-379.17, 'kJ/mol'),
-        S298=(-179.047, 'J/(mol*K)'),
+        Cpdata=([5.833, 9.834, 11.905, 12.95, 13.691, 13.905, 14.428], 'J/(mol*K)'),
+        H298=(-463.491, 'kJ/mol'),
+        S298=(-187.544, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1611,80 +1612,7 @@ longDesc=u"""
 
 entry(
     index = 67,
-    label = "CDXRCR3",
-    group=
-"""
-1 * X u0 p0 c0 {3,D}
-2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
-3 C  u0 p0 c0 {1,D} {2,S} {7,S}
-4 R  u0 px c0 {2,S}
-5 R  u0 px c0 {2,S}
-6 R  u0 px c0 {2,S}
-7 R  u0 px c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([1.778, 4.719, 6.599, 7.86, 9.389, 10.262, 11.344], 'J/(mol*K)'),
-        H298=(-372.228, 'kJ/mol'),
-        S298=(-179.041, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 68,
-    label = "CDXRN",
-    group=
-"""
-1 * X u0 p0 c0 {2,D}
-2 C  u0 p0 c0 {1,D} {3,S} {4,S}
-3 N  u0 p1 c0 {2,S}
-4 R  u0 p0 c0 {2,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.001, 5.078, 6.087, 6.635, 7.154, 7.387, 7.694], 'J/(mol*K)'),
-        H298=(-304.038, 'kJ/mol'),
-        S298=(-144.277, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 69,
-    label = "CDXROR",
-    group=
-"""
-1 * X u0 p0 c0 {2,D}
-2 C  u0 p0 c0 {1,D} {3,S} {4,S}
-3 O  u0 p2 c0 {2,S} {5,S}
-4 R  u0 px c0 {2,S}
-5 R  u0 px c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.049, 2.817, 4.477, 5.525, 6.776, 7.488, 8.236], 'J/(mol*K)'),
-        H298=(-325.886, 'kJ/mol'),
-        S298=(-146.569, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 70,
-    label = "CSXR2",
+    label = "C-XR2",
     group=
 """
 1 * X u0  p0 c0 {2,S}
@@ -1706,8 +1634,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 71,
-    label = "CSXRCR2",
+    index = 68,
+    label = "C-XRCR2",
     group=
 """
 1 * X u0  p0 c0 {2,S}
@@ -1731,8 +1659,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 72,
-    label = "CSXRN",
+    index = 69,
+    label = "C-XRN",
     group=
 """
 1 * X u0  p0 c0 {2,S}
@@ -1754,8 +1682,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 73,
-    label = "CSXRNR",
+    index = 70,
+    label = "C-XRNR",
     group=
 """
 1 * X u0  p0 c0 {2,S}
@@ -1778,8 +1706,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 74,
-    label = "CSXRO",
+    index = 71,
+    label = "C-XRO",
     group=
 """
 1 * X u0  p0 c0 {2,S}
@@ -1801,8 +1729,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 75,
-    label = "CSXR3",
+    index = 72,
+    label = "C-XR3",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -1825,8 +1753,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 76,
-    label = "CSXR2CR3",
+    index = 73,
+    label = "C-XR2CR3",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -1852,8 +1780,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 77,
-    label = "CSXR2N",
+    index = 74,
+    label = "C-XR2N",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -1876,8 +1804,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 78,
-    label = "CSXR2OR",
+    index = 75,
+    label = "C-XR2OR",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -1901,19 +1829,87 @@ longDesc=u"""
 )
 
 entry(
-    index = 79,
-    label = "CTXR",
+    index = 76,
+    label = "C=X(=R)",
     group=
 """
-1 * X u0 p0 c0 {2,T}
-2 C  u0 p0 c0 {1,T} {3,S}
-3 R  u0 px c0 {2,S}
+1 * X  u0  p0 c0 {2,D}
+2 C   u0  p0 c0 {1,D} {3,D}
+3 R!H u0  px c0 {2,D}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-2.337, 1.347, 3.717, 5.276, 7.07, 8.028, 9.212], 'J/(mol*K)'),
-        H298=(-547.473, 'kJ/mol'),
-        S298=(-175.05, 'J/(mol*K)'),
+        Cpdata=([1.636, 4.766, 6.547, 7.637, 8.832, 9.428, 10.027], 'J/(mol*K)'),
+        H298=(-373.622, 'kJ/mol'),
+        S298=(-170.526, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 77,
+    label = "C=X(=C)",
+    group=
+"""
+1 * X u0  p0 c0 {2,D}
+2 C  u0  p0 c0 {1,D} {3,D}
+3 C  u0  p0 c0 {2,D}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([1.558, 4.879, 6.698, 7.792, 9.007, 9.649, 10.379], 'J/(mol*K)'),
+        H298=(-430.199, 'kJ/mol'),
+        S298=(-171.763, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 78,
+    label = "C=X(=NR)",
+    group=
+"""
+1 * X u0  p0 c0 {2,D}
+2 C  u0  p0 c0 {1,D} {3,D}
+3 N  u0  p1 c0 {2,D} {4,S}
+4 R  u0  px c0 {3,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([1.872, 4.427, 6.095, 7.174, 8.304, 8.763, 8.972], 'J/(mol*K)'),
+        H298=(-203.888, 'kJ/mol'),
+        S298=(-166.816, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 79,
+    label = "C=XR2",
+    group=
+"""
+1 * X u0 p0 c0 {2,D}
+2 C  u0 p0 c0 {1,D} {3,S} {4,S}
+3 R  u0 px c0 {2,S}
+4 R  u0 px c0 {2,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([0.584, 3.971, 6.027, 7.341, 8.844, 9.648, 10.583], 'J/(mol*K)'),
+        H298=(-353.276, 'kJ/mol'),
+        S298=(-165.599, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1924,20 +1920,21 @@ longDesc=u"""
 
 entry(
     index = 80,
-    label = "CTXCR2",
+    label = "C=XRCR2",
     group=
 """
-1 * X u0 p0 c0 {3,T}
+1 * X u0 p0 c0 {3,D}
 2 C  u0 p0 c0 {3,S} {4,S} {5,D}
-3 C  u0 p0 c0 {1,T} {2,S}
+3 C  u0 p0 c0 {1,D} {2,S} {6,S}
 4 R  u0 px c0 {2,S}
 5 R!H  u0 px c0 {2,D}
+6 R  u0 px c0 {3,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-4.055, -1.187, 0.947, 2.528, 4.593, 5.79, 7.154], 'J/(mol*K)'),
-        H298=(-565.742, 'kJ/mol'),
-        S298=(-183.565, 'J/(mol*K)'),
+        Cpdata=([0.813, 4.083, 6.234, 7.704, 9.498, 10.486, 11.571], 'J/(mol*K)'),
+        H298=(-379.17, 'kJ/mol'),
+        S298=(-179.047, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1948,21 +1945,22 @@ longDesc=u"""
 
 entry(
     index = 81,
-    label = "CTXCR3",
+    label = "C=XRCR3",
     group=
 """
-1 * X u0 p0 c0 {3,T}
+1 * X u0 p0 c0 {3,D}
 2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
-3 C  u0 p0 c0 {1,T} {2,S}
+3 C  u0 p0 c0 {1,D} {2,S} {7,S}
 4 R  u0 px c0 {2,S}
 5 R  u0 px c0 {2,S}
 6 R  u0 px c0 {2,S}
+7 R  u0 px c0 {3,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-1.907, 1.584, 4.181, 6.073, 8.471, 9.861, 11.631], 'J/(mol*K)'),
-        H298=(-594.901, 'kJ/mol'),
-        S298=(-174.235, 'J/(mol*K)'),
+        Cpdata=([1.778, 4.719, 6.599, 7.86, 9.389, 10.262, 11.344], 'J/(mol*K)'),
+        H298=(-372.228, 'kJ/mol'),
+        S298=(-179.041, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1973,18 +1971,19 @@ longDesc=u"""
 
 entry(
     index = 82,
-    label = "CTXN",
+    label = "C=XRN",
     group=
 """
-1 * X u0 p0 c0 {2,T}
-2 C  u0 p0 c0 {1,T} {3,S}
+1 * X u0 p0 c0 {2,D}
+2 C  u0 p0 c0 {1,D} {3,S} {4,S}
 3 N  u0 p1 c0 {2,S}
+4 R  u0 p0 c0 {2,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.513, 5.534, 6.472, 6.944, 7.314, 7.431, 7.609], 'J/(mol*K)'),
-        H298=(-426.965, 'kJ/mol'),
-        S298=(-161.835, 'J/(mol*K)'),
+        Cpdata=([3.001, 5.078, 6.087, 6.635, 7.154, 7.387, 7.694], 'J/(mol*K)'),
+        H298=(-304.038, 'kJ/mol'),
+        S298=(-144.277, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -1995,19 +1994,20 @@ longDesc=u"""
 
 entry(
     index = 83,
-    label = "CTXOR",
+    label = "C=XROR",
     group=
 """
-1 * X u0 p0 c0 {2,T}
-2 C  u0 p0 c0 {1,T} {3,S}
-3 O  u0 p2 c0 {2,S} {4,S}
-4 R  u0 px c0 {3,S}
+1 * X u0 p0 c0 {2,D}
+2 C  u0 p0 c0 {1,D} {3,S} {4,S}
+3 O  u0 p2 c0 {2,S} {5,S}
+4 R  u0 px c0 {2,S}
+5 R  u0 px c0 {3,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([5.833, 9.834, 11.905, 12.95, 13.691, 13.905, 14.428], 'J/(mol*K)'),
-        H298=(-463.491, 'kJ/mol'),
-        S298=(-187.544, 'J/(mol*K)'),
+        Cpdata=([-0.049, 2.817, 4.477, 5.525, 6.776, 7.488, 8.236], 'J/(mol*K)'),
+        H298=(-325.886, 'kJ/mol'),
+        S298=(-146.569, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -2039,120 +2039,7 @@ longDesc=u"""
 
 entry(
     index = 85,
-    label = "NDXR",
-    group=
-"""
-1 * X u0 p0 c0 {2,D}
-2 N  u0 p1 c0 {1,D} {3,S}
-3 R  u0 px c0 {2,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.509, 3.839, 6.171, 7.446, 8.598, 9.078, 9.714], 'J/(mol*K)'),
-        H298=(-325.79, 'kJ/mol'),
-        S298=(-168.676, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 86,
-    label = "NDXCSR",
-    group=
-"""
-1 * X u0 p0 c0 {3,D}
-2 C  u0 p0 c0 {3,S} {4,S}
-3 N  u0 p1 c0 {1,D} {2,S}
-4 R  u0 px c0 {2,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([6.614, 9.468, 11.121, 12.197, 13.469, 14.191, 15.174], 'J/(mol*K)'),
-        H298=(-350.952, 'kJ/mol'),
-        S298=(-176.565, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 87,
-    label = "NDXCTR",
-    group=
-"""
-1 * X u0 p0 c0 {2,D}
-2 N  u0 p1 c0 {1,D} {3,S}
-3 C  u0 p0 c0 {2,S} {4,T}
-4 R  u0 px c0 {3,T}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-6.989, -4.603, -3.581, -3.072, -2.447, -1.961, -1.142], 'J/(mol*K)'),
-        H298=(-329.595, 'kJ/mol'),
-        S298=(-142.031, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 88,
-    label = "NDXN",
-    group=
-"""
-1 * X u0 p0 c0 {2,D}
-2 N  u0 p1 c0 {1,D} {3,S}
-3 N  u0 p1 c0 {2,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([11.303, 15.422, 17.092, 17.515, 16.969, 16.192, 15.433], 'J/(mol*K)'),
-        H298=(-247.749, 'kJ/mol'),
-        S298=(-174.51, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 89,
-    label = "NDXOR",
-    group=
-"""
-1 * X u0 p0 c0 {2,D}
-2 N  u0 p1 c0 {1,D} {3,S}
-3 O  u0 p2 c0 {2,S} {4,S}
-4 R  u0 px c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([9.017, 13.03, 14.825, 15.531, 15.693, 15.491, 15.382], 'J/(mol*K)'),
-        H298=(-292.051, 'kJ/mol'),
-        S298=(-178.708, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 90,
-    label = "NSXR",
+    label = "N-XR",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -2173,8 +2060,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 91,
-    label = "NSXCR",
+    index = 86,
+    label = "N-XCR",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -2196,8 +2083,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 92,
-    label = "NSXCR2",
+    index = 87,
+    label = "N-XCR2",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -2220,8 +2107,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 93,
-    label = "NSXNR",
+    index = 88,
+    label = "N-XNR",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -2243,8 +2130,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 94,
-    label = "NSXR2",
+    index = 89,
+    label = "N-XR2",
     group=
 """
 1 * X u0 p0 c0 {2,[S,D]}
@@ -2266,8 +2153,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 95,
-    label = "NSXRCR",
+    index = 90,
+    label = "N-XRCR",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -2290,8 +2177,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 96,
-    label = "NSXRCR3",
+    index = 91,
+    label = "N-XRCR3",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -2316,8 +2203,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 97,
-    label = "NSXRNR",
+    index = 92,
+    label = "N-XRNR",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -2340,8 +2227,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 98,
-    label = "NSXRNR2",
+    index = 93,
+    label = "N-XRNR2",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -2365,8 +2252,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 99,
-    label = "NSXROR",
+    index = 94,
+    label = "N-XROR",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -2389,8 +2276,31 @@ longDesc=u"""
 )
 
 entry(
-    index = 100,
-    label = "NpDXRnR",
+    index = 95,
+    label = "N[+]-XR[-]R",
+    group=
+"""
+1 * X u0 p0 c0 {2,S}
+2 N  u0 p0 c+1 {1,S} {3,S} {4,D}
+3 R!H  u0 px c-1 {2,S}
+4 R!H  u0 px c0 {2,D}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([7.236, 9.867, 11.247, 11.962, 12.515, 12.65, 12.642], 'J/(mol*K)'),
+        H298=(-216.486, 'kJ/mol'),
+        S298=(-163.298, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 96,
+    label = "N[+]=XR[-]R",
     group=
 """
 1 * X u0 p0 c0 {2,D}
@@ -2412,20 +2322,110 @@ longDesc=u"""
 )
 
 entry(
-    index = 101,
-    label = "NpSXRnR",
+    index = 97,
+    label = "N=XR",
     group=
 """
-1 * X u0 p0 c0 {2,S}
-2 N  u0 p0 c+1 {1,S} {3,S} {4,D}
-3 R!H  u0 px c-1 {2,S}
-4 R!H  u0 px c0 {2,D}
+1 * X u0 p0 c0 {2,D}
+2 N  u0 p1 c0 {1,D} {3,S}
+3 R  u0 px c0 {2,S}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([7.236, 9.867, 11.247, 11.962, 12.515, 12.65, 12.642], 'J/(mol*K)'),
-        H298=(-216.486, 'kJ/mol'),
-        S298=(-163.298, 'J/(mol*K)'),
+        Cpdata=([-0.509, 3.839, 6.171, 7.446, 8.598, 9.078, 9.714], 'J/(mol*K)'),
+        H298=(-325.79, 'kJ/mol'),
+        S298=(-168.676, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 98,
+    label = "N=XCSR",
+    group=
+"""
+1 * X u0 p0 c0 {3,D}
+2 C  u0 p0 c0 {3,S} {4,S}
+3 N  u0 p1 c0 {1,D} {2,S}
+4 R  u0 px c0 {2,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([6.614, 9.468, 11.121, 12.197, 13.469, 14.191, 15.174], 'J/(mol*K)'),
+        H298=(-350.952, 'kJ/mol'),
+        S298=(-176.565, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 99,
+    label = "N=XCTR",
+    group=
+"""
+1 * X u0 p0 c0 {2,D}
+2 N  u0 p1 c0 {1,D} {3,S}
+3 C  u0 p0 c0 {2,S} {4,T}
+4 R  u0 px c0 {3,T}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([-6.989, -4.603, -3.581, -3.072, -2.447, -1.961, -1.142], 'J/(mol*K)'),
+        H298=(-329.595, 'kJ/mol'),
+        S298=(-142.031, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 100,
+    label = "N=XN",
+    group=
+"""
+1 * X u0 p0 c0 {2,D}
+2 N  u0 p1 c0 {1,D} {3,S}
+3 N  u0 p1 c0 {2,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([11.303, 15.422, 17.092, 17.515, 16.969, 16.192, 15.433], 'J/(mol*K)'),
+        H298=(-247.749, 'kJ/mol'),
+        S298=(-174.51, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 101,
+    label = "N=XOR",
+    group=
+"""
+1 * X u0 p0 c0 {2,D}
+2 N  u0 p1 c0 {1,D} {3,S}
+3 O  u0 p2 c0 {2,S} {4,S}
+4 R  u0 px c0 {3,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([9.017, 13.03, 14.825, 15.531, 15.693, 15.491, 15.382], 'J/(mol*K)'),
+        H298=(-292.051, 'kJ/mol'),
+        S298=(-178.708, 'J/(mol*K)'),
     ),
 shortDesc=u""" """,
 longDesc=u""" 
@@ -2457,7 +2457,7 @@ longDesc=u"""
 
 entry(
     index = 103,
-    label = "OSXR",
+    label = "O-XR",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -2479,7 +2479,7 @@ longDesc=u"""
 
 entry(
     index = 104,
-    label = "OSXCR2",
+    label = "O-XCR2",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -2503,7 +2503,7 @@ longDesc=u"""
 
 entry(
     index = 105,
-    label = "OSXCR3",
+    label = "O-XCR3",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -2528,7 +2528,7 @@ longDesc=u"""
 
 entry(
     index = 106,
-    label = "OSXN",
+    label = "O-XN",
     group=
 """
 1 * X u0 p0 c0 {3,S}
@@ -2551,7 +2551,7 @@ longDesc=u"""
 
 entry(
     index = 107,
-    label = "OSXOR",
+    label = "O-XOR",
     group=
 """
 1 * X u0 p0 c0 {2,S}
@@ -2595,7 +2595,7 @@ longDesc=u"""
 
 entry(
     index = 109,
-    label = "CR2X",
+    label = "(CR2)X",
     group=
 """
 1 * X  u0
@@ -2618,7 +2618,7 @@ longDesc=u"""
 
 entry(
     index = 110,
-    label = "CRCRX",
+    label = "(CRCR)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2642,7 +2642,7 @@ longDesc=u"""
 
 entry(
     index = 111,
-    label = "CRNX",
+    label = "(CRN)X",
     group=
 """
 1 * X u0  p0 c0
@@ -2665,7 +2665,7 @@ longDesc=u"""
 
 entry(
     index = 112,
-    label = "CR3X",
+    label = "(CR3)X",
     group=
 """
 1 * X  u0
@@ -2689,7 +2689,7 @@ longDesc=u"""
 
 entry(
     index = 113,
-    label = "CR2CRX",
+    label = "(CR2CR)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2714,7 +2714,7 @@ longDesc=u"""
 
 entry(
     index = 114,
-    label = "CR2NX",
+    label = "(CR2N)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2738,7 +2738,7 @@ longDesc=u"""
 
 entry(
     index = 115,
-    label = "CR2OX",
+    label = "(CR2O)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2762,7 +2762,7 @@ longDesc=u"""
 
 entry(
     index = 116,
-    label = "CR4X",
+    label = "(CR4)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2787,7 +2787,7 @@ longDesc=u"""
 
 entry(
     index = 117,
-    label = "CR3CR3X",
+    label = "(CR3CR3)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2815,7 +2815,7 @@ longDesc=u"""
 
 entry(
     index = 118,
-    label = "CR3NX",
+    label = "(CR3N)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2840,7 +2840,7 @@ longDesc=u"""
 
 entry(
     index = 119,
-    label = "CR3ORX",
+    label = "(CR3OR)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2866,7 +2866,7 @@ longDesc=u"""
 
 entry(
     index = 120,
-    label = "NR2X",
+    label = "(NR2)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2889,7 +2889,7 @@ longDesc=u"""
 
 entry(
     index = 121,
-    label = "NDCX",
+    label = "(NDC)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2911,7 +2911,7 @@ longDesc=u"""
 
 entry(
     index = 122,
-    label = "NR3X",
+    label = "(NR3)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2935,7 +2935,7 @@ longDesc=u"""
 
 entry(
     index = 123,
-    label = "NCX",
+    label = "(NC)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2957,7 +2957,7 @@ longDesc=u"""
 
 entry(
     index = 124,
-    label = "NNX",
+    label = "(NN)X",
     group=
 """
 1 * X u0 p0 c0
@@ -2979,7 +2979,7 @@ longDesc=u"""
 
 entry(
     index = 125,
-    label = "NOX",
+    label = "(NO)X",
     group=
 """
 1 * X u0 p0 c0
@@ -3001,54 +3001,7 @@ longDesc=u"""
 
 entry(
     index = 126,
-    label = "OR2X",
-    group=
-"""
-1 * X u0 p0 c0
-2 O  u0 p2 c0 {3,S} {4,S}
-3 R  u0 p[0,1,2] c0 {2,S}
-4 R  u0 p[0,1,2] c0 {2,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([4.402, 6.003, 6.837, 7.327, 7.877, 8.177, 8.462], 'J/(mol*K)'),
-        H298=(-34.454, 'kJ/mol'),
-        S298=(-98.276, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 127,
-    label = "ORORX",
-    group=
-"""
-1 * X u0 p0 c0
-2 O  u0 p2 c0 {3,S} {4,S}
-3 O  u0 p2 c0 {2,S} {5,S}
-4 R  u0 p0 c0 {2,S}
-5 R  u0 p0 c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([6.316, 7.23, 7.68, 7.947, 8.291, 8.512, 8.707], 'J/(mol*K)'),
-        H298=(-63.013, 'kJ/mol'),
-        S298=(-110.352, 'J/(mol*K)'),
-    ),
-shortDesc=u""" """,
-longDesc=u""" 
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 128,
-    label = "ORX",
+    label = "(OR)X",
     group=
 """
 1 * X u0 p0 c0
@@ -3069,8 +3022,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 129,
-    label = "ONRX",
+    index = 127,
+    label = "(ONR)X",
     group=
 """
 1 * X u0 p0 c0
@@ -3092,8 +3045,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 130,
-    label = "ONNX",
+    index = 128,
+    label = "(ONN)X",
     group=
 """
 1 * X u0 p0 c0
@@ -3115,8 +3068,8 @@ longDesc=u"""
 )
 
 entry(
-    index = 131,
-    label = "ONORX",
+    index = 129,
+    label = "(ONOR)X",
     group=
 """
 1 * X u0 p0 c0
@@ -3138,138 +3091,185 @@ longDesc=u"""
     facet = "111",
 )
 
+entry(
+    index = 130,
+    label = "(OR2)X",
+    group=
+"""
+1 * X u0 p0 c0
+2 O  u0 p2 c0 {3,S} {4,S}
+3 R  u0 p[0,1,2] c0 {2,S}
+4 R  u0 p[0,1,2] c0 {2,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([4.402, 6.003, 6.837, 7.327, 7.877, 8.177, 8.462], 'J/(mol*K)'),
+        H298=(-34.454, 'kJ/mol'),
+        S298=(-98.276, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 131,
+    label = "(OROR)X",
+    group=
+"""
+1 * X u0 p0 c0
+2 O  u0 p2 c0 {3,S} {4,S}
+3 O  u0 p2 c0 {2,S} {5,S}
+4 R  u0 p0 c0 {2,S}
+5 R  u0 p0 c0 {3,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([6.316, 7.23, 7.68, 7.947, 8.291, 8.512, 8.707], 'J/(mol*K)'),
+        H298=(-63.013, 'kJ/mol'),
+        S298=(-110.352, 'J/(mol*K)'),
+    ),
+shortDesc=u""" """,
+longDesc=u""" 
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
 tree(
 """
 L1: RX
     L2: RXbidentate
         L3: CXCX
-            L4: CDXRCDXR
-            L4: CDXRCSXR
-            L4: CSXCSX
-            L4: CSXR2CDXR
-            L4: CSXR2CSXR
-            L4: CSXR2CSXR2
-            L4: CSXRCDX
-            L4: CSXRCSXR
-            L4: CTXCDXR
-            L4: CTXCSXR
-            L4: CTXCSXR2
+            L4: C#XC-XR
+            L4: C#XC-XR2
+            L4: C#XC=XR
+            L4: C-XC-X
+            L4: C-XR2C-XR
+            L4: C-XR2C-XR2
+            L4: C-XR2C=XR
+            L4: C-XRC-XR
+            L4: C-XRC=X
+            L4: C=XRC-XR
+            L4: C=XRC=XR
         L3: CXNX
-            L4: CDXRNDX
-            L4: CDXRNSXR
-            L4: CSXR2NDX
-            L4: CSXR2NSXR
-            L4: CSXRNDX
-            L4: CSXRNSX
-            L4: CSXRNSXR
+            L4: C-XR2N-XR
+            L4: C-XR2N=X
+            L4: C-XRN-X
+            L4: C-XRN-XR
+            L4: C-XRN=X
+            L4: C=XRN-XR
+            L4: C=XRN=X
         L3: CXOX
-            L4: CDXROSX
-            L4: CSXR2OSX
-            L4: CSXROSX
+            L4: C-XR2O-X
+            L4: C-XRO-X
+            L4: C=XRO-X
         L3: NXCX
-            L4: invCDXRNDX
-            L4: invCDXRNSXR
-            L4: invCSXR2NDX
-            L4: invCSXR2NSXR
-            L4: invCSXRNDX
-            L4: invCSXRNSX
-            L4: invCSXRNSXR
+            L4: inv(C-XR2N-XR)
+            L4: inv(C-XR2N=X)
+            L4: inv(C-XRN-X)
+            L4: inv(C-XRN-XR)
+            L4: inv(C-XRN=X)
+            L4: inv(C=XRN-XR)
+            L4: inv(C=XRN=X)
         L3: NXNX
-            L4: NSXRNDX
-            L4: NSXRNSXR
+            L4: N-XRN-XR
+            L4: N-XRN=X
         L3: NXOX
-            L4: NSXROSX
-            L4: NpDXRnOSX
+            L4: N-XRO-X
+            L4: N[+]=XR[-]O-X
         L3: OXOX
     L2: RXbridgedBidentate
         L3: CXRCX
-            L4: CDXDRSCSXR2
-            L4: CTXSRDCSXR
-            L4: CTXSRSCDXR
-            L4: CTXSRSCSXR2
-            L4: CTXSRSCTX
-            L4: R2CSXSRSCSXR2
-            L4: RCDXSRDCSXR
-            L4: RCDXSRSCDXR
-            L4: RCDXSRSCSXR2
-            L4: RCSXDRDCDX
-            L4: RCSXDRDCSXR
-            L4: RCSXDRSCSXR2
+            L4: C#XSRDC-XR
+            L4: C#XSRSC#X
+            L4: C#XSRSC-XR2
+            L4: C#XSRSC=XR
+            L4: C=XDRSC-XR2
+            L4: R2C-XSRSC-XR2
+            L4: RC-XDRDC-XR
+            L4: RC-XDRDC=X
+            L4: RC-XDRSC-XR2
+            L4: RC=XSRDC-XR
+            L4: RC=XSRSC-XR2
+            L4: RC=XSRSC=XR
         L3: CXROX
-            L4: RCSXDRSOSX
+            L4: RC-XDRSO-X
         L3: OXROX
-            L4: OSXSCSOSX
+            L4: O-XSCSO-X
     L2: RXsingleChemisorbed
         L3: CX
-            L4: CDXDR
-                L5: CDXDC
-                L5: CDXDNR
-            L4: CDXR2
-                L5: CDXRCR2
-                L5: CDXRCR3
-                L5: CDXRN
-                L5: CDXROR
-            L4: CSXR2
-                L5: CSXRCR2
-                L5: CSXRN
-                L5: CSXRNR
-                L5: CSXRO
-            L4: CSXR3
-                L5: CSXR2CR3
-                L5: CSXR2N
-                L5: CSXR2OR
-            L4: CTXR
-                L5: CTXCR2
-                L5: CTXCR3
-                L5: CTXN
-                L5: CTXOR
+            L4: C#XR
+                L5: C#XCR2
+                L5: C#XCR3
+                L5: C#XN
+                L5: C#XOR
+            L4: C-XR2
+                L5: C-XRCR2
+                L5: C-XRN
+                L5: C-XRNR
+                L5: C-XRO
+            L4: C-XR3
+                L5: C-XR2CR3
+                L5: C-XR2N
+                L5: C-XR2OR
+            L4: C=X(=R)
+                L5: C=X(=C)
+                L5: C=X(=NR)
+            L4: C=XR2
+                L5: C=XRCR2
+                L5: C=XRCR3
+                L5: C=XRN
+                L5: C=XROR
         L3: NX
-            L4: NDXR
-                L5: NDXCSR
-                L5: NDXCTR
-                L5: NDXN
-                L5: NDXOR
-            L4: NSXR
-                L5: NSXCR
-                L5: NSXCR2
-                L5: NSXNR
-            L4: NSXR2
-                L5: NSXRCR
-                L5: NSXRCR3
-                L5: NSXRNR
-                L5: NSXRNR2
-                L5: NSXROR
-                L5: NpDXRnR
-                L5: NpSXRnR
+            L4: N-XR
+                L5: N-XCR
+                L5: N-XCR2
+                L5: N-XNR
+            L4: N-XR2
+                L5: N-XRCR
+                L5: N-XRCR3
+                L5: N-XRNR
+                L5: N-XRNR2
+                L5: N-XROR
+                L5: N[+]-XR[-]R
+                L5: N[+]=XR[-]R
+            L4: N=XR
+                L5: N=XCSR
+                L5: N=XCTR
+                L5: N=XN
+                L5: N=XOR
         L3: OX
-            L4: OSXR
-                L5: OSXCR2
-                L5: OSXCR3
-                L5: OSXN
-                L5: OSXOR
+            L4: O-XR
+                L5: O-XCR2
+                L5: O-XCR3
+                L5: O-XN
+                L5: O-XOR
     L2: RXvdW
-        L3: CR2X
-            L4: CRCRX
-            L4: CRNX
-        L3: CR3X
-            L4: CR2CRX
-            L4: CR2NX
-            L4: CR2OX
-        L3: CR4X
-            L4: CR3CR3X
-            L4: CR3NX
-            L4: CR3ORX
-        L3: NR2X
-            L4: NDCX
-        L3: NR3X
-            L4: NCX
-            L4: NNX
-            L4: NOX
-        L3: OR2X
-            L4: ORORX
-        L3: ORX
-            L4: ONRX
-                L5: ONNX
-                L5: ONORX
+        L3: (CR2)X
+            L4: (CRCR)X
+            L4: (CRN)X
+        L3: (CR3)X
+            L4: (CR2CR)X
+            L4: (CR2N)X
+            L4: (CR2O)X
+        L3: (CR4)X
+            L4: (CR3CR3)X
+            L4: (CR3N)X
+            L4: (CR3OR)X
+        L3: (NR2)X
+            L4: (NDC)X
+        L3: (NR3)X
+            L4: (NC)X
+            L4: (NN)X
+            L4: (NO)X
+        L3: (OR)X
+            L4: (ONR)X
+                L5: (ONN)X
+                L5: (ONOR)X
+        L3: (OR2)X
+            L4: (OROR)X
 """,
 )
