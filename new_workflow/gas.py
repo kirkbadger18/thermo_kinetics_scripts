@@ -63,7 +63,11 @@ class Gas:
         self._get_temperatures()
         self._check_monoatomic()
         self._check_linear()
-        self.thermo = self.get_thermo()
+        self.trans_thermo = self.get_translational_thermo()
+        self.vib_thermo = self.get_vibrational_thermo()
+        self.elec_thermo = self.get_electronic_thermo()
+        self.rot_thermo = self.get_rotational_thermo()
+
     def __repr__(self):
         return self.name
 
@@ -217,10 +221,10 @@ class Gas:
         HOF_correction += comp['N'] * n_correction
         HOF_correction += comp['O'] * o_correction
 
-        q_t, S_t, dH_t, Cp_t = self.get_translational_thermo()
-        q_v, S_v, dH_v, Cv_v = self.get_vibrational_thermo()
-        q_r, S_r, dH_r, Cv_r = self.get_rotational_thermo()
-        q_e, S_e, dH_e, Cv_e = self.get_electronic_thermo()
+        q_t, S_t, dH_t, Cp_t = self.trans_thermo
+        q_v, S_v, dH_v, Cv_v = self.vib_thermo
+        q_r, S_r, dH_r, Cv_r = self.rot_thermo
+        q_e, S_e, dH_e, Cv_e = self.elec_thermo
 
         Q = q_v * q_t * q_r * q_e
         S = S_t + S_v + S_r + S_e

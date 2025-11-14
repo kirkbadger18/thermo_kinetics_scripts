@@ -596,7 +596,7 @@ Pt111_ads_data = [
         "adsorbate_name": "XNXNCH3",
         "atomic_composition": {
             "H": 3,
-            "C": 0,
+            "C": 1,
             "N": 2,
             "O": 0,
             "Pt": 1
@@ -4968,7 +4968,7 @@ Pt111_ads_data = [
         "adsorbate_name": "XNNCH3",
         "atomic_composition": {
             "H": 3,
-            "C": 0,
+            "C": 1,
             "N": 2,
             "O": 0,
             "Pt": 1

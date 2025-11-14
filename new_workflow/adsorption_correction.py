@@ -29,12 +29,14 @@ class Group:
         dH_list, dS_list = [], []
         dcP_array = np.zeros([7, len(self.adsorbate_list)])
         for i, ads in enumerate(self.adsorbate_list):
-            Qa, Sa, Ha, cPa = ads.thermo
+            Qa, Sa, Ha, cPa = ads.get_thermo()
             gas = self.gas_list[i]
-            Qg, Sg, Hg, cPg = gas.thermo
+            Qg, Sg, Hg, cPg = gas.get_thermo()
             dH_list.append(float(Ha[0] - Hg[0]))
-            if np.abs(dH_list[-1]) > 700:
-                print(ads.adsorbate_name)
+            if np.abs(dH_list[-1]) > 1000:
+                print(ads.adsorbate_name,
+                      " has an adsorption correction over",
+                      "1000 kJ/mol")
             dS_list.append(1e3*(Sa[0] - Sg[0]))
             temps = gas.temperatures
             desired_temps = [300, 400, 500, 600, 800, 1000, 1500]
@@ -232,7 +234,7 @@ class AdsorptionCorrectionTree:
 
     def write_RMG_adsorption_correction_file(self,
                                              filename,
-                                             file_title,
+                                             file_title=' ',
                                              file_long_description=' ',
                                              file_short_description=' ',
                                              ):
@@ -270,3 +272,72 @@ class AdsorptionCorrectionTree:
         lines += '\"\"\",\n'
         lines += ')\n'
         return lines
+
+
+class AdsorptionCorrectionTreeEnsemble(AdsorptionCorrectionTree):
+    def __init__(self,
+                 tree_dict,
+                 group_lib,
+                 adsorbate_lib=None,
+                 gas_lib=None,
+                 reference_dict=None,
+                 slab_dict=None,
+                 ensemble_energies_array=None,
+                 reference_ensemble=None,
+                 ensemble_scale=0.683,
+                 group_long_description=' ',
+                 group_short_description=' ',
+                 P_ref=100000,
+                 NASA7_T_switch=1000,
+                 twoD_gas_cutoff_frequency=100):
+        
+        super().__init__(tree_dict,
+                         group_lib,
+                         adsorbate_lib,
+                         gas_lib,
+                         reference_dict,
+                         slab_dict,
+                         group_long_description,
+                         group_short_description,
+                         P_ref,
+                         NASA7_T_switch,
+                         twoD_gas_cutoff_frequency)
+
+        self.ensemble_energies_array = ensemble_energies_array
+        self.ref_ensemble = reference_ensemble
+        self.ensemble_scale = ensemble_scale
+        self.original_ads_list = self.adsorbate_list.copy()
+        self.reference_dict = reference_dict
+        self.original_ref_dict = self.reference_dict.copy()
+        self.rydberg_to_eV = 13.6056980659
+
+    def write_files(
+            self,
+            directory="./",
+            file_prefix="database",
+            max_members=None,
+            ):
+        names = [ads.adsorbate_name for ads in self.adsorbate_list]
+        ref_names = list(self.ref_ensemble.keys())
+        if max_members:
+            N_members = max_members
+        else:
+            N_members = len(self.ensemble_energies_array[names[0]])
+        for i in range(N_members):
+            for j, name in enumerate(names):
+                dE = self.ensemble_energies_array[name][i]
+                dE *= self.rydberg_to_eV * self.ensemble_scale
+                oldE = self.original_ads_list[j].dft_energy[0]
+                newE = oldE - dE
+                self.adsorbate_list[j].dft_energy[0] = newE
+            for j, name in enumerate(ref_names):
+                dE = self.ref_ensemble[name][i]
+                dE *= self.rydberg_to_eV * self.ensemble_scale
+                oldE = self.original_ref_dict['reference_energies'][name]
+                newE = oldE - dE
+                self.reference_dict['reference_energies'][name] = newE
+            """ loop to do same for refs"""
+            name = directory + file_prefix + "_{}.py".format(str(i))
+            self.write_RMG_adsorption_correction_file(name)
+        return None
+    

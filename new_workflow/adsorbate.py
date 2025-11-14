@@ -82,7 +82,9 @@ class Adsorbate:
         self._get_adsorbate_molecular_mass()
         self._get_temperatures()
         self._check_if_2D_gas()
-        self.thermo = self.get_thermo()
+        self.trans_thermo = self.get_2D_translational_thermo()
+        self.vib_thermo = self.get_vibrational_thermo()
+
 
     def __repr__(self):
         """
@@ -280,8 +282,8 @@ class Adsorbate:
         EOF_ref_correction += comp['N'] * n_correction
         EOF_ref_correction += comp['O'] * o_correction
 
-        q_t, S_t, dH_t, Cp_t = self.get_2D_translational_thermo()
-        q_v, S_v, dH_v, Cv_v = self.get_vibrational_thermo()
+        q_t, S_t, dH_t, Cp_t = self.trans_thermo
+        q_v, S_v, dH_v, Cv_v = self.vib_thermo
         Q = q_v * q_t
         S = S_t + S_v
         dH = dH_t + dH_v
@@ -309,7 +311,7 @@ class Adsorbate:
         to be more descriptive.
         """
         R = self.R
-        Q, S, H, Cp = self.thermo
+        Q, S, H, Cp = self.get_thermo()
         H0 = H[0]
         S0 = S[0]
         T_switch = self.NASA7_T_switch
@@ -440,7 +442,7 @@ class Adsorbate:
         the estimate from the NASA7 polynomial.
         """
         S_fit, H_fit, Cp_fit = self.get_thermo_from_NASA()
-        Q, S, H, Cp = self.thermo
+        Q, S, H, Cp = self.get_thermo()
         HOF_298 = self.enthalpy_of_formation_at_298K
         plt.figure(dpi=300, figsize=(12, 4))
         gs = gridspec.GridSpec(1, 3)
