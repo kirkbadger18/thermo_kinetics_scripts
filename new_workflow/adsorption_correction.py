@@ -2,6 +2,8 @@ from adsorbate import Adsorbate
 from gas import Gas
 import numpy as np
 from treelib import Tree
+import copy
+
 
 class Group:
 
@@ -290,12 +292,12 @@ class AdsorptionCorrectionTreeEnsemble(AdsorptionCorrectionTree):
                  P_ref=100000,
                  NASA7_T_switch=1000,
                  twoD_gas_cutoff_frequency=100):
-        
+
         super().__init__(tree_dict,
                          group_lib,
-                         adsorbate_lib,
+                         copy.deepcopy(adsorbate_lib),
                          gas_lib,
-                         reference_dict,
+                         copy.deepcopy(reference_dict),
                          slab_dict,
                          group_long_description,
                          group_short_description,
@@ -306,9 +308,9 @@ class AdsorptionCorrectionTreeEnsemble(AdsorptionCorrectionTree):
         self.ensemble_energies_array = ensemble_energies_array
         self.ref_ensemble = reference_ensemble
         self.ensemble_scale = ensemble_scale
-        self.original_ads_list = self.adsorbate_list.copy()
-        self.reference_dict = reference_dict
-        self.original_ref_dict = self.reference_dict.copy()
+        self.original_ads_list = copy.deepcopy(self.adsorbate_list)
+        self.original_ref_dict = copy.deepcopy(self.reference_dict)
+        self.EOF_uncertainty = self.original_ref_dict['EOF_uncertainty']
         self.rydberg_to_eV = 13.6056980659
 
     def write_files(
@@ -334,10 +336,14 @@ class AdsorptionCorrectionTreeEnsemble(AdsorptionCorrectionTree):
                 dE = self.ref_ensemble[name][i]
                 dE *= self.rydberg_to_eV * self.ensemble_scale
                 oldE = self.original_ref_dict['reference_energies'][name]
-                newE = oldE - dE
+                EOF_perturbation = np.random.rand(1)
+                EOF_perturbation *= 2 * self.EOF_uncertainty[name]
+                EOF_perturbation -= self.EOF_uncertainty[name]
+                newE = oldE - dE + EOF_perturbation
                 self.reference_dict['reference_energies'][name] = newE
             """ loop to do same for refs"""
             name = directory + file_prefix + "_{}.py".format(str(i))
             self.write_RMG_adsorption_correction_file(name)
+        self.adsorbate_list = self.original_ads_list
+        self.reference_dict = self.original_ref_dict
         return None
-    

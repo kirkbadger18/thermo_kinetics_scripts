@@ -5,6 +5,8 @@ import matplotlib.gridspec as gridspec
 from matplotlib.ticker import MaxNLocator, LogLocator
 import textwrap
 import math
+import copy
+
 
 class Adsorbate:
 
@@ -84,7 +86,6 @@ class Adsorbate:
         self._check_if_2D_gas()
         self.trans_thermo = self.get_2D_translational_thermo()
         self.vib_thermo = self.get_vibrational_thermo()
-
 
     def __repr__(self):
         """
@@ -242,7 +243,7 @@ class Adsorbate:
         S_vib = np.zeros(len(temps))
         dH_vib = np.zeros(len(temps))
         Cv_vib = np.zeros(len(temps))
-        
+
         for t, temp in enumerate(temps):
             for n, nu in enumerate(self.frequencies[0:-1]):
                 if self.twoD_gas and n <= 1:
@@ -544,6 +545,7 @@ class Adsorbates:
                  ):
 
         self.slab_dict = slab_dict
+        self.reference_dict = reference_dict
         self.adsorbate_list = []
         for ads_dict in adsorbate_list:
             ads = Adsorbate(ads_dict, reference_dict, slab_dict,
@@ -656,8 +658,8 @@ class AdsorbatesEnsemble(Adsorbates):
                  NASA7_T_switch: float = 1000,
                  twoD_gas_cutoff_frequency: float = 100):
 
-        super().__init__(adsorbate_list,
-                         reference_dict,
+        super().__init__(copy.deepcopy(adsorbate_list),
+                         copy.deepcopy(reference_dict),
                          slab_dict,
                          long_description,
                          P_ref,
@@ -667,9 +669,9 @@ class AdsorbatesEnsemble(Adsorbates):
         self.ensemble_energies_array = ensemble_energies_array
         self.ref_ensemble = reference_ensemble
         self.ensemble_scale = ensemble_scale
-        self.original_ads_list = self.adsorbate_list.copy()
-        self.reference_dict = reference_dict
-        self.original_ref_dict = self.reference_dict.copy()
+        self.original_ads_list = copy.deepcopy(self.adsorbate_list)
+        self.original_ref_dict = copy.deepcopy(self.reference_dict)
+        self.EOF_uncertainty = self.original_ref_dict['EOF_uncertainty']
         self.rydberg_to_eV = 13.6056980659
 
     def write_ensemble_of_RMG_thermodatabase_files(
@@ -695,9 +697,14 @@ class AdsorbatesEnsemble(Adsorbates):
                 dE = self.ref_ensemble[name][i]
                 dE *= self.rydberg_to_eV * self.ensemble_scale
                 oldE = self.original_ref_dict['reference_energies'][name]
-                newE = oldE - dE
+                EOF_perturbation = np.random.rand(1)
+                EOF_perturbation *= 2 * self.EOF_uncertainty[name]
+                EOF_perturbation -= self.EOF_uncertainty[name]
+                newE = oldE - dE + EOF_perturbation
                 self.reference_dict['reference_energies'][name] = newE
             """ loop to do same for refs"""
             name = directory + file_prefix + "_{}.py".format(str(i))
             self.write_RMG_thermodatabase_file(name)
+        self.adsorbate_list = self.original_ads_list
+        self.reference_dict = self.original_ref_dict
         return None

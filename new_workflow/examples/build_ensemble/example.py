@@ -20,6 +20,7 @@ by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were app
 kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
 fmax=2.5e-2.'''
 N_members = 10
+
 ads_list = AdsorbatesEnsemble(Pt111_ads_data,
                               reference_dict,
                               slab_dict,

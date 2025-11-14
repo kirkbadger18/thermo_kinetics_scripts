@@ -20,4 +20,11 @@ reference_dict = dict(
                                #  "NH3X":-145.3,
                                "Pt": 0,
                                },
+                EOF_uncertainty={"XCO": 0.3,
+                               "XH": 0.3,
+                               "XNO": 0.3,
+                               'XO': 0.3,
+                               #  "NH3X":-145.3,
+                               "Pt": 0,
+                               },
                 )
