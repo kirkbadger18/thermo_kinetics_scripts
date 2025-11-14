@@ -309,7 +309,7 @@ class Adsorbate:
         to be more descriptive.
         """
         R = self.R
-        Q, S, H, Cp = self.get_thermo()
+        Q, S, H, Cp = self.thermo
         H0 = H[0]
         S0 = S[0]
         T_switch = self.NASA7_T_switch
@@ -440,7 +440,7 @@ class Adsorbate:
         the estimate from the NASA7 polynomial.
         """
         S_fit, H_fit, Cp_fit = self.get_thermo_from_NASA()
-        Q, S, H, Cp = self.get_thermo()
+        Q, S, H, Cp = self.thermo
         HOF_298 = self.enthalpy_of_formation_at_298K
         plt.figure(dpi=300, figsize=(12, 4))
         gs = gridspec.GridSpec(1, 3)
