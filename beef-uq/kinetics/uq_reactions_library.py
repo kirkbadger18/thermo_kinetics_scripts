@@ -40,8 +40,6 @@ x_sobol = generate_sobol_set(N_members,4)
 x_sobol *= 30
 x_sobol -=15
 
-print(x_sobol)
-
 with open('reactions.py','r') as f:
     original_lines = f.readlines()
 ### Read beef data from files and store in array

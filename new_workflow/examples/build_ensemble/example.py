@@ -9,8 +9,8 @@ from data.gas_data import gas_lib
 
 import sys
 sys.path.append('../../')
-from adsorbate import AdsorbatesEnsemble
-from adsorption_correction import AdsorptionCorrectionTreeEnsemble
+from adsorbate import AdsorbatesEnsemble, Adsorbates
+from adsorption_correction import AdsorptionCorrectionTreeEnsemble, AdsorptionCorrectionTree
 
 long_description = '''
 Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
@@ -21,17 +21,17 @@ kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mi
 fmax=2.5e-2.'''
 N_members = 10
 
-ads_list = AdsorbatesEnsemble(Pt111_ads_data,
-                              reference_dict,
-                              slab_dict,
-                              long_description,
-                              beefdict,
-                              refbeefdict,
-                              )
-ads_list.write_ensemble_of_RMG_thermodatabase_files(
-    directory='thermolib/',
-    file_prefix='surfaceThermoPt111',
-    max_members=N_members)
+#ads_list = AdsorbatesEnsemble(Pt111_ads_data,
+#                              reference_dict,
+#                              slab_dict,
+#                              long_description,
+#                              beefdict,
+#                              refbeefdict,
+#                              )
+#ads_list.write_ensemble_of_RMG_thermodatabase_files(
+#    directory='thermolib/',
+#    file_prefix='surfaceThermoPt111',
+#    max_members=N_members)
 
 correns = AdsorptionCorrectionTreeEnsemble(
     RX,
@@ -49,3 +49,21 @@ correns.write_files(
     file_prefix="adsorptionPt111",
     max_members=N_members,
 )
+
+tree = AdsorptionCorrectionTree(RX,
+                                group_data,
+                                Pt111_ads_data,
+                                gas_lib,
+                                reference_dict,
+                                slab_dict)
+
+tree.write_RMG_adsorption_correction_file('adscorr/adsorptionPt111.py',
+                                          ' ',
+                                          )
+
+ads_list = Adsorbates(Pt111_ads_data,
+                      reference_dict,
+                      slab_dict,
+                      long_description)
+
+ads_list.write_RMG_thermodatabase_file("thermolib/surfaceThermoPt111.py")
