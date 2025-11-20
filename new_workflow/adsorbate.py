@@ -66,7 +66,8 @@ class Adsorbate:
         self.zpe = adsorbate_dict['zpe']
         self.frequencies = adsorbate_dict['frequencies']
         self.sites_occupied = adsorbate_dict['sites_occupied']
-        self.connectivity = adsorbate_dict['connectivity']
+        if 'connectivity' in adsorbate_dict:
+            self.connectivity = adsorbate_dict['connectivity']
 
         self.reference_compositions = reference_dict['reference_compositions']
         self.reference_energies = reference_dict['reference_energies']

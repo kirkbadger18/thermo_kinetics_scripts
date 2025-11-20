@@ -48,6 +48,8 @@ class Group:
                     ctmp = np.round(1e3*(float(cPa[j] - cPg[j])), 3)
                     dcP_array[count, i] = ctmp
                     count += 1
+        if not dH_list:
+            print('There is no data for the group: ', self.group_name)
         dH = np.round(np.mean(dH_list), 3)
         dS = np.round(np.mean(dS_list), 3)
         dcP = np.round(np.mean(dcP_array, axis=1), 3)
