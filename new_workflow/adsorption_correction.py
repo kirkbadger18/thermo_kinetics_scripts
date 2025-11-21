@@ -254,7 +254,7 @@ class AdsorptionCorrectionTree:
         lines = []
         lines += '#!/usr/bin/env python\n# encoding: utf-8\n'
         lines += 'name = \"{}\"\n'.format(str(file_title))
-        lines += 'shortDesc = u"""{}"""\n'.format(textwrap.fill(shortdesc, 80))
+        lines += 'shortDesc = u"""{}\n"""\n'.format(textwrap.fill(shortdesc, 80))
         lines += 'longDesc = u"""\n'
         lines += '{}\n'.format(str(longdesc))
         lines += '"""\n'
