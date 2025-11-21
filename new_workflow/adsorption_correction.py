@@ -3,6 +3,7 @@ from gas import Gas
 import numpy as np
 from treelib import Tree
 import copy
+import textwrap
 
 
 class Group:
@@ -14,17 +15,23 @@ class Group:
                  slab_dict,
                  connectivity_string,
                  group_long_description=' ',
-                 group_short_description=' ',
+                 group_short_description=None,
                  ):
 
         self.group_name = group_name
-        self.group_long_description = group_long_description
-        self.group_short_description = group_short_description
         self.slab_dict = slab_dict
         self.connectivity_string = connectivity_string
 
         self.adsorbate_list = adsorbate_list
         self.gas_list = gas_list
+
+        self.group_long_description = group_long_description
+        self.avg_list = [ads.adsorbate_name for ads in self.adsorbate_list]
+        if group_short_description is None:
+            self.group_short_description = 'Averaged from: '\
+                + str(self.avg_list)
+        else:
+            self.group_short_description = group_short_description
         return
 
     def get_group_correction(self):
@@ -74,8 +81,8 @@ class Group:
         lines += '        H298=({}, \'kJ/mol\'),\n'.format(str(dH))
         lines += '        S298=({}, \'J/(mol*K)\'),\n'.format(str(dS))
         lines += '    ),\n'
-        lines += 'shortDesc=u\"\"\"{}\"\"\",\n'.format(shortdesc)
-        lines += 'longDesc=u\"\"\"{}\n'.format(longdesc)
+        lines += 'shortDesc=u\"\"\"{}\"\"\",\n'.format(textwrap.fill(shortdesc, 80))
+        lines += 'longDesc=u\"\"\"{}\n'.format(textwrap.fill(longdesc, 80))
         lines += '\"\"\",\n'
         lines += '    metal = \"{}\",\n'.format(self.slab_dict['metal'])
         lines += '    facet = \"{}\",\n'.format(self.slab_dict['facet'])
@@ -93,7 +100,7 @@ class AdsorptionCorrectionTree:
                  reference_dict=None,
                  slab_dict=None,
                  group_long_description=' ',
-                 group_short_description=' ',
+                 group_short_description=None,
                  P_ref=1.0E5,  # Pa
                  NASA7_T_switch=1000.0,  # K
                  twoD_gas_cutoff_frequency=100.0,
@@ -247,10 +254,10 @@ class AdsorptionCorrectionTree:
         lines = []
         lines += '#!/usr/bin/env python\n# encoding: utf-8\n'
         lines += 'name = \"{}\"\n'.format(str(file_title))
-        lines += 'shortDesc = u\"{}\"\n'.format(shortdesc)
-        lines += 'longDesc = u\"\"\"\n'
+        lines += 'shortDesc = u"""{}"""\n'.format(textwrap.fill(shortdesc, 80))
+        lines += 'longDesc = u"""\n'
         lines += '{}\n'.format(str(longdesc))
-        lines += '\"\"\"\n'
+        lines += '"""\n'
         entry1 = self.get_first_entry()
         lines.extend(entry1)
         for i, node_id in enumerate(self.tree.expand_tree()):
