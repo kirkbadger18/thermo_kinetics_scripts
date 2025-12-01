@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
 name = " "
-shortDesc = u" "
+shortDesc = u"""
+"""
 longDesc = u"""
  
 """
@@ -34,11 +35,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.521, 7.713, 10.235, 11.751, 13.233, 13.812, 14.188], 'J/(mol*K)'),
-        H298=(-278.982, 'kJ/mol'),
+        H298=(-88.655, 'kJ/mol'),
         S298=(-186.501, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -57,11 +58,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.57, 4.379, 7.518, 9.51, 11.661, 12.666, 13.548], 'J/(mol*K)'),
-        H298=(-461.307, 'kJ/mol'),
+        H298=(-224.897, 'kJ/mol'),
         S298=(-195.899, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -81,11 +82,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.406, 8.303, 11.6, 13.474, 15.227, 15.907, 16.407], 'J/(mol*K)'),
-        H298=(-556.557, 'kJ/mol'),
+        H298=(-308.832, 'kJ/mol'),
         S298=(-204.353, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -106,11 +107,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.902, 4.58, 8.212, 10.593, 13.246, 14.529, 15.765], 'J/(mol*K)'),
-        H298=(-565.55, 'kJ/mol'),
+        H298=(-319.255, 'kJ/mol'),
         S298=(-201.882, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -130,11 +131,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-1.997, 1.292, 3.271, 4.542, 5.969, 6.69, 7.482], 'J/(mol*K)'),
-        H298=(-634.413, 'kJ/mol'),
+        H298=(-356.796, 'kJ/mol'),
         S298=(-152.622, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -153,11 +154,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.847, 3.224, 5.377, 6.552, 7.603, 7.987, 8.243], 'J/(mol*K)'),
-        H298=(-661.467, 'kJ/mol'),
+        H298=(-536.174, 'kJ/mol'),
         S298=(-172.682, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -179,11 +180,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.178, 10.538, 13.14, 14.737, 16.34, 16.95, 17.203], 'J/(mol*K)'),
-        H298=(-344.602, 'kJ/mol'),
+        H298=(-37.091, 'kJ/mol'),
         S298=(-191.92, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -206,11 +207,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.944, 10.721, 13.46, 15.034, 16.536, 17.102, 17.324], 'J/(mol*K)'),
-        H298=(-299.618, 'kJ/mol'),
+        H298=(6.461, 'kJ/mol'),
         S298=(-192.345, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -232,11 +233,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.737, 6.176, 9.658, 11.873, 14.279, 15.412, 16.395], 'J/(mol*K)'),
-        H298=(-452.274, 'kJ/mol'),
+        H298=(-211.003, 'kJ/mol'),
         S298=(-214.968, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -257,11 +258,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-1.8, 1.82, 4.657, 6.682, 9.212, 10.778, 13.112], 'J/(mol*K)'),
-        H298=(-390.147, 'kJ/mol'),
+        H298=(-82.637, 'kJ/mol'),
         S298=(-194.29, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -281,11 +282,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-5.689, -0.923, 1.99, 3.824, 5.844, 6.836, 7.789], 'J/(mol*K)'),
-        H298=(-511.628, 'kJ/mol'),
+        H298=(-356.442, 'kJ/mol'),
         S298=(-193.307, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -306,11 +307,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-9.522, -3.487, 0.526, 3.158, 6.094, 7.472, 8.537], 'J/(mol*K)'),
-        H298=(-419.067, 'kJ/mol'),
+        H298=(-307.413, 'kJ/mol'),
         S298=(-211.081, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -331,11 +332,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-9.568, -4.218, -0.109, 2.801, 6.219, 7.87, 9.08], 'J/(mol*K)'),
-        H298=(-314.556, 'kJ/mol'),
+        H298=(-129.477, 'kJ/mol'),
         S298=(-184.879, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -354,11 +355,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.814, 8.69, 11.032, 12.458, 13.852, 14.367, 14.618], 'J/(mol*K)'),
-        H298=(-218.59, 'kJ/mol'),
+        H298=(-31.101, 'kJ/mol'),
         S298=(-186.3, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -380,11 +381,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.405, 12.921, 16.012, 17.371, 18.056, 17.95, 17.424], 'J/(mol*K)'),
-        H298=(-187.489, 'kJ/mol'),
+        H298=(47.076, 'kJ/mol'),
         S298=(-197.829, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -405,11 +406,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
-        H298=(-278.818, 'kJ/mol'),
+        H298=(-74.147, 'kJ/mol'),
         S298=(-193.314, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -429,11 +430,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
-        H298=(-134.527, 'kJ/mol'),
+        H298=(40.252, 'kJ/mol'),
         S298=(-171.411, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -454,11 +455,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
-        H298=(-147.321, 'kJ/mol'),
+        H298=(61.759, 'kJ/mol'),
         S298=(-183.708, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -478,11 +479,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.842, 9.2, 10.954, 11.87, 12.579, 12.736, 12.69], 'J/(mol*K)'),
-        H298=(-261.044, 'kJ/mol'),
+        H298=(-81.857, 'kJ/mol'),
         S298=(-188.758, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -503,11 +504,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
-        H298=(-352.079, 'kJ/mol'),
+        H298=(-169.173, 'kJ/mol'),
         S298=(-195.23, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -527,11 +528,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
-        H298=(-141.387, 'kJ/mol'),
+        H298=(11.626, 'kJ/mol'),
         S298=(-175.675, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -550,11 +551,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.503, 12.504, 14.797, 16.033, 16.96, 17.124, 16.993], 'J/(mol*K)'),
-        H298=(-119.769, 'kJ/mol'),
+        H298=(-33.384, 'kJ/mol'),
         S298=(-170.773, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -575,11 +576,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.782, 13.6, 16.068, 17.197, 17.75, 17.624, 17.161], 'J/(mol*K)'),
-        H298=(-82.819, 'kJ/mol'),
+        H298=(-3.919, 'kJ/mol'),
         S298=(-170.273, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -599,11 +600,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([10.817, 13.644, 15.48, 16.629, 17.68, 17.938, 17.721], 'J/(mol*K)'),
-        H298=(-41.749, 'kJ/mol'),
+        H298=(89.498, 'kJ/mol'),
         S298=(-174.316, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -623,11 +624,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.909, 10.268, 12.842, 14.274, 15.451, 15.809, 16.096], 'J/(mol*K)'),
-        H298=(-234.738, 'kJ/mol'),
+        H298=(-185.731, 'kJ/mol'),
         S298=(-167.729, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -646,11 +647,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.814, 8.69, 11.032, 12.458, 13.852, 14.367, 14.618], 'J/(mol*K)'),
-        H298=(-218.59, 'kJ/mol'),
+        H298=(-31.101, 'kJ/mol'),
         S298=(-186.3, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -672,11 +673,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.405, 12.921, 16.012, 17.371, 18.056, 17.95, 17.424], 'J/(mol*K)'),
-        H298=(-187.489, 'kJ/mol'),
+        H298=(47.076, 'kJ/mol'),
         S298=(-197.829, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -697,11 +698,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
-        H298=(-278.818, 'kJ/mol'),
+        H298=(-74.147, 'kJ/mol'),
         S298=(-193.314, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -721,11 +722,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
-        H298=(-134.527, 'kJ/mol'),
+        H298=(40.252, 'kJ/mol'),
         S298=(-171.411, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -746,11 +747,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
-        H298=(-147.321, 'kJ/mol'),
+        H298=(61.759, 'kJ/mol'),
         S298=(-183.708, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -770,11 +771,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.842, 9.2, 10.954, 11.87, 12.579, 12.736, 12.69], 'J/(mol*K)'),
-        H298=(-261.044, 'kJ/mol'),
+        H298=(-81.857, 'kJ/mol'),
         S298=(-188.758, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -795,11 +796,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
-        H298=(-352.079, 'kJ/mol'),
+        H298=(-169.173, 'kJ/mol'),
         S298=(-195.23, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -819,11 +820,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
-        H298=(-141.387, 'kJ/mol'),
+        H298=(11.626, 'kJ/mol'),
         S298=(-175.675, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -842,11 +843,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.107, 10.571, 12.444, 13.424, 14.153, 14.311, 14.357], 'J/(mol*K)'),
-        H298=(-194.444, 'kJ/mol'),
+        H298=(65.208, 'kJ/mol'),
         S298=(-177.885, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -867,11 +868,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.625, 11.666, 13.041, 13.56, 13.614, 13.356, 12.881], 'J/(mol*K)'),
-        H298=(-158.885, 'kJ/mol'),
+        H298=(104.83, 'kJ/mol'),
         S298=(-159.55, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -891,11 +892,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.588, 9.475, 11.847, 13.288, 14.692, 15.266, 15.833], 'J/(mol*K)'),
-        H298=(-230.003, 'kJ/mol'),
+        H298=(25.585, 'kJ/mol'),
         S298=(-196.22, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -914,11 +915,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.828, 8.982, 11.072, 12.03, 12.538, 12.504, 12.333], 'J/(mol*K)'),
-        H298=(-116.209, 'kJ/mol'),
+        H298=(-84.32, 'kJ/mol'),
         S298=(-164.124, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -938,11 +939,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.908, 11.467, 14.333, 15.65, 16.315, 16.243, 16.06], 'J/(mol*K)'),
-        H298=(-122.676, 'kJ/mol'),
+        H298=(-54.076, 'kJ/mol'),
         S298=(-186.753, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -962,11 +963,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.747, 6.497, 7.811, 8.41, 8.761, 8.765, 8.607], 'J/(mol*K)'),
-        H298=(-109.741, 'kJ/mol'),
+        H298=(-114.565, 'kJ/mol'),
         S298=(-141.494, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -985,11 +986,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.536, 7.866, 9.241, 9.716, 9.734, 9.477, 8.969], 'J/(mol*K)'),
-        H298=(-14.061, 'kJ/mol'),
+        H298=(-101.125, 'kJ/mol'),
         S298=(-176.349, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1009,11 +1010,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.915, 5.633, 8.64, 10.601, 12.832, 13.947, 15.003], 'J/(mol*K)'),
-        H298=(-555.972, 'kJ/mol'),
+        H298=(-320.635, 'kJ/mol'),
         S298=(-205.343, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1033,11 +1034,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.358, 5.428, 8.678, 10.802, 13.21, 14.401, 15.498], 'J/(mol*K)'),
-        H298=(-606.755, 'kJ/mol'),
+        H298=(-321.664, 'kJ/mol'),
         S298=(-209.129, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1057,11 +1058,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-4.884, 4.756, 10.174, 13.182, 15.816, 16.675, 17.026], 'J/(mol*K)'),
-        H298=(-780.669, 'kJ/mol'),
+        H298=(-532.944, 'kJ/mol'),
         S298=(-243.646, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1083,11 +1084,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.53, 3.814, 6.889, 9.138, 12.063, 13.729, 15.503], 'J/(mol*K)'),
-        H298=(-636.459, 'kJ/mol'),
+        H298=(-328.948, 'kJ/mol'),
         S298=(-200.61, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1108,11 +1109,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.004, 5.764, 9.532, 11.978, 14.676, 15.929, 16.877], 'J/(mol*K)'),
-        H298=(-592.713, 'kJ/mol'),
+        H298=(-315.095, 'kJ/mol'),
         S298=(-222.487, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1133,11 +1134,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.799, 11.404, 13.669, 14.882, 16.004, 16.449, 16.743], 'J/(mol*K)'),
-        H298=(-520.114, 'kJ/mol'),
+        H298=(-272.389, 'kJ/mol'),
         S298=(-202.293, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1159,11 +1160,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-3.015, 2.841, 6.845, 9.501, 12.496, 13.988, 15.496], 'J/(mol*K)'),
-        H298=(-679.333, 'kJ/mol'),
+        H298=(-401.715, 'kJ/mol'),
         S298=(-217.923, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1187,11 +1188,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-1.024, 3.612, 7.097, 9.667, 12.989, 14.82, 16.508], 'J/(mol*K)'),
-        H298=(-598.563, 'kJ/mol'),
+        H298=(-231.268, 'kJ/mol'),
         S298=(-209.34, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1214,11 +1215,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.123, 6.048, 9.544, 11.637, 13.776, 14.754, 15.729], 'J/(mol*K)'),
-        H298=(-587.469, 'kJ/mol'),
+        H298=(-279.958, 'kJ/mol'),
         S298=(-227.783, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1240,11 +1241,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.013, 7.654, 10.526, 12.323, 14.255, 15.167, 16.031], 'J/(mol*K)'),
-        H298=(-490.272, 'kJ/mol'),
+        H298=(-242.546, 'kJ/mol'),
         S298=(-196.347, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1265,11 +1266,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-3.349, -0.277, 2.079, 3.785, 5.883, 6.983, 8.012], 'J/(mol*K)'),
-        H298=(-532.785, 'kJ/mol'),
+        H298=(-314.952, 'kJ/mol'),
         S298=(-188.069, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1292,11 +1293,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.326, 9.998, 11.71, 12.977, 14.703, 15.7, 16.623], 'J/(mol*K)'),
-        H298=(-714.139, 'kJ/mol'),
+        H298=(-376.736, 'kJ/mol'),
         S298=(-196.129, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1318,11 +1319,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.897, 10.63, 13.334, 14.983, 16.737, 17.487, 17.796], 'J/(mol*K)'),
-        H298=(-392.545, 'kJ/mol'),
+        H298=(-85.035, 'kJ/mol'),
         S298=(-203.938, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1344,11 +1345,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-6.057, -1.103, 2.742, 5.566, 9.119, 11.137, 13.631], 'J/(mol*K)'),
-        H298=(-756.002, 'kJ/mol'),
+        H298=(-478.384, 'kJ/mol'),
         S298=(-200.988, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1369,11 +1370,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.773, 6.687, 9.402, 11.279, 13.546, 14.748, 15.95], 'J/(mol*K)'),
-        H298=(-491.868, 'kJ/mol'),
+        H298=(-350.321, 'kJ/mol'),
         S298=(-211.148, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1394,11 +1395,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.773, 6.687, 9.402, 11.279, 13.546, 14.748, 15.95], 'J/(mol*K)'),
-        H298=(-491.868, 'kJ/mol'),
+        H298=(-350.321, 'kJ/mol'),
         S298=(-211.148, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1418,11 +1419,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.33, 6.335, 8.029, 9.062, 10.207, 10.816, 11.564], 'J/(mol*K)'),
-        H298=(-283.326, 'kJ/mol'),
+        H298=(-299.616, 'kJ/mol'),
         S298=(-179.723, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1442,11 +1443,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.33, 6.335, 8.029, 9.062, 10.207, 10.816, 11.564], 'J/(mol*K)'),
-        H298=(-283.326, 'kJ/mol'),
+        H298=(-299.616, 'kJ/mol'),
         S298=(-179.723, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1463,11 +1464,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.736, 4.734, 6.575, 7.75, 9.067, 9.746, 10.516], 'J/(mol*K)'),
-        H298=(-359.982, 'kJ/mol'),
+        H298=(-173.606, 'kJ/mol'),
         S298=(-167.699, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1484,11 +1485,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.298, 3.393, 5.384, 6.7, 8.222, 9.017, 9.882], 'J/(mol*K)'),
-        H298=(-439.855, 'kJ/mol'),
+        H298=(-227.625, 'kJ/mol'),
         S298=(-169.455, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1506,11 +1507,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-2.337, 1.347, 3.717, 5.276, 7.07, 8.028, 9.212], 'J/(mol*K)'),
-        H298=(-611.172, 'kJ/mol'),
+        H298=(-445.852, 'kJ/mol'),
         S298=(-175.05, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1530,11 +1531,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-4.055, -1.187, 0.947, 2.528, 4.593, 5.79, 7.154], 'J/(mol*K)'),
-        H298=(-647.214, 'kJ/mol'),
+        H298=(-452.578, 'kJ/mol'),
         S298=(-183.565, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1555,11 +1556,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-1.907, 1.584, 4.181, 6.073, 8.471, 9.861, 11.631], 'J/(mol*K)'),
-        H298=(-717.175, 'kJ/mol'),
+        H298=(-475.904, 'kJ/mol'),
         S298=(-174.235, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1577,11 +1578,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.513, 5.534, 6.472, 6.944, 7.314, 7.431, 7.609], 'J/(mol*K)'),
-        H298=(-439.959, 'kJ/mol'),
+        H298=(-286.946, 'kJ/mol'),
         S298=(-161.835, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1600,11 +1601,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.833, 9.834, 11.905, 12.95, 13.691, 13.905, 14.428], 'J/(mol*K)'),
-        H298=(-458.269, 'kJ/mol'),
+        H298=(-409.262, 'kJ/mol'),
         S298=(-187.544, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1623,11 +1624,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.308, 3.316, 5.308, 6.63, 8.118, 8.843, 9.538], 'J/(mol*K)'),
-        H298=(-379.038, 'kJ/mol'),
+        H298=(-170.315, 'kJ/mol'),
         S298=(-166.429, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1648,11 +1649,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.29, 4.859, 7.35, 9.038, 10.965, 11.917, 12.819], 'J/(mol*K)'),
-        H298=(-429.657, 'kJ/mol'),
+        H298=(-161.89, 'kJ/mol'),
         S298=(-182.514, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1671,11 +1672,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.317, 3.815, 5.358, 6.318, 7.274, 7.655, 7.964], 'J/(mol*K)'),
-        H298=(-339.818, 'kJ/mol'),
+        H298=(-100.846, 'kJ/mol'),
         S298=(-153.59, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1695,11 +1696,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.138, 2.63, 4.403, 5.552, 6.796, 7.373, 7.911], 'J/(mol*K)'),
-        H298=(-335.156, 'kJ/mol'),
+        H298=(-107.617, 'kJ/mol'),
         S298=(-151.565, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1718,11 +1719,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.811, 1.985, 3.789, 4.994, 6.4, 7.127, 7.863], 'J/(mol*K)'),
-        H298=(-370.436, 'kJ/mol'),
+        H298=(-244.146, 'kJ/mol'),
         S298=(-164.4, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1742,11 +1743,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.942, 2.387, 4.712, 6.34, 8.353, 9.469, 10.669], 'J/(mol*K)'),
-        H298=(-359.185, 'kJ/mol'),
+        H298=(-92.178, 'kJ/mol'),
         S298=(-177.467, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1769,11 +1770,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.387, 3.924, 6.346, 8.022, 10.071, 11.199, 12.428], 'J/(mol*K)'),
-        H298=(-386.251, 'kJ/mol'),
+        H298=(-79.934, 'kJ/mol'),
         S298=(-192.287, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1793,11 +1794,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-3.187, -0.519, 1.569, 3.139, 5.196, 6.372, 7.617], 'J/(mol*K)'),
-        H298=(-332.497, 'kJ/mol'),
+        H298=(-68.04, 'kJ/mol'),
         S298=(-143.176, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1818,11 +1819,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-3.141, -0.002, 2.2, 3.737, 5.638, 6.694, 7.8], 'J/(mol*K)'),
-        H298=(-304.867, 'kJ/mol'),
+        H298=(-134.858, 'kJ/mol'),
         S298=(-157.564, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1840,11 +1841,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.636, 4.766, 6.547, 7.637, 8.832, 9.428, 10.027], 'J/(mol*K)'),
-        H298=(-438.17, 'kJ/mol'),
+        H298=(-265.833, 'kJ/mol'),
         S298=(-170.526, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1862,11 +1863,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.558, 4.879, 6.698, 7.792, 9.007, 9.649, 10.379], 'J/(mol*K)'),
-        H298=(-504.895, 'kJ/mol'),
+        H298=(-333.373, 'kJ/mol'),
         S298=(-171.763, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1885,11 +1886,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.872, 4.427, 6.095, 7.174, 8.304, 8.763, 8.972], 'J/(mol*K)'),
-        H298=(-237.995, 'kJ/mol'),
+        H298=(-63.216, 'kJ/mol'),
         S298=(-166.816, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1908,11 +1909,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.584, 3.971, 6.027, 7.341, 8.844, 9.648, 10.583], 'J/(mol*K)'),
-        H298=(-454.732, 'kJ/mol'),
+        H298=(-229.56, 'kJ/mol'),
         S298=(-165.599, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1933,11 +1934,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.813, 4.083, 6.234, 7.704, 9.498, 10.486, 11.571], 'J/(mol*K)'),
-        H298=(-486.07, 'kJ/mol'),
+        H298=(-261.541, 'kJ/mol'),
         S298=(-179.047, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1959,11 +1960,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.778, 4.719, 6.599, 7.86, 9.389, 10.262, 11.344], 'J/(mol*K)'),
-        H298=(-533.611, 'kJ/mol'),
+        H298=(-238.414, 'kJ/mol'),
         S298=(-179.041, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1982,11 +1983,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.001, 5.078, 6.087, 6.635, 7.154, 7.387, 7.694], 'J/(mol*K)'),
-        H298=(-374.654, 'kJ/mol'),
+        H298=(-117.222, 'kJ/mol'),
         S298=(-144.277, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2006,11 +2007,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.049, 2.817, 4.477, 5.525, 6.776, 7.488, 8.236], 'J/(mol*K)'),
-        H298=(-382.549, 'kJ/mol'),
+        H298=(-242.433, 'kJ/mol'),
         S298=(-146.569, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2027,11 +2028,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.07, 7.28, 9.078, 10.127, 11.187, 11.695, 12.317], 'J/(mol*K)'),
-        H298=(-249.576, 'kJ/mol'),
+        H298=(-73.591, 'kJ/mol'),
         S298=(-168.306, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2049,11 +2050,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.702, 5.321, 6.757, 7.583, 8.38, 8.722, 9.069], 'J/(mol*K)'),
-        H298=(-213.695, 'kJ/mol'),
+        H298=(-49.176, 'kJ/mol'),
         S298=(-165.284, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2072,11 +2073,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.421, 1.147, 1.86, 2.23, 2.65, 2.937, 3.411], 'J/(mol*K)'),
-        H298=(-273.344, 'kJ/mol'),
+        H298=(-94.157, 'kJ/mol'),
         S298=(-145.417, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2096,11 +2097,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.608, 9.954, 11.836, 12.985, 14.211, 14.819, 15.561], 'J/(mol*K)'),
-        H298=(-272.81, 'kJ/mol'),
+        H298=(-68.139, 'kJ/mol'),
         S298=(-180.636, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2119,11 +2120,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.46, 7.334, 9.012, 10.015, 11.003, 11.429, 11.874], 'J/(mol*K)'),
-        H298=(-203.976, 'kJ/mol'),
+        H298=(51.613, 'kJ/mol'),
         S298=(-164.071, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2142,11 +2143,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.042, 8.56, 10.66, 11.961, 13.382, 14.111, 14.965], 'J/(mol*K)'),
-        H298=(-224.741, 'kJ/mol'),
+        H298=(-55.234, 'kJ/mol'),
         S298=(-171.405, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2166,11 +2167,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.987, 7.376, 9.536, 11.007, 12.778, 13.752, 14.963], 'J/(mol*K)'),
-        H298=(-347.821, 'kJ/mol'),
+        H298=(-186.681, 'kJ/mol'),
         S298=(-216.907, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2192,11 +2193,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([12.309, 16.976, 20.433, 23.081, 26.902, 29.654, 34.187], 'J/(mol*K)'),
-        H298=(-459.741, 'kJ/mol'),
+        H298=(-195.284, 'kJ/mol'),
         S298=(-167.995, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2216,11 +2217,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([10.898, 13.865, 15.436, 16.236, 16.797, 16.876, 16.777], 'J/(mol*K)'),
-        H298=(-224.733, 'kJ/mol'),
+        H298=(-73.893, 'kJ/mol'),
         S298=(-189.56, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2241,11 +2242,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.129, 10.37, 12.332, 13.576, 14.975, 15.687, 16.376], 'J/(mol*K)'),
-        H298=(-213.469, 'kJ/mol'),
+        H298=(40.689, 'kJ/mol'),
         S298=(-188.5, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2265,11 +2266,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.087, 11.692, 13.567, 14.63, 15.723, 16.248, 16.716], 'J/(mol*K)'),
-        H298=(-167.612, 'kJ/mol'),
+        H298=(-69.118, 'kJ/mol'),
         S298=(-189.451, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2288,11 +2289,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.236, 9.867, 11.247, 11.962, 12.515, 12.65, 12.642], 'J/(mol*K)'),
-        H298=(-142.325, 'kJ/mol'),
+        H298=(-69.317, 'kJ/mol'),
         S298=(-163.298, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2311,11 +2312,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.728, 5.688, 6.778, 7.398, 7.997, 8.253, 8.447], 'J/(mol*K)'),
-        H298=(-165.21, 'kJ/mol'),
+        H298=(59.767, 'kJ/mol'),
         S298=(-143.039, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2333,11 +2334,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.509, 3.839, 6.171, 7.446, 8.598, 9.078, 9.714], 'J/(mol*K)'),
-        H298=(-344.014, 'kJ/mol'),
+        H298=(-180.877, 'kJ/mol'),
         S298=(-168.676, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2356,11 +2357,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-6.989, -4.603, -3.581, -3.072, -2.447, -1.961, -1.142], 'J/(mol*K)'),
-        H298=(-340.212, 'kJ/mol'),
+        H298=(-113.085, 'kJ/mol'),
         S298=(-142.031, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2379,11 +2380,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.614, 9.468, 11.121, 12.197, 13.469, 14.191, 15.174], 'J/(mol*K)'),
-        H298=(-435.052, 'kJ/mol'),
+        H298=(-200.488, 'kJ/mol'),
         S298=(-176.565, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2401,11 +2402,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([11.303, 15.422, 17.092, 17.515, 16.969, 16.192, 15.433], 'J/(mol*K)'),
-        H298=(-270.145, 'kJ/mol'),
+        H298=(-45.881, 'kJ/mol'),
         S298=(-174.51, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2424,11 +2425,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([9.017, 13.03, 14.825, 15.531, 15.693, 15.491, 15.382], 'J/(mol*K)'),
-        H298=(-257.995, 'kJ/mol'),
+        H298=(-189.394, 'kJ/mol'),
         S298=(-178.708, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2445,11 +2446,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.429, 6.188, 7.189, 7.815, 8.523, 8.912, 9.424], 'J/(mol*K)'),
-        H298=(-189.432, 'kJ/mol'),
+        H298=(-125.896, 'kJ/mol'),
         S298=(-155.727, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2467,11 +2468,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.044, 4.902, 5.986, 6.67, 7.447, 7.867, 8.404], 'J/(mol*K)'),
-        H298=(-188.625, 'kJ/mol'),
+        H298=(-132.806, 'kJ/mol'),
         S298=(-151.553, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2491,11 +2492,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([11.169, 13.366, 14.539, 15.213, 15.906, 16.227, 16.51], 'J/(mol*K)'),
-        H298=(-205.928, 'kJ/mol'),
+        H298=(-159.642, 'kJ/mol'),
         S298=(-194.234, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2516,11 +2517,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.445, 2.24, 2.925, 3.538, 4.489, 5.184, 6.345], 'J/(mol*K)'),
-        H298=(-240.188, 'kJ/mol'),
+        H298=(-105.096, 'kJ/mol'),
         S298=(-149.812, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2539,11 +2540,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.23, 4.154, 5.771, 6.686, 7.575, 7.955, 8.262], 'J/(mol*K)'),
-        H298=(-119.175, 'kJ/mol'),
+        H298=(-20.682, 'kJ/mol'),
         S298=(-134.71, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2562,11 +2563,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([10.207, 11.382, 11.381, 11.023, 10.193, 9.56, 8.77], 'J/(mol*K)'),
-        H298=(-66.005, 'kJ/mol'),
+        H298=(-123.176, 'kJ/mol'),
         S298=(-120.712, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2583,11 +2584,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.618, 6.887, 7.601, 8.033, 8.504, 8.745, 8.987], 'J/(mol*K)'),
-        H298=(-154.09, 'kJ/mol'),
+        H298=(50.512, 'kJ/mol'),
         S298=(-128.976, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2606,11 +2607,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.204, 2.484, 2.649, 2.795, 3.123, 3.488, 4.251], 'J/(mol*K)'),
-        H298=(-163.562, 'kJ/mol'),
+        H298=(44.383, 'kJ/mol'),
         S298=(-120.514, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2630,11 +2631,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.391, -0.19, -0.063, 0.059, 0.385, 0.816, 1.884], 'J/(mol*K)'),
-        H298=(-199.765, 'kJ/mol'),
+        H298=(46.53, 'kJ/mol'),
         S298=(-119.645, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2653,11 +2654,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.394, 7.832, 8.074, 8.267, 8.599, 8.832, 8.985], 'J/(mol*K)'),
-        H298=(-91.156, 'kJ/mol'),
+        H298=(40.091, 'kJ/mol'),
         S298=(-122.254, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2677,11 +2678,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.176, 7.536, 8.289, 8.717, 9.118, 9.268, 9.344], 'J/(mol*K)'),
-        H298=(-150.348, 'kJ/mol'),
+        H298=(27.787, 'kJ/mol'),
         S298=(-130.966, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2702,11 +2703,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.429, 9.04, 9.921, 10.423, 10.896, 11.075, 11.173], 'J/(mol*K)'),
-        H298=(-254.487, 'kJ/mol'),
+        H298=(52.069, 'kJ/mol'),
         S298=(-143.863, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2726,11 +2727,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.299, 6.343, 7.876, 8.574, 8.928, 8.866, 8.608], 'J/(mol*K)'),
-        H298=(-138.714, 'kJ/mol'),
+        H298=(95.85, 'kJ/mol'),
         S298=(-135.288, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2750,11 +2751,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.999, 6.871, 7.393, 7.722, 8.089, 8.264, 8.393], 'J/(mol*K)'),
-        H298=(-90.191, 'kJ/mol'),
+        H298=(-0.394, 'kJ/mol'),
         S298=(-122.364, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2775,11 +2776,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.688, 8.694, 9.215, 9.504, 9.784, 9.904, 10.0], 'J/(mol*K)'),
-        H298=(-177.321, 'kJ/mol'),
+        H298=(59.097, 'kJ/mol'),
         S298=(-118.627, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2803,11 +2804,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([9.04, 9.934, 10.397, 10.672, 10.97, 11.108, 11.195], 'J/(mol*K)'),
-        H298=(-235.431, 'kJ/mol'),
+        H298=(95.518, 'kJ/mol'),
         S298=(-137.338, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2828,11 +2829,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.932, 3.145, 4.574, 5.506, 6.556, 7.095, 7.704], 'J/(mol*K)'),
-        H298=(-232.045, 'kJ/mol'),
+        H298=(62.304, 'kJ/mol'),
         S298=(-141.215, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2854,11 +2855,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.436, 9.528, 10.024, 10.252, 10.408, 10.449, 10.467], 'J/(mol*K)'),
-        H298=(-140.8, 'kJ/mol'),
+        H298=(37.335, 'kJ/mol'),
         S298=(-139.363, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2877,11 +2878,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.54, 7.091, 7.441, 7.69, 8.006, 8.18, 8.339], 'J/(mol*K)'),
-        H298=(-131.874, 'kJ/mol'),
+        H298=(77.205, 'kJ/mol'),
         S298=(-122.197, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2899,11 +2900,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.54, 7.091, 7.441, 7.69, 8.006, 8.18, 8.339], 'J/(mol*K)'),
-        H298=(-131.874, 'kJ/mol'),
+        H298=(77.205, 'kJ/mol'),
         S298=(-122.197, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2923,11 +2924,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.702, 6.186, 7.691, 8.647, 9.72, 10.261, 10.798], 'J/(mol*K)'),
-        H298=(-166.947, 'kJ/mol'),
+        H298=(79.089, 'kJ/mol'),
         S298=(-136.79, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2945,11 +2946,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.687, 6.032, 6.825, 7.329, 7.911, 8.22, 8.494], 'J/(mol*K)'),
-        H298=(-137.439, 'kJ/mol'),
+        H298=(53.594, 'kJ/mol'),
         S298=(-138.501, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2967,11 +2968,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.776, 4.013, 5.344, 6.178, 7.098, 7.552, 8.006], 'J/(mol*K)'),
-        H298=(-256.789, 'kJ/mol'),
+        H298=(149.693, 'kJ/mol'),
         S298=(-150.696, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2989,11 +2990,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.322, 5.152, 6.208, 6.849, 7.534, 7.863, 8.173], 'J/(mol*K)'),
-        H298=(-91.303, 'kJ/mol'),
+        H298=(37.083, 'kJ/mol'),
         S298=(-132.089, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3011,11 +3012,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.708, 6.011, 6.788, 7.301, 7.93, 8.274, 8.565], 'J/(mol*K)'),
-        H298=(-144.694, 'kJ/mol'),
+        H298=(65.772, 'kJ/mol'),
         S298=(-141.385, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3034,11 +3035,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.708, 6.011, 6.788, 7.301, 7.93, 8.274, 8.565], 'J/(mol*K)'),
-        H298=(-144.694, 'kJ/mol'),
+        H298=(65.772, 'kJ/mol'),
         S298=(-141.385, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3057,11 +3058,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.682, 6.734, 7.311, 7.663, 8.05, 8.242, 8.401], 'J/(mol*K)'),
-        H298=(-191.875, 'kJ/mol'),
+        H298=(111.29, 'kJ/mol'),
         S298=(-139.884, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3081,11 +3082,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.761, 4.564, 5.742, 6.578, 7.689, 8.338, 8.892], 'J/(mol*K)'),
-        H298=(-50.333, 'kJ/mol'),
+        H298=(-25.265, 'kJ/mol'),
         S298=(-144.387, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3104,11 +3105,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.402, 6.003, 6.837, 7.327, 7.877, 8.177, 8.462], 'J/(mol*K)'),
-        H298=(-17.803, 'kJ/mol'),
+        H298=(-16.061, 'kJ/mol'),
         S298=(-98.276, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3128,11 +3129,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.316, 7.23, 7.68, 7.947, 8.291, 8.512, 8.707], 'J/(mol*K)'),
-        H298=(-14.457, 'kJ/mol'),
+        H298=(-41.735, 'kJ/mol'),
         S298=(-110.352, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",

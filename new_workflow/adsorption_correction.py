@@ -1,6 +1,7 @@
 from adsorbate import Adsorbate
 from gas import Gas
 import numpy as np
+import scipy
 from treelib import Tree
 import copy
 import textwrap
@@ -334,6 +335,7 @@ class AdsorptionCorrectionTreeEnsemble(AdsorptionCorrectionTree):
             N_members = max_members
         else:
             N_members = len(self.ensemble_energies_array[names[0]])
+        sampler = scipy.stats.qmc.Sobol(d=1, scramble=True, seed=12)
         for i in range(N_members):
             for j, name in enumerate(names):
                 dE = self.ensemble_energies_array[name][i]
@@ -345,7 +347,7 @@ class AdsorptionCorrectionTreeEnsemble(AdsorptionCorrectionTree):
                 dE = self.ref_ensemble[name][i]
                 dE *= self.rydberg_to_eV * self.ensemble_scale
                 oldE = self.original_ref_dict['reference_energies'][name]
-                EOF_perturbation = np.random.rand(1)
+                EOF_perturbation = sampler.random()[0, 0]
                 EOF_perturbation *= 2 * self.EOF_uncertainty[name]
                 EOF_perturbation -= self.EOF_uncertainty[name]
                 newE = oldE - dE + EOF_perturbation
