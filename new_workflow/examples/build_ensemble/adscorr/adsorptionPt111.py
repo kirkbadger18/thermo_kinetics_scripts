@@ -35,7 +35,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.517, 7.712, 10.239, 11.76, 13.248, 13.831, 14.211], 'J/(mol*K)'),
-        H298=(-213.362, 'kJ/mol'),
+        H298=(-183.728, 'kJ/mol'),
         S298=(-186.544, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC', 'XCH2XCCH2',
@@ -399,7 +399,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.814, 8.69, 11.032, 12.458, 13.852, 14.367, 14.618], 'J/(mol*K)'),
-        H298=(-180.313, 'kJ/mol'),
+        H298=(-136.015, 'kJ/mol'),
         S298=(-186.3, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO',
@@ -430,7 +430,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.405, 12.921, 16.012, 17.371, 18.056, 17.95, 17.424], 'J/(mol*K)'),
-        H298=(-120.633, 'kJ/mol'),
+        H298=(-83.15, 'kJ/mol'),
         S298=(-197.829, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XNH', 'XCH2XNH', 'XCH2XNH']""",
@@ -455,7 +455,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
-        H298=(-221.256, 'kJ/mol'),
+        H298=(-183.773, 'kJ/mol'),
         S298=(-193.314, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XN', 'XCH2XN', 'XCH2XN', 'XCH2XN']""",
@@ -479,7 +479,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
-        H298=(-93.575, 'kJ/mol'),
+        H298=(-56.092, 'kJ/mol'),
         S298=(-171.411, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXN', 'XCHXN', 'XCHXN', 'XCHXN']""",
@@ -504,7 +504,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
-        H298=(-116.123, 'kJ/mol'),
+        H298=(-59.899, 'kJ/mol'),
         S298=(-183.708, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO',
@@ -529,7 +529,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.842, 9.2, 10.954, 11.87, 12.579, 12.736, 12.69], 'J/(mol*K)'),
-        H298=(-243.206, 'kJ/mol'),
+        H298=(-186.982, 'kJ/mol'),
         S298=(-188.758, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH',
@@ -555,7 +555,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
-        H298=(-306.041, 'kJ/mol'),
+        H298=(-268.558, 'kJ/mol'),
         S298=(-195.23, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH',
@@ -580,7 +580,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
-        H298=(-108.619, 'kJ/mol'),
+        H298=(-71.136, 'kJ/mol'),
         S298=(-175.675, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH',
@@ -604,7 +604,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.503, 12.504, 14.797, 16.033, 16.96, 17.124, 16.993], 'J/(mol*K)'),
-        H298=(-81.763, 'kJ/mol'),
+        H298=(-69.268, 'kJ/mol'),
         S298=(-170.773, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XO', 'XOXCNH', 'XCHXO', 'XCH2XO', 'XOXCNH', 'XCHXO',
@@ -654,7 +654,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([10.817, 13.644, 15.48, 16.629, 17.68, 17.938, 17.721], 'J/(mol*K)'),
-        H298=(-16.536, 'kJ/mol'),
+        H298=(20.947, 'kJ/mol'),
         S298=(-174.316, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOXCNH', 'XOXCNH', 'XOXCNH', 'XOXCNH']""",
@@ -701,7 +701,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.814, 8.69, 11.032, 12.458, 13.852, 14.367, 14.618], 'J/(mol*K)'),
-        H298=(-180.313, 'kJ/mol'),
+        H298=(-136.015, 'kJ/mol'),
         S298=(-186.3, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO',
@@ -732,7 +732,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.405, 12.921, 16.012, 17.371, 18.056, 17.95, 17.424], 'J/(mol*K)'),
-        H298=(-120.633, 'kJ/mol'),
+        H298=(-83.15, 'kJ/mol'),
         S298=(-197.829, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XNH', 'XCH2XNH', 'XCH2XNH']""",
@@ -757,7 +757,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
-        H298=(-221.256, 'kJ/mol'),
+        H298=(-183.773, 'kJ/mol'),
         S298=(-193.314, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XN', 'XCH2XN', 'XCH2XN', 'XCH2XN']""",
@@ -781,7 +781,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
-        H298=(-93.575, 'kJ/mol'),
+        H298=(-56.092, 'kJ/mol'),
         S298=(-171.411, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXN', 'XCHXN', 'XCHXN', 'XCHXN']""",
@@ -806,7 +806,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
-        H298=(-116.123, 'kJ/mol'),
+        H298=(-59.899, 'kJ/mol'),
         S298=(-183.708, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO',
@@ -831,7 +831,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.842, 9.2, 10.954, 11.87, 12.579, 12.736, 12.69], 'J/(mol*K)'),
-        H298=(-243.206, 'kJ/mol'),
+        H298=(-186.982, 'kJ/mol'),
         S298=(-188.758, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH',
@@ -857,7 +857,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
-        H298=(-306.041, 'kJ/mol'),
+        H298=(-268.558, 'kJ/mol'),
         S298=(-195.23, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH',
@@ -882,7 +882,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
-        H298=(-108.619, 'kJ/mol'),
+        H298=(-71.136, 'kJ/mol'),
         S298=(-175.675, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH',
@@ -906,7 +906,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.107, 10.571, 12.444, 13.424, 14.153, 14.311, 14.357], 'J/(mol*K)'),
-        H298=(-179.114, 'kJ/mol'),
+        H298=(-104.148, 'kJ/mol'),
         S298=(-177.885, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHXNH', 'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XNHXNH',
@@ -933,7 +933,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.625, 11.667, 13.041, 13.56, 13.614, 13.356, 12.881], 'J/(mol*K)'),
-        H298=(-141.495, 'kJ/mol'),
+        H298=(-66.529, 'kJ/mol'),
         S298=(-159.55, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHXNH', 'CH3XNXNOH', 'XNHXNH', 'CH3XNXNOH', 'XNHXNH',
@@ -958,7 +958,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.588, 9.475, 11.847, 13.288, 14.692, 15.266, 15.833], 'J/(mol*K)'),
-        H298=(-216.733, 'kJ/mol'),
+        H298=(-141.767, 'kJ/mol'),
         S298=(-196.22, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHXN', 'XNXNCH3', 'XNHXN', 'XNXNCH3', 'XNHXN', 'XNXNCH3',
@@ -982,7 +982,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.828, 8.982, 11.072, 12.03, 12.538, 12.504, 12.333], 'J/(mol*K)'),
-        H298=(-155.542, 'kJ/mol'),
+        H298=(-118.059, 'kJ/mol'),
         S298=(-164.124, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOXNH', 'XOXNO', 'XOXNH', 'XOXNO', 'XOXNH', 'XOXNH', 'XOXNO',
@@ -1007,7 +1007,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.908, 11.467, 14.333, 15.65, 16.315, 16.243, 16.06], 'J/(mol*K)'),
-        H298=(-145.058, 'kJ/mol'),
+        H298=(-107.575, 'kJ/mol'),
         S298=(-186.753, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOXNH', 'XOXNH', 'XOXNH', 'XOXNH']""",
@@ -1031,7 +1031,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.747, 6.497, 7.811, 8.41, 8.761, 8.765, 8.607], 'J/(mol*K)'),
-        H298=(-166.025, 'kJ/mol'),
+        H298=(-128.542, 'kJ/mol'),
         S298=(-141.494, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOXNO', 'XOXNO', 'XOXNO', 'XOXNO']""",
@@ -1554,7 +1554,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.825, 4.8, 6.627, 7.794, 9.104, 9.781, 10.55], 'J/(mol*K)'),
-        H298=(-285.262, 'kJ/mol'),
+        H298=(-262.311, 'kJ/mol'),
         S298=(-167.765, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
@@ -1636,7 +1636,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.241, 3.349, 5.352, 6.678, 8.217, 9.024, 9.906], 'J/(mol*K)'),
-        H298=(-329.924, 'kJ/mol'),
+        H298=(-317.688, 'kJ/mol'),
         S298=(-169.612, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCN', 'XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
@@ -1691,7 +1691,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-1.352, 2.042, 4.247, 5.715, 7.423, 8.345, 9.498], 'J/(mol*K)'),
-        H298=(-511.0, 'kJ/mol'),
+        H298=(-502.671, 'kJ/mol'),
         S298=(-175.086, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
@@ -1768,7 +1768,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.513, 5.534, 6.472, 6.944, 7.314, 7.431, 7.609], 'J/(mol*K)'),
-        H298=(-409.309, 'kJ/mol'),
+        H298=(-371.826, 'kJ/mol'),
         S298=(-161.835, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCNO', 'XCNH2', 'XCNO', 'XCNH2', 'XCNO', 'XCNH2', 'XCNO',
@@ -1815,7 +1815,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.308, 3.316, 5.308, 6.63, 8.118, 8.843, 9.538], 'J/(mol*K)'),
-        H298=(-279.371, 'kJ/mol'),
+        H298=(-261.879, 'kJ/mol'),
         S298=(-166.429, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
@@ -1874,7 +1874,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.317, 3.815, 5.358, 6.318, 7.274, 7.655, 7.964], 'J/(mol*K)'),
-        H298=(-296.931, 'kJ/mol'),
+        H298=(-240.707, 'kJ/mol'),
         S298=(-153.59, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['OXCNH2', 'NH2XCNH', 'OXCNH2', 'NH2XCNH', 'OXCNH2', 'NH2XCNH',
@@ -1899,7 +1899,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.138, 2.63, 4.403, 5.552, 6.796, 7.373, 7.911], 'J/(mol*K)'),
-        H298=(-288.56, 'kJ/mol'),
+        H298=(-238.583, 'kJ/mol'),
         S298=(-151.565, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH',
@@ -1949,7 +1949,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.942, 2.387, 4.712, 6.34, 8.353, 9.469, 10.669], 'J/(mol*K)'),
-        H298=(-211.739, 'kJ/mol'),
+        H298=(-207.054, 'kJ/mol'),
         S298=(-177.467, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH',
@@ -2008,7 +2008,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-3.187, -0.519, 1.569, 3.139, 5.196, 6.372, 7.617], 'J/(mol*K)'),
-        H298=(-253.245, 'kJ/mol'),
+        H298=(-215.762, 'kJ/mol'),
         S298=(-143.176, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2NH2', 'XCH2NH2', 'XCH2NH2', 'XCH2NH2']""",
@@ -2056,7 +2056,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.636, 4.766, 6.547, 7.637, 8.832, 9.428, 10.027], 'J/(mol*K)'),
-        H298=(-338.307, 'kJ/mol'),
+        H298=(-328.936, 'kJ/mol'),
         S298=(-170.526, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCCO', 'XCCCH2', 'XCCH2',
@@ -2103,7 +2103,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.872, 4.427, 6.095, 7.174, 8.304, 8.763, 8.972], 'J/(mol*K)'),
-        H298=(-200.346, 'kJ/mol'),
+        H298=(-162.864, 'kJ/mol'),
         S298=(-166.816, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCNH', 'XCNH', 'XCNH', 'XCNH']""",
@@ -2126,7 +2126,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.051, 4.147, 6.018, 7.218, 8.606, 9.358, 10.236], 'J/(mol*K)'),
-        H298=(-336.811, 'kJ/mol'),
+        H298=(-324.317, 'kJ/mol'),
         S298=(-164.709, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
@@ -2209,7 +2209,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.001, 5.078, 6.087, 6.635, 7.154, 7.387, 7.694], 'J/(mol*K)'),
-        H298=(-315.52, 'kJ/mol'),
+        H298=(-265.542, 'kJ/mol'),
         S298=(-144.277, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHNH2', 'OHXCNH2',
@@ -2256,7 +2256,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.307, 7.457, 9.215, 10.238, 11.27, 11.766, 12.379], 'J/(mol*K)'),
-        H298=(-241.228, 'kJ/mol'),
+        H298=(-186.229, 'kJ/mol'),
         S298=(-168.135, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNH2',
@@ -2290,7 +2290,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.8, 5.347, 6.74, 7.547, 8.348, 8.717, 9.135], 'J/(mol*K)'),
-        H298=(-212.532, 'kJ/mol'),
+        H298=(-156.308, 'kJ/mol'),
         S298=(-163.05, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNO', 'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNO',
@@ -2315,7 +2315,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.421, 1.147, 1.86, 2.23, 2.65, 2.937, 3.411], 'J/(mol*K)'),
-        H298=(-251.414, 'kJ/mol'),
+        H298=(-195.19, 'kJ/mol'),
         S298=(-145.417, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNCNH', 'XNCO', 'XNCNH', 'XNCO', 'XNCNH', 'XNCO', 'XNCNH',
@@ -2340,7 +2340,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.608, 9.954, 11.836, 12.985, 14.211, 14.819, 15.561], 'J/(mol*K)'),
-        H298=(-216.473, 'kJ/mol'),
+        H298=(-178.99, 'kJ/mol'),
         S298=(-180.636, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNCH2', 'XNCH2', 'XNCH2', 'XNCH2']""",
@@ -2363,7 +2363,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.46, 7.334, 9.012, 10.015, 11.003, 11.429, 11.874], 'J/(mol*K)'),
-        H298=(-191.197, 'kJ/mol'),
+        H298=(-116.231, 'kJ/mol'),
         S298=(-164.071, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNNH', 'XNNCH3', 'XNNH', 'XNNCH3', 'XNNH', 'XNNCH3', 'XNNH',
@@ -2387,7 +2387,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.844, 9.082, 11.002, 12.19, 13.49, 14.164, 14.965], 'J/(mol*K)'),
-        H298=(-218.926, 'kJ/mol'),
+        H298=(-164.405, 'kJ/mol'),
         S298=(-171.136, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNH2', 'XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH',
@@ -2416,7 +2416,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.987, 7.376, 9.536, 11.007, 12.778, 13.752, 14.963], 'J/(mol*K)'),
-        H298=(-309.073, 'kJ/mol'),
+        H298=(-271.59, 'kJ/mol'),
         S298=(-216.907, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHCHO', 'XNHCHO', 'XNHCHO', 'XNHCHO']""",
@@ -2442,7 +2442,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([12.309, 16.976, 20.433, 23.081, 26.902, 29.654, 34.187], 'J/(mol*K)'),
-        H298=(-378.589, 'kJ/mol'),
+        H298=(-341.106, 'kJ/mol'),
         S298=(-167.995, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHCH3', 'XNHCH3', 'XNHCH3', 'XNHCH3']""",
@@ -2466,7 +2466,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([10.898, 13.865, 15.436, 16.236, 16.797, 16.876, 16.777], 'J/(mol*K)'),
-        H298=(-266.425, 'kJ/mol'),
+        H298=(-191.459, 'kJ/mol'),
         S298=(-189.56, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHNO', 'XNHNO', 'XNHNO', 'XNHNO']""",
@@ -2491,7 +2491,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.129, 10.37, 12.332, 13.576, 14.975, 15.687, 16.376], 'J/(mol*K)'),
-        H298=(-214.67, 'kJ/mol'),
+        H298=(-139.705, 'kJ/mol'),
         S298=(-188.5, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHNH2', 'XNHNH2', 'XNHNH2', 'XNHNH2']""",
@@ -2515,7 +2515,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.087, 11.692, 13.567, 14.63, 15.723, 16.248, 16.716], 'J/(mol*K)'),
-        H298=(-180.508, 'kJ/mol'),
+        H298=(-143.025, 'kJ/mol'),
         S298=(-189.451, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHOH', 'XNHOH', 'XNHOH', 'XNHOH']""",
@@ -2538,7 +2538,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.236, 9.867, 11.247, 11.962, 12.515, 12.65, 12.642], 'J/(mol*K)'),
-        H298=(-190.959, 'kJ/mol'),
+        H298=(-134.735, 'kJ/mol'),
         S298=(-163.298, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNO2', 'OXNNH', 'XNO2', 'OXNNH', 'XNO2', 'OXNNH', 'XNO2',
@@ -2562,7 +2562,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.728, 5.688, 6.778, 7.398, 7.997, 8.253, 8.447], 'J/(mol*K)'),
-        H298=(-144.298, 'kJ/mol'),
+        H298=(-81.826, 'kJ/mol'),
         S298=(-143.039, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['HXNO', 'CH3NXNOH', 'CH3XNNOH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH',
@@ -2585,7 +2585,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.689, 5.635, 7.648, 8.685, 9.527, 9.838, 10.313], 'J/(mol*K)'),
-        H298=(-327.867, 'kJ/mol'),
+        H298=(-275.391, 'kJ/mol'),
         S298=(-168.387, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XNH', 'XNH',
@@ -2610,7 +2610,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-6.989, -4.603, -3.581, -3.072, -2.447, -1.961, -1.142], 'J/(mol*K)'),
-        H298=(-324.849, 'kJ/mol'),
+        H298=(-249.883, 'kJ/mol'),
         S298=(-142.031, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNCN', 'XNCN', 'XNCN', 'XNCN']""",
@@ -2633,7 +2633,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.614, 9.468, 11.121, 12.197, 13.469, 14.191, 15.174], 'J/(mol*K)'),
-        H298=(-366.037, 'kJ/mol'),
+        H298=(-328.554, 'kJ/mol'),
         S298=(-176.565, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNCH3', 'XNCH3', 'XNCH3', 'XNCH3']""",
@@ -2655,7 +2655,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([11.303, 15.422, 17.092, 17.515, 16.969, 16.192, 15.433], 'J/(mol*K)'),
-        H298=(-282.591, 'kJ/mol'),
+        H298=(-207.626, 'kJ/mol'),
         S298=(-174.51, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNNH2', 'XNNH2', 'XNNH2', 'XNNH2']""",
@@ -2678,7 +2678,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([9.017, 13.03, 14.825, 15.531, 15.693, 15.491, 15.382], 'J/(mol*K)'),
-        H298=(-281.242, 'kJ/mol'),
+        H298=(-243.759, 'kJ/mol'),
         S298=(-178.708, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNOH', 'XNOH', 'XNOH', 'XNOH']""",
@@ -2699,7 +2699,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.744, 6.48, 7.463, 8.075, 8.768, 9.15, 9.656], 'J/(mol*K)'),
-        H298=(-146.825, 'kJ/mol'),
+        H298=(-142.566, 'kJ/mol'),
         S298=(-156.676, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3',
@@ -2726,7 +2726,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.429, 6.188, 7.189, 7.815, 8.523, 8.912, 9.424], 'J/(mol*K)'),
-        H298=(-147.667, 'kJ/mol'),
+        H298=(-143.502, 'kJ/mol'),
         S298=(-155.727, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOH', 'XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3',
@@ -2804,7 +2804,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.23, 4.154, 5.771, 6.686, 7.575, 7.955, 8.262], 'J/(mol*K)'),
-        H298=(-126.647, 'kJ/mol'),
+        H298=(-89.164, 'kJ/mol'),
         S298=(-134.71, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XONH2', 'XONH2', 'XONH2', 'XONH2']""",
@@ -2848,7 +2848,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.604, 6.861, 7.568, 7.996, 8.464, 8.704, 8.944], 'J/(mol*K)'),
-        H298=(-65.796, 'kJ/mol'),
+        H298=(-44.442, 'kJ/mol'),
         S298=(-130.005, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X', 'NCOHX', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X',
@@ -2895,7 +2895,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.204, 2.484, 2.649, 2.795, 3.123, 3.488, 4.251], 'J/(mol*K)'),
-        H298=(-45.7, 'kJ/mol'),
+        H298=(-33.206, 'kJ/mol'),
         S298=(-120.514, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X', 'NCOHX', 'CHCHX', 'CHCCH3X', 'NCOHX',
@@ -2944,7 +2944,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.394, 7.832, 8.074, 8.267, 8.599, 8.832, 8.985], 'J/(mol*K)'),
-        H298=(-65.633, 'kJ/mol'),
+        H298=(-28.15, 'kJ/mol'),
         S298=(-122.254, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['NCOHX', 'NCOHX', 'NCOHX', 'NCOHX']""",
@@ -2968,7 +2968,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.176, 7.536, 8.289, 8.717, 9.118, 9.268, 9.344], 'J/(mol*K)'),
-        H298=(-40.968, 'kJ/mol'),
+        H298=(-36.803, 'kJ/mol'),
         S298=(-130.966, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2NHX', 'CH2COX', 'CH2OX',
@@ -3024,7 +3024,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.299, 6.343, 7.876, 8.574, 8.928, 8.866, 8.608], 'J/(mol*K)'),
-        H298=(-71.248, 'kJ/mol'),
+        H298=(-33.765, 'kJ/mol'),
         S298=(-135.288, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH2NHX', 'CH2NHX', 'CH2NHX', 'CH2NHX']""",
@@ -3075,7 +3075,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.704, 8.778, 9.334, 9.643, 9.941, 10.07, 10.175], 'J/(mol*K)'),
-        H298=(-42.906, 'kJ/mol'),
+        H298=(-38.741, 'kJ/mol'),
         S298=(-127.608, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH4X', 'CH4X', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X',
@@ -3135,7 +3135,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.932, 3.145, 4.574, 5.506, 6.556, 7.095, 7.704], 'J/(mol*K)'),
-        H298=(-137.324, 'kJ/mol'),
+        H298=(-99.841, 'kJ/mol'),
         S298=(-141.215, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH3NH2X', 'CH3NH2X', 'CH3NH2X', 'CH3NH2X']""",
@@ -3186,7 +3186,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.54, 7.091, 7.441, 7.69, 8.006, 8.18, 8.339], 'J/(mol*K)'),
-        H298=(-98.325, 'kJ/mol'),
+        H298=(-42.101, 'kJ/mol'),
         S298=(-122.197, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX',
@@ -3209,7 +3209,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.54, 7.091, 7.441, 7.69, 8.006, 8.18, 8.339], 'J/(mol*K)'),
-        H298=(-98.325, 'kJ/mol'),
+        H298=(-42.101, 'kJ/mol'),
         S298=(-122.197, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX',
@@ -3234,7 +3234,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.377, 5.633, 6.987, 7.841, 8.796, 9.275, 9.747], 'J/(mol*K)'),
-        H298=(-123.698, 'kJ/mol'),
+        H298=(-71.222, 'kJ/mol'),
         S298=(-139.272, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['NH3X', 'NH3X', 'OCHNH2X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX',
@@ -3259,7 +3259,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.687, 6.032, 6.825, 7.329, 7.911, 8.22, 8.494], 'J/(mol*K)'),
-        H298=(-85.533, 'kJ/mol'),
+        H298=(-48.05, 'kJ/mol'),
         S298=(-138.501, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['OCHNH2X', 'OCHNH2X', 'OCHNH2X', 'OCHNH2X']""",
@@ -3281,7 +3281,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.776, 4.013, 5.344, 6.178, 7.098, 7.552, 8.006], 'J/(mol*K)'),
-        H298=(-167.888, 'kJ/mol'),
+        H298=(-92.922, 'kJ/mol'),
         S298=(-150.696, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['NH2NH2X', 'NH2NCH3CH3X', 'NH2NH2X', 'NH2NCH3CH3X', 'NH2NH2X',
@@ -3304,7 +3304,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.322, 5.152, 6.208, 6.849, 7.534, 7.863, 8.173], 'J/(mol*K)'),
-        H298=(-88.376, 'kJ/mol'),
+        H298=(-50.894, 'kJ/mol'),
         S298=(-132.089, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['H2NOHX', 'H2NOHX', 'H2NOHX', 'H2NOHX']""",
@@ -3326,7 +3326,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.708, 6.011, 6.788, 7.301, 7.93, 8.274, 8.565], 'J/(mol*K)'),
-        H298=(-127.155, 'kJ/mol'),
+        H298=(-64.683, 'kJ/mol'),
         S298=(-141.385, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X',
@@ -3351,7 +3351,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.708, 6.011, 6.788, 7.301, 7.93, 8.274, 8.565], 'J/(mol*K)'),
-        H298=(-127.155, 'kJ/mol'),
+        H298=(-64.683, 'kJ/mol'),
         S298=(-141.385, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X',
@@ -3375,7 +3375,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.682, 6.734, 7.312, 7.663, 8.05, 8.242, 8.401], 'J/(mol*K)'),
-        H298=(-145.525, 'kJ/mol'),
+        H298=(-70.559, 'kJ/mol'),
         S298=(-139.884, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONNH2X', 'ONNCH3CH3X', 'ONNH2X',
@@ -3400,7 +3400,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.761, 4.564, 5.742, 6.578, 7.689, 8.338, 8.892], 'J/(mol*K)'),
-        H298=(-90.414, 'kJ/mol'),
+        H298=(-52.931, 'kJ/mol'),
         S298=(-144.387, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['ONOHX', 'ONOHX', 'ONOHX', 'ONOHX']""",
