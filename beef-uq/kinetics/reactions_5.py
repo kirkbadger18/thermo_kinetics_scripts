@@ -430,19 +430,19 @@ entry(
     longDesc = u"""my value, it is endothermic, but kept in this direction, since we are going to switch it later afterwards due to the coverage dependence of CCH3"""
 )
 
-entry(
-     index = 31,
-    label = "CHCHX + Pt <=> XCHXCH",
-    kinetics = SurfaceArrhenius(
-        A=(5.0E21, 'cm^2/(mol*s)'),
-        n = 0.0,
-        Ea=(5.0, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Default""",
-    longDesc = u"""Barrierless according to DFT calculations by Katrin Blondal"""
-)
+#entry(
+#     index = 31,
+#    label = "CHCHX + Pt <=> XCHXCH",
+#    kinetics = SurfaceArrhenius(
+#        A=(5.0E21, 'cm^2/(mol*s)'),
+#        n = 0.0,
+#        Ea=(5.0, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Default""",
+#    longDesc = u"""Barrierless according to DFT calculations by Katrin Blondal"""
+#)
 
 #entry(
 #    index = 32,

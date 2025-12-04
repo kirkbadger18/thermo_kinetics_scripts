@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
 name = " "
-shortDesc = u" "
+shortDesc = u"""
+"""
 longDesc = u"""
  
 """
@@ -34,11 +35,42 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.517, 7.712, 10.239, 11.76, 13.248, 13.831, 14.211], 'J/(mol*K)'),
-        H298=(-183.728, 'kJ/mol'),
+        H298=(-213.362, 'kJ/mol'),
         S298=(-186.544, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC', 'XCH2XCCH2',
+'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3', 'XCHXCCH3',
+'XCHXC', 'XCHXCO', 'XCHXCH', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO',
+'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XO', 'XOXCNH',
+'XCHXO', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH',
+'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XNHXNH', 'CH3XNXNOH', 'XNHXN',
+'XNXNCH3', 'XOXNH', 'XOXNO', 'XOXO', 'XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3',
+'XCXC', 'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH',
+'XCHXCHCH3', 'XCHXCCH3', 'XCHXC', 'XCHXCO', 'XCHXCH', 'XCH2XNH', 'XCH2XN',
+'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN',
+'XNXCOH', 'XCH2XO', 'XOXCNH', 'XCHXO', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH',
+'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XNHXNH',
+'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XOXNH', 'XOXNO', 'XOXO', 'XCXCCH2', 'XCXCH2',
+'XCXCHCH3', 'XCXCCH3', 'XCXC', 'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH',
+'XCH2XCOH', 'XCHXCHCH3', 'XCHXCCH3', 'XCHXC', 'XCHXCO', 'XCHXCH', 'XCXCCH2',
+'XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXCCH3',
+'XCXC', 'XCXC', 'XCH2XCCH2', 'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH2',
+'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3', 'XCH2XCH', 'XCH2XCOH',
+'XCHXCHCH3', 'XCHXCCH3', 'XCHXCCH3', 'XCHXC', 'XCHXC', 'XCHXCO', 'XCHXCO',
+'XCHXCH', 'XCHXCH', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO',
+'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XNH', 'XCH2XNH',
+'XCH2XN', 'XCH2XN', 'XCHXN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO',
+'XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH',
+'XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH', 'XCH2XO', 'XOXCNH', 'XCHXO', 'XCH2XO',
+'XCH2XO', 'XOXCNH', 'XOXCNH', 'XCHXO', 'XCHXO', 'XCH2XNH', 'XCH2XN', 'XCHXN',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH',
+'XCH2XNH', 'XCH2XNH', 'XCH2XN', 'XCH2XN', 'XCHXN', 'XCHXN', 'NHXCXNH', 'XNHXCO',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH',
+'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH', 'XNHXNH',
+'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XNHXNH', 'CH3XNXNOH', 'XNHXNH', 'CH3XNXNOH',
+'XNHXN', 'XNXNCH3', 'XNHXN', 'XNXNCH3', 'XOXNH', 'XOXNO', 'XOXNH', 'XOXNH',
+'XOXNO', 'XOXNO', 'XOXO', 'XOXO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -60,8 +92,17 @@ entry(
         H298=(-313.603, 'kJ/mol'),
         S298=(-195.899, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC', 'XCH2XCCH2',
+'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3', 'XCHXCCH3',
+'XCHXC', 'XCHXCO', 'XCHXCH', 'XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC',
+'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3',
+'XCHXCCH3', 'XCHXC', 'XCHXCO', 'XCHXCH', 'XCXCCH2', 'XCXCCH2', 'XCXCH2',
+'XCXCHCH3', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXCCH3', 'XCXC', 'XCXC',
+'XCH2XCCH2', 'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH2', 'CH3XCHXCH2',
+'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3',
+'XCHXCCH3', 'XCHXCCH3', 'XCHXC', 'XCHXC', 'XCHXCO', 'XCHXCO', 'XCHXCH',
+'XCHXCH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -84,8 +125,8 @@ entry(
         H298=(-396.018, 'kJ/mol'),
         S298=(-204.353, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCCH2', 'XCXCCH2', 'XCXCCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -109,8 +150,9 @@ entry(
         H298=(-411.994, 'kJ/mol'),
         S298=(-201.882, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCXCH2', 'XCXCHCH3', 'XCXCH2', 'XCXCHCH3', 'XCXCH2',
+'XCXCHCH3', 'XCXCH2', 'XCXCHCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -133,8 +175,8 @@ entry(
         H298=(-453.576, 'kJ/mol'),
         S298=(-152.622, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCXCCH3', 'XCXCCH3', 'XCXCCH3', 'XCXCCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -156,8 +198,8 @@ entry(
         H298=(-572.661, 'kJ/mol'),
         S298=(-172.682, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCXC', 'XCXC', 'XCXC', 'XCXC']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -182,8 +224,8 @@ entry(
         H298=(-154.356, 'kJ/mol'),
         S298=(-191.92, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XCCH2', 'XCH2XCCH2', 'XCH2XCCH2', 'XCH2XCCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -209,8 +251,9 @@ entry(
         H298=(-118.247, 'kJ/mol'),
         S298=(-192.345, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH2',
+'CH3XCHXCH2', 'XCH2XCH2', 'CH3XCHXCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -235,8 +278,10 @@ entry(
         H298=(-306.635, 'kJ/mol'),
         S298=(-214.968, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3', 'XCH2XCH', 'XCH2XCOH',
+'XCHXCHCH3', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3', 'XCH2XCH', 'XCH2XCOH',
+'XCHXCHCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -260,8 +305,8 @@ entry(
         H298=(-201.945, 'kJ/mol'),
         S298=(-194.29, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXCCH3', 'XCHXCCH3', 'XCHXCCH3', 'XCHXCCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -284,8 +329,8 @@ entry(
         H298=(-409.148, 'kJ/mol'),
         S298=(-193.307, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXC', 'XCHXC', 'XCHXC', 'XCHXC']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -309,8 +354,8 @@ entry(
         H298=(-336.748, 'kJ/mol'),
         S298=(-211.081, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXCO', 'XCHXCO', 'XCHXCO', 'XCHXCO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -334,8 +379,8 @@ entry(
         H298=(-199.21, 'kJ/mol'),
         S298=(-184.879, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXCH', 'XCHXCH', 'XCHXCH', 'XCHXCH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -354,11 +399,16 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.814, 8.69, 11.032, 12.458, 13.852, 14.367, 14.618], 'J/(mol*K)'),
-        H298=(-136.015, 'kJ/mol'),
+        H298=(-180.313, 'kJ/mol'),
         S298=(-186.3, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO',
+'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XNH', 'XCH2XN', 'XCHXN',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH',
+'XCH2XNH', 'XCH2XNH', 'XCH2XN', 'XCH2XN', 'XCHXN', 'XCHXN', 'NHXCXNH', 'XNHXCO',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH',
+'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -380,11 +430,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.405, 12.921, 16.012, 17.371, 18.056, 17.95, 17.424], 'J/(mol*K)'),
-        H298=(-83.15, 'kJ/mol'),
+        H298=(-120.633, 'kJ/mol'),
         S298=(-197.829, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XNH', 'XCH2XNH', 'XCH2XNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -405,11 +455,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
-        H298=(-183.773, 'kJ/mol'),
+        H298=(-221.256, 'kJ/mol'),
         S298=(-193.314, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XN', 'XCH2XN', 'XCH2XN', 'XCH2XN']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -429,11 +479,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
-        H298=(-56.092, 'kJ/mol'),
+        H298=(-93.575, 'kJ/mol'),
         S298=(-171.411, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXN', 'XCHXN', 'XCHXN', 'XCHXN']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -454,11 +504,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
-        H298=(-59.899, 'kJ/mol'),
+        H298=(-116.123, 'kJ/mol'),
         S298=(-183.708, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO',
+'NHXCXNH', 'XNHXCO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -478,11 +529,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.842, 9.2, 10.954, 11.87, 12.579, 12.736, 12.69], 'J/(mol*K)'),
-        H298=(-186.982, 'kJ/mol'),
+        H298=(-243.206, 'kJ/mol'),
         S298=(-188.758, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH',
+'XNXCO', 'XNXCNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -503,11 +555,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
-        H298=(-268.558, 'kJ/mol'),
+        H298=(-306.041, 'kJ/mol'),
         S298=(-195.23, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH',
+'XCHXNH', 'OHXCXNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -527,11 +580,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
-        H298=(-71.136, 'kJ/mol'),
+        H298=(-108.619, 'kJ/mol'),
         S298=(-175.675, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH',
+'XCHXN', 'XNXCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -550,11 +604,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.503, 12.504, 14.797, 16.033, 16.96, 17.124, 16.993], 'J/(mol*K)'),
-        H298=(-69.268, 'kJ/mol'),
+        H298=(-81.763, 'kJ/mol'),
         S298=(-170.773, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XO', 'XOXCNH', 'XCHXO', 'XCH2XO', 'XOXCNH', 'XCHXO',
+'XCH2XO', 'XCH2XO', 'XOXCNH', 'XOXCNH', 'XCHXO', 'XCHXO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -578,8 +633,8 @@ entry(
         H298=(-30.467, 'kJ/mol'),
         S298=(-170.273, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XO', 'XCH2XO', 'XCH2XO', 'XCH2XO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -599,11 +654,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([10.817, 13.644, 15.48, 16.629, 17.68, 17.938, 17.721], 'J/(mol*K)'),
-        H298=(20.947, 'kJ/mol'),
+        H298=(-16.536, 'kJ/mol'),
         S298=(-174.316, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOXCNH', 'XOXCNH', 'XOXCNH', 'XOXCNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -626,8 +681,8 @@ entry(
         H298=(-198.285, 'kJ/mol'),
         S298=(-167.729, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXO', 'XCHXO', 'XCHXO', 'XCHXO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -646,11 +701,16 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.814, 8.69, 11.032, 12.458, 13.852, 14.367, 14.618], 'J/(mol*K)'),
-        H298=(-136.015, 'kJ/mol'),
+        H298=(-180.313, 'kJ/mol'),
         S298=(-186.3, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO',
+'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XNH', 'XCH2XN', 'XCHXN',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH',
+'XCH2XNH', 'XCH2XNH', 'XCH2XN', 'XCH2XN', 'XCHXN', 'XCHXN', 'NHXCXNH', 'XNHXCO',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH',
+'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -672,11 +732,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.405, 12.921, 16.012, 17.371, 18.056, 17.95, 17.424], 'J/(mol*K)'),
-        H298=(-83.15, 'kJ/mol'),
+        H298=(-120.633, 'kJ/mol'),
         S298=(-197.829, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XNH', 'XCH2XNH', 'XCH2XNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -697,11 +757,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.669, 8.592, 11.419, 13.048, 14.565, 15.167, 15.763], 'J/(mol*K)'),
-        H298=(-183.773, 'kJ/mol'),
+        H298=(-221.256, 'kJ/mol'),
         S298=(-193.314, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2XN', 'XCH2XN', 'XCH2XN', 'XCH2XN']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -721,11 +781,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.606, 2.686, 4.939, 6.472, 8.169, 8.878, 9.184], 'J/(mol*K)'),
-        H298=(-56.092, 'kJ/mol'),
+        H298=(-93.575, 'kJ/mol'),
         S298=(-171.411, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXN', 'XCHXN', 'XCHXN', 'XCHXN']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -746,11 +806,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.142, 10.448, 12.782, 14.385, 16.144, 16.874, 17.246], 'J/(mol*K)'),
-        H298=(-59.899, 'kJ/mol'),
+        H298=(-116.123, 'kJ/mol'),
         S298=(-183.708, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO',
+'NHXCXNH', 'XNHXCO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -770,11 +831,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.842, 9.2, 10.954, 11.87, 12.579, 12.736, 12.69], 'J/(mol*K)'),
-        H298=(-186.982, 'kJ/mol'),
+        H298=(-243.206, 'kJ/mol'),
         S298=(-188.758, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH',
+'XNXCO', 'XNXCNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -795,11 +857,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.764, 8.663, 11.11, 12.692, 14.407, 15.204, 15.963], 'J/(mol*K)'),
-        H298=(-268.558, 'kJ/mol'),
+        H298=(-306.041, 'kJ/mol'),
         S298=(-195.23, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH',
+'XCHXNH', 'OHXCXNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -819,11 +882,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.994, 7.386, 9.644, 11.128, 12.658, 13.207, 13.314], 'J/(mol*K)'),
-        H298=(-71.136, 'kJ/mol'),
+        H298=(-108.619, 'kJ/mol'),
         S298=(-175.675, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH',
+'XCHXN', 'XNXCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -842,11 +906,13 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.107, 10.571, 12.444, 13.424, 14.153, 14.311, 14.357], 'J/(mol*K)'),
-        H298=(-104.148, 'kJ/mol'),
+        H298=(-179.114, 'kJ/mol'),
         S298=(-177.885, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNHXNH', 'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XNHXNH',
+'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XNHXNH', 'CH3XNXNOH', 'XNHXNH', 'CH3XNXNOH',
+'XNHXN', 'XNXNCH3', 'XNHXN', 'XNXNCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -867,11 +933,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.625, 11.667, 13.041, 13.56, 13.614, 13.356, 12.881], 'J/(mol*K)'),
-        H298=(-66.529, 'kJ/mol'),
+        H298=(-141.495, 'kJ/mol'),
         S298=(-159.55, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNHXNH', 'CH3XNXNOH', 'XNHXNH', 'CH3XNXNOH', 'XNHXNH',
+'CH3XNXNOH', 'XNHXNH', 'CH3XNXNOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -891,11 +958,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.588, 9.475, 11.847, 13.288, 14.692, 15.266, 15.833], 'J/(mol*K)'),
-        H298=(-141.767, 'kJ/mol'),
+        H298=(-216.733, 'kJ/mol'),
         S298=(-196.22, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNHXN', 'XNXNCH3', 'XNHXN', 'XNXNCH3', 'XNHXN', 'XNXNCH3',
+'XNHXN', 'XNXNCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -914,11 +982,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.828, 8.982, 11.072, 12.03, 12.538, 12.504, 12.333], 'J/(mol*K)'),
-        H298=(-118.059, 'kJ/mol'),
+        H298=(-155.542, 'kJ/mol'),
         S298=(-164.124, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOXNH', 'XOXNO', 'XOXNH', 'XOXNO', 'XOXNH', 'XOXNH', 'XOXNO',
+'XOXNO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -938,11 +1007,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.908, 11.467, 14.333, 15.65, 16.315, 16.243, 16.06], 'J/(mol*K)'),
-        H298=(-107.575, 'kJ/mol'),
+        H298=(-145.058, 'kJ/mol'),
         S298=(-186.753, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOXNH', 'XOXNH', 'XOXNH', 'XOXNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -962,11 +1031,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.747, 6.497, 7.811, 8.41, 8.761, 8.765, 8.607], 'J/(mol*K)'),
-        H298=(-128.542, 'kJ/mol'),
+        H298=(-166.025, 'kJ/mol'),
         S298=(-141.494, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOXNO', 'XOXNO', 'XOXNO', 'XOXNO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -988,8 +1057,8 @@ entry(
         H298=(-51.985, 'kJ/mol'),
         S298=(-176.349, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOXO', 'XOXO', 'XOXO', 'XOXO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1012,8 +1081,20 @@ entry(
         H298=(-405.99, 'kJ/mol'),
         S298=(-205.343, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCCH2XC', 'XCCH2XCH2', 'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2',
+'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH', 'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH',
+'XCHCHXCH', 'XCHCHXO', 'XOC(O)XO', 'H2C(XO)XO', 'XCCH2XC', 'XCCH2XCH2',
+'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2', 'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH',
+'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH', 'XCHCHXCH', 'XCHCHXO', 'XOC(O)XO',
+'H2C(XO)XO', 'XCCH2XC', 'XCCH2XCH2', 'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2',
+'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH', 'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH',
+'XCHCHXCH', 'XCCH2XC', 'XCCH2XC', 'XCCH2XCH2', 'XCCH2XCH2', 'XCHCH2XC',
+'XCHCH2XC', 'XCHCHXC', 'XCHCHXC', 'XCCHXCH2', 'XCCHXCH2', 'XCH2CH2XCH2',
+'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCHXCH2', 'XCHCXCH', 'XCHCXCH', 'XCHCXC',
+'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH2', 'XCHCH2XCH', 'XCHCH2XCH', 'XCHCHXCH',
+'XCHCHXCH', 'XCHCHXO', 'XCHCHXO', 'XCHCHXO', 'XOC(O)XO', 'H2C(XO)XO',
+'XOC(O)XO', 'H2C(XO)XO', 'XOC(O)XO', 'H2C(XO)XO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1036,8 +1117,16 @@ entry(
         H298=(-429.176, 'kJ/mol'),
         S298=(-209.129, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCCH2XC', 'XCCH2XCH2', 'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2',
+'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH', 'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH',
+'XCHCHXCH', 'XCCH2XC', 'XCCH2XCH2', 'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2',
+'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH', 'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH',
+'XCHCHXCH', 'XCCH2XC', 'XCCH2XC', 'XCCH2XCH2', 'XCCH2XCH2', 'XCHCH2XC',
+'XCHCH2XC', 'XCHCHXC', 'XCHCHXC', 'XCCHXCH2', 'XCCHXCH2', 'XCH2CH2XCH2',
+'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCHXCH2', 'XCHCXCH', 'XCHCXCH', 'XCHCXC',
+'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH2', 'XCHCH2XCH', 'XCHCH2XCH', 'XCHCHXCH',
+'XCHCHXCH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1060,8 +1149,8 @@ entry(
         H298=(-626.902, 'kJ/mol'),
         S298=(-243.646, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCCH2XC', 'XCCH2XC', 'XCCH2XC', 'XCCH2XC']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1086,8 +1175,8 @@ entry(
         H298=(-451.564, 'kJ/mol'),
         S298=(-200.61, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCCH2XCH2', 'XCCH2XCH2', 'XCCH2XCH2', 'XCCH2XCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1111,8 +1200,8 @@ entry(
         H298=(-422.355, 'kJ/mol'),
         S298=(-222.487, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCH2XC', 'XCHCH2XC', 'XCHCH2XC', 'XCHCH2XC']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1136,8 +1225,8 @@ entry(
         H298=(-358.068, 'kJ/mol'),
         S298=(-202.293, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCHXC', 'XCHCHXC', 'XCHCHXC', 'XCHCHXC']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1162,8 +1251,8 @@ entry(
         H298=(-508.297, 'kJ/mol'),
         S298=(-217.923, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCCHXCH2', 'XCCHXCH2', 'XCCHXCH2', 'XCCHXCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1190,8 +1279,8 @@ entry(
         H298=(-382.13, 'kJ/mol'),
         S298=(-209.34, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2CH2XCH2', 'XCH2CH2XCH2', 'XCH2CH2XCH2', 'XCH2CH2XCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1217,8 +1306,8 @@ entry(
         H298=(-401.113, 'kJ/mol'),
         S298=(-227.783, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCHXCH2', 'XCHCHXCH2', 'XCHCHXCH2', 'XCHCHXCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1243,8 +1332,8 @@ entry(
         H298=(-326.523, 'kJ/mol'),
         S298=(-196.347, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCXCH', 'XCHCXCH', 'XCHCXCH', 'XCHCXCH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1268,8 +1357,8 @@ entry(
         H298=(-380.597, 'kJ/mol'),
         S298=(-188.069, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCXC', 'XCHCXC', 'XCHCXC', 'XCHCXC']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1295,8 +1384,8 @@ entry(
         H298=(-510.204, 'kJ/mol'),
         S298=(-196.129, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCH2XCH2', 'XCHCH2XCH2', 'XCHCH2XCH2', 'XCHCH2XCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1321,8 +1410,8 @@ entry(
         H298=(-204.387, 'kJ/mol'),
         S298=(-203.938, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCH2XCH', 'XCHCH2XCH', 'XCHCH2XCH', 'XCHCH2XCH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1347,8 +1436,8 @@ entry(
         H298=(-577.967, 'kJ/mol'),
         S298=(-200.988, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCHXCH', 'XCHCHXCH', 'XCHCHXCH', 'XCHCHXCH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1372,8 +1461,8 @@ entry(
         H298=(-394.957, 'kJ/mol'),
         S298=(-211.148, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCHXO', 'XCHCHXO', 'XCHCHXO', 'XCHCHXO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1397,8 +1486,8 @@ entry(
         H298=(-394.957, 'kJ/mol'),
         S298=(-211.148, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCHXO', 'XCHCHXO', 'XCHCHXO', 'XCHCHXO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1421,8 +1510,9 @@ entry(
         H298=(-272.391, 'kJ/mol'),
         S298=(-179.723, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOC(O)XO', 'H2C(XO)XO', 'XOC(O)XO', 'H2C(XO)XO', 'XOC(O)XO',
+'H2C(XO)XO', 'XOC(O)XO', 'H2C(XO)XO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1445,8 +1535,9 @@ entry(
         H298=(-272.391, 'kJ/mol'),
         S298=(-179.723, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOC(O)XO', 'H2C(XO)XO', 'XOC(O)XO', 'H2C(XO)XO', 'XOC(O)XO',
+'H2C(XO)XO', 'XOC(O)XO', 'H2C(XO)XO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1463,11 +1554,72 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.825, 4.8, 6.627, 7.794, 9.104, 9.781, 10.55], 'J/(mol*K)'),
-        H298=(-262.311, 'kJ/mol'),
+        H298=(-285.262, 'kJ/mol'),
         S298=(-167.765, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
+'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2',
+'XCHCHCH3', 'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH',
+'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3',
+'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCCO', 'XCCCH2',
+'XCCH2', 'XCNH', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
+'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH',
+'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNH2', 'XNHCHO', 'XNHCH3',
+'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH',
+'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XOH', 'XOCHCH2', 'HC(O)XO',
+'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XCN', 'XCH',
+'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH',
+'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'OXCNH2', 'NH2XCNH',
+'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO',
+'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2',
+'XCH2OH', 'CH3XCHOH', 'XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCH2', 'XCHCHCH2',
+'XCHCHO', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2',
+'NH2XCNH2', 'XCHOH', 'CH3XCOH', 'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH',
+'XNNCH3', 'XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2',
+'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2',
+'XNOH', 'XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH',
+'XONH2', 'XOOH', 'XCN', 'XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
+'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2',
+'XCHCHCH3', 'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH',
+'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3',
+'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCCO', 'XCCCH2',
+'XCCH2', 'XCNH', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
+'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH',
+'XCH', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCNO',
+'XCNH2', 'XCOH', 'XCCHCH2', 'XCCHO', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
+'XCCH2OH', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCNO', 'XCNH2', 'XCNO', 'XCNH2',
+'XCOH', 'XCOH', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
+'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO',
+'XCCHO', 'CH3CH2XCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
+'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'OXCNH2', 'NH2XCNH',
+'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH',
+'XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCHO', 'XCOOH', 'CH3XCO',
+'XCCHO', 'CH3CH2XCO', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3',
+'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH',
+'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3',
+'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCH2OH',
+'CH3XCHOH', 'XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCCO', 'XCCCH2', 'XCCH2',
+'XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCNH', 'XCH2', 'XCH2', 'XCHCHCH2', 'XCHCHO',
+'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2',
+'XCHOH', 'CH3XCOH', 'XCHCHCH2', 'XCHCHO', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3',
+'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3',
+'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH',
+'CH3XCOH', 'XCHOH', 'CH3XCOH', 'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH',
+'XNNCH3', 'XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2',
+'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2',
+'XNOH', 'XNO', 'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNCNH',
+'XNCO', 'XNCNH', 'XNCO', 'XNCH2', 'XNCH2', 'XNNH', 'XNNCH3', 'XNNH', 'XNNCH3',
+'XNH2', 'XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH',
+'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNHCHO', 'XNHCHO', 'XNHCH3', 'XNHCH3', 'XNHNO',
+'XNHNO', 'XNHNH2', 'XNHNH2', 'XNHOH', 'XNHOH', 'XNO2', 'OXNNH', 'XNO2', 'OXNNH',
+'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNH', 'XNH',
+'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XNCN', 'XNCN', 'XNCH3', 'XNCH3', 'XNNH2',
+'XNNH2', 'XNOH', 'XNOH', 'XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3',
+'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XOH', 'XOH', 'XOCHCH2', 'HC(O)XO',
+'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XOCHCH2',
+'HC(O)XO', 'XOC(OH)O', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3',
+'XOCH2OH', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XONH2', 'XOOH', 'XOOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1484,11 +1636,44 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.241, 3.349, 5.352, 6.678, 8.217, 9.024, 9.906], 'J/(mol*K)'),
-        H298=(-317.688, 'kJ/mol'),
+        H298=(-329.924, 'kJ/mol'),
         S298=(-169.612, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCN', 'XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
+'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2',
+'XCHCHCH3', 'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH',
+'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3',
+'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCCO', 'XCCCH2',
+'XCCH2', 'XCNH', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
+'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH',
+'XCN', 'XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCNO',
+'XCNH2', 'XCOH', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
+'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO',
+'XCCHO', 'CH3CH2XCO', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3',
+'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCCO', 'XCCCH2', 'XCCH2', 'XCNH',
+'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3',
+'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH', 'XCH', 'XCH', 'XCCHCH2',
+'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'XCCHCH2',
+'XCCHO', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCCH3',
+'XCCH2CH3', 'XCCH2OH', 'XCNO', 'XCNH2', 'XCNO', 'XCNH2', 'XCOH', 'XCOH',
+'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'OXCNH2', 'NH2XCNH',
+'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO',
+'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'CH2XCCH3', 'CH2XCOH',
+'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'OXCNH2', 'NH2XCNH', 'OXCNH2', 'NH2XCNH',
+'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH',
+'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO',
+'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2',
+'XCH2OH', 'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3',
+'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH',
+'XCH2NH2', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCH2OH', 'CH3XCHOH', 'XCCO',
+'XCCCH2', 'XCCH2', 'XCNH', 'XCCO', 'XCCCH2', 'XCCH2', 'XCCO', 'XCCCH2', 'XCCH2',
+'XCNH', 'XCNH', 'XCH2', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
+'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH',
+'XCHCHCH2', 'XCHCHO', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3',
+'XCHCH3', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2',
+'NH2XCNH2', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH', 'XCHOH',
+'CH3XCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1506,11 +1691,15 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-1.352, 2.042, 4.247, 5.715, 7.423, 8.345, 9.498], 'J/(mol*K)'),
-        H298=(-502.671, 'kJ/mol'),
+        H298=(-511.0, 'kJ/mol'),
         S298=(-175.086, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
+'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'XCH', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3',
+'XCCH2CH3', 'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'XCCHCH2', 'XCCHO', 'XCCHCH2',
+'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCNO',
+'XCNH2', 'XCNO', 'XCNH2', 'XCOH', 'XCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1533,8 +1722,9 @@ entry(
         H298=(-517.846, 'kJ/mol'),
         S298=(-183.565, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCCHCH2', 'XCCHO', 'XCCHCH2', 'XCCHO', 'XCCHCH2', 'XCCHO',
+'XCCHCH2', 'XCCHO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1558,8 +1748,9 @@ entry(
         H298=(-570.726, 'kJ/mol'),
         S298=(-174.235, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCCH3', 'XCCH2CH3', 'XCCH2OH',
+'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCCH3', 'XCCH2CH3', 'XCCH2OH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1577,11 +1768,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.513, 5.534, 6.472, 6.944, 7.314, 7.431, 7.609], 'J/(mol*K)'),
-        H298=(-371.826, 'kJ/mol'),
+        H298=(-409.309, 'kJ/mol'),
         S298=(-161.835, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCNO', 'XCNH2', 'XCNO', 'XCNH2', 'XCNO', 'XCNH2', 'XCNO',
+'XCNH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1603,8 +1795,8 @@ entry(
         H298=(-423.61, 'kJ/mol'),
         S298=(-187.544, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCOH', 'XCOH', 'XCOH', 'XCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1623,11 +1815,19 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.308, 3.316, 5.308, 6.63, 8.118, 8.843, 9.538], 'J/(mol*K)'),
-        H298=(-261.879, 'kJ/mol'),
+        H298=(-279.371, 'kJ/mol'),
         S298=(-166.429, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
+'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO',
+'XCCHO', 'CH3CH2XCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
+'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO',
+'XCCHO', 'CH3CH2XCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
+'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'OXCNH2', 'NH2XCNH',
+'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH',
+'XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCHO', 'XCOOH', 'CH3XCO',
+'XCCHO', 'CH3CH2XCO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1651,8 +1851,11 @@ entry(
         H298=(-263.409, 'kJ/mol'),
         S298=(-182.514, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
+'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'CH2XCCH3', 'CH2XCOH',
+'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2',
+'XCHCHCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1671,11 +1874,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.317, 3.815, 5.358, 6.318, 7.274, 7.655, 7.964], 'J/(mol*K)'),
-        H298=(-240.707, 'kJ/mol'),
+        H298=(-296.931, 'kJ/mol'),
         S298=(-153.59, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['OXCNH2', 'NH2XCNH', 'OXCNH2', 'NH2XCNH', 'OXCNH2', 'NH2XCNH',
+'OXCNH2', 'NH2XCNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1695,11 +1899,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.138, 2.63, 4.403, 5.552, 6.796, 7.373, 7.911], 'J/(mol*K)'),
-        H298=(-238.583, 'kJ/mol'),
+        H298=(-288.56, 'kJ/mol'),
         S298=(-151.565, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH',
+'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1721,8 +1926,10 @@ entry(
         H298=(-282.795, 'kJ/mol'),
         S298=(-164.4, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCHO',
+'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCHO', 'XCOOH', 'CH3XCO', 'XCCHO',
+'CH3CH2XCO', 'XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1742,11 +1949,16 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.942, 2.387, 4.712, 6.34, 8.353, 9.469, 10.669], 'J/(mol*K)'),
-        H298=(-207.054, 'kJ/mol'),
+        H298=(-211.739, 'kJ/mol'),
         S298=(-177.467, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH',
+'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3',
+'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCH2CH2CH3',
+'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH',
+'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH',
+'XCH2OH', 'CH3XCHOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1772,8 +1984,11 @@ entry(
         H298=(-206.875, 'kJ/mol'),
         S298=(-192.287, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH',
+'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2CH2CH3',
+'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH',
+'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1793,11 +2008,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-3.187, -0.519, 1.569, 3.139, 5.196, 6.372, 7.617], 'J/(mol*K)'),
-        H298=(-215.762, 'kJ/mol'),
+        H298=(-253.245, 'kJ/mol'),
         S298=(-143.176, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2NH2', 'XCH2NH2', 'XCH2NH2', 'XCH2NH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1821,8 +2036,9 @@ entry(
         H298=(-203.147, 'kJ/mol'),
         S298=(-157.564, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2OH', 'CH3XCHOH', 'XCH2OH', 'CH3XCHOH', 'XCH2OH',
+'CH3XCHOH', 'XCH2OH', 'CH3XCHOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1840,11 +2056,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.636, 4.766, 6.547, 7.637, 8.832, 9.428, 10.027], 'J/(mol*K)'),
-        H298=(-328.936, 'kJ/mol'),
+        H298=(-338.307, 'kJ/mol'),
         S298=(-170.526, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCCO', 'XCCCH2', 'XCCH2',
+'XCNH', 'XCCO', 'XCCCH2', 'XCCH2', 'XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1865,8 +2082,9 @@ entry(
         H298=(-384.293, 'kJ/mol'),
         S298=(-171.763, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCCO', 'XCCCH2', 'XCCH2', 'XCCO', 'XCCCH2', 'XCCH2', 'XCCO',
+'XCCCH2', 'XCCH2', 'XCCO', 'XCCCH2', 'XCCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1885,11 +2103,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.872, 4.427, 6.095, 7.174, 8.304, 8.763, 8.972], 'J/(mol*K)'),
-        H298=(-162.864, 'kJ/mol'),
+        H298=(-200.346, 'kJ/mol'),
         S298=(-166.816, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCNH', 'XCNH', 'XCNH', 'XCNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1908,11 +2126,17 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.051, 4.147, 6.018, 7.218, 8.606, 9.358, 10.236], 'J/(mol*K)'),
-        H298=(-324.317, 'kJ/mol'),
+        H298=(-336.811, 'kJ/mol'),
         S298=(-164.709, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCH2', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
+'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH',
+'XCH2', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3',
+'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH', 'XCHCHCH2',
+'XCHCHO', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3',
+'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2',
+'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH', 'XCHOH', 'CH3XCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1936,8 +2160,9 @@ entry(
         H298=(-340.587, 'kJ/mol'),
         S298=(-179.047, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHCHCH2', 'XCHCHO', 'XCHCHCH2', 'XCHCHO', 'XCHCHCH2',
+'XCHCHO', 'XCHCHCH2', 'XCHCHO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1962,8 +2187,10 @@ entry(
         H298=(-359.328, 'kJ/mol'),
         S298=(-179.041, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'CH3XCCH3',
+'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3',
+'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1982,11 +2209,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.001, 5.078, 6.087, 6.635, 7.154, 7.387, 7.694], 'J/(mol*K)'),
-        H298=(-265.542, 'kJ/mol'),
+        H298=(-315.52, 'kJ/mol'),
         S298=(-144.277, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHNH2', 'OHXCNH2',
+'NH2XCNH2', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2009,8 +2237,9 @@ entry(
         H298=(-294.15, 'kJ/mol'),
         S298=(-146.569, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XCHOH', 'CH3XCOH', 'XCHOH', 'CH3XCOH', 'XCHOH', 'CH3XCOH',
+'XCHOH', 'CH3XCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2027,11 +2256,23 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.307, 7.457, 9.215, 10.238, 11.27, 11.766, 12.379], 'J/(mol*K)'),
-        H298=(-186.229, 'kJ/mol'),
+        H298=(-241.228, 'kJ/mol'),
         S298=(-168.135, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNH2',
+'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO',
+'CH3NXNOH', 'CH3XNNOH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XNO', 'XNCNH',
+'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO',
+'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNH',
+'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XNO', 'XNO', 'XNCNH', 'XNCO', 'XNCH2',
+'XNNH', 'XNNCH3', 'XNCNH', 'XNCO', 'XNCNH', 'XNCO', 'XNCH2', 'XNCH2', 'XNNH',
+'XNNCH3', 'XNNH', 'XNNCH3', 'XNH2', 'XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO',
+'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNHCHO',
+'XNHCHO', 'XNHCH3', 'XNHCH3', 'XNHNO', 'XNHNO', 'XNHNH2', 'XNHNH2', 'XNHOH',
+'XNHOH', 'XNO2', 'OXNNH', 'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH',
+'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH',
+'XNCN', 'XNCN', 'XNCH3', 'XNCH3', 'XNNH2', 'XNNH2', 'XNOH', 'XNOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2049,11 +2290,13 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.8, 5.347, 6.74, 7.547, 8.348, 8.717, 9.135], 'J/(mol*K)'),
-        H298=(-156.308, 'kJ/mol'),
+        H298=(-212.532, 'kJ/mol'),
         S298=(-163.05, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNO', 'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNO',
+'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNCNH', 'XNCO', 'XNCNH',
+'XNCO', 'XNCH2', 'XNCH2', 'XNNH', 'XNNCH3', 'XNNH', 'XNNCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2072,11 +2315,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.421, 1.147, 1.86, 2.23, 2.65, 2.937, 3.411], 'J/(mol*K)'),
-        H298=(-195.19, 'kJ/mol'),
+        H298=(-251.414, 'kJ/mol'),
         S298=(-145.417, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNCNH', 'XNCO', 'XNCNH', 'XNCO', 'XNCNH', 'XNCO', 'XNCNH',
+'XNCO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2096,11 +2340,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.608, 9.954, 11.836, 12.985, 14.211, 14.819, 15.561], 'J/(mol*K)'),
-        H298=(-178.99, 'kJ/mol'),
+        H298=(-216.473, 'kJ/mol'),
         S298=(-180.636, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNCH2', 'XNCH2', 'XNCH2', 'XNCH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2119,11 +2363,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.46, 7.334, 9.012, 10.015, 11.003, 11.429, 11.874], 'J/(mol*K)'),
-        H298=(-116.231, 'kJ/mol'),
+        H298=(-191.197, 'kJ/mol'),
         S298=(-164.071, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNNH', 'XNNCH3', 'XNNH', 'XNNCH3', 'XNNH', 'XNNCH3', 'XNNH',
+'XNNCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2142,11 +2387,16 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.844, 9.082, 11.002, 12.19, 13.49, 14.164, 14.965], 'J/(mol*K)'),
-        H298=(-164.405, 'kJ/mol'),
+        H298=(-218.926, 'kJ/mol'),
         S298=(-171.136, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNH2', 'XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH',
+'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNH2', 'XNH2', 'XNHCHO',
+'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH',
+'CH3XNNOH', 'XNHCHO', 'XNHCHO', 'XNHCH3', 'XNHCH3', 'XNHNO', 'XNHNO', 'XNHNH2',
+'XNHNH2', 'XNHOH', 'XNHOH', 'XNO2', 'OXNNH', 'XNO2', 'OXNNH', 'HXNO',
+'CH3NXNOH', 'CH3XNNOH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2166,11 +2416,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.987, 7.376, 9.536, 11.007, 12.778, 13.752, 14.963], 'J/(mol*K)'),
-        H298=(-271.59, 'kJ/mol'),
+        H298=(-309.073, 'kJ/mol'),
         S298=(-216.907, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNHCHO', 'XNHCHO', 'XNHCHO', 'XNHCHO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2192,11 +2442,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([12.309, 16.976, 20.433, 23.081, 26.902, 29.654, 34.187], 'J/(mol*K)'),
-        H298=(-341.106, 'kJ/mol'),
+        H298=(-378.589, 'kJ/mol'),
         S298=(-167.995, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNHCH3', 'XNHCH3', 'XNHCH3', 'XNHCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2216,11 +2466,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([10.898, 13.865, 15.436, 16.236, 16.797, 16.876, 16.777], 'J/(mol*K)'),
-        H298=(-191.459, 'kJ/mol'),
+        H298=(-266.425, 'kJ/mol'),
         S298=(-189.56, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNHNO', 'XNHNO', 'XNHNO', 'XNHNO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2241,11 +2491,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.129, 10.37, 12.332, 13.576, 14.975, 15.687, 16.376], 'J/(mol*K)'),
-        H298=(-139.705, 'kJ/mol'),
+        H298=(-214.67, 'kJ/mol'),
         S298=(-188.5, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNHNH2', 'XNHNH2', 'XNHNH2', 'XNHNH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2265,11 +2515,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([8.087, 11.692, 13.567, 14.63, 15.723, 16.248, 16.716], 'J/(mol*K)'),
-        H298=(-143.025, 'kJ/mol'),
+        H298=(-180.508, 'kJ/mol'),
         S298=(-189.451, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNHOH', 'XNHOH', 'XNHOH', 'XNHOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2288,11 +2538,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.236, 9.867, 11.247, 11.962, 12.515, 12.65, 12.642], 'J/(mol*K)'),
-        H298=(-134.735, 'kJ/mol'),
+        H298=(-190.959, 'kJ/mol'),
         S298=(-163.298, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNO2', 'OXNNH', 'XNO2', 'OXNNH', 'XNO2', 'OXNNH', 'XNO2',
+'OXNNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2311,11 +2562,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.728, 5.688, 6.778, 7.398, 7.997, 8.253, 8.447], 'J/(mol*K)'),
-        H298=(-81.826, 'kJ/mol'),
+        H298=(-144.298, 'kJ/mol'),
         S298=(-143.039, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['HXNO', 'CH3NXNOH', 'CH3XNNOH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH',
+'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2333,11 +2585,13 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.689, 5.635, 7.648, 8.685, 9.527, 9.838, 10.313], 'J/(mol*K)'),
-        H298=(-275.391, 'kJ/mol'),
+        H298=(-327.867, 'kJ/mol'),
         S298=(-168.387, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XNH', 'XNH',
+'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XNCN', 'XNCN', 'XNCH3', 'XNCH3', 'XNNH2',
+'XNNH2', 'XNOH', 'XNOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2356,11 +2610,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-6.989, -4.603, -3.581, -3.072, -2.447, -1.961, -1.142], 'J/(mol*K)'),
-        H298=(-249.883, 'kJ/mol'),
+        H298=(-324.849, 'kJ/mol'),
         S298=(-142.031, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNCN', 'XNCN', 'XNCN', 'XNCN']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2379,11 +2633,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.614, 9.468, 11.121, 12.197, 13.469, 14.191, 15.174], 'J/(mol*K)'),
-        H298=(-328.554, 'kJ/mol'),
+        H298=(-366.037, 'kJ/mol'),
         S298=(-176.565, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNCH3', 'XNCH3', 'XNCH3', 'XNCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2401,11 +2655,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([11.303, 15.422, 17.092, 17.515, 16.969, 16.192, 15.433], 'J/(mol*K)'),
-        H298=(-207.626, 'kJ/mol'),
+        H298=(-282.591, 'kJ/mol'),
         S298=(-174.51, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNNH2', 'XNNH2', 'XNNH2', 'XNNH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2424,11 +2678,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([9.017, 13.03, 14.825, 15.531, 15.693, 15.491, 15.382], 'J/(mol*K)'),
-        H298=(-243.759, 'kJ/mol'),
+        H298=(-281.242, 'kJ/mol'),
         S298=(-178.708, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XNOH', 'XNOH', 'XNOH', 'XNOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2445,11 +2699,16 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.744, 6.48, 7.463, 8.075, 8.768, 9.15, 9.656], 'J/(mol*K)'),
-        H298=(-142.566, 'kJ/mol'),
+        H298=(-146.825, 'kJ/mol'),
         S298=(-156.676, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3',
+'XOCH2OH', 'XONH2', 'XOOH', 'XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3',
+'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XOH', 'XOH', 'XOCHCH2', 'HC(O)XO',
+'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XOCHCH2',
+'HC(O)XO', 'XOC(OH)O', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3',
+'XOCH2OH', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XONH2', 'XOOH', 'XOOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2467,11 +2726,15 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.429, 6.188, 7.189, 7.815, 8.523, 8.912, 9.424], 'J/(mol*K)'),
-        H298=(-143.502, 'kJ/mol'),
+        H298=(-147.667, 'kJ/mol'),
         S298=(-155.727, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOH', 'XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3',
+'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XOH', 'XOH', 'XOCHCH2', 'HC(O)XO',
+'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XOCHCH2',
+'HC(O)XO', 'XOC(OH)O', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3',
+'XOCH2OH', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XONH2', 'XOOH', 'XOOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2494,8 +2757,9 @@ entry(
         H298=(-159.147, 'kJ/mol'),
         S298=(-194.234, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCHCH2', 'HC(O)XO',
+'XOC(OH)O', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2519,8 +2783,9 @@ entry(
         H298=(-151.108, 'kJ/mol'),
         S298=(-149.812, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XOCH3', 'XOCH2CH3', 'XOCH2OH',
+'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XOCH3', 'XOCH2CH3', 'XOCH2OH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2539,11 +2804,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.23, 4.154, 5.771, 6.686, 7.575, 7.955, 8.262], 'J/(mol*K)'),
-        H298=(-89.164, 'kJ/mol'),
+        H298=(-126.647, 'kJ/mol'),
         S298=(-134.71, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XONH2', 'XONH2', 'XONH2', 'XONH2']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2565,8 +2830,8 @@ entry(
         H298=(-86.892, 'kJ/mol'),
         S298=(-120.712, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['XOOH', 'XOOH', 'XOOH', 'XOOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2583,11 +2848,35 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.604, 6.861, 7.568, 7.996, 8.464, 8.704, 8.944], 'J/(mol*K)'),
-        H298=(-44.442, 'kJ/mol'),
+        H298=(-65.796, 'kJ/mol'),
         S298=(-130.005, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X', 'NCOHX', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X',
+'CH2NHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'CH4X',
+'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X', 'CH3OHX', 'CH3OCH3X',
+'CH3OCH2OHX', 'H2C(OH)OHX', 'OCNHX', 'NHCNHX', 'NH3X', 'OCHNH2X', 'NH2NH2X',
+'NH2NCH3CH3X', 'H2NOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'H2OX', 'HOOHX',
+'CHCHX', 'CHCCH3X', 'NCOHX', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2NHX',
+'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'CH4X', 'CH3CH3X',
+'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX',
+'H2C(OH)OHX', 'OCNHX', 'NHCNHX', 'NH3X', 'OCHNH2X', 'NH2NH2X', 'NH2NCH3CH3X',
+'H2NOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'H2OX', 'HOOHX', 'CHCHX', 'CHCCH3X',
+'NCOHX', 'CHCHX', 'CHCCH3X', 'CHCHX', 'CHCCH3X', 'NCOHX', 'NCOHX', 'CH2CH2X',
+'CH3CHCH2X', 'CH2CCH2X', 'CH2NHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX',
+'HCOOHX', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2CH2X', 'CH3CHCH2X',
+'CH2CCH2X', 'CH2NHX', 'CH2NHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX',
+'HCOOHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'CH4X', 'CH4X',
+'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X', 'CH3OHX', 'CH3OCH3X',
+'CH3OCH2OHX', 'H2C(OH)OHX', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3CH3X',
+'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X', 'CH3NH2X', 'CH3OHX', 'CH3OCH3X',
+'CH3OCH2OHX', 'H2C(OH)OHX', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX',
+'OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX', 'NH3X', 'NH3X',
+'OCHNH2X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX', 'OCHNH2X', 'OCHNH2X', 'NH2NH2X',
+'NH2NCH3CH3X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX', 'H2NOHX', 'ONNH2X',
+'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X',
+'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONOHX', 'H2OX', 'H2OX', 'HOOHX', 'HOOHX',
+'HOOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2606,11 +2895,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.204, 2.484, 2.649, 2.795, 3.123, 3.488, 4.251], 'J/(mol*K)'),
-        H298=(-33.206, 'kJ/mol'),
+        H298=(-45.7, 'kJ/mol'),
         S298=(-120.514, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X', 'NCOHX', 'CHCHX', 'CHCCH3X', 'NCOHX',
+'CHCHX', 'CHCCH3X', 'CHCHX', 'CHCCH3X', 'NCOHX', 'NCOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2633,8 +2923,9 @@ entry(
         H298=(-35.733, 'kJ/mol'),
         S298=(-119.645, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X', 'CHCHX', 'CHCCH3X', 'CHCHX', 'CHCCH3X',
+'CHCHX', 'CHCCH3X']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2653,11 +2944,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.394, 7.832, 8.074, 8.267, 8.599, 8.832, 8.985], 'J/(mol*K)'),
-        H298=(-28.15, 'kJ/mol'),
+        H298=(-65.633, 'kJ/mol'),
         S298=(-122.254, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['NCOHX', 'NCOHX', 'NCOHX', 'NCOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2677,11 +2968,16 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.176, 7.536, 8.289, 8.717, 9.118, 9.268, 9.344], 'J/(mol*K)'),
-        H298=(-36.803, 'kJ/mol'),
+        H298=(-40.968, 'kJ/mol'),
         S298=(-130.966, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2NHX', 'CH2COX', 'CH2OX',
+'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2NHX',
+'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'CH2CH2X', 'CH3CHCH2X',
+'CH2CCH2X', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2NHX', 'CH2NHX', 'CH2COX',
+'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX',
+'CH3CHOX', 'HCOOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2705,8 +3001,10 @@ entry(
         H298=(-64.3, 'kJ/mol'),
         S298=(-143.863, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2CH2X', 'CH3CHCH2X',
+'CH2CCH2X', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2CH2X', 'CH3CHCH2X',
+'CH2CCH2X']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2726,11 +3024,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.299, 6.343, 7.876, 8.574, 8.928, 8.866, 8.608], 'J/(mol*K)'),
-        H298=(-33.765, 'kJ/mol'),
+        H298=(-71.248, 'kJ/mol'),
         S298=(-135.288, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH2NHX', 'CH2NHX', 'CH2NHX', 'CH2NHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2753,8 +3051,10 @@ entry(
         H298=(-20.913, 'kJ/mol'),
         S298=(-122.364, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'CH2COX',
+'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX',
+'CH3CHOX', 'HCOOHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2775,11 +3075,16 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([7.704, 8.778, 9.334, 9.643, 9.941, 10.07, 10.175], 'J/(mol*K)'),
-        H298=(-38.741, 'kJ/mol'),
+        H298=(-42.906, 'kJ/mol'),
         S298=(-127.608, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH4X', 'CH4X', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X',
+'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX', 'CH4X', 'CH4X', 'CH3CH3X',
+'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX',
+'H2C(OH)OHX', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3CH3X', 'CH3CH2CH3X',
+'CH3CH2OHX', 'CH3NH2X', 'CH3NH2X', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX',
+'H2C(OH)OHX', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2806,8 +3111,10 @@ entry(
         H298=(-33.367, 'kJ/mol'),
         S298=(-137.338, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3CH3X', 'CH3CH2CH3X',
+'CH3CH2OHX', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3CH3X', 'CH3CH2CH3X',
+'CH3CH2OHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2828,11 +3135,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([0.932, 3.145, 4.574, 5.506, 6.556, 7.095, 7.704], 'J/(mol*K)'),
-        H298=(-99.841, 'kJ/mol'),
+        H298=(-137.324, 'kJ/mol'),
         S298=(-141.215, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH3NH2X', 'CH3NH2X', 'CH3NH2X', 'CH3NH2X']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2857,8 +3164,10 @@ entry(
         H298=(-30.336, 'kJ/mol'),
         S298=(-139.363, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX', 'CH3OHX',
+'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX',
+'H2C(OH)OHX', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2877,11 +3186,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.54, 7.091, 7.441, 7.69, 8.006, 8.18, 8.339], 'J/(mol*K)'),
-        H298=(-42.101, 'kJ/mol'),
+        H298=(-98.325, 'kJ/mol'),
         S298=(-122.197, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX',
+'OCNHX', 'NHCNHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2899,11 +3209,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([6.54, 7.091, 7.441, 7.69, 8.006, 8.18, 8.339], 'J/(mol*K)'),
-        H298=(-42.101, 'kJ/mol'),
+        H298=(-98.325, 'kJ/mol'),
         S298=(-122.197, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX',
+'OCNHX', 'NHCNHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2923,11 +3234,14 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.377, 5.633, 6.987, 7.841, 8.796, 9.275, 9.747], 'J/(mol*K)'),
-        H298=(-71.222, 'kJ/mol'),
+        H298=(-123.698, 'kJ/mol'),
         S298=(-139.272, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['NH3X', 'NH3X', 'OCHNH2X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX',
+'NH3X', 'NH3X', 'OCHNH2X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX', 'OCHNH2X',
+'OCHNH2X', 'NH2NH2X', 'NH2NCH3CH3X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX',
+'H2NOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2945,11 +3259,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.687, 6.032, 6.825, 7.329, 7.911, 8.22, 8.494], 'J/(mol*K)'),
-        H298=(-48.05, 'kJ/mol'),
+        H298=(-85.533, 'kJ/mol'),
         S298=(-138.501, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['OCHNH2X', 'OCHNH2X', 'OCHNH2X', 'OCHNH2X']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2967,11 +3281,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([1.776, 4.013, 5.344, 6.178, 7.098, 7.552, 8.006], 'J/(mol*K)'),
-        H298=(-92.922, 'kJ/mol'),
+        H298=(-167.888, 'kJ/mol'),
         S298=(-150.696, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['NH2NH2X', 'NH2NCH3CH3X', 'NH2NH2X', 'NH2NCH3CH3X', 'NH2NH2X',
+'NH2NCH3CH3X', 'NH2NH2X', 'NH2NCH3CH3X']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -2989,11 +3304,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.322, 5.152, 6.208, 6.849, 7.534, 7.863, 8.173], 'J/(mol*K)'),
-        H298=(-50.894, 'kJ/mol'),
+        H298=(-88.376, 'kJ/mol'),
         S298=(-132.089, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['H2NOHX', 'H2NOHX', 'H2NOHX', 'H2NOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3011,11 +3326,13 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.708, 6.011, 6.788, 7.301, 7.93, 8.274, 8.565], 'J/(mol*K)'),
-        H298=(-64.683, 'kJ/mol'),
+        H298=(-127.155, 'kJ/mol'),
         S298=(-141.385, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X',
+'ONOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONNH2X',
+'ONNCH3CH3X', 'ONOHX', 'ONOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3034,11 +3351,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([4.708, 6.011, 6.788, 7.301, 7.93, 8.274, 8.565], 'J/(mol*K)'),
-        H298=(-64.683, 'kJ/mol'),
+        H298=(-127.155, 'kJ/mol'),
         S298=(-141.385, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X',
+'ONOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3057,11 +3375,12 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([5.682, 6.734, 7.312, 7.663, 8.05, 8.242, 8.401], 'J/(mol*K)'),
-        H298=(-70.559, 'kJ/mol'),
+        H298=(-145.525, 'kJ/mol'),
         S298=(-139.884, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONNH2X', 'ONNCH3CH3X', 'ONNH2X',
+'ONNCH3CH3X', 'ONNH2X', 'ONNCH3CH3X']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3081,11 +3400,11 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([2.761, 4.564, 5.742, 6.578, 7.689, 8.338, 8.892], 'J/(mol*K)'),
-        H298=(-52.931, 'kJ/mol'),
+        H298=(-90.414, 'kJ/mol'),
         S298=(-144.387, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['ONOHX', 'ONOHX', 'ONOHX', 'ONOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3107,8 +3426,9 @@ entry(
         H298=(-17.874, 'kJ/mol'),
         S298=(-101.295, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['H2OX', 'H2OX', 'HOOHX', 'H2OX', 'H2OX', 'HOOHX', 'HOOHX',
+'HOOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -3131,8 +3451,8 @@ entry(
         H298=(-25.178, 'kJ/mol'),
         S298=(-110.352, 'J/(mol*K)'),
     ),
-shortDesc=u""" """,
-longDesc=u""" 
+shortDesc=u"""Averaged from: ['HOOHX', 'HOOHX', 'HOOHX', 'HOOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",

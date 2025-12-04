@@ -21,17 +21,17 @@ kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mi
 fmax=2.5e-2.'''
 N_members = 10
 
-#ads_list = AdsorbatesEnsemble(Pt111_ads_data,
-#                              reference_dict,
-#                              slab_dict,
-#                              long_description,
-#                              beefdict,
-#                              refbeefdict,
-#                              )
-#ads_list.write_ensemble_of_RMG_thermodatabase_files(
-#    directory='thermolib/',
-#    file_prefix='surfaceThermoPt111',
-#    max_members=N_members)
+ads_list = AdsorbatesEnsemble(Pt111_ads_data,
+                              reference_dict,
+                              slab_dict,
+                              long_description,
+                              beefdict,
+                              refbeefdict,
+                              )
+ads_list.write_ensemble_of_RMG_thermodatabase_files(
+    directory='thermolib/',
+    file_prefix='surfaceThermoPt111',
+    max_members=N_members)
 
 correns = AdsorptionCorrectionTreeEnsemble(
     RX,
