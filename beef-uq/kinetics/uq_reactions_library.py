@@ -4,7 +4,7 @@ import os
 import pandas as pd
 from torch.quasirandom import SobolEngine
 
-N_members=10
+N_members=20
 name='reactions'
 
 N_reactions = 54
