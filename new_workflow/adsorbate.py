@@ -1,9 +1,12 @@
 import numpy as np
+import scipy
 from numpy.linalg import inv
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from matplotlib.ticker import MaxNLocator, LogLocator
 import textwrap
+import math
+import copy
 
 
 class Adsorbate:
@@ -12,7 +15,7 @@ class Adsorbate:
                  adsorbate_dict: dict,
                  reference_dict: dict,
                  slab_dict: dict,
-                 long_description: str,
+                 long_description: str = ' ',
                  P_ref: float = 1.0E5,  # Pa
                  NASA7_T_switch: float = 1000.0,  # K
                  twoD_gas_cutoff_frequency: float = 100.0,  # cm^{-1}
@@ -64,7 +67,8 @@ class Adsorbate:
         self.zpe = adsorbate_dict['zpe']
         self.frequencies = adsorbate_dict['frequencies']
         self.sites_occupied = adsorbate_dict['sites_occupied']
-        self.connectivity = adsorbate_dict['connectivity']
+        if 'connectivity' in adsorbate_dict:
+            self.connectivity = adsorbate_dict['connectivity']
 
         self.reference_compositions = reference_dict['reference_compositions']
         self.reference_energies = reference_dict['reference_energies']
@@ -82,6 +86,8 @@ class Adsorbate:
         self._get_adsorbate_molecular_mass()
         self._get_temperatures()
         self._check_if_2D_gas()
+        self.trans_thermo = self.get_2D_translational_thermo()
+        self.vib_thermo = self.get_vibrational_thermo()
 
     def __repr__(self):
         """
@@ -222,7 +228,7 @@ class Adsorbate:
         if self.twoD_gas:
             for i, T in enumerate(temps):
                 q_trans[i] = (2*pi*m*amu*kB*T/h**2) * area * sites
-                S_trans[i] = R * (2.0 + np.log(q_trans[i]))
+                S_trans[i] = R * (2.0 + math.log(q_trans[i]))
                 Cp_trans[i] = R
                 dH_trans[i] = R * T
 
@@ -245,12 +251,13 @@ class Adsorbate:
                 if self.twoD_gas and n <= 1:
                     pass
                 else:
+                    pass
                     x = nu * units / temp  # cm^-1 * K cm / K = dimensionless
-                    q_vib[t] *= 1.0 / (1.0 - np.exp(-x))
-                    qterm = 1.0 - np.exp(-x)
-                    S_vib[t] += -np.log(qterm) + x * np.exp(-x) / qterm
-                    dH_vib[t] += x * np.exp(-x) / qterm
-                    Cv_vib[t] += x ** 2.0 * np.exp(-x) / qterm ** 2.0
+                    q_vib[t] *= 1.0 / (1.0 - math.exp(-x))
+                    qterm = 1.0 - math.exp(-x)
+                    S_vib[t] += -math.log(qterm) + x * math.exp(-x) / qterm
+                    dH_vib[t] += x * math.exp(-x) / qterm
+                    Cv_vib[t] += x ** 2.0 * math.exp(-x) / qterm ** 2.0
             S_vib[t] *= self.R
             dH_vib[t] *= self.R * temp
             Cv_vib[t] *= self.R
@@ -266,7 +273,6 @@ class Adsorbate:
         DOI:10.1016/B978-0-444-64087-1.00001-2, page 75). If you are reading
         this, you should probably read the whole paper!
         """
-
         # Values from Ruscic and Bross (see above), page 75
         h_correction = 4.234  # kJ/mol. enthalpy_H(298) - enthalpy_H(0)
         c_correction = 1.051  # kJ/mol. enthalpy_C(298) - enthalpy_C(0)
@@ -279,9 +285,8 @@ class Adsorbate:
         EOF_ref_correction += comp['N'] * n_correction
         EOF_ref_correction += comp['O'] * o_correction
 
-        q_t, S_t, dH_t, Cp_t = self.get_2D_translational_thermo()
-        q_v, S_v, dH_v, Cv_v = self.get_vibrational_thermo()
-
+        q_t, S_t, dH_t, Cp_t = self.trans_thermo
+        q_v, S_v, dH_v, Cv_v = self.vib_thermo
         Q = q_v * q_t
         S = S_t + S_v
         dH = dH_t + dH_v
@@ -542,6 +547,7 @@ class Adsorbates:
                  ):
 
         self.slab_dict = slab_dict
+        self.reference_dict = reference_dict
         self.adsorbate_list = []
         for ads_dict in adsorbate_list:
             ads = Adsorbate(ads_dict, reference_dict, slab_dict,
@@ -654,8 +660,8 @@ class AdsorbatesEnsemble(Adsorbates):
                  NASA7_T_switch: float = 1000,
                  twoD_gas_cutoff_frequency: float = 100):
 
-        super().__init__(adsorbate_list,
-                         reference_dict,
+        super().__init__(copy.deepcopy(adsorbate_list),
+                         copy.deepcopy(reference_dict),
                          slab_dict,
                          long_description,
                          P_ref,
@@ -665,9 +671,9 @@ class AdsorbatesEnsemble(Adsorbates):
         self.ensemble_energies_array = ensemble_energies_array
         self.ref_ensemble = reference_ensemble
         self.ensemble_scale = ensemble_scale
-        self.original_ads_list = self.adsorbate_list.copy()
-        self.reference_dict = reference_dict
-        self.original_ref_dict = self.reference_dict.copy()
+        self.original_ads_list = copy.deepcopy(self.adsorbate_list)
+        self.original_ref_dict = copy.deepcopy(self.reference_dict)
+        self.EOF_uncertainty = self.original_ref_dict['EOF_uncertainty']
         self.rydberg_to_eV = 13.6056980659
 
     def write_ensemble_of_RMG_thermodatabase_files(
@@ -682,6 +688,7 @@ class AdsorbatesEnsemble(Adsorbates):
             N_members = max_members
         else:
             N_members = len(self.ensemble_energies_array[names[0]])
+        sampler = scipy.stats.qmc.Sobol(d=1, scramble=True, seed=12)
         for i in range(N_members):
             for j, name in enumerate(names):
                 dE = self.ensemble_energies_array[name][i]
@@ -693,9 +700,14 @@ class AdsorbatesEnsemble(Adsorbates):
                 dE = self.ref_ensemble[name][i]
                 dE *= self.rydberg_to_eV * self.ensemble_scale
                 oldE = self.original_ref_dict['reference_energies'][name]
-                newE = oldE - dE
+                EOF_perturbation = sampler.random()[0, 0]
+                EOF_perturbation *= 2 * self.EOF_uncertainty[name]
+                EOF_perturbation -= self.EOF_uncertainty[name]
+                newE = oldE - dE + EOF_perturbation
                 self.reference_dict['reference_energies'][name] = newE
             """ loop to do same for refs"""
             name = directory + file_prefix + "_{}.py".format(str(i))
             self.write_RMG_thermodatabase_file(name)
+        self.adsorbate_list = self.original_ads_list
+        self.reference_dict = self.original_ref_dict
         return None
