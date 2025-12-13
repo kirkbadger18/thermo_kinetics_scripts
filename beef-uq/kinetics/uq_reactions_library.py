@@ -9,8 +9,8 @@ name='reactions'
 
 N_reactions = 54
 stick_coeff_indices = [1, 3, 4, 33, 34, 35, 36, 37]
-stick_arr_indices = [18, 19, 38]
-no_data_indices = [31, 32, 42, 50, 54]
+stick_arr_indices = [18, 19, 38, 54]
+no_data_indices = [31, 32, 42, 50]
 indices = []
 
 for i in range(1,N_reactions+1):
