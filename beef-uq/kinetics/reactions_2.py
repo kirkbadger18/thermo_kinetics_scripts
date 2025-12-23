@@ -253,7 +253,7 @@ entry(
     kinetics = StickingCoefficient(
         A = 6.04,
         n = 0,
-        Ea = (45.328568, 'kJ/mol'),
+        Ea = (57.075394, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -267,7 +267,7 @@ entry(
     kinetics = StickingCoefficient(
         A = 2.052,
         n = 0,
-        Ea = (28.479763, 'kJ/mol'),
+        Ea = (37.457687, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -507,21 +507,21 @@ entry(
     metal = "Pt",
 )
 
-entry(
-    index = 36,
-    label = "NNO + Pt <=> NNOX",
-    kinetics = StickingCoefficient(
-        A = .1,
-        n = 0,
-        Ea = (0, 'J/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Surface_Adsorption_Single""",
-    longDesc = u"""
-""",
-    metal = "Pt",
-)
+#entry(
+#    index = 36,
+#    label = "NNO + Pt <=> NNOX",
+#    kinetics = StickingCoefficient(
+#        A = .1,
+#        n = 0,
+#        Ea = (0, 'J/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Surface_Adsorption_Single""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#)
 
 entry(
     index = 37,
@@ -545,7 +545,7 @@ entry(
     kinetics = StickingCoefficient(
         A = 0.0001,
         n = 0,
-        Ea = (177.98376, 'kJ/mol'),
+        Ea = (232.01396, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -559,9 +559,9 @@ entry(
     index = 39,
     label = "XNO + Pt <=> XN + XO",
     kinetics = SurfaceArrhenius(
-        A = (2.99E21, 'cm^2/(mol*s)'),  
+        A = (5.21E21, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (208.47441893070936, 'kJ/mol'),
+        Ea = (114.47441893070936, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -810,21 +810,20 @@ entry(
     facet = "111",
 )
 
-entry(
-    index = 54,
-    label = "NNOX + Pt <=> XNO + XN",
-    kinetics = SurfaceArrhenius(
-        A = (4.18e17, 'm^2/(mol*s)'),  
-        n = 0,
-        Ea=(97, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
-    longDesc = u"""
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
+#entry(
+#    index = 54,
+#    label = "NNOX + Pt <=> XNO + XN",
+#    kinetics = SurfaceArrhenius(
+#        A = (4.18e17, 'm^2/(mol*s)'),  
+#        n = 0,
+#        Ea=(97, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
 

@@ -8,9 +8,9 @@ N_members=20
 name='reactions'
 
 N_reactions = 54
-stick_coeff_indices = [1, 3, 4, 33, 34, 35, 36, 37]
-stick_arr_indices = [18, 19, 38, 54]
-no_data_indices = [31, 32, 42, 50]
+stick_coeff_indices = [1, 3, 4, 33, 34, 35, 37]
+stick_arr_indices = [18, 19, 38]
+no_data_indices = [31, 32, 42, 50, 36, 54]
 indices = []
 
 for i in range(1,N_reactions+1):
@@ -37,9 +37,9 @@ def generate_sobol_set(N_member, N):
     sobol=SobolEngine(dimension=N,scramble=True,seed = 1409580)
     x_sobol=sobol.draw(N_members)
     return x_sobol.numpy()
-x_sobol = generate_sobol_set(N_members,4)
-x_sobol *= 30
-x_sobol -=15
+x_sobol = generate_sobol_set(N_members,5)
+x_sobol *= 20
+x_sobol -=10
 
 with open('reactions.py','r') as f:
     original_lines = f.readlines()

@@ -14,12 +14,13 @@ sobol = np.asarray(generate_sobol_set(a_list,E0_list,N_members))
 for k in range(N_members):
     n, m = 0, 0
     for fam_num, lines in enumerate(fam_lines):
-        print(fams[fam_num])
+        #print(fams[fam_num])
         new_lines = []
         for num, line in enumerate(lines):
             if n < len(E0_lines) and num == E0_lines[n] and '    E0' in line:
                 E0 = E0_list[n]
                 perturb = Delta_E0 - 2 * Delta_E0 * sobol[k,2*n]
+                print(perturb)
                 new_E0 = E0 + perturb
                 if new_E0 < 3:
                     new_E0 = 3
