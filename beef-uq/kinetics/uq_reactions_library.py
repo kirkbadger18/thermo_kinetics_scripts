@@ -7,10 +7,10 @@ from torch.quasirandom import SobolEngine
 N_members=20
 name='reactions'
 
-N_reactions = 54
+N_reactions = 55
 stick_coeff_indices = [1, 3, 4, 33, 34, 35, 37]
 stick_arr_indices = [18, 19, 38]
-no_data_indices = [31, 32, 42, 50, 36, 54]
+no_data_indices = [31, 32, 36, 42, 50, 54]
 indices = []
 
 for i in range(1,N_reactions+1):
@@ -30,6 +30,7 @@ beef_keys = ['O-CO','h2cch-h-diss','hc-ch2-diss','CH2-CH2','hcch2-h-diss',
              'H-XNNH2','XNH-CH3',
              'XN-CH3','XN-CN','XC-N',
              'XNO-H', 'H-XNO', 'HXN-O',
+             'C-H',
              ]
 ### Read reaction file and store as list
 

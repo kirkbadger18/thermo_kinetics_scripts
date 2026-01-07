@@ -827,3 +827,19 @@ entry(
 #    facet = "111",
 #)
 
+entry(
+    index = 55,
+    label = "XCH + Pt <=> XC + XH",
+    kinetics = SurfaceArrhenius(
+        A = (1.157E22, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (142.10552874952555, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
