@@ -380,7 +380,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(4.22E12, '1/s'),
         n = 0.0,
-        Ea = (85.48316747695208, 'kJ/mol'),
+        Ea = (170.48316747695208, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -422,7 +422,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(1.07E+30, 'cm^4/(mol^2*s)'),
         n = 0,
-        Ea = (105.88149991631508, 'kJ/mol'),
+        Ea = (176.88149991631508, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -843,3 +843,72 @@ entry(
     metal = "Pt",
     facet = "111",
 )
+
+entry(
+    index = 56,
+    label = "OXCCH3 + Pt + Pt <=> OXCXCH2 + XH",
+    kinetics = SurfaceArrhenius(
+        A = (3.56E30, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (164.7778954282403, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 57,
+    label = "OXCXCH2 + Pt <=> OXCXCH + XH",
+    kinetics = SurfaceArrhenius(
+        A = (4.16E19, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (130.0448895841837, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 58,
+    label = "OXCCH3 + Pt <=> XCCH3 + XO",
+    kinetics = SurfaceArrhenius(
+        A = (4.18e21, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (217.79716, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 59,
+    label = "OXCCH3 + Pt <=> XCO + XCH3",
+    kinetics = SurfaceArrhenius(
+        A = (4.18e21, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (116.85835, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
