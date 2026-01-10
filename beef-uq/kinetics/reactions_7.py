@@ -882,9 +882,9 @@ entry(
     index = 58,
     label = "OXCCH3 + Pt <=> XCCH3 + XO",
     kinetics = SurfaceArrhenius(
-        A = (4.18e21, 'cm^2/(mol*s)'),
+        A = (2.85e20, 'cm^2/(mol*s)'),
         n = 0.0,
-        Ea = (223.08015, 'kJ/mol'),
+        Ea = (253.2015158906579, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -899,9 +899,26 @@ entry(
     index = 59,
     label = "OXCCH3 + Pt <=> XCO + XCH3",
     kinetics = SurfaceArrhenius(
-        A = (4.18e21, 'cm^2/(mol*s)'),
+        A = (1.64e21, 'cm^2/(mol*s)'),
         n = 0.0,
-        Ea = (130.51949, 'kJ/mol'),
+        Ea = (171.6787648499012, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 60,
+    label = "OXCXCH <=> XCO + XCH",
+    kinetics = SurfaceArrhenius(
+        A = (5.45e10, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (97.73531673103571, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
