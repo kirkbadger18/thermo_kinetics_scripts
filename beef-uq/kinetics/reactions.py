@@ -68,9 +68,9 @@ entry(
     index = 5,
     label = "XCH2XCH2 + Pt <=> XCH2XCH + XH",
     kinetics = SurfaceArrhenius(
-        A=(5.36e21, 'cm^2/(mol*s)'),
+        A=(5.00e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea=(59.5, 'kJ/mol'),
+        Ea=(89, 'kJ/mol'), #59.5
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -82,9 +82,9 @@ entry(
     index = 6,
     label = "XCH2XCH <=> XCH + XCH2",
     kinetics = SurfaceArrhenius(
-        A=(2.94e13, '1/s'),
+        A=(1.84e14, '1/s'),
         n = 0,
-        Ea=(140.09, 'kJ/mol'),
+        Ea=(170, 'kJ/mol'), #140.09
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -96,9 +96,9 @@ entry(
     index = 7,
     label = "XCH2XCH2 <=> XCH2 + XCH2",
     kinetics = SurfaceArrhenius(
-        A=(3.09e15, '1/s'),
+        A=(4.03e13, '1/s'),
         n = 0,
-        Ea=(228.00, 'kJ/mol'),
+        Ea=(212, 'kJ/mol'), #228
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -110,9 +110,9 @@ entry(
     index = 8,
     label = "XCHCH3 + Pt + Pt  <=>  XCH2XCH + XH",
     kinetics = SurfaceArrhenius(
-        A=(2.32e30, 'cm^4/(mol^2*s)'),
+        A=(6.10e30, 'cm^4/(mol^2*s)'),
         n = 0,
-        Ea=(49.00, 'kJ/mol'),
+        Ea=(77, 'kJ/mol'), #49
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -124,9 +124,9 @@ entry(
     index = 9,
     label = "XCH2XCH + Pt <=> XCHXCH + XH",
     kinetics = SurfaceArrhenius(
-        A=(1.08e22, 'cm^2/(mol*s)'),
+        A=(4.02e22, 'cm^2/(mol*s)'),
         n = 0,
-        Ea=(72.88, 'kJ/mol'),
+        Ea=(95, 'kJ/mol'), #72.88
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -135,12 +135,12 @@ entry(
 )
 
 entry(
-    index = 10,
+    index = 10, #Vlachos Ethane
     label = "XCHXCH <=> XCH + XCH",
     kinetics = SurfaceArrhenius(
         A=(8.5e12, '1/s'),
         n = 0,
-        Ea=(90.20, 'kJ/mol'),
+        Ea=(102.9, 'kJ/mol'), #90.2
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -153,9 +153,9 @@ entry(
     index = 11,
     label = "XCH2CH3 + Pt + Pt <=> XCH2XCH2 + XH",
     kinetics = SurfaceArrhenius(
-        A=(1.87e30, 'cm^4/(mol^2*s)'),
+        A=(4.73e30, 'cm^4/(mol^2*s)'),
         n = 0,
-        Ea=(46.13, 'kJ/mol'),
+        Ea=(82, 'kJ/mol'), #46.13
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -167,9 +167,9 @@ entry(
     index = 12,
     label = "XCHXCH + Pt <=> XCHXC + XH",
     kinetics = SurfaceArrhenius(
-        A=(2.033e22, 'cm^2/(mol*s)'),
+        A=(2.03e22, 'cm^2/(mol*s)'),
         n = 0,
-        Ea=(151.29, 'kJ/mol'),
+        Ea=(151, 'kJ/mol'), #151.29
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -178,12 +178,12 @@ entry(
 )
 
 entry(
-    index = 13,
+    index = 13, #Vlachos Ethane
     label = "XCHXC <=> XCH + XC",
     kinetics = SurfaceArrhenius(
         A=(1.4e12, '1/s'),
         n = 0,
-        Ea=(77.48, 'kJ/mol'),
+        Ea=(86.6, 'kJ/mol'), #77.48
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -375,12 +375,12 @@ entry(
 )
 
 entry(
-    index = 27,
+    index = 27, #Vlachos Ethane
     label = "XCXC <=> XC + XC",
     kinetics = SurfaceArrhenius(
         A=(4.22E12, '1/s'),
         n = 0.0,
-        Ea=(189, 'kJ/mol'), #104 #189
+        Ea=(104, 'kJ/mol'), #104 #189
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -390,11 +390,11 @@ entry(
 
 entry(
     index = 28,
-    label = "XCHXC + XH <=> XCXCH2 + Pt",
+    label = "XCXCH2 + Pt <=> XCHXC + XH",
     kinetics = SurfaceArrhenius(
-        A=(5.19e19, 'cm^2/(mol*s)'),
+        A=(1.51e22, 'cm^2/(mol*s)'),
         n = 0,
-        Ea=(34, 'kJ/mol'),
+        Ea=(152, 'kJ/mol'), #72
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -406,9 +406,9 @@ entry(
     index = 29,
     label = "XCH2XCH + Pt <=> XCXCH2 + XH",
     kinetics = SurfaceArrhenius(
-        A=(9.69e21, 'cm^2/(mol*s)'),
+        A=(1.78e22, 'cm^2/(mol*s)'),
         n = 0,
-        Ea=(48, 'kJ/mol'),
+        Ea=(57, 'kJ/mol'), #48
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -420,9 +420,9 @@ entry(
     index = 30,
     label = "XCCH3 + Pt + Pt <=> XCXCH2 + XH",
     kinetics = SurfaceArrhenius(
-        A=(1.07E+30, 'cm^4/(mol^2*s)'),
+        A=(6.64E+28, 'cm^4/(mol^2*s)'),
         n = 0,
-        Ea=(174, 'kJ/mol'), #103 #174
+        Ea=(127, 'kJ/mol'), #103 #174
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -484,7 +484,7 @@ entry(
         Ea = (0, 'J/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
-    ),
+        ),
     shortDesc = u"""Surface_Adsorption_Single""",
     longDesc = u"""
 """,
@@ -848,9 +848,9 @@ entry(
     index = 56,
     label = "OXCCH3 + Pt + Pt <=> OXCXCH2 + XH",
     kinetics = SurfaceArrhenius(
-        A = (3.56E30, 'cm^2/(mol*s)'),
+        A = (1.92E30, 'cm^4/(mol^2*s)'),
         n = 0.0,
-        Ea = (149, 'kJ/mol'),
+        Ea = (112, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -865,9 +865,9 @@ entry(
     index = 57,
     label = "OXCXCH2 + Pt <=> OXCXCH + XH",
     kinetics = SurfaceArrhenius(
-        A = (4.16E19, 'cm^2/(mol*s)'),
+        A = (4.87E21, 'cm^2/(mol*s)'),
         n = 0.0,
-        Ea = (122, 'kJ/mol'),
+        Ea = (86, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -882,9 +882,9 @@ entry(
     index = 58,
     label = "OXCCH3 + Pt <=> XCCH3 + XO",
     kinetics = SurfaceArrhenius(
-        A = (2.85e20, 'cm^2/(mol*s)'),
+        A = (1.53e20, 'cm^2/(mol*s)'),
         n = 0.0,
-        Ea = (268, 'kJ/mol'),
+        Ea = (230, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -899,9 +899,9 @@ entry(
     index = 59,
     label = "OXCCH3 + Pt <=> XCO + XCH3",
     kinetics = SurfaceArrhenius(
-        A = (1.64e21, 'cm^2/(mol*s)'),
+        A = (8.84e20, 'cm^2/(mol*s)'),
         n = 0.0,
-        Ea = (184, 'kJ/mol'),
+        Ea = (147, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -916,9 +916,145 @@ entry(
     index = 60,
     label = "OXCXCH <=> XCO + XCH",
     kinetics = SurfaceArrhenius(
-        A = (5.45e10, 'cm^2/(mol*s)'),
+        A = (1.11e14, '1/s'),
         n = 0.0,
-        Ea = (110, 'kJ/mol'),
+        Ea = (80, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 61,
+    label = "OXCXCH2 <=> XCO + XCH2",
+    kinetics = SurfaceArrhenius(
+        A = (6.74e13, '1/s'),
+        n = 0.0,
+        Ea = (102, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 62,
+    label = "OXCXCH2 + Pt <=> XO + XCXCH2",
+    kinetics = SurfaceArrhenius(
+        A = (1.71e21, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (243, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 63,
+    label = "OXCXCH + Pt <=> XCXCO + XH",
+    kinetics = SurfaceArrhenius(
+        A = (8.26e22, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (124, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 64,
+    label = "XCXCO <=> XCO + XC",
+    kinetics = SurfaceArrhenius(
+        A = (1.82e13, '1/s'),
+        n = 0.0,
+        Ea = (66, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 65,
+    label = "XCXCH2 <=> XC + XCH2",
+    kinetics = SurfaceArrhenius(
+        A = (2.59e13, '1/s'),
+        n = 0.0,
+        Ea = (237, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 66,
+    label = "XCHXC + Pt <=> XCXC + XH",
+    kinetics = SurfaceArrhenius(
+        A = (1.66e22, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (132, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 67,
+    label = "XNO2 + XCXCH2 <=> XNO + OXCXCH2",
+    kinetics = SurfaceArrhenius(
+        A = (9.04e19, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (69, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 68,
+    label = "XNOH + XC <=> XNO + XCH",
+    kinetics = SurfaceArrhenius(
+        A = (6.01e20, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (91, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),

@@ -4,12 +4,12 @@ import os
 import pandas as pd
 from torch.quasirandom import SobolEngine
 
-N_members=20
+N_members=40
 name='reactions'
 
-N_reactions = 60
+N_reactions = 68
 stick_coeff_indices = [1, 3, 4, 33, 34, 35, 37]
-stick_arr_indices = [18, 19, 38]
+stick_arr_indices = [10, 13, 18, 19, 27, 38]
 no_data_indices = [31, 32, 36, 42, 50, 54]
 indices = []
 
@@ -18,12 +18,16 @@ for i in range(1,N_reactions+1):
         indices.append(i)
 
 beef_keys = ['O-CO','h2cch-h-diss','hc-ch2-diss','CH2-CH2','hcch2-h-diss',
-             'hcch-h-diss','hc-ch-diss','h2cch2-h-diss','CHC-H','hc-c-diss',
+             'hcch-h-diss',
+             #'hc-ch-diss',
+             'h2cch2-h-diss','CHC-H',
+             #'hc-c-diss',
              'CO-OH','HO-H','O-H','COOH-O','CH2-H','CH-H','HC-O','H-CO','CO-H',
              'C-OH','CH2-CH3',
-             'XC-XC',
-             'CCH-H-FS','CH2C-H-IS', 
-             'XCCH2-H',
+             #'XC-XC',
+             'CCH-H-IS',
+             'CH2C-H-IS', 
+             'CCH2-H',
              #'CH2CH2X_to_bi',
              'XN-O','O-XNO','XN-OH',
              'H-XNH','XN-H', 
@@ -31,17 +35,25 @@ beef_keys = ['O-CO','h2cch-h-diss','hc-ch2-diss','CH2-CH2','hcch2-h-diss',
              'XN-CH3','XN-CN','XC-N',
              'XNO-H', 'H-XNO', 'HXN-O',
              'C-H', 'OXCCH2-H', 'OXCXCH-H',
-             'O-XCCH3', 'OXC-CH3', 'OXC-XCH'
+             'O-XCCH3',
+             'OXC-CH3', 'OXC-XCH',
+             'OXC-XCH2', 
+             'O-XCXCH2',
+             'OXCXC-H', 'OXC-XC',
+             'CH2-C',
+             'CC-H',
+             'XNO-O-XCXCH2',
+             'XNO-H-XC',
              ]
 ### Read reaction file and store as list
-
+assert len(indices) == len(beef_keys)
 def generate_sobol_set(N_member, N):
     sobol=SobolEngine(dimension=N,scramble=True,seed = 1409580)
     x_sobol=sobol.draw(N_members)
     return x_sobol.numpy()
-x_sobol = generate_sobol_set(N_members,5)
-x_sobol *= 20
-x_sobol -=10
+x_sobol = generate_sobol_set(N_members,8)
+x_sobol *= 30
+x_sobol -=15
 
 with open('reactions.py','r') as f:
     original_lines = f.readlines()

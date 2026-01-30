@@ -22,7 +22,7 @@ reference_dict = dict(
                                "Pt": 0,
                                },
                 EOF_uncertainty={"XCO": 0.062,
-                               "XH": 0.062,
+                               "XH": 0.031,
                                "XNO": 0.062,
                                'XO': 0.031,
                                #"NH3X":0.1,
