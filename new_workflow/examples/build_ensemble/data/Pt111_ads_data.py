@@ -774,7 +774,7 @@ Pt111_ads_data = [
             "eV"
         ],
         "frequencies": [
-            8.1,
+            68.1,
             130.4,
             183.2,
             375,
@@ -3199,24 +3199,24 @@ Pt111_ads_data = [
             "Pt": 1
         },
         "dft_energy": [
-            -378768.9838,
+            -378769.0291499427,
             "eV"
         ],
         "zpe": [
-            0.137,
+            0.132,
             "eV"
         ],
         "frequencies": [
-            113.6,
-            197.8,
-            295.5,
-            320.9,
-            456.5,
-            809.4,
+            92.2,
+            110.7,
+            209.0,
+            356.6,
+            518.6,
+            850.3,
             "cm-1"
         ],
         "sites_occupied": 2,
-        "connectivity": "1 X  u0 p0 c0 {3,S}\n2 X  u0 p0 c0 {4,S}\n3 O  u0 p2 c0 {1,S} {4,S}\n4 O  u0 p2 c0 {2,S} {3,S}\n"
+        "connectivity": "1 X  u0 p0 c0 {3,S}\n2 X  u0 p0 c0 {4,S}\n3 O  u0 p2 c0 {1,S} {4,S}\n4 O  u0 p2 c0 {2,S} {3,S}"
     },
     {
         "adsorbate_name": "CH3NXNOH",

@@ -20,7 +20,7 @@ for k in range(N_members):
             if n < len(E0_lines) and num == E0_lines[n] and '    E0' in line:
                 E0 = E0_list[n]
                 perturb = Delta_E0 - 2 * Delta_E0 * sobol[k,2*n]
-                print(perturb)
+                #print(perturb)
                 new_E0 = E0 + perturb
                 if new_E0 < 3:
                     new_E0 = 3

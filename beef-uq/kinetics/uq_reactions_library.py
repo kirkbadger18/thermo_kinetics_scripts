@@ -7,10 +7,10 @@ from torch.quasirandom import SobolEngine
 N_members=40
 name='reactions'
 
-N_reactions = 68
+N_reactions = 72
 stick_coeff_indices = [1, 3, 4, 33, 34, 35, 37]
 stick_arr_indices = [10, 13, 18, 19, 27, 38]
-no_data_indices = [31, 32, 36, 42, 50, 54]
+no_data_indices = [31, 32, 36, 42, 50, 54, 69, 70]
 indices = []
 
 for i in range(1,N_reactions+1):
@@ -34,9 +34,12 @@ beef_keys = ['O-CO','h2cch-h-diss','hc-ch2-diss','CH2-CH2','hcch2-h-diss',
              'H-XNNH2','XNH-CH3',
              'XN-CH3','XN-CN','XC-N',
              'XNO-H', 'H-XNO', 'HXN-O',
-             'C-H', 'OXCCH2-H', 'OXCXCH-H',
+             'C-H',
+             'OXCCH2-H',
+             'OXCXCH-H',
              'O-XCCH3',
-             'OXC-CH3', 'OXC-XCH',
+             'OXC-CH3',
+             'OXC-XCH',
              'OXC-XCH2', 
              'O-XCXCH2',
              'OXCXC-H', 'OXC-XC',
@@ -44,6 +47,9 @@ beef_keys = ['O-CO','h2cch-h-diss','hc-ch2-diss','CH2-CH2','hcch2-h-diss',
              'CC-H',
              'XNO-O-XCXCH2',
              'XNO-H-XC',
+             #'O-O',
+             'XNO-O-XCCH3',
+             'XNO-H-XCHXCH2',
              ]
 ### Read reaction file and store as list
 assert len(indices) == len(beef_keys)
