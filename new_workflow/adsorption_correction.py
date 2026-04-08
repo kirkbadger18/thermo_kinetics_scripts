@@ -28,7 +28,6 @@ class Group:
 
         self.group_long_description = group_long_description
         self.avg_list = [ads.adsorbate_name for ads in self.adsorbate_list]
-        print(self.avg_list)
         if group_short_description is None:
             self.group_short_description = 'Averaged from: '\
                 + str(self.avg_list)
