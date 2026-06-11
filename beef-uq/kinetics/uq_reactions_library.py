@@ -61,7 +61,7 @@ x_sobol = generate_sobol_set(N_members,8)
 x_sobol *= 30
 x_sobol -=15
 
-with open('reactions.py','r') as f:
+with open('rxn_files/reactions.py','r') as f:
     original_lines = f.readlines()
 ### Read beef data from files and store in array
 beef_data = np.zeros([N_members,len(beef_keys)])
@@ -114,5 +114,5 @@ for k in range(N_members):
             new_lines.append(Ea_line)
         else:
             new_lines.append(line)
-    with open('reactions_{}.py'.format(str(k)),'w') as f:
+    with open('rxn_files/reactions_{}.py'.format(str(k)),'w') as f:
         f.writelines(new_lines)

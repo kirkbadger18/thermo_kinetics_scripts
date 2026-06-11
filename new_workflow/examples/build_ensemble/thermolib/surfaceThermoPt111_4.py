@@ -43,19 +43,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.0132854616344893, 0.03262761058111659, -3.706095174588158e-05, 2.0960395825783326e-08, -4.666933506314308e-12, -65784.29016285978, -4.7536240621565184], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.852353543588329, -0.00570824849650918, 1.0285808375407427e-05, -5.567159908424826e-09, 1.0106531022767602e-12, -68741.3104679299, -64.44940816059918], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.0132821388160569, 0.03262761444819034, -3.70609620229599e-05, 2.0960399945931917e-08, -4.666935318875744e-12, -67907.25673773419, -4.753605859081658], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.852338703820633, -0.005708227788078347, 1.0285787142546047e-05, -5.567150394898063e-09, 1.0106515277124002e-12, -70864.27169054988, -64.44932362201482], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -76,19 +79,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.05959982061160269, 0.034935604893275844, -4.39855790528056e-05, 2.8727528722406607e-08, -7.522184264363574e-12, -20698.32728041855, -0.9052005642652068], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.072877573168544, -0.00664305462261147, 1.1791965438741197e-05, -6.237700543196466e-09, 1.1116826317998652e-12, -23619.45580960256, -61.5268883603407], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.059603378477773736, 0.034935609033896455, -4.398559005685721e-05, 2.872753313401961e-08, -7.522175408214756e-12, -27116.503376300298, -0.9051810948806436], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.072883238272052, -0.0066430625083292415, 1.1791973540592518e-05, -6.2377041806638626e-09, 1.1116832344948537e-12, -30037.63782095824, -61.52692538119648], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -106,19 +112,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.8779203086664225, 0.028356288698697506, -4.277510879499703e-05, 3.274075934781191e-08, -9.75815608872388e-12, 788.2806675934123, 6.329199424648831], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[6.669211004920813, -0.004662986852426903, 8.163981923387267e-06, -4.222734018968265e-09, 7.383907972091739e-13, -1087.3458120512823, -35.46553410089453], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.8779231964907284, 0.028356292059529015, -4.277511772669091e-05, 3.274076292859684e-08, -9.758152641713668e-12, -3646.5849542104497, 6.329215234815479], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[6.669208134866729, -0.004662982841009374, 8.163977816838163e-06, -4.222732181899948e-09, 7.383904944349786e-13, -5522.212199413934, -35.465519957953674], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -137,19 +146,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.9656085337498914, 0.013397832123679605, -1.3429344690682074e-05, 7.121751881737713e-09, -1.4106285584070122e-12, -15750.682081878631, -6.154667707403931], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.635380049446058, -0.004641489077444636, 8.092564580948746e-06, -4.1676236189663395e-09, 7.263873560942958e-13, -17179.822061947198, -34.81282407199182], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.965607169305528, 0.013397833711610185, -1.3429348910743593e-05, 7.1217535735940225e-09, -1.4106275643253041e-12, -17560.488304622962, -6.1546602361344185], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.635377420774269, -0.004641485401087584, 8.092560818044735e-06, -4.167621935915142e-09, 7.263870776245651e-13, -18989.627960351612, -34.81280986368097], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 47.7,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -172,19 +184,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.926298861921214, 0.023920986270762924, -1.1102891365437688e-05, -3.274735343361719e-09, 3.4649297320221706e-12, -38098.36754278964, -0.7623716616782339], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.909732388832854, -0.011497699076417572, 2.032569157433714e-05, -1.0702611808126942e-08, 1.8994750772814185e-12, -41678.59266222984, -67.8770367839491], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.9262964257920037, 0.023920989105911238, -1.1102898900090449e-05, -3.2747323226728277e-09, 3.4649234275040854e-12, -45997.030143061405, -0.7623583062370898], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.909711557027842, -0.011497669997516056, 2.0325661765180163e-05, -1.0702598454695946e-08, 1.8994728664480473e-12, -49577.24596579015, -67.87691592985098], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -204,19 +219,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.2962185933988715, 0.02186181914758953, -2.3841617463750646e-05, 1.4095769583907038e-08, -3.388230668255332e-12, 9543.002412851114, 6.207184485801549], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.412928956150449, -0.006234425804480822, 1.1089327437980425e-05, -5.8875786554616106e-09, 1.0512700719032776e-12, 7346.265950570383, -37.771462079077395], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.29622081982164633, 0.02186182173868537, -2.3841624349809043e-05, 1.4095772344583549e-08, -3.3882292775728435e-12, 2359.5794860417886, 6.20719667745149], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.412924206055754, -0.006234419168429111, 1.1089320642025945e-05, -5.887575614148772e-09, 1.0512695705615748e-12, 162.8438031661608, -37.771436165066646], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 35.45 and 72.61,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -239,19 +257,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.4980461074061682, 0.028761407443681834, -2.688619835613685e-05, 1.5278311802666502e-08, -3.7822904530582235e-12, 30179.984092271192, -1.1152321426024887], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.832729154984882, -0.012370334275977175, 2.196867477820534e-05, -1.1633971170730466e-08, 2.0721780580768446e-12, 26683.391234196813, -69.01651034223151], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.4980431783247965, 0.028761410852525884, -2.6886207415432296e-05, 1.5278315434594736e-08, -3.782295348730434e-12, 15253.714429126127, -1.1152160899839618], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.832709469075109, -0.012370306795815036, 2.1968646610824228e-05, -1.1633958554052888e-08, 2.072175971251275e-12, 11757.129853626331, -69.01639675194647], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 51.8 and 63.4,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -275,19 +296,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.2137160105042675, 0.012214676187922303, 1.9068675577301113e-05, -2.8645440448763678e-08, 1.1057901122546454e-11, 1829.2140131261535, -3.3273316867407114], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[15.869139226341218, -0.01767832977387301, 3.144153037560276e-05, -1.6706168903883034e-08, 2.9833575253225206e-12, -2373.90032135573, -75.91019621235004], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.213714766554295, 0.012214677635618211, 1.906867172991721e-05, -2.864543890631113e-08, 1.1057901507003212e-11, -13688.79853010845, -3.327324874228742], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[15.869135753367733, -0.017678324888408148, 3.1441525396766254e-05, -1.6706166686709798e-08, 2.983357157765762e-12, -17891.911995577902, -75.91017691123528], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 77.2,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -310,19 +334,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.34655425022431197, 0.03320903146374003, -3.229874644014059e-05, 1.7752091169205867e-08, -4.033794132052293e-12, 28921.291304303468, 3.586650323800802], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.940337148457722, -0.012271000595976094, 2.1814353103818894e-05, -1.1572978619254032e-08, 2.0644252739308432e-12, 25141.448153859972, -70.54967983272971], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.3465508681937564, 0.03320903539972369, -3.229875690035423e-05, 1.775209536279152e-08, -4.033785375564616e-12, 13995.021757609597, 3.586668830308689], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.940343194822113, -0.012271008997495392, 2.18143617452858e-05, -1.1572982503327585e-08, 2.064425915505187e-12, 10215.172622693253, -70.5497189473227], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -340,19 +367,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.4289514345775818, 0.014037445912949231, -2.2117880511546713e-05, 1.7865950156490832e-08, -5.7147862830841945e-12, -27016.40147643236, -7.782662330904809], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[5.486566622473974, -0.0016811903234556856, 3.0903081182232816e-06, -1.7118686775497669e-09, 3.158649696949356e-13, -27929.103631428632, -27.6788563455022], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.4289500049941222, 0.014037447576690015, -2.211788493307807e-05, 1.7865951929107985e-08, -5.714789235501603e-12, -28999.711742300588, -7.78265449506427], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[5.48655590159597, -0.0016811753694007709, 3.0902927809275455e-06, -1.7118618035337593e-09, 3.158638326234654e-13, -29912.40925099016, -27.67879431440744], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -370,19 +400,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.2935534672256999, 0.012551181494457475, -1.3054228857275018e-05, 7.661604760904095e-09, -1.9215514596160332e-12, 229.4173255753941, -0.23897969202122304], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[6.5168215174433115, -0.0038395553030464496, 6.878336370803954e-06, -3.689005627860506e-09, 6.639624483559064e-13, -1122.1209196531508, -26.758424636724342], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.2935521890047679, 0.012551182982042065, -1.3054232810658336e-05, 7.661606345846852e-09, -1.9215519976261293e-12, -1770.0524892499648, -0.23897268998167043], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[6.516816120868313, -0.0038395477705153408, 6.878328650796626e-06, -3.6890021703325427e-09, 6.639618777921635e-13, -3121.5888446919375, -26.75839396379392], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 38.5 and 75.09,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -401,19 +434,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.3392517506347437, 0.015618782360796482, -1.787059252180066e-05, 1.1610327846079934e-08, -3.20827392430445e-12, -18975.993215576946, -4.278239925919107], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.472501868868721, -0.004256523643468286, 7.672402782773906e-06, -4.150942931718123e-09, 7.520574349498309e-13, -20537.670677271402, -35.27774836937108], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.339250160007176, 0.015618784211958003, -1.787059744142033e-05, 1.1610329818388465e-08, -3.2082745859831687e-12, -22629.453208284616, -4.27823121254485], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.472495173378918, -0.004256514294681343, 7.67239320040194e-06, -4.15093863969437e-09, 7.520567235450011e-13, -24191.128329662366, -35.277710319913915], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -433,19 +469,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.33610634372831166, 0.02264832889133042, -2.392389692851722e-05, 1.372564500933275e-08, -3.2403177363526936e-12, -11931.666072973774, -1.8821696787908078], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.52488862496814, -0.006507330938045106, 1.1658617720730415e-05, -6.256802483730977e-09, 1.1264926555990982e-12, -14281.20686106614, -48.422513251657755], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.336104037206985, 0.02264833157564371, -2.3923904062309394e-05, 1.3725647869324616e-08, -3.24031677194947e-12, -17255.275640782147, -1.8821570475887368], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.524882752948642, -0.006507322736492783, 1.1658609319411942e-05, -6.25679872302614e-09, 1.1264920350747862e-12, -19604.81510767983, -48.42248077834853], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -462,19 +501,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.6680472878038217, 0.029069338138602956, -4.826533132112092e-05, 3.8758909084069156e-08, -1.197493840199293e-11, 1360.9569254374787, 9.729399453355848], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[4.9042986812595295, -0.0026386505447205592, 4.717292856601354e-06, -2.512670074814904e-09, 4.496592934290092e-13, -185.29417723491224, -26.71079316515238], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.668050248245743, 0.02906934158394708, -4.826534047741306e-05, 3.875891275489789e-08, -1.1974940133636796e-11, -3057.749168366165, 9.72941567148859], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[4.904285233893887, -0.0026386317845829206, 4.717273616560156e-06, -2.5126614520237118e-09, 4.496578657019606e-13, -4603.995379035883, -26.71071650546929], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -494,19 +536,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.339069154341588, 0.01798477612437326, -8.009977251468463e-06, -2.618497985761969e-09, 2.5890609101075768e-12, 13785.565950737027, 4.1390415779888325], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.264107395002439, -0.009024685340635264, 1.603009365697747e-05, -8.501798468860542e-09, 1.5167137091078899e-12, 11037.196034073046, -47.20208075096739], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.33906732275997425, 0.01798477825595378, -8.009982916328749e-06, -2.618495714675942e-09, 2.589058695332754e-12, 4931.993145471746, 4.139051614167242], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.264096776148266, -0.009024670506335649, 1.6030078456067276e-05, -8.501791662058619e-09, 1.5167125792205402e-12, 2183.627492497608, -47.2020197322819], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 57.54 and 70.14,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -528,19 +573,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.3072075375182828, 0.01659607225538956, -1.6559253185471037e-06, -8.536445042335518e-09, 4.498179606571284e-12, 13047.896211527768, 1.0098625648933126], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.184232258898184, -0.011502131450414807, 2.039505158252219e-05, -1.0788041807467539e-08, 1.919978455058478e-12, 9948.187130945851, -55.65816457564598], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.3072058473633485, 0.016596074222378177, -1.655930545991473e-06, -8.536442946610478e-09, 4.4981760076166914e-12, 870.1833390874588, 1.0098718291946085], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.184219340604525, -0.011502113412652405, 2.0395033099924633e-05, -1.07880335315863e-08, 1.9199770884658133e-12, -2229.520121869664, -55.65808981144987], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -563,19 +611,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.9091619785380343, 0.021534813613813434, -9.823249366586295e-06, -2.1902942596023663e-09, 2.4632899886523063e-12, 15311.771367826383, -8.927485547055522], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.863871656738088, -0.010727742260440263, 1.9186856661479928e-05, -1.0276921509403038e-08, 1.8476574064403995e-12, 11963.087612956986, -70.900741012967], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.9091597854182405, 0.021534816166149242, -9.823256149640216e-06, -2.1902915402179213e-09, 2.463293213656941e-12, 5363.631792448337, -8.927473541433368], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.8638706713468, -0.010727740861067628, 1.918685524601173e-05, -1.0276920883878388e-08, 1.8476573029537742e-12, 2014.9468062999804, -70.90073735079142], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -596,19 +647,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.5500262969193481, 0.030684202469102608, -3.992249753741044e-05, 2.5278303136043825e-08, -6.3331111188613676e-12, -11193.17015104916, 4.895455951409511], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.242175297856868, -0.0029122603612644444, 5.392008844105333e-06, -3.031193465863102e-09, 5.661929309593158e-13, -13494.409856795817, -43.40465498004178], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.5500231720187959, 0.030684206105841463, -3.99225072023528e-05, 2.5278307010786185e-08, -6.333111712595872e-12, -9991.996748045782, 4.895473068055269], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.242163565452627, -0.002912243993637214, 5.391992059112484e-06, -3.0311859439479518e-09, 5.661916867178293e-13, -12293.232620074572, -43.40458862882762], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 71.1 and 71.28,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -632,19 +686,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.9451797364169352, 0.03956540242304279, -3.0393046626231364e-05, 9.792876353127494e-09, -1.9579476928655026e-13, -14473.645095134107, 13.10646326346898], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[16.78477602772791, -0.015222694741328471, 2.7096928465957854e-05, -1.4411836968466e-08, 2.577084860344147e-12, -19476.274903350826, -82.85736005667101], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.945183765784283, 0.039565407112390746, -3.03930590885776e-05, 9.79288134938609e-09, -1.9580349623810398e-13, -27556.260632134898, 13.10648535006097], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[16.78474497567341, -0.015222651402037893, 2.709688403494845e-05, -1.4411817063468926e-08, 2.5770815660618024e-12, -32558.87690013318, -82.857180297327], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 93.4,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -666,19 +723,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.2547936215827744, 0.037684767144248746, -3.935381821535873e-05, 2.1670811364191383e-08, -4.778594187015983e-12, 12200.075198356308, 4.101768954903848], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.936501535466054, -0.010360492624125524, 1.8520756188653936e-05, -9.90838417832083e-09, 1.7799915628090041e-12, 8322.96685982012, -72.84125571769354], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.2547974594252762, 0.03768477161070287, -3.93538300853427e-05, 2.1670816122968157e-08, -4.778586531948073e-12, -1056.0444582912264, 4.10178996012694], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.93650384605931, -0.010360495826388488, 1.8520759493049464e-05, -9.908385668323627e-09, 1.7799918125583177e-12, -4933.1571257725245, -72.84127316857649], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -698,19 +758,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.4988345404830799, 0.02203120199576683, -1.6302195290715152e-05, 5.4014098940402165e-09, -2.950070743246158e-13, -189.04524243398828, -0.3412430292365851], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.308085389094629, -0.009363149454315057, 1.6709016551341747e-05, -8.918401000827673e-09, 1.5986925799567168e-12, -3103.644853829521, -55.82031172680274], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.45723705208517446, 0.022226226542089316, -1.6672125815364453e-05, 5.721350274429687e-09, -3.993259712628866e-13, -10730.712231223966, -2.273251186122538], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.3070908359545, -0.0093662342059687, 1.6714987459785614e-05, -8.921820946018977e-09, 1.5993389382243973e-12, -13652.313576232931, -57.941090981236144], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -731,19 +794,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.9101399566489873, 0.03643403579329222, -4.2297554017529666e-05, 2.6415078172539904e-08, -6.695602405848433e-12, -26444.84768270189, 8.346346609316207], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.917020687604829, -0.0092665518941809, 1.641641421751263e-05, -8.660235302430652e-09, 1.5391698772991309e-12, -29871.16331612012, -61.19161366687353], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.9101436671161726, 0.03643404011150783, -4.229756549355626e-05, 2.6415082773360968e-08, -6.6956014433453335e-12, -34533.17350829137, 8.346366930110008], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.91701007435875, -0.00926653706859623, 1.641639902594674e-05, -8.660228499999005e-09, 1.539168749140775e-12, -37959.48638637249, -61.19155452417664], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 35.97 and 69.6,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -766,19 +832,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.370067691833459, 0.045287905228815095, -5.4441930156142054e-05, 3.432254837964767e-08, -8.711850685294564e-12, -14627.047593432597, 8.336898697810568], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.054550824009052, -0.009769463971518799, 1.7438363219580855e-05, -9.30557660349684e-09, 1.6687316066184114e-12, -18652.16451361227, -74.05556129305924], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.370072303985213, 0.045287910596407036, -5.444194442097456e-05, 3.432255409854695e-08, -8.711850798245208e-12, -24369.363439274515, 8.336923959367985], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.054535017277079, -0.00976944190759886, 1.7438340603680773e-05, -9.305566473333517e-09, 1.6687299317235396e-12, -28394.47551977594, -74.05547230281076], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -802,19 +871,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.6079189052290737, 0.03650725681966295, -1.730280304462386e-05, -2.6327059517695602e-09, 3.772884782371477e-12, 11226.943495570387, 11.71795140046801], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[18.686830394336674, -0.018861777121957767, 3.3694441510049684e-05, -1.801704019498555e-08, 3.234259112968891e-12, 5571.438343275, -93.3400307131864], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.6079226231525483, 0.03650726114655381, -1.7302814543711623e-05, -2.6327013416913424e-09, 3.772889866974306e-12, -7039.625498960394, 11.717971753958178], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[18.686827955849985, -0.018861773680335724, 3.369443801472732e-05, -1.8017038643905838e-08, 3.234258858636861e-12, -12695.132323443366, -93.34001995994643], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 74.1,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -834,19 +906,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.1533309386454741, 0.02312968678326665, -3.289590795769531e-05, 2.441141448952092e-08, -7.243664001954642e-12, 11036.499346765382, -1.7896837262996588], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.537079417328969, -0.0038577507795309633, 6.934770920070903e-06, -3.733040236094633e-09, 6.7380093000881e-13, 9322.197385236486, -38.320594459139734], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.15332858310194414, 0.02312968952463336, -3.289591524310939e-05, 2.441141741029369e-08, -7.243662148765799e-12, 5523.226221530973, -1.7896708283530005], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.537075162700196, -0.003857744837904004, 6.9347648321421656e-06, -3.733037510228149e-09, 6.738004794435977e-13, 3808.9246692727975, -38.3205716008726], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -867,19 +942,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.7582967946366366, 0.042026401517499944, -5.600753638515023e-05, 3.825182908222041e-08, -1.0409416384415948e-11, 11414.893816686254, 5.853411567519336], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.077474570473491, -0.006939960216315113, 1.2365235918805114e-05, -6.576528299276142e-09, 1.1767590618301862e-12, 8161.233473290113, -62.89449360450202], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.7583010746346701, 0.04202640649853385, -5.6007549622670626e-05, 3.82518343892414e-08, -1.0409415095254682e-11, 3136.904581421107, 5.853435007059303], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.07746269192123, -0.006939943635357624, 1.236521892226283e-05, -6.576520685800326e-09, 1.1767578021891588e-12, -116.75277722854662, -62.8944275280393], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -904,19 +982,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.5789725109422789, 0.03719156947423711, -1.2289771963968407e-05, -8.771791809048261e-09, 6.040390410078089e-12, 6564.604412071569, 1.4727597507430517], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[21.536381694217713, -0.02159323821878347, 3.852990432548073e-05, -2.056918248879602e-08, 3.6875582882373026e-12, 321.67605124391775, -113.39905386783853], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.5789762985562977, 0.03719157388223185, -1.2289783678598454e-05, -8.771787112559921e-09, 6.0404016816608195e-12, -13372.114335918572, 1.4727804737150247], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[21.53639136789115, -0.021593251659390987, 3.852991815375113e-05, -2.0569188705878607e-08, 3.687559317805305e-12, -19615.050971237022, -113.39911485663337], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -935,19 +1016,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.2626258291795631, 0.023970695898387073, -3.5780696767867036e-05, 2.6941743821084965e-08, -8.087010228141622e-12, -9716.5882423616, -6.660766627246156], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.290136763413816, -0.002447954963019431, 4.512500116250858e-06, -2.513110578099106e-09, 4.657872140968094e-13, -11312.685262583569, -41.25295452279153], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.2626233879870643, 0.023970698739431546, -3.5780704318182904e-05, 2.6941746848058587e-08, -8.087009960850628e-12, -12794.465100037622, -6.660753257056404], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.29012905650921, -0.002447944211152241, 4.512489091232046e-06, -2.5131056378761975e-09, 4.657863977308473e-13, -14390.559913305457, -41.25291131865794], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -967,19 +1051,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.7981534894390012, 0.03269962600516455, -4.2566230420913326e-05, 2.91542490369061e-08, -8.035856702282018e-12, 6589.706315779012, 5.848060021291731], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.430231182423013, -0.006459576055042201, 1.1544899962243683e-05, -6.169056776575097e-09, 1.1071361163869078e-12, 3906.107102604552, -50.12254953508379], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.798156819591712, 0.03269962988077464, -4.2566240720676274e-05, 2.915425316615059e-08, -8.035869759058999e-12, -2247.7065701673287, 5.848078286750203], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.430193864353257, -0.006459524000938785, 1.15448465749276e-05, -6.169032849306648e-09, 1.1071321585628248e-12, -4931.288291450264, -50.122331998208224], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -999,19 +1086,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.3088563851978815, 0.0283916874007885, -3.0151732071123384e-05, 1.771974951629053e-08, -4.275930304276088e-12, 14257.148916706597, 1.0285424176859035], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.348629912270564, -0.008905560700536734, 1.584616974627966e-05, -8.417565551754216e-09, 1.5032447502223972e-12, 11294.14648687791, -57.93257830829966], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.30885927662681495, 0.028391690765813347, -3.0151741013964643e-05, 1.771975310154138e-08, -4.275926497500082e-12, 3749.5861307540395, 1.0285582468853116], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.34862772966723, -0.00890555764803352, 1.5846166631462863e-05, -8.417564162870206e-09, 1.5032445290368195e-12, 786.5825603697758, -57.93256823787196], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1030,19 +1120,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.472397484259402, 0.027761496719987733, -4.488251024138066e-05, 3.68137619172982e-08, -1.161323814891091e-11, 31586.46196031937, 2.4117785112268493], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.532291909983012, -0.004937822379131742, 8.640827527955598e-06, -4.462041957190934e-09, 7.786526296378301e-13, 29875.68730728928, -36.66572094479358], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.4723946570089228, 0.027761500010324784, -4.488251898572861e-05, 3.681376542297081e-08, -1.1613241209937689e-11, 22749.048933226728, 2.4117940024795494], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.532276249354998, -0.004937800530834081, 8.640805124047922e-06, -4.462031917930421e-09, 7.786509699998019e-13, 21038.280474105715, -36.66563106010004], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 90.3,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1064,19 +1157,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.880908266679414, 0.018320052300656305, -5.853299352285862e-06, -4.76200059261109e-09, 3.300731216127062e-12, 7768.08605543906, 1.6988541423802932], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.86272199859298, -0.011203107450698802, 1.9721651219833707e-05, -1.031497658472236e-08, 1.820102655560301e-12, 4707.238385304361, -55.20399403423673], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.8809064009530958, 0.01832005447197403, -5.853305122751859e-06, -4.761998279178285e-09, 3.300733634111998e-12, -1101.646246812686, 1.6988643564214563], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.862720506682408, -0.011203105342302134, 1.9721649077576812e-05, -1.0314975633640902e-08, 1.8201024967927935e-12, -4162.49461276731, -55.20398705530151], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 78.71,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1096,19 +1192,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.549649161595254, 0.018460038448502983, -2.4200109760726565e-05, 1.7347497091245413e-08, -5.041828066154608e-12, -14121.548861093164, -4.24776437425156], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.09914564301697, -0.00440018433340282, 7.814540603211383e-06, -4.134669468842997e-09, 7.364144304799385e-13, -15697.590932179435, -36.92102410599301], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.5496472816120783, 0.018460040636415147, -2.420011557528892e-05, 1.7347499422346073e-08, -5.041828697680698e-12, -18869.575640947583, -4.247754076100012], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.099138030435192, -0.00440017370726316, 7.814529710623416e-06, -4.1346645895368875e-09, 7.364136231451159e-13, -20445.615107763413, -36.920980913117546], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 26.05 and 32.19,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1130,19 +1229,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-4.4984127088896, 0.04745052289849407, -6.331779821893876e-05, 4.4144524192894254e-08, -1.2310062691422985e-11, 7861.62571049746, 16.9501903638442], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.436461478905347, -0.009004134479819131, 1.6092821219686652e-05, -8.599486637344516e-09, 1.5431118907086212e-12, 4099.241523450679, -62.25662996993202], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-4.498417541283888, 0.047450528522402884, -6.331781316495387e-05, 4.414453018485055e-08, -1.2310067041985113e-11, -2645.936545031798, 16.95021684006932], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.43643647000544, -0.009004099585864357, 1.6092785440764184e-05, -8.59947060577506e-09, 1.543109239900355e-12, -6408.311096147547, -62.25648674441216], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1161,19 +1263,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[4.152110941060885, -0.0005487132048017087, 1.6858930590385225e-05, -1.8335786801037157e-08, 6.296303756148092e-12, -9338.107933957877, -11.442037711879983], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.405124888330336, -0.006902168774863108, 1.2352154347418985e-05, -6.623629623294305e-09, 1.1913644441634286e-12, -10819.186780579996, -34.84179113075547], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[4.152110996942741, -0.000548713269838846, 1.6858930763222785e-05, -1.833578687032829e-08, 6.296303898491239e-12, -14661.718142293588, -11.442038018232552], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.405125342133548, -0.006902169392499726, 1.2352154993938465e-05, -6.6236299189175004e-09, 1.1913644938348446e-12, -16142.797193313932, -34.8417937714809], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 51.8,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1195,19 +1300,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.7328851297248244, 0.03226341164733199, -3.779587705376396e-05, 2.3986538279409256e-08, -6.161557375428117e-12, 7936.713599455099, 1.3588387160694158], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.000137061023471, -0.00855709104302838, 1.507579874185188e-05, -7.885511119293845e-09, 1.3920669867208742e-12, 4913.108558710672, -60.26006040271306], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.7328818439967254, 0.03226341547123992, -3.779588721612529e-05, 2.39865423535709e-08, -6.161561259148655e-12, -2011.4256761511547, 1.3588567200874806], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.000118202323204, -0.00855706472628288, 1.50757717607447e-05, -7.885499031168206e-09, 1.392064987916781e-12, -5035.023164567872, -60.25995205042936], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 37.45 and 56.05,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1228,19 +1336,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.356981745321052, 0.016581789113467055, -8.93245604193931e-06, -5.966003689946505e-10, 1.6571154171085567e-12, -38833.02014244525, -0.5432075164117869], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.04779135974607, -0.007242743771743657, 1.2909101836650357e-05, -6.880215062637572e-09, 1.2328955029475026e-12, -41236.3349508852, -45.472846353414454], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.356980056620526, 0.016581791078763862, -8.932461264885762e-06, -5.965982750789433e-10, 1.6571152953229613e-12, -43391.383402335334, -0.5431982669458293], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.047785403239047, -0.007242735447338841, 1.2909093310612405e-05, -6.880211246610009e-09, 1.2328948708400386e-12, -45794.69634995588, -45.472812777004705], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1262,19 +1373,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[3.0573783465802915, 0.012862428884006407, 4.84928695038375e-06, -1.3599718395029272e-08, 5.96899960014774e-12, -18020.168640191623, -12.435908461234026], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.113485534322619, -0.011408786775686736, 2.0203001135172224e-05, -1.0664783232591535e-08, 1.8954587248723453e-12, -20977.59834190456, -65.26660390806612], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[3.0573770366622774, 0.012862430408477442, 4.849282898966965e-06, -1.359971677078574e-08, 5.9690013787272024e-12, -26684.078019454002, -12.435901290161363], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.113484637206701, -0.011408785499328795, 2.0202999846960784e-05, -1.0664782664591096e-08, 1.8954586318005556e-12, -29641.508292589908, -65.26659990202504], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1292,19 +1406,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.25761672253846946, 0.019381161206708936, -2.9969201901782745e-05, 2.2777218830822605e-08, -6.826799542336559e-12, 30838.056347235535, -2.704206528801257], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[5.608145428430299, -0.001423773475814122, 2.641982059575953e-06, -1.482898706580994e-09, 2.765400103395678e-13, 29663.961802634676, -28.85413578279513], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.25761474874738755, 0.01938116350379463, -2.996920800648192e-05, 2.2777221278246303e-08, -6.826796760384756e-12, 25340.942624750056, -2.7041957235955687], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[5.608144321932299, -0.0014237719299395385, 2.6419804765132873e-06, -1.4828979981593626e-09, 2.765398935749608e-13, 24166.847095743302, -28.854131173898477], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1325,19 +1442,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-3.9682655700924263, 0.04821224322916436, -7.020382754527549e-05, 5.070190901773966e-08, -1.4459940189670561e-11, 27272.35307866401, 14.06249620531019], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.25618784819828, -0.005010574566594026, 9.09124673541548e-06, -4.959982299338515e-09, 9.052412241843371e-13, 24070.053677854077, -55.90859791121436], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-3.9682704800610584, 0.04821224894335466, -7.020384273121975e-05, 5.07019151059013e-08, -1.445994708952662e-11, 17356.533262226472, 14.062523111455508], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.256157496066718, -0.0050105322334465935, 9.091203317717695e-06, -4.959962840140173e-09, 9.052380082508832e-13, 14154.246325141708, -55.908423137907015], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1356,19 +1476,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.5903493375056066, 0.02820293094982219, -4.3192054719588326e-05, 3.320670015772697e-08, -1.0016171919646766e-11, 21989.853960656623, 0.22475283272964264], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.5929913939688, -0.003510020572438653, 6.291002447877343e-06, -3.3685290767535198e-09, 6.056109381544889e-13, 20188.087338217287, -39.79604200258437], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.5903522097119523, 0.028202934292478124, -4.3192063602978775e-05, 3.320670371914228e-08, -1.0016174457682312e-11, 14822.59071406889, 0.22476856917821175], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.592976630010214, -0.003509999976756217, 6.290981326499577e-06, -3.3685196113277216e-09, 6.056093728215036e-13, 13020.829765654513, -39.79595746603347], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1390,19 +1513,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.44426315342025297, 0.035143393541917915, -3.825191195703062e-05, 2.319547565822575e-08, -5.754598186857862e-12, -3261.785922305832, 1.9827666071889034], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.74514219361069, -0.01113296971728403, 1.9585112575923382e-05, -1.022169767857312e-08, 1.8010348359985117e-12, -6860.324780918184, -70.19620556082776], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.4442595743928324, 0.03514339770716558, -3.825192302653209e-05, 2.319548009607335e-08, -5.75459180946177e-12, -14880.07488904226, 1.9827861973732404], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.745142833148192, -0.011132970575763266, 1.958511347707567e-05, -1.0221698091739705e-08, 1.8010348989170152e-12, -18478.616968924944, -70.1962128774334], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12.72 and 84.97,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1421,19 +1547,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.725344253463979, 0.014265170184759477, -2.2141020445308363e-05, 1.7159763247973412e-08, -5.148140594379846e-12, -8669.855954516095, -5.880073500148141], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[6.853407080304272, -0.0020628219096885067, 3.5777124521888544e-06, -1.8218841229896744e-09, 3.147031466937131e-13, -9553.990605438743, -25.965590783472088], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.725342800689044, 0.014265171875489696, -2.214102493856669e-05, 1.7159765049347425e-08, -5.14814312649392e-12, -8809.512380391834, -5.88006553811517], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[6.853397119729436, -0.0020628080151690866, 3.577698202321133e-06, -1.8218777366792332e-09, 3.1470209026330443e-13, -9693.642814576891, -25.965533274356986], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1454,19 +1583,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.8461597506391261, 0.030516767779180953, -4.188170241751797e-05, 3.038456998083873e-08, -8.772416820734819e-12, 15841.357197256559, 1.700598484390028], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.071582906242801, -0.006359525728146733, 1.1223991720427978e-05, -5.882504318359561e-09, 1.0398336922415319e-12, 13456.501221539043, -48.97471372204738], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.846156642790234, 0.030516771396075195, -4.18817120297212e-05, 3.038457383443344e-08, -8.772416329839914e-12, 7563.367644366114, 1.700615505499023], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.071573387185454, -0.006359512441013695, 1.1223978101642147e-05, -5.882498218542703e-09, 1.0398326844665556e-12, 5178.514318443633, -48.97466045490009], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 24.23 and 51.07,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1495,19 +1627,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.9579364986986095, 0.03417770159679381, 2.826760350589623e-06, -2.457700198169472e-08, 1.1560079282713076e-11, 18883.612101746035, 2.110336297847528], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[24.884358222017116, -0.025217745838261856, 4.4913423110741845e-05, -2.3913113116198802e-08, 4.2785533688020905e-12, 11916.359475646172, -123.21632842360013], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.9579330180191061, 0.03417770564757993, 2.8267495852693448e-06, -2.4576997665800892e-08, 1.15600742930037e-11, -2163.833098722122, 2.110355371825184], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[24.884336455473225, -0.025217715425044775, 4.4913391958504446e-05, -2.391309917222889e-08, 4.2785510613671765e-12, -9131.076768007952, -123.21620308424588], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 37.85 and 59.82,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1527,19 +1662,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.5564428527368741, 0.024881884193241183, -3.1883879797680434e-05, 2.1907620558739207e-08, -6.062372825965667e-12, 13006.151374357005, -4.09640099470948], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.380929521863289, -0.005719366556090383, 1.0097890187526818e-05, -5.296771085574308e-09, 9.37012913345748e-13, 10889.587514710054, -48.125145497670374], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.5564403187484964, 0.02488188714228014, -3.188388763500215e-05, 2.1907623700767777e-08, -6.06237530691845e-12, 7476.7187928213925, -4.096387110835597], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.380916008529832, -0.0057193476971602155, 1.0097870851768122e-05, -5.296762422400411e-09, 9.370114791384883e-13, 5360.160200750808, -48.125068033908434], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1562,19 +1700,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.46107024748277925, 0.025330918143713778, -2.95241411134256e-06, -1.2660214463929042e-08, 6.611412806112327e-12, -8372.186757753114, 3.458601622411173], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[16.75018505264351, -0.016155449576488578, 2.886032092240437e-05, -1.5435831253719646e-08, 2.771547477197628e-12, -13060.485450831047, -81.5974450307295], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.4610676677654211, 0.025330921145967775, -2.95242209009532e-06, -1.2660211265186084e-08, 6.6114131458296666e-12, -21454.802692312875, 3.4586157511771223], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[16.750176987330857, -0.016155438293009517, 2.8860309377503062e-05, -1.5435826091871815e-08, 2.7715466243288713e-12, -26143.099103950866, -81.59739986318627], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 92.3,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1596,19 +1737,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.3699267416865255, 0.028658531388564657, -2.7893618373901115e-05, 1.3652626507646608e-08, -2.5391216906811565e-12, -24332.668939744766, -0.370046041484299], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.223403098656842, -0.007741668107278932, 1.3941845053627606e-05, -7.541931084030117e-09, 1.3666956123401224e-12, -27413.72408732127, -60.680093933753156], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.36992382308205635, 0.028658534785216086, -2.789362740079327e-05, 1.3652630126583081e-08, -2.5391238552483443e-12, -28891.031865002078, -0.37003005164447345], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.223388913202939, -0.007741648307491574, 1.3941824756717029e-05, -7.54192199179161e-09, 1.3666941082028279e-12, -31972.081691035797, -60.680012872942854], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1627,19 +1771,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.5846760207902084, 0.021387549509509458, -2.6680149499382863e-05, 1.8085986641749082e-08, -4.954679028168485e-12, -1449.2734070753033, -8.566494007825689], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.406551623095396, -0.005399648922306131, 9.490951838389342e-06, -4.944506127843228e-09, 8.7003523316202e-13, -3341.9032325981216, -47.67579637039664], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.584673842667386, 0.021387552044394017, -2.668015623605442e-05, 1.808598934252459e-08, -4.9546824564792595e-12, -8632.696344717577, -8.56648207120059], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.406537419558042, -0.005399629101361455, 9.490931515118908e-06, -4.944497021698531e-09, 8.700337254353496e-13, -10525.320244448745, -47.67571447318059], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1659,19 +1806,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.2803857910420373, 0.026146381291558756, -3.3204709331127583e-05, 2.1735482177742986e-08, -5.739485275935152e-12, -10316.16473560959, -6.266983747164432], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.200444140595133, -0.004387993684222539, 7.853858549677602e-06, -4.205155301682368e-09, 7.569009489132158e-13, -12469.342765987101, -50.85669026114345], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.2803831282764202, 0.026146384390467715, -3.320471756674164e-05, 2.1735485479466045e-08, -5.739487491855816e-12, -15064.191302350306, -6.266969158485124], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.200430727595318, -0.0043879749651592175, 7.853839355053178e-06, -4.205146700723268e-09, 7.568995228467198e-13, -17217.364222347183, -50.85661351700185], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1690,19 +1840,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.687367474126204, 0.021323469448902975, -2.336039976055324e-05, 1.4597549431102648e-08, -3.8509542776843375e-12, 11413.299159190914, -4.107463299522058], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.374615944582363, -0.0066065430484157075, 1.1797360181945044e-05, -6.297363597977766e-09, 1.1289628357603193e-12, 9199.548457809175, -48.04572552374324], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.6873653025294285, 0.021323471976192207, -2.3360406477040266e-05, 1.4597552123790646e-08, -3.850955446746286e-12, 4229.876218713588, -4.107451403104054], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.37460626889264, -0.0066065295407903984, 1.179734633756829e-05, -6.297357397301241e-09, 1.12896181035644e-12, 2016.129001491252, -48.045670412522796], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1725,19 +1878,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.7274572524717122, 0.04911931955016374, -5.721652497603537e-05, 3.62071316553514e-08, -9.375812626277735e-12, 16589.894522788218, 9.21504180455984], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[15.965388395063554, -0.012665129565738375, 2.261329816229308e-05, -1.2071212014237589e-08, 2.164311373349659e-12, 11940.8935045663, -84.83327362637277], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.7274622548171465, 0.049119325371859465, -5.721654044768814e-05, 3.6207137858058645e-08, -9.375809842604731e-12, 1663.6254184965424, 9.215069197535115], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[15.965377047817515, -0.012665113714302009, 2.2613281924845392e-05, -1.2071204745862839e-08, 2.1643101723100343e-12, -2985.373483904472, -84.83321141026437], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1757,19 +1913,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.14057965370883882, 0.03395928839141774, -4.877970542687829e-05, 3.545524730076265e-08, -1.0228443092508144e-11, 19160.507035023697, -0.9856796655624303], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.244757631333274, -0.0044230054762681255, 7.940488035408964e-06, -4.265902533836407e-09, 7.694698624474174e-13, 16790.29039738742, -52.21194594431905], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.1405831121465602, 0.033959292416325615, -4.877971612341176e-05, 3.545525158907157e-08, -1.0228439728204221e-11, 12552.66734534425, -0.9856607299109612], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.24475267233186, -0.004422998551696639, 7.940480940184433e-06, -4.26589935688731e-09, 7.694693377023069e-13, 10182.45061365331, -52.211920000743376], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1788,19 +1947,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.15487855368882772, 0.02466503412850334, -2.7882905742974466e-05, 1.67435027549696e-08, -4.172544254554822e-12, -11046.176801074895, 5.361930025591014], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.176496183301216, -0.005390103654173492, 9.767429234625479e-06, -5.327193686576743e-09, 9.715802550783626e-13, -13411.245097466559, -41.79608509369516], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.1548810655929222, 0.024665037051840227, -2.7882913511991704e-05, 1.6743505869627745e-08, -4.172550138149023e-12, -17448.193670607692, 5.3619437952284805], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.176475948765468, -0.00539007542637278, 9.767400287521005e-06, -5.3271807146336225e-09, 9.715781104542564e-13, -19813.25304935246, -41.795967836379724], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 20.1 and 76.7,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1819,19 +1981,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.28139503852560294, 0.023606090400724623, -3.329587349814532e-05, 2.359374470300372e-08, -6.599876894997081e-12, -22467.959131021176, -2.84939166435208], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.572784026138338, -0.003165794452503801, 5.618129387791434e-06, -2.968323943805841e-09, 5.286847314914158e-13, -24129.93515092726, -38.82975654873838], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.28139263446484447, 0.023606093198555125, -3.329588093361693e-05, 2.3593747683929012e-08, -6.599879438782627e-12, -26121.418902159396, -2.8493784919840888], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.57277082900458, -0.0031657760447325266, 5.6181105101654745e-06, -2.9683154839025576e-09, 5.2868333401445e-13, -27783.389718917628, -38.82968082223016], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1850,19 +2015,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.8975857479384713, 0.02467430605223327, -3.701359961395603e-05, 2.8207317800893548e-08, -8.568604159542303e-12, -8594.418686088324, -4.673145748543366], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.178182501682011, -0.0027487269566934865, 5.052972658860588e-06, -2.8034483246861914e-09, 5.180259484040403e-13, -10250.324183168355, -40.51071502096373], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.8975832350898159, 0.024674308976670726, -3.701360738589572e-05, 2.8207320916726853e-08, -8.56860477682647e-12, -13326.285787499308, -4.673131984136443], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.17817278705946, -0.0027487134031397584, 5.0529587603136555e-06, -2.803442096559865e-09, 5.180249180917092e-13, -14982.188050628789, -40.51066000845178], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1886,19 +2054,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.6808021563044655, 0.031212610386516765, -8.0789083685967e-06, -1.0837720993507388e-08, 6.482207132174622e-12, -26847.61642148256, -5.80787639926811], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[20.413219942559014, -0.01736018391676655, 3.107644929253564e-05, -1.667132564139086e-08, 3.0008306359545142e-12, -32190.74648192467, -103.39683977096684], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.6807989775914365, 0.031212614085878283, -8.078918199972394e-06, -1.0837717052028392e-08, 6.4822075098957106e-12, -39164.985716742005, -5.807858989802799], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[20.413209915942357, -0.017360169914598392, 3.107643496100142e-05, -1.667131923137997e-08, 3.000829590399239e-12, -44508.11291310868, -103.39678357761134], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1919,19 +2090,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.035651661290625, 0.02403762635148776, -3.10715175028547e-05, 2.1274644888654494e-08, -5.936341695989e-12, -14553.971275814154, 0.8423300649336412], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.320902420594948, -0.004524709457421657, 8.146698589352583e-06, -4.39895746622928e-09, 7.961296162925903e-13, -16558.88650180157, -40.56217721897826], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.0356492132819912, 0.024037629200464355, -3.1071525074251956e-05, 2.127464792409261e-08, -5.936340198877723e-12, -15788.194300113933, 0.8423434700267176], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.32089714381821, -0.004524702085478232, 8.146691035409909e-06, -4.398954083740913e-09, 7.961290547003047e-13, -17793.108639656704, -40.56214840614903], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 29.74 and 57.23,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -1951,19 +2125,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.5632792211806477, 0.014266187393854, -1.2973938191255383e-05, 7.2687754684802e-09, -1.690748235860795e-12, -8311.298997210393, -4.452608283390505], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.417075986305159, -0.007111062744209318, 1.2402765963078194e-05, -6.388062948060308e-09, 1.112839399284942e-12, -10081.880000975125, -39.25667844445977], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.563277768302388, 0.014266189084703357, -1.297394268483268e-05, 7.2687772699944656e-09, -1.6907441235130718e-12, -14416.314778076392, -4.452600333917612], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.417079278937878, -0.007111067319578444, 1.2402770669666947e-05, -6.3880650637720095e-09, 1.1128397494000864e-12, -16186.898729211869, -39.2566993633798], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -1980,19 +2157,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[3.7671511680188914, 0.004179530413204547, -5.16460306174389e-06, 4.281737107517529e-09, -1.53270538622019e-12, 13548.248033011918, -16.448669925442786], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[5.522345399046397, -0.0014872471506000141, 2.7115514303087297e-06, -1.4880483774407132e-09, 2.725089394624866e-13, 13082.46125930551, -25.372463575785044], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[3.767150742372571, 0.004179530908569143, -5.164604378217358e-06, 4.281737635298446e-09, -1.5327068827384986e-12, 9705.12415612616, -16.448667591168054], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[5.522340971904843, -0.0014872409729567407, 2.7115450958464748e-06, -1.4880455390745584e-09, 2.7250846956428665e-13, 9239.339432468247, -25.37243780029487], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2013,19 +2193,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.5872272419093946, 0.021884253745618573, -9.092097282359689e-06, -3.2013094266308145e-09, 2.9345692542648294e-12, 5696.663778512549, -3.0977389241107636], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.083489072067747, -0.011983006093140706, 2.1302955374565833e-05, -1.1309817688692583e-08, 2.0190228680020024e-12, 2212.5839915266715, -67.81740135471398], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.5872250132023423, 0.021884256339370783, -9.092104175481355e-06, -3.201306663136786e-09, 2.9345642363430316e-12, -4827.058688935802, -3.097726707288616], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.083471500413467, -0.011982981568694118, 2.130293023859158e-05, -1.1309806430634165e-08, 2.019021010621252e-12, -8311.130773120089, -67.8172995834919], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2045,19 +2228,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.5697224109377661, 0.026888160051806834, -2.5056254060616507e-05, 1.1463352656729904e-08, -1.8672528800944832e-12, -19937.885286866924, -3.3542668371249977], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.974057020690037, -0.007721493775440698, 1.3817688459358648e-05, -7.405228719062684e-09, 1.3327051932182123e-12, -22918.220093701537, -61.47039926672395], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.5697196726291491, 0.026888163238631135, -2.505626252987531e-05, 1.146335605210907e-08, -1.8672548903182554e-12, -26356.061599972538, -3.354251835093125], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.974043749120295, -0.0077214752537399685, 1.3817669473435759e-05, -7.405220214460908e-09, 1.3327037888206146e-12, -29336.391433900433, -61.47032343457707], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2076,19 +2262,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.5007041222485064, 0.020387505380996075, -1.8341220404454415e-05, 8.052118908019455e-09, -1.1760176166220049e-12, -16983.649627564322, 7.4226327062441815], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.403552916321377, -0.006564510724457786, 1.1718359325497268e-05, -6.258468246674575e-09, 1.1227488750043197e-12, -19313.865033042926, -37.968065521548], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.5007061985259844, 0.0203875077973531, -1.8341226826130557e-05, 8.05212148252645e-09, -1.1760122693690211e-12, -22307.25925990254, 7.42264406771336], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.403556573032391, -0.0065645158086063546, 1.17183645532985e-05, -6.2584705957162855e-09, 1.122749263845731e-12, -24637.478308706475, -37.96808920560764], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 58.4,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2111,19 +2300,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.1702965064381586, 0.026818224391284964, -2.1187990710913625e-05, 8.209912931753756e-09, -1.027764678918075e-12, 17468.712968489348, 4.199426716437015], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.950283973573839, -0.010553855620259525, 1.8890938379933674e-05, -1.0126216905412885e-08, 1.821528611810081e-12, 14029.296277989512, -61.349263752500676], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.17029377525203263, 0.026818227569819247, -2.118799915814212e-05, 8.209916318310437e-09, -1.0277617592212064e-12, 4212.59301383973, 4.1994416697191355], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.950280567865766, -0.010553850841279262, 1.889093349720556e-05, -1.0126214725431623e-08, 1.8215282476579488e-12, 773.1759678857088, -61.34924629932815], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2150,19 +2342,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.158563986374605, 0.024853988358157476, 1.5352617703198102e-05, -3.2530250732843954e-08, 1.350676862021949e-11, 4147.025490558255, -8.741405924676677], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[23.28324248920475, -0.024540711211524024, 4.373135677424616e-05, -2.3303703808340938e-08, 4.171503691519779e-12, -2179.4666631662985, -120.20188474457066], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.1585614552286883, 0.02485399130388187, 1.5352609874672988e-05, -3.2530247594325694e-08, 1.3506766435523373e-11, -17459.843361419244, -8.741392056954975], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[23.283229534991747, -0.024540693077868107, 4.373133821768709e-05, -2.3303695510259222e-08, 4.1715023104297174e-12, -23786.330560643237, -120.20181062152284], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2185,19 +2380,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.7297881782361464, 0.0477487229679998, -4.578266674370648e-05, 2.3451874122656707e-08, -4.784866947105115e-12, 7930.718040331521, 9.234684278219188], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[17.85666165260097, -0.01573099663032726, 2.8107720156277172e-05, -1.5027652331556597e-08, 2.6975423746144773e-12, 2577.39879120612, -95.4810405802704], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.729793040998688, 0.047748728627248174, -4.578268178364427e-05, 2.3451880152285657e-08, -4.784870749797674e-12, -8665.70086996834, 9.234710919693295], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[17.85663761889357, -0.015730963078653456, 2.8107685766893508e-05, -1.5027636928535814e-08, 2.697539826495407e-12, -14019.011038808952, -95.48090316641051], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2222,19 +2420,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-3.876486774098759, 0.05041092235724704, -4.037083717101258e-05, 1.4788222259221832e-08, -1.2397097237659693e-12, 7745.126823133269, 15.749899480627548], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[19.66013395149451, -0.018925451027068645, 3.3821169214707656e-05, -1.8093156895228588e-08, 3.249415703686625e-12, 1468.5436975798475, -104.75676803324718], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-3.87649190798121, 0.05041092833202155, -4.0370853049490226e-05, 1.4788228625032917e-08, -1.2397049347867394e-12, -10521.441787111693, 15.749927590086838], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[19.66012614426986, -0.018925440102690868, 3.382115804337741e-05, -1.8093151903175618e-08, 3.2494148830155017e-12, -16798.02481780408, -104.75672689983918], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2258,19 +2459,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[3.372718318131053, 0.011948605519731134, 2.7150456278172206e-05, -3.885263527850272e-08, 1.494058696205336e-11, -11839.311800013726, -7.758957601829563], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[18.516664160343957, -0.019074670417355798, 3.401223935596512e-05, -1.8145942414685825e-08, 3.2514411153175722e-12, -16597.724746221204, -88.75718953272656], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[3.3727171012781385, 0.01194860693589067, 2.7150452514596973e-05, -3.8852633769656305e-08, 1.494058469006216e-11, -26592.077876120264, -7.758950932483417], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[18.516655476128754, -0.019074658254398358, 3.4012226914245165e-05, -1.8145936853226977e-08, 3.2514401894230582e-12, -31350.48711802194, -88.75713937578965], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 67.3,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2291,19 +2495,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.2535897313874391, 0.0331664250530545, -4.263532659067634e-05, 2.860999415456707e-08, -7.693949644060893e-12, -13645.0576936844, 5.808089455489748], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.171441927115158, -0.00647197678082797, 1.1485655604529038e-05, -6.0731342014698865e-09, 1.0815666921505608e-12, -16375.53701188061, -51.16815885849702], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.2535931090791713, 0.033166428983989624, -4.2635337037470735e-05, 2.8609998342755266e-08, -7.693958851743003e-12, -20063.233829935398, 5.808107973721631], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.171412133321526, -0.0064719352202689305, 1.1485612981891048e-05, -6.0731150998083144e-09, 1.081563533316656e-12, -22793.69975969845, -51.167985889369774], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 15.1 and 62.25,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2329,19 +2536,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.3443315809312595, 0.04526673811325242, -3.3447648876703874e-05, 1.0361211371484028e-08, -1.3049283875687934e-13, 4271.650132263641, 8.413327357263116], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[19.655427687564014, -0.018621902641565248, 3.322657498803786e-05, -1.773344101340974e-08, 3.1788171677175556e-12, -1646.7289521414823, -104.46654041689519], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.344336190926412, 0.04526674347833033, -3.344766313486098e-05, 1.0361217087690635e-08, -1.3048407300447009e-13, -13994.918621984623, 8.413352589469767], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[19.65542958645535, -0.01862190525542446, 3.322657770420552e-05, -1.773344224662297e-08, 3.178817378615654e-12, -19913.302435590114, -104.46655619952196], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2359,19 +2569,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.2300645782186788, 0.029222282416047938, -4.3315468288874015e-05, 3.31428027291935e-08, -9.964716551902342e-12, 5670.784494596961, 8.30171716264823], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[6.834592696160247, -0.0051492538511714245, 9.154900439151632e-06, -4.849169380135208e-09, 8.637658222411613e-13, 3634.068996989313, -36.22149496382639], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.230067554236452, 0.029222285879518774, -4.33154774933406e-05, 3.314280641933064e-08, -9.964713162186928e-12, -418.07136594903, 8.301733455974734], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[6.834589411639772, -0.00514924926211478, 9.154895741071403e-06, -4.8491672783580415e-09, 8.637654768470861e-13, -2454.787475863777, -36.22147845498701], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2390,19 +2603,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.04255587293465304, 0.027932802284313885, -3.942772006846711e-05, 2.937989976562643e-08, -8.786783800562858e-12, -3103.269696491425, 4.036376718408254], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.117743977532806, -0.005002064890272754, 8.996355973457415e-06, -4.846548272764188e-09, 8.752672658917174e-13, -5228.181098131027, -40.93666941907792], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.04255302823853574, 0.027932805594952984, -3.942772886677102e-05, 2.937990329292741e-08, -8.786786258580484e-12, -9505.286477352643, 4.0363923040219465], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.117729461045178, -0.005002044637666469, 8.99633520685214e-06, -4.846538967647318e-09, 8.752657281838953e-13, -11630.192317266472, -40.9365863214174], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 38.0 and 95.1,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2424,19 +2640,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.9848787280247717, 0.03601480571258881, -5.06523957248035e-05, 3.6284301142324924e-08, -1.0380460380154943e-11, 32863.62773586956, 1.6646681085462038], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.257828530267187, -0.004865143870387635, 8.797732294992285e-06, -4.777704201738108e-09, 8.686592687967868e-13, 30259.863335359307, -53.96726152944254], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.9848823957977769, 0.036014809981119555, -5.065240706878557e-05, 3.628430569021752e-08, -1.038046169822867e-11, 22947.80757979698, 1.664688200003285], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.25781351760424, -0.004865122921467677, 8.797710813870003e-06, -4.777694576221335e-09, 8.68657674739829e-13, 20344.048348819404, -53.96717630562679], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2456,19 +2675,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.4987424599124593, 0.020575187483968613, -1.268778417935204e-05, 2.0580096976730705e-09, 8.05244759760626e-13, 4482.802600960845, -3.116375604882025], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.222901125746136, -0.009612809130542856, 1.715947768608812e-05, -9.163517606100242e-09, 1.6433481467715682e-12, 1541.316102443987, -58.400890305140216], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.4987403645215517, 0.02057518992256862, -1.2687790660142427e-05, 2.058012295878718e-09, 8.052488824448949e-13, -4370.770135719781, -3.1163641363067622], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.22290226484407, -0.009612810696986896, 1.715947931096462e-05, -9.163518342562197e-09, 1.6433482690117591e-12, -7312.2589343367, -58.40089911574482], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2486,19 +2708,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.366216905242251, 0.019020740681499365, -2.6531517990758787e-05, 1.9018956406066634e-08, -5.525649382498443e-12, 8371.377779924389, -10.66468490521628], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.334160815533311, -0.002320012120532959, 4.273612948512938e-06, -2.380222376156985e-09, 4.4120735219471815e-13, 6961.856639509524, -40.31024821340094], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.3662149681567333, 0.019020742935867013, -2.653152398193189e-05, 1.9018958807979596e-08, -5.525647036737049e-12, 6947.491048097805, -10.664674300189802], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.334158959428054, -0.0023200095273370794, 4.273610292768672e-06, -2.3802211876351535e-09, 4.412071561099113e-13, 5537.969357195972, -40.31023913438368], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2518,19 +2743,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.671760911419438, 0.024196095571897572, -3.0224106307781846e-05, 1.9895399940588105e-08, -5.340183156787859e-12, -17008.962524866067, -7.690276919546048], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.180364931491424, -0.004638309918568294, 8.319844328464815e-06, -4.468746102314158e-09, 8.058137202616262e-13, -19086.510209805005, -50.31831828858603], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.6717584472722575, 0.024196098439655787, -3.0224113929093245e-05, 1.9895402996021003e-08, -5.340187307455098e-12, -21756.989144579857, -7.690263414902659], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.18034832262653, -0.004638286745146815, 8.319820564851001e-06, -4.4687354533682325e-09, 8.058119574382185e-13, -23834.529832812266, -50.3182224383382], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2553,19 +2781,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.19306645245111803, 0.028838421998994525, -1.1311610948254996e-05, -5.046731874152569e-09, 4.143907439413397e-12, 15344.352832912253, 4.760672174748043], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[16.77750123732734, -0.015741207057722553, 2.807045276052443e-05, -1.4972152812116074e-08, 2.6824589404383318e-12, 10696.022941087322, -81.23811178635668], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.19306351552681508, 0.02883842541696513, -1.1311620031808518e-05, -5.046728232480822e-09, 4.1439068909993586e-12, -1252.0666013966527, 4.7606882617354085], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[16.777490200659685, -0.015741191624172802, 2.8070436957471546e-05, -1.4972145741035512e-08, 2.6824577662790475e-12, -5900.392893637843, -81.23804939085386], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2582,19 +2813,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.2944742231310568, 0.01441625726654529, -2.6132258567565067e-05, 2.1900587545061747e-08, -6.98019593514676e-12, -13919.997650631438, -0.1994529693939322], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[2.9024434885594417, -0.0003385796875714501, 6.433677259569432e-07, -3.663244667788907e-10, 6.90090255981083e-14, -14507.818638959718, -15.255951597679068], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.2944756912929656, 0.014416258975183505, -2.6132263108414372e-05, 2.1900589365515376e-08, -6.980195992476666e-12, -13154.750779067725, -0.1994449279737156], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[2.902438421740939, -0.0003385726210179092, 6.43360477448012e-07, -3.663212176891723e-10, 6.900848803300778e-14, -13742.570206255847, -15.255923057858514], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2615,19 +2849,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.230386273235039, 0.021364181138588848, -1.0987940121250096e-05, -4.0856023207660433e-10, 1.727923359950978e-12, -20272.811598691205, 0.4124434938860766], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.896116437024084, -0.010602939524945506, 1.8955775325381663e-05, -1.0145891565618452e-08, 1.822929746606375e-12, -23520.888356869276, -59.954277173473585], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.2303840974925047, 0.021364183670701403, -1.0987946850558625e-05, -4.085575342462738e-10, 1.7279226465245644e-12, -30015.128105242475, 0.4124554121112016], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.896107647619662, -0.010602927242390975, 1.8955762745224325e-05, -1.0145885935032006e-08, 1.822928814492563e-12, -33263.20186414826, -59.95422731762176], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 23.8 and 88.9,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2644,19 +2881,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.9435071260361403, 0.019776732831383256, -3.36336478120767e-05, 2.6902708865759773e-08, -8.279588820103712e-12, 9569.159852383282, 7.174688997290197], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[2.8134783548688582, -0.0006939614447037248, 1.3030892875136078e-06, -7.387048270359094e-10, 1.387965682836422e-13, 8628.618821846454, -15.573868627012471], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.9435091401126336, 0.019776735175353385, -3.3633654041374426e-05, 2.690271136312718e-08, -8.279586519600723e-12, 6820.603269383872, 7.174700024095191], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[2.8134761534241264, -0.0006939583733566436, 1.30308613815354e-06, -7.387034158394115e-10, 1.3879633501116816e-13, 5880.061814178742, -15.573857577758485], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2674,19 +2914,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.0095993625509263, 0.013359751800887295, -1.623038022297421e-05, 1.100295092154081e-08, -3.144848964575786e-12, -44612.521722101745, -2.592942043349627], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[6.982982484199035, -0.003098712991854859, 5.6288276125419164e-06, -3.0784730588189656e-09, 5.624488513619069e-13, -45864.17862731508, -27.652011141862076], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.0095980019845503, 0.013359753384305327, -1.6230384431042425e-05, 1.100295260858819e-08, -3.144848106372021e-12, -45830.58553436594, -2.5929345930520586], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[6.982979600482389, -0.0030987089636898475, 5.628823486160688e-06, -3.0784712116700837e-09, 5.624485461804745e-13, -47082.24197337982, -27.65199541812654], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 10.8 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2704,19 +2947,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[3.8640642056131584, 0.0007534561819428265, -1.6557138003720825e-06, 1.5522317389958574e-09, -4.4678204278586486e-13, 1177.0607153377553, -8.858065697537338], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[4.068796960213998, -0.0004958073404741864, 6.59234957641556e-07, -1.7259799397596298e-10, 7.629699988490827e-15, 1165.6352206289594, -9.719180011871295], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[3.8640641288806377, 0.000753456271243711, -1.6557140376965991e-06, 1.5522318341406327e-09, -4.4678219820768147e-13, -2163.2388026736357, -8.858065276956662], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[4.068796390056559, -0.0004958065446495855, 6.592341419391949e-07, -1.725976286189919e-10, 7.629639633524452e-15, -2174.6640509931754, -9.719176714004277], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2744,19 +2990,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[3.9971693162720885, 0.025096348548238535, 1.3274009383360151e-05, -3.229249144943194e-08, 1.3906143597752774e-11, 14681.514107743114, -7.72206159144363], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[23.931485047682692, -0.02091595534142395, 3.7374058428816125e-05, -2.0002140984265296e-08, 3.5937322453820364e-12, 8709.895293527581, -112.9798376013536], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[3.9971667604441734, 0.025096351522686924, 1.327400147849864e-05, -3.229248828031911e-08, 1.3906143055484269e-11, -2260.385330016785, -7.722047591779937], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[23.93147529529223, -0.020915941685986497, 3.7374044459560956e-05, -2.0002134739614815e-08, 3.593731207543028e-12, -8232.000936470062, -112.97978243967577], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 41.92 and 44.79,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2771,23 +3020,25 @@ entry(
 1 X  u0 p0 c0 {3,S}
 2 X  u0 p0 c0 {4,S}
 3 O  u0 p2 c0 {1,S} {4,S}
-4 O  u0 p2 c0 {2,S} {3,S}
-""",
+4 O  u0 p2 c0 {2,S} {3,S}""",
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.967034615362547, 0.02010733549192458, -3.4308739987448315e-05, 2.7576743917525124e-08, -8.530565143161084e-12, -7962.043508710253, -5.635470610931528], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[5.80193968165238, -0.0007299198999691197, 1.3702143543308481e-06, -7.761672795155717e-10, 1.4574203770431897e-13, -8918.339296559196, -28.75413978117127], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.2231455169463437, 0.018341447841647436, -3.0386325748395055e-05, 2.3891585307086276e-08, -7.268136510643082e-12, -6974.433511888087, -5.827727911134208], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[5.7929537712364505, -0.0007752730210599631, 1.4506987999484195e-06, -8.206145968477627e-10, 1.539514533647738e-13, -7904.590467757046, -27.814758438131133], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2810,19 +3061,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.2298280105896993, 0.02857061603848079, -1.4963298962563756e-05, -5.176313642584092e-10, 2.3810120541867263e-12, 8992.90771361736, -3.88141499699622], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[17.662163695275716, -0.013767034996296631, 2.461032395965204e-05, -1.3171447002254381e-08, 2.3665201200583075e-12, 4704.542201906133, -83.71181218671018], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.229825100938746, 0.02857061942471177, -1.4963307961765392e-05, -5.176277564032557e-10, 2.381012195592759e-12, -1860.1349603455415, -3.8813990607513915], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[17.662154125491448, -0.013767021623286328, 2.4610310266771934e-05, -1.317144087550648e-08, 2.3665191096040582e-12, -6148.497640104757, -83.71175843550023], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 11.99 and 57.8,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2843,19 +3097,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.3799318568768906, 0.01775103470413556, -1.2084989762157814e-05, 2.539138091112652e-09, 6.810073338581191e-13, -5753.399786027396, -0.28277495203800207], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.249400879119277, -0.00793852051711074, 1.394200430491105e-05, -7.2651932040060965e-09, 1.2784307609119226e-12, -8122.15774830066, -45.75608364954671], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.3799300490995994, 0.017751036808012963, -1.2084995353393713e-05, 2.539140332685803e-09, 6.810103108968516e-13, -11093.168995951322, -0.28276505649544603], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.249400701919917, -0.007938520257210327, 1.3942004052877396e-05, -7.265193097568502e-09, 1.2784307472830213e-12, -13461.928314630692, -45.75608438388285], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 21.45 and 69.68,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2878,19 +3135,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.6719194973911855, 0.03806450613181091, -3.824359770062638e-05, 2.040231059078257e-08, -4.289291144488061e-12, 3740.304213369038, 10.50407379541928], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.228995066113947, -0.011870659656779477, 2.115216565464864e-05, -1.1264162101025237e-08, 2.0156694171299776e-12, -335.98918030423374, -70.11901785345958], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.671923373906593, 0.03806451064327246, -3.8243609690221696e-05, 2.0402315397508814e-08, -4.289290897870988e-12, -8437.4080677286, 10.504095027094214], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.228982457871668, -0.011870642041170823, 2.115214760590694e-05, -1.1264154019990138e-08, 2.0156680761643477e-12, -12513.697763093762, -70.1189470742668], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2911,19 +3171,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.969587403874247, 0.02052289466273032, -1.1621280547621207e-05, 6.215825757615234e-10, 1.3989989722240637e-12, -20653.393736038302, -2.3548372776887767], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.866079481005135, -0.00980042385656314, 1.7404572637224417e-05, -9.22325533388852e-09, 1.6448101391910563e-12, -23651.46370445189, -58.5945861741978], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.9695853138086932, 0.0205228970951337, -1.1621287011943349e-05, 6.215851673640726e-10, 1.3989998969380091e-12, -28741.720001221373, -2.354825831963712], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.866074256235924, -0.00980041654320586, 1.7404565153065928e-05, -9.223251987029436e-09, 1.6448095822345696e-12, -31739.78882794285, -58.59455732707728], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 29.77 and 83.13,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -2947,19 +3210,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-4.928535066156786, 0.05534718152841105, -7.064613041223017e-05, 4.67853742667796e-08, -1.2437668950315839e-11, 16703.913380505925, 18.28098562868972], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.083457114456088, -0.010265295379669075, 1.8411727682574056e-05, -9.893069344811372e-09, 1.7834012939381763e-12, 12137.603809711982, -76.62810888409447], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-4.928540702752197, 0.05534718808824353, -7.06461478455427e-05, 4.6785381255932114e-08, -1.2437674535129727e-11, 3447.7942180946297, 18.28101651206359], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.083426927809178, -0.010265253259335689, 1.8411684492939716e-05, -9.893049992225787e-09, 1.7833980915636025e-12, -1118.5035648037992, -76.62793581406693], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -2978,19 +3244,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.8730990245546361, 0.019325901636389226, -2.4337266409277266e-05, 1.6132658100797165e-08, -4.345260262716977e-12, -16284.465269964547, -2.940452198061079], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.634569118474064, -0.003735680111357191, 6.726671065437476e-06, -3.6343862440460883e-09, 6.579582612385249e-13, -17928.672933495967, -36.779209771998254], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.8730970563913626, 0.019325903926924782, -2.433727249657027e-05, 1.6132660541232428e-08, -4.3452632072736365e-12, -19937.925159171937, -2.94044141236658], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.634556592034008, -0.0037356626340408357, 6.726653143472722e-06, -3.6343782130709962e-09, 6.579569323097696e-13, -21582.127633686927, -36.779137589176756], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3008,19 +3277,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.0573699775793095, 0.01878551011043775, -2.938069724351587e-05, 2.350186851777543e-08, -7.340232588415319e-12, 5744.671651525949, -10.421554931384392], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.609523066033134, -0.0029859167584867937, 5.278299518393383e-06, -2.767395024338096e-09, 4.893079722596751e-13, 4526.640850291362, -37.533505209362595], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.0573680644497503, 0.018785512336925957, -2.9380703160596206e-05, 2.3501870889973202e-08, -7.340235401105846e-12, 231.3984084641652, -10.42154444737714], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.609510989685855, -0.0029858999120175238, 5.27828224206432e-06, -2.767387282111314e-09, 4.89306692025521e-13, -986.6274021255185, -37.533435633814946], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3042,19 +3314,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-4.325685008569402, 0.05227616954992133, -6.524815321269459e-05, 4.254890479161197e-08, -1.1179376868675206e-11, 14623.746554045203, 15.78604404581501], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.035495081023502, -0.010328866072734963, 1.8514421035613457e-05, -9.939820509563878e-09, 1.7906297172559822e-12, 10172.406201118816, -76.07100602733398], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-4.325690332410893, 0.05227617574577326, -6.524816967869794e-05, 4.2548911392955294e-08, -1.1179369344420272e-11, 1367.6273006074985, 15.786073190299277], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.035492123657766, -0.010328861922127128, 1.8514416797103598e-05, -9.939818618198685e-09, 1.790629402763902e-12, -3083.7157267598177, -76.07099376870829], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3076,19 +3351,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-4.3383416228785405, 0.05493561603944398, -8.04347803491962e-05, 5.94297263297502e-08, -1.7339199520627346e-11, 21521.90077632244, 15.175251696241196], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.21959304626652, -0.007225570624319904, 1.2980701378227055e-05, -6.981180433014081e-09, 1.259477509332513e-12, 17789.056814617332, -66.26216346010321], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-4.338347217560166, 0.05493562255049885, -8.043479765287541e-05, 5.942973326695645e-08, -1.7339193550556327e-11, 9935.931366546278, 15.175282327220621], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.219586078218885, -0.007225560891365661, 1.2980691407311966e-05, -6.981175969304602e-09, 1.2594767716027926e-12, 6203.086682937128, -66.26212772907982], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3108,19 +3386,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[4.8549618970361985, -0.005541347878692846, 3.0119805912452307e-05, -2.992258851269603e-08, 1.0050251429694068e-11, -1791.117670414285, -9.256206302347813], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.541393766552916, -0.010402513409078933, 1.8377739993644713e-05, -9.667651291471074e-09, 1.712113788146074e-12, -3529.051578798735, -35.56384362882349], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[4.854962461371593, -0.005541348535465471, 3.011980765787564e-05, -2.992258921244716e-08, 1.0050250292925996e-11, -11220.274028219219, -9.256209391037203], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.54139337024375, -0.01040251283633434, 1.837773942532161e-05, -9.667651045328302e-09, 1.7121137503578788e-12, -12958.207275738356, -35.56384074430227], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3142,19 +3423,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.029643429257797, 0.03056436481280869, -2.5733365236408553e-05, 1.1293796508562125e-08, -1.821806594470843e-12, 6749.751746374264, 2.6617654177208347], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.238954399490348, -0.012066252955546966, 2.153093734988074e-05, -1.1489313129942497e-08, 2.059020397351995e-12, 2961.30728430244, -70.27958695073038], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.0296465419536625, 0.03056436843534247, -2.5733374863603103e-05, 1.1293800368173688e-08, -1.8218077540432425e-12, -5427.960741283311, 2.661782468638178], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.238941552762988, -0.012066235015657971, 2.153091896887421e-05, -1.1489304900136156e-08, 2.0590190380730824e-12, -9216.400762671316, -70.27951400675978], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3173,19 +3457,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.6545257813847285, 0.015399192759007823, -1.0183826670136605e-05, 1.753031763371618e-09, 5.796144814107507e-13, -33203.824960714155, -11.081140115163407], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.183628262656756, -0.0054815563934807335, 9.935047271124395e-06, -5.4247649800572645e-09, 9.901839547951652e-13, -35286.508888315235, -49.97906879817951], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.6545242131205566, 0.015399194584141936, -1.018383152058808e-05, 1.7530337079552375e-09, 5.796151215755024e-13, -36092.03848597861, -11.081131526847855], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.183624235462183, -0.005481550766966762, 9.935041509590802e-06, -5.424762401917044e-09, 9.901835300359757e-13, -38174.72149704954, -49.97904651496785], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3207,19 +3494,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.26477234399100147, 0.03035176999255425, -2.0473774973403015e-05, 4.470350596539826e-09, 8.498098058584702e-13, -19053.652755186737, 6.5331825956055], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.898898669499161, -0.012891073692233341, 2.2999889257501197e-05, -1.2274824918481617e-08, 2.2004937612731326e-12, -23170.966248912082, -71.46368014442395], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.2647754350356402, 0.030351773589888487, -2.0473784533629483e-05, 4.470354429308169e-09, 8.498143248400961e-13, -30466.118779958462, 6.533199516718724], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.898897231761438, -0.012891071659887727, 2.299988719668995e-05, -1.2274824005449935e-08, 2.2004936122579036e-12, -34583.43398076795, -71.4636746884245], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 58.0,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3240,19 +3530,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.2534176212234847, 0.03273020710355643, -3.754929968340677e-05, 2.321145562250547e-08, -5.930839153123202e-12, -5151.526679155229, 9.926598033908668], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.179468174879117, -0.00779811690179576, 1.4043737251600803e-05, -7.591820150798237e-09, 1.3748378944225233e-12, -8278.245917100812, -52.78358959003789], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.2534209544904569, 0.032730210982790324, -3.7549309992801566e-05, 2.321145975562514e-08, -5.9308399666582925e-12, -13223.693096798024, 9.926616292237732], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.179455287286821, -0.007798098913204271, 1.4043718812801308e-05, -7.591811891569331e-09, 1.3748365291506193e-12, -16350.408046475462, -52.78351661485842], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 98.6,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3276,19 +3569,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.1589268706614568, 0.03704248615588869, -3.1233211398208106e-05, 1.2995299183184974e-08, -1.8017601299824548e-12, 7431.520907516759, 2.9590731669920447], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[15.804653938713914, -0.013393435838752776, 2.3947519559819504e-05, -1.2818034367726568e-08, 2.3031836481675772e-12, 2924.668741550793, -83.79742663135006], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.1589306430934916, 0.0370424905462181, -3.12332230658859e-05, 1.2995303860849604e-08, -1.8017575271373604e-12, -7494.748530362438, 2.959093823934715], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[15.80464637776645, -0.013393425263628071, 2.3947508736440405e-05, -1.281802952701938e-08, 2.3031828473915517e-12, -12001.59964167993, -83.79738561465682], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3306,19 +3602,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.3606845113620176, 0.014165730210107362, -1.8920019008514142e-05, 1.3801126624201276e-08, -4.17869384927716e-12, 7431.514195991555, -5.69574266490236], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.213817876105713, -0.0025695804418745093, 4.7049065756329745e-06, -2.59884802643941e-09, 4.785325044545847e-13, 6239.6093544369105, -29.994800796459366], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.360683068714212, 0.014165731889051325, -1.892002347045031e-05, 1.3801128413020781e-08, -4.178695529704014e-12, 4353.6370683303585, -5.695734760019386], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.213809647981861, -0.0025695689625320735, 4.704894804539271e-06, -2.5988427518532685e-09, 4.785316324962005e-13, 3161.7355153030176, -29.99475352902745], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 67.9 and 67.9,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3341,19 +3640,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.9288946551072278, 0.016318625808529733, 6.612725716932379e-06, -1.7902849148795664e-08, 7.848204724991703e-12, -2574.141616783781, 1.6939762269788439], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.774420011612554, -0.014595529984813184, 2.584779947691287e-05, -1.3646600194900631e-08, 2.4255124479537725e-12, -6353.804113010652, -65.80622703440591], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.9288929932077815, 0.01631862774263431, 6.6127205768783405e-06, -1.7902847088098996e-08, 7.848205115270006e-12, -14768.01400462853, 1.6939853286406148], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.774415145648046, -0.01459552316874508, 2.5847792511727323e-05, -1.3646597084652586e-08, 2.42551193591374e-12, -18547.67521131911, -65.80619989351544], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 95.95,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3372,19 +3674,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.1312884557033114, 0.018402865797038696, -2.427788191413619e-05, 1.7224355907441603e-08, -4.970784200919454e-12, 17641.394610063922, -5.779521623383209], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.494137250133281, -0.003797247762429778, 6.797288946156097e-06, -3.6381823616072336e-09, 6.538479728756012e-13, 16110.920441107293, -37.52197446358211], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.1312865815426474, 0.01840286797817462, -2.4277887710690205e-05, 1.722435823131042e-08, -4.9707878084454026e-12, 13782.11162218864, -5.77951135124305], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.494123716390367, -0.003797228881063589, 6.797269583929042e-06, -3.6381736850185154e-09, 6.538465376547789e-13, 12251.643261949139, -37.52189622794443], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3401,19 +3706,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.863304528558866, 0.0044727378996352735, -7.657888254030589e-06, 7.566551322548495e-09, -2.8240309396521113e-12, 1581.2991005746367, -7.401146569539408], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[4.411396737184059, -0.0016031840634147642, 2.8880078620045804e-06, -1.556323952810155e-09, 2.807779740962135e-13, 1215.626204219403, -15.027258594306273], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.8633040730520567, 0.0044727384297514215, -7.65788966285876e-06, 7.566551887360406e-09, -2.824030320982694e-12, -607.8345056148114, -7.401144075893692], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[4.411396431291331, -0.0016031836340185189, 2.888007424531916e-06, -1.5563237580538682e-09, 2.8077794257156996e-13, -973.507602456626, -15.027257233215492], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 56.8 and 56.8,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3438,19 +3746,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.5739263830230383, 0.047739907569548025, -4.598070554827103e-05, 2.351354975713881e-08, -4.7455095408821535e-12, 9025.480894598888, 9.441519150074074], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[17.908024758271736, -0.015549251038012276, 2.7772942266178536e-05, -1.484153246052161e-08, 2.6631323285942338e-12, 3710.6019661209048, -94.6975853312059], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.5739312448879508, 0.04773991322775247, -4.598072058543406e-05, 2.351355578566828e-08, -4.7454963845956605e-12, -7570.938023935592, 9.441545753128848], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[17.908034587091507, -0.015549264710131305, 2.777295632069162e-05, -1.4841538773975302e-08, 2.6631333748265644e-12, -12885.826167655274, -94.6976482818124], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3471,19 +3782,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.2993505590209032, 0.036295047104036034, -3.944358953629666e-05, 2.3073395624284446e-08, -5.505172706588013e-12, -1041.8757599397566, -0.5243066765065851], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.089051869291591, -0.009905142176605984, 1.769612743136704e-05, -9.4569990848886e-09, 1.6972918872508545e-12, -4684.650111960318, -73.24268995539349], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.29935425533347815, 0.03629505140577918, -3.9443600968546555e-05, 2.3073400207566012e-08, -5.505164095632448e-12, -10784.19185835744, -0.5242864483491534], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.089056568124821, -0.009905148708692501, 1.7696134150779686e-05, -9.457002105402365e-09, 1.697292389023077e-12, -14426.971716377655, -73.24272139895612], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3505,19 +3819,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.4658840835034903, 0.04032671174813905, -5.1677635604570834e-05, 3.3783985926401025e-08, -8.785375205100365e-12, 16966.755239417125, 4.137115672641978], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.158172157336903, -0.006887697575459862, 1.2286455919780816e-05, -6.5489391464297215e-09, 1.1738114261372569e-12, 13719.933760885799, -63.78765548494883], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.4658881904039123, 0.04032671652772304, -5.167764830672131e-05, 3.3783991018804145e-08, -8.78536639063177e-12, 8688.765953645036, 4.137138149238149], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.158175885963995, -0.00688770276139021, 1.2286461252588527e-05, -6.548941542810867e-09, 1.1738118244187488e-12, 5441.939166124124, -63.787681585915784], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3540,19 +3857,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.335993439055977, 0.04095493966544115, -3.308964605037999e-05, 1.2340872982475107e-08, -1.0794767857369436e-12, 14019.71141193133, 14.860345426691612], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[16.74976165361396, -0.015545093613927969, 2.7694717132704748e-05, -1.4747871407183279e-08, 2.63918260753589e-12, 8950.9727833444, -82.7716117653313], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.3359976099348523, 0.040954944519479695, -3.308965895040512e-05, 1.2340878154190055e-08, -1.0794845463097146e-12, -2576.7076842100646, 14.860368286450937], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[16.749732048016103, -0.01554505229772852, 2.7694674777696646e-05, -1.4747852433105328e-08, 2.63917947214116e-12, -7645.433666457164, -82.77144070050932], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 74.2,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3573,19 +3893,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.138216103041777, 0.02823086411784676, -3.8437541152423604e-05, 2.6868203923619623e-08, -7.519328909522116e-12, -9409.415561022068, -5.622350233610955], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.261952078333145, -0.004316973382806578, 7.73409680281726e-06, -4.144915494278597e-09, 7.462540784972105e-13, -11549.615514196365, -50.91355633230831], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.1382132279909492, 0.028230867463811926, -3.843755004460994e-05, 2.6868207488574734e-08, -7.519327025758515e-12, -14157.442072102062, -5.622334490317954], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.261946129698629, -0.004316965080427518, 7.734088293961143e-06, -4.144911683523959e-09, 7.462534503008572e-13, -16297.641116734248, -50.913523959473565], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3605,19 +3928,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.3347812981984684, 0.024001926445212443, -2.56561658286328e-05, 1.4867686876108568e-08, -3.5296973677212407e-12, -23687.639135012563, -0.6581843781404473], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.997098052356328, -0.006795965625441362, 1.2045699322112889e-05, -6.359634936884278e-09, 1.1313346110218602e-12, -26143.674179925823, -49.545628505612484], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.3347788538257543, 0.02400192928995664, -2.56561733887836e-05, 1.4867689907027367e-08, -3.5296958527612083e-12, -30105.815529523432, -0.6581709929966859], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.997092813486743, -0.006795958307164792, 1.2045691827302481e-05, -6.35963158273436e-09, 1.1313340583748807e-12, -32561.849705772518, -49.54559991381272], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 37.01 and 60.96,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3641,19 +3967,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[3.3768902555000424, 0.01716828893718684, 1.0226321143136432e-05, -2.3112247575109005e-08, 9.75945366188391e-12, -32788.28973530398, -7.590723086367682], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[17.381509301194935, -0.01483893474211383, 2.65610658179714e-05, -1.4250112374202607e-08, 2.5651784197483225e-12, -37010.890584759676, -81.64682914395209], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[3.376888507070602, 0.01716829097199307, 1.0226315735457644e-05, -2.31122454071209e-08, 9.75945662354606e-12, -43435.50965036273, -7.590713515849725], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[17.381509273065006, -0.014838934676127916, 2.656106577806364e-05, -1.4250112368781772e-08, 2.5651784247275115e-12, -47658.11189298637, -81.64683071188084], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 62.9 and 75.5,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3678,19 +4007,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.4985974573272718, 0.032355190208176496, -2.1571861406286484e-05, 4.167224639668699e-09, 1.1892153928272364e-12, 8844.00401970122, -0.5266906827411653], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[17.60251185517201, -0.013353248368212221, 2.379894519605285e-05, -1.2680910283828348e-08, 2.2710678925289256e-12, 4466.369940204986, -83.39997325193697], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.4985941622526862, 0.03235519404296074, -2.1571871597556333e-05, 4.167228725437758e-09, 1.1892209212351688e-12, -2009.038552235457, -0.5266726461247799], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[17.602511742287444, -0.013353248184176617, 2.3798945032155278e-05, -1.2680910221528142e-08, 2.271067885592054e-12, -6386.675218068645, -83.3999758350555], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 43.28 and 91.29,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3710,19 +4042,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.3860267526578358, 0.016641787893430366, -1.6919429844757538e-05, 9.530135630943216e-09, -2.1792567750367198e-12, 807.3493557948844, -0.7177355154818166], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.443721041372171, -0.005684040584492491, 1.0035186919117291e-05, -5.2677860777462666e-09, 9.321823589864562e-13, -995.1103482152312, -36.467259613747544], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.386025057846731, 0.016641789865839772, -1.691943508660429e-05, 9.530137732441303e-09, -2.1792566643465093e-12, -2862.2701148710416, -0.7177262330070526], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.44371553114693, -0.005684032888295971, 1.0035179034516899e-05, -5.267782547915829e-09, 9.321817757249796e-13, -4664.728202735447, -36.46722868035879], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 32.89 and 61.93,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3742,19 +4077,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.932904977014775, 0.025594396730344988, -2.9929209749898772e-05, 1.7922495652637445e-08, -4.312904200443057e-12, 8760.146201041658, -4.323578107980424], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.189909236154165, -0.004837276323957634, 8.704543634748917e-06, -4.700785411742493e-09, 8.512922744524252e-13, 6464.041645286903, -50.9038572152291], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.9329023704637375, 0.025594399763831377, -2.9929217811647463e-05, 1.7922498884658204e-08, -4.3129046270679965e-12, 5666.109883591068, -4.3235638307301105], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.189899578328756, -0.0048372628483032785, 8.704529819934222e-06, -4.70077922286624e-09, 8.512912531443968e-13, 3370.0084554381156, -50.90380263208374], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3772,19 +4110,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.9093427832856398, 0.015109857567877763, -2.0359918968130758e-05, 1.4975405540619096e-08, -4.539493780875148e-12, -10988.884152280585, -3.1891958041489765], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.079628606140264, -0.002883577778149964, 5.257881761191409e-06, -2.8882247892031097e-09, 5.294853427979958e-13, -12249.607454174478, -29.032431347097084], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.9093412444872058, 0.015109859358721396, -2.0359923727449643e-05, 1.497540744865976e-08, -4.539494264660256e-12, -14066.761254420186, -3.189187375000939], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.079622442658005, -0.0028835691765253762, 5.257872942765865e-06, -2.8882208385109374e-09, 5.294846893709078e-13, -15327.482460719659, -29.03239639146591], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 79.59 and 79.64,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3804,19 +4145,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.3537232216404795, 0.02738047612849207, -3.8612604745333626e-05, 2.9270129615313785e-08, -8.860745470684606e-12, 22463.58688636815, -2.856833924551207], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.50738886564937, -0.005965218577499618, 1.0615016854246257e-05, -5.630345050552874e-09, 1.0041366575849666e-12, 20325.703636307895, -48.18896116956779], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.353720433193718, 0.027380479373668155, -3.861261336966412e-05, 2.9270133072873463e-08, -8.860743055927948e-12, 13626.173846168, -2.856818656648496], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.507384264072636, -0.005965212151141966, 1.0615010272909038e-05, -5.630342105226881e-09, 1.0041361735304452e-12, 11488.29084546983, -48.1889366842378], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3837,19 +4181,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.2710300707133886, 0.04275388669801405, -5.6165217605294374e-05, 3.8441904983893874e-08, -1.0600409439120995e-11, 25389.81137957505, 6.930604839386239], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.12906137260305, -0.007572217776039778, 1.360161547534432e-05, -7.320902085911084e-09, 1.3215775807826633e-12, 21953.465509876463, -64.82524264398151], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.2710344247988186, 0.042753891765269336, -5.6165231071956046e-05, 3.844191038277121e-08, -1.0600416122648065e-11, 13803.841639190394, 6.930628700462604], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.129033324279652, -0.007572178644341316, 1.3601575346551853e-05, -7.320884103194313e-09, 1.3215746053417432e-12, 10367.507431308033, -64.82508096392019], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3870,19 +4217,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.5280803860139417, 0.0285783252077775, -2.2234906966676733e-05, 7.78827990007637e-09, -5.933586955109149e-13, -10912.741955854437, 7.519427148206355], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.978155171283714, -0.010727812123524144, 1.9236820173513977e-05, -1.0341454007115124e-08, 1.8645498454938642e-12, -14548.966125634588, -61.77930156020717], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.5280832964499694, 0.02857832859492173, -2.2234915968304163e-05, 7.788283508886629e-09, -5.93358709205692e-13, -20655.058263414696, 7.519443089057723], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.978145297319083, -0.010727798332984888, 1.9236806046693476e-05, -1.0341447683316024e-08, 1.8645488021368837e-12, -24291.279435780834, -61.77924600538357], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 58.8 and 75.3,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3900,19 +4250,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.8619810025490673, 0.012267703380084078, -1.7731758155958465e-05, 1.315536840698411e-08, -3.9401086560086895e-12, -6526.988202406494, -9.289693099202832], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[5.60325861290425, -0.0013940190087381843, 2.573613909741894e-06, -1.436315753114337e-09, 2.6664821685648044e-13, -7399.292308132421, -27.812281404482913], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.8619797531975506, 0.01226770483407149, -1.773176202005306e-05, 1.315536995612894e-08, -3.940107642579075e-12, -6856.308255448033, -9.289686258349786], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[5.603256419033999, -0.0013940159460681886, 2.5736107706121614e-06, -1.4363143471003888e-09, 2.666479842882661e-13, -7728.612177669183, -27.812269651080857], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -3937,19 +4290,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.359495731431357, 0.026577899561492875, 4.854377666264913e-06, -2.3300751281310787e-08, 1.080241104900459e-11, -33101.45615694384, -2.7290965641338794], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[21.248882464739534, -0.01932093653813231, 3.441582389182342e-05, -1.8332031567445875e-08, 3.2816944758981732e-12, -38633.276862803876, -101.87030526237768], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.359493024720845, 0.026577902711539418, 4.854369294738433e-06, -2.3300747925097863e-08, 1.0802412500241882e-11, -47088.97535379768, -2.729081742005988], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[21.248876184416513, -0.019320927733525405, 3.441581489566954e-05, -1.8332027550769172e-08, 3.2816938103512397e-12, -52620.794846875346, -101.87027078781432], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -3970,19 +4326,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.26079540729489786, 0.029660018341478807, -3.746238665500517e-05, 2.358568716943405e-08, -5.979147732482204e-12, -52945.61480865474, 4.317532672755526], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.046796775039754, -0.003516390240860414, 6.491780792346332e-06, -3.6335189500432592e-09, 6.76298154237971e-13, -55321.08868182186, -44.67323784193456], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.26079238669804067, 0.02966002185682939, -3.7462395997348304e-05, 2.3585690914845046e-08, -5.979149689033182e-12, -53398.43169779457, 4.3175492208091715], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.046782671886772, -0.0035163705656289647, 6.491760615417757e-06, -3.6335099080933313e-09, 6.762966584087594e-13, -55773.90037309661, -44.6731573615769], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 89.5 and 92.5,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4003,19 +4362,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.3891902594461783, 0.029211254914251555, -3.686302879714153e-05, 2.577719019942489e-08, -7.388346878745011e-12, -8595.136347577502, 3.258447821188735], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.099162358552885, -0.007408051053110082, 1.3248023640579377e-05, -7.084641349487045e-09, 1.2717661007009525e-12, -11215.704317571566, -50.37072313089001], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.3891872845515294, 0.029211258376415077, -3.686303799813517e-05, 2.577719388817712e-08, -7.388347087907539e-12, -16667.302862730725, 3.2584641154733998], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.0991518870024, -0.007408036435348514, 1.3248008658893356e-05, -7.0846346396538015e-09, 1.271764992207576e-12, -19287.867562374602, -50.37066409898756], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4033,19 +4395,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.6898546774949579, 0.011560714377428666, -1.8172061719401493e-05, 1.4019483176817962e-08, -4.13411839483846e-12, -15273.021098915176, 2.129066713741218], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[3.9594002477034005, -0.0016598690893849198, 2.83126774534202e-06, -1.4039375937825617e-09, 2.3701080762369444e-13, -15951.755405140297, -13.688877268045676], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.6898535001436462, 0.011560715747622905, -1.8172065360808256e-05, 1.4019484636684314e-08, -4.1341182941071035e-12, -16177.924075773197, 2.129073162043106], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[3.959396473787725, -0.0016598638232622237, 2.83126234608295e-06, -1.4039351747093804e-09, 2.3701040763643917e-13, -16856.657287105398, -13.688856094870856], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 80.8 and 80.8,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4068,19 +4433,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.11893718001907885, 0.02541808705430347, -9.608108765723387e-06, -4.295199952049952e-09, 3.4643572732750982e-12, 3606.005648650028, -0.7380722583744292], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[15.060757899352813, -0.014857615759044823, 2.6463057211542945e-05, -1.408810404432668e-08, 2.519977482300052e-12, -584.5836751674797, -78.21199707340558], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.11893459142418157, 0.025418090066889925, -9.608116771933841e-06, -4.295196742293207e-09, 3.464357462477983e-12, -10241.856753073676, -0.7380580806880177], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[15.060749507479485, -0.014857604022812533, 2.6463045199679808e-05, -1.408809867202183e-08, 2.5199765942401104e-12, -14432.443625402568, -78.2119499804451], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4101,19 +4469,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.4556863016454771, 0.02637115066174354, -2.1193123690587854e-05, 8.24653183318703e-09, -8.510588067611735e-13, 1889.910421383844, 6.940746767287202], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.091019819661316, -0.011033048767363404, 1.9484405869727385e-05, -1.0237438115629293e-08, 1.8128748895400622e-12, -1425.666757530722, -57.16805413486118], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.4556889873013476, 0.02637115378729022, -2.1193131996997146e-05, 8.246535163307095e-09, -8.510567522705759e-13, -8633.811925427894, 6.940761472903407], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.091014829045449, -0.011033041791600598, 1.9484398734063737e-05, -1.0237434925971296e-08, 1.8128743684909556e-12, -11949.388564515615, -57.16802725202871], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 76.79,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4133,19 +4504,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.9935294751058956, 0.019188084816283715, -2.42924974394525e-05, 1.547804984753989e-08, -3.9995055878261354e-12, -12382.343087047557, 1.4913827637688648], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.354995216279332, -0.002362726178059236, 4.3611695875785825e-06, -2.4396473219602613e-09, 4.538698078124497e-13, -13930.876460145893, -30.368866436801472], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.9935275209780121, 0.019188087090484827, -2.4292503483335336e-05, 1.5478052270571518e-08, -3.999504806554147e-12, -11946.416475547754, 1.491393465229386], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.354990179402851, -0.0023627191484181793, 4.361162380825014e-06, -2.4396440933341437e-09, 4.5386927366933493e-13, -13494.948694309487, -30.368838554150337], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 63.4 and 94.07,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4168,19 +4542,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.7686539476068672, 0.015420898484374354, 5.767884406987405e-06, -1.5827045233451258e-08, 6.751805711746606e-12, -12317.652824372914, -5.059392156151771], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.847749730759535, -0.01335819566033185, 2.386893017993304e-05, -1.2769340121425279e-08, 2.2930531883285244e-12, -15913.559232810572, -68.67480546580957], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.7686523771328186, 0.015420900312077459, 5.767879549704185e-06, -1.5827043286126327e-08, 6.7518071869769546e-12, -23730.119260237818, -5.0593835573814285], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.84774734404763, -0.013358192301668933, 2.386892675943612e-05, -1.2769338599276014e-08, 2.2930529372262883e-12, -27326.025645285856, -68.67479290471243], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 30.5 and 72.0,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4200,19 +4577,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.331038987128432, 0.024146747684085316, -3.506375863681946e-05, 2.529019734254638e-08, -7.2690325980673265e-12, 13334.904526862534, -6.608669248279261], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.420686007412883, -0.002119684347932115, 3.923924112852273e-06, -2.199553140841385e-09, 4.098201473816919e-13, 11719.246344453357, -41.566088246820584], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.3310365280067524, 0.02414675054599538, -3.5063766242587676e-05, 2.5290200391753758e-08, -7.26903102232295e-12, 11911.017937026041, -6.608655782473958], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.420680853651005, -0.0021196771568185117, 3.923916739995684e-06, -2.199549837548649e-09, 4.098196015657322e-13, 10295.360567808815, -41.56606016706463], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4236,19 +4616,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.4414185422025114, 0.020141843913278987, 1.004446940309389e-05, -2.4632473249166706e-08, 1.0643652625930144e-11, -12237.75462650489, -2.162546111921909], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[18.599268479100633, -0.01794421988237652, 3.1880937783277695e-05, -1.6915783501947735e-08, 3.0187083572847523e-12, -17035.57904204552, -87.2751835535458], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.4414164909443667, 0.020141846300514372, 1.0044463058803559e-05, -2.4632470705674976e-08, 1.0643655451973795e-11, -26990.520478641385, -2.1625348825050494], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[18.599267162738386, -0.017944217996744175, 3.188093588226114e-05, -1.6915782664718715e-08, 3.0187082130244765e-12, -31788.345838741192, -87.27517780931359], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4268,19 +4651,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.8242951099574672, 0.02601749300527663, -3.764243998419181e-05, 2.8538878383309112e-08, -8.616187624488347e-12, 20077.11222373421, 0.7718232648179626], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.101373002612124, -0.004568081627199246, 8.155009679545203e-06, -4.344213509050772e-09, 7.779513439557439e-13, 18168.950272139635, -40.10485955343061], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.824292460317689, 0.02601749608891088, -3.764244817921074e-05, 2.8538881668749783e-08, -8.616189007413881e-12, 13469.272316866549, 0.7718377799596219], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.101361292443928, -0.0045680652881194975, 8.154992926727776e-06, -4.344206002856444e-09, 7.779501031579715e-13, 11561.114567063178, -40.104792869372005], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 54.13 and 75.02,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4302,19 +4688,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.230754474365933, 0.017783658337877685, -5.881534702396693e-06, -3.712415964603129e-09, 2.534902843187581e-12, 19688.91720738508, -3.1752208193723153], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.925748183648, -0.010525828837205065, 1.8814014384299243e-05, -1.006660382450365e-08, 1.8080350821928545e-12, 16650.737907253155, -58.79212788139595], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.2307526632663266, 0.017783660445621286, -5.8815403039087805e-06, -3.7124137189088388e-09, 2.5349066309163098e-12, 9740.777528100642, -3.175210907234449], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.925749605822386, -0.010525830802496002, 1.8814016420061135e-05, -1.0066604745935756e-08, 1.8080352395345379e-12, 6702.596003313003, -58.79213808622047], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 60.41 and 70.27,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4335,20 +4724,23 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.638128311790396, 0.011236540999882609, 3.664844911067219e-06, -1.1120657164061452e-08, 4.8571719563073046e-12, -9381.439786247349, -2.018462765805568], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.252954055242327, -0.009480301245285542, 1.6901229048930064e-05, -9.011985872256507e-09, 1.6141330283557347e-12, -11928.532490430403, -47.321051295023864], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.7273785148877367, 0.010788735354898502, 4.9967108828586935e-06, -1.2468126656547278e-08, 5.318867454032739e-12, -17117.575354460983, -1.5351955816669687], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.340294884584132, -0.00950160319712203, 1.697403456690111e-05, -9.07934305084049e-09, 1.6301823466076707e-12, -19687.222556102937, -46.9368606502489], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
-The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
+The two lowest frequencies, 51.1 and 54.5,where replaced by the 2D gas model.
 """,
     metal = "Pt",
     facet = "111",
@@ -4371,19 +4763,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.09380422645656587, 0.03254184716882104, -1.9508073897544622e-05, 1.9033590070599593e-09, 2.0178511639379337e-12, -17651.376358788384, 5.477417787388822], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[16.823623671029893, -0.015032614497108913, 2.673269143470952e-05, -1.419836836264027e-08, 2.535846969827513e-12, -22273.329186147443, -81.69221157337572], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.09380754054011578, 0.0325418510257262, -1.9508084147603755e-05, 1.9033631163800556e-09, 2.017848614406121e-12, -30733.99209275483, 5.477435944078252], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[16.823607363161834, -0.015032591722587536, 2.6732668099565248e-05, -1.4198357914414404e-08, 2.5358452426433642e-12, -35355.938772638416, -81.69211835243186], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 96.1,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4405,19 +4800,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-3.0932804254633512, 0.04054757010622049, -5.061867190583267e-05, 3.338407760784367e-08, -8.850732646781267e-12, 6874.083633933093, 11.04447440181341], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.340397884578818, -0.0088565986454187, 1.5767249042201063e-05, -8.379519466619423e-09, 1.497433921245116e-12, 3385.1153387097675, -61.114477479073585], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-3.093284554855984, 0.040547574911979994, -5.061868467754752e-05, 3.338408272812267e-08, -8.850728226061783e-12, -1979.4885510678628, 11.04449701028243], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.340392757497492, -0.008856591480446027, 1.576724170854937e-05, -8.37951618646151e-09, 1.4974333824980495e-12, -5468.457388973215, -61.11445120381964], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4440,19 +4838,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.8458767372850369, 0.029847037326815637, -1.6288060107211608e-05, -5.160668468083551e-10, 2.7107066591369744e-12, 9005.130008744127, -2.262003683764842], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[17.56413769242538, -0.01346431811154401, 2.3999175935712788e-05, -1.2790808184361166e-08, 2.2913064369846966e-12, 4666.033470627466, -83.4757358547679], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.8458736976425771, 0.029847040864329207, -1.628806950845996e-05, -5.160630777782037e-10, 2.7107071993275384e-12, -1847.9126301402368, -2.261987036327792], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[17.56412848342619, -0.013464305239539199, 2.3999162756146917e-05, -1.2790802287437008e-08, 2.291305462464261e-12, -6187.006635737918, -83.47568436687708], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 26.19 and 53.11,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4473,19 +4874,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.8122506955542943, 0.02240816943062234, -2.560540942880489e-05, 1.573713386046396e-08, -3.913543100697581e-12, 17089.096082220094, -4.914017566653307], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.420923212444105, -0.005908523822900844, 1.0467898149707035e-05, -5.523251266533882e-09, 9.815551844217065e-13, 14950.410957313505, -48.23756065490732], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.8122484134908616, 0.02240817208647222, -2.560541648695253e-05, 1.573713669012945e-08, -3.9135440329412915e-12, 11559.663431608049, -4.914005065663471], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.420913639253023, -0.00590851045959325, 1.0467884451987092e-05, -5.523245130977161e-09, 9.815541695290048e-13, 9420.981647348004, -48.23750625756504], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4509,19 +4913,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.3179838467359952, 0.03378081534288041, -1.4799606364101423e-05, -3.849161364955791e-09, 3.936379000535339e-12, -15087.824242481165, 3.571976723406868], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[19.33780951406004, -0.017434394968453903, 3.119767889977107e-05, -1.6722666366243355e-08, 3.0079833819606806e-12, -20428.417801392065, -95.0724895175665], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.3179804064752164, 0.0337808193466292, -1.4799617004411486e-05, -3.849157099163547e-09, 3.93637648998797e-12, -30918.99706966816, 3.571995571107836], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[19.33779285285688, -0.017434371694113212, 3.119765505656061e-05, -1.672265569235557e-08, 3.0079816165686478e-12, -36259.58439302078, -95.07239433429336], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 63.5,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4545,19 +4952,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-4.872530990892688, 0.05562110739421251, -6.411740846381472e-05, 3.90946383572137e-08, -9.649864241012551e-12, 21073.702165536957, 18.42848547630861], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[16.033258703301918, -0.013087062152820088, 2.3459289825218143e-05, -1.259972074761509e-08, 2.27017642762139e-12, 15869.346124328107, -86.81233037475391], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-4.872536655384702, 0.05562111398651003, -6.411742598340763e-05, 3.909464538095682e-08, -9.649860709050681e-12, 6147.433240531592, 18.428516494465626], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[16.033246614537457, -0.013087045267915006, 2.3459272528477657e-05, -1.2599713004773305e-08, 2.2701751492970414e-12, 943.0791852898437, -86.81226442045676], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4578,19 +4988,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.8969967399970498, 0.03136537278382585, -3.453660942774956e-05, 1.938036117537774e-08, -4.250745588851856e-12, -62686.4959152395, -0.6822241363351544], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.83415680377455, -0.007126677188177576, 1.2639040075343967e-05, -6.681795799640911e-09, 1.1906517912991903e-12, -65675.587726322, -60.909943049190474], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.8969935457260645, 0.03136537650129557, -3.4536619307243186e-05, 1.9380365136144386e-08, -4.250746365163833e-12, -66479.61229313561, -0.6822066393777533], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.834144459748813, -0.00712665996163563, 1.2639022416819117e-05, -6.681787889537329e-09, 1.1906504853640317e-12, -69468.69999739867, -60.909873151562834], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 37.3,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4610,19 +5023,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.25283229666286844, 0.02196083615973443, -2.9950780653634024e-05, 2.1358393509157084e-08, -6.125745743990052e-12, 14570.602090362496, -2.7225950490932895], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.479256089403834, -0.003801893741304097, 6.806689659541158e-06, -3.6435473720240567e-09, 6.55030932313473e-13, 12867.383028783646, -38.61818128245971], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.25283006015604187, 0.02196083876256632, -2.995078757088064e-05, 2.1358396282336687e-08, -6.1257447536872715e-12, 10711.319198624406, -2.7225828014208826], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.479250514525144, -0.0038018859574486426, 6.8066816816392985e-06, -3.643543798852429e-09, 6.550303406277692e-13, 9008.101354857077, -38.61815049599427], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4643,19 +5059,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.6497117249237597, 0.03554659990718607, -4.4142697799558037e-05, 2.93903593051855e-08, -8.001765916532122e-12, -17313.992525917864, 1.807676305525411], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.113681847679658, -0.007676997669985588, 1.3787877482188212e-05, -7.421194660802826e-09, 1.3394167722781966e-12, -20441.127116782518, -62.165190770593796], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.6497153450141888, 0.035546604120223445, -4.414270899606324e-05, 2.939036379394475e-08, -8.001754984206834e-12, -25386.158871280717, 1.8076961116185153], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.11369144591575, -0.00767701103697003, 1.3787891209052118e-05, -7.421200820811269e-09, 1.3394177916973617e-12, -28513.301553477533, -62.16525112731247], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4676,19 +5095,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.41436465043911636, 0.029786625133376217, -2.426107781057743e-05, 8.221441058744636e-09, -2.817850119907206e-13, -14658.158453707338, 7.219061486102157], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.025013580421547, -0.009793659831366196, 1.7460964722192518e-05, -9.310410292910685e-09, 1.6689305407764036e-12, -18221.921985759705, -61.54133917364577], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.4143676839292862, 0.029786628663730223, -2.426108719279687e-05, 8.221444820144557e-09, -2.817862319670817e-13, -24400.4747273149, 7.219078103319432], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.02500088722102, -0.009793642109474915, 1.7460946560560346e-05, -9.310402159535727e-09, 1.6689291964108132e-12, -27964.23383707055, -61.541267057571915], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 51.0,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4708,19 +5130,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.010038189100148368, 0.027915951531930515, -3.7008074488711533e-05, 2.570289914908294e-08, -7.117882672158515e-12, -3135.090888188212, -1.4839360217744142], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.46433498705958, -0.005614607763985756, 9.924580262988197e-06, -5.215372068440793e-09, 9.23919913422026e-13, -5367.195379691557, -48.57071566492603], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.010041032080093394, 0.02791595484057199, -3.7008083281707176e-05, 2.570290267425526e-08, -7.117885244079258e-12, -6804.710046094447, -1.4839204453352997], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.464320248836604, -0.005614587199193173, 9.9245591770994e-06, -5.2153626206299305e-09, 9.23918350847828e-13, -9036.808855328203, -48.57063125531307], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4741,19 +5166,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-3.4051441867506744, 0.047724289490958145, -6.43559924429585e-05, 4.449797963339486e-08, -1.2296011431267573e-11, 23287.98612754453, 11.83631806740635], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.134869945412417, -0.0075269187342327185, 1.3520541327636236e-05, -7.277197774712797e-09, 1.3138262992731103e-12, 19636.558323697398, -65.34142221287271], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-3.4051490470255836, 0.047724295147314466, -6.435600747520544e-05, 4.449798565993566e-08, -1.229600974858338e-11, 11702.016520545762, 11.83634468441823], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.134856888890395, -0.007526900516033633, 1.352052265274789e-05, -7.2771894094033805e-09, 1.3138249202344664e-12, 8050.59187389058, -65.34134973287247], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4773,19 +5201,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.3776098886368788, 0.03725658652985835, -5.301683192936591e-05, 3.855549170243632e-08, -1.1193462823300138e-11, -14979.890655962163, 3.9622718582434455], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.198849403954185, -0.005117172932029725, 9.263940504945724e-06, -5.038401040839732e-09, 9.169576549613017e-13, -17653.33860554634, -53.26801022581537], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.377613682873679, 0.03725659094556663, -5.301684366448474e-05, 3.85554964071359e-08, -1.1193467269780293e-11, -21381.90717827815, 3.962292648538873], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.198827717145198, -0.005117142676443838, 9.263909477123228e-06, -5.03838713590732e-09, 9.16955353646548e-13, -24055.346453419006, -53.26788563457137], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4803,19 +5234,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.923562143240646, 0.010682159200923623, -1.2508195264134207e-05, 8.481349940250621e-09, -2.4795755726447766e-12, 7874.934152805861, -2.176705532413184], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.086216049969408, -0.0028051611886139994, 5.098960366822314e-06, -2.7909116737181186e-09, 5.101968931763034e-13, 6806.999474188373, -23.237580035600725], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.9235610553621525, 0.01068216046698936, -1.2508198628811793e-05, 8.48135128917812e-09, -2.479573346741727e-12, 6451.047190647793, -2.1766995783633227], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.0862168181954, -0.002805162252729235, 5.0989614637722275e-06, -2.7909121678571102e-09, 5.101969745948299e-13, 5383.111223470665, -23.23758565322258], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4839,19 +5273,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-4.002408677490918, 0.05221889029432998, -5.891216152170422e-05, 3.5103548702661736e-08, -8.419341612775355e-12, 12769.100245140358, 15.082182270412012], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[15.9486679253505, -0.012883729841375003, 2.302832738699371e-05, -1.2316759623532165e-08, 2.2120213375841774e-12, 7784.641898728694, -85.45366806841204], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-4.002413995498696, 0.05221889648339103, -5.8912177969662134e-05, 3.510355529677287e-08, -8.419339629356664e-12, -2157.1687731357215, 15.082211393890638], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[15.948653910382953, -0.012883710275849664, 2.30283073399041e-05, -1.2316750647550109e-08, 2.212019858759127e-12, -7141.623814128183, -85.45359037375812], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4873,19 +5310,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-3.2454263842040563, 0.045740712834499, -5.206788394779641e-05, 3.1011581474928596e-08, -7.431173731919927e-12, 18608.93468346289, 14.227506587622653], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.973737140881015, -0.010520315933265804, 1.8851700221785156e-05, -1.0120427938433633e-08, 1.8231167545404697e-12, 14312.568408448173, -72.51992728662742], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-3.2454310424697583, 0.045740718255756645, -5.206789835525127e-05, 3.101158725098536e-08, -7.43117665629453e-12, 5352.815254379377, 14.227532107306452], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.973715561836796, -0.010520285819897423, 1.8851669349884655e-05, -1.0120414107899575e-08, 1.8231144688019987e-12, 1056.4569008898125, -72.51980418671917], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -4906,19 +5346,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.300412672194553, 0.036196155908658725, -4.2884290614632455e-05, 2.714169514084154e-08, -6.9348485287612505e-12, -7741.61379539172, 5.483638123808867], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.191116478633521, -0.00886431129373155, 1.5729147271793533e-05, -8.318780340166752e-09, 1.4811271173832512e-12, -11058.79823281015, -62.242630748054566], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.30041635843613135, 0.03619616019868196, -4.288430201573472e-05, 2.7141699711617187e-08, -6.934849338825931e-12, -17483.929892102457, 5.483658315417512], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.191102408307225, -0.008864291649055325, 1.572912713587234e-05, -8.318771320936293e-09, 1.4811256231144176e-12, -20801.109686429227, -62.24255112474064], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4938,19 +5381,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.3590540257949546, 0.02501724558325153, -3.0958732097422e-05, 2.0028686967558853e-08, -5.265201469262237e-12, -45177.44501002426, 3.52733979234295], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.1626551705247, -0.004701472115306819, 8.43556603182292e-06, -4.533668267548416e-09, 8.179721904287085e-13, -47329.16593838451, -40.59755552516822], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.35905147802137405, 0.025017248548333162, -3.0958739977378896e-05, 2.002869012669601e-08, -5.2651983806115445e-12, -48065.658270703745, 3.5273537407172775], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.162652730015594, -0.004701468704464756, 8.435562541654682e-06, -4.533666706921367e-09, 8.179719347759545e-13, -50217.37992398336, -40.59754358949283], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 36.7 and 64.6,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -4970,19 +5416,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.26696039959774404, 0.025658708019581325, -3.6746089354556215e-05, 2.652568290254523e-08, -7.56687767999864e-12, 533.3673834572083, -0.5999011793376585], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.589736849916923, -0.0034428159868778517, 6.1541249150112485e-06, -3.2864385949829006e-09, 5.898563049065437e-13, -1250.9557086160285, -39.32243587207851], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.2669630126984997, 0.025658711060691144, -3.674609743656314e-05, 2.652568614267245e-08, -7.566882843329833e-12, -1466.1020670387804, -0.5998868568564104], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.589717718492281, -0.0034427893006683118, 6.154097545559309e-06, -3.286426328580151e-09, 5.898542759689933e-13, -3250.4169176372634, -39.322325238792374], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5006,19 +5455,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-3.484480061504159, 0.049611889732151956, -4.654198224495474e-05, 2.2377925953709398e-08, -4.031094902323673e-12, 17971.351855047233, 13.750530599079733], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[17.886825386143485, -0.015838525349654065, 2.8325178735322635e-05, -1.5167316715817698e-08, 2.7260964210844285e-12, 12404.406024243623, -95.0345997749903], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-3.484485114012842, 0.04961189561222539, -4.65419978717544e-05, 2.2377932218595584e-08, -4.031092980904033e-12, 1374.9329935279382, 13.750558268509494], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[17.886812140218346, -0.015838506842304444, 2.832515977929691e-05, -1.5167308231428934e-08, 2.7260950183678272e-12, -4192.009737803672, -95.03452637890805], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5041,19 +5493,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-4.026345852130678, 0.050330824582074225, -5.385881175406401e-05, 3.034074169321413e-08, -6.849180944623612e-12, 13794.09327381182, 15.773763750300732], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[15.89638211689794, -0.01326625399305861, 2.3747362731478014e-05, -1.2730778062976612e-08, 2.2905149321293325e-12, 8741.120527532707, -84.98132493424458], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-4.026350977856424, 0.05033083054735824, -5.3858827607316166e-05, 3.034074804890288e-08, -6.8491831794954975e-12, -1132.1757946422752, 15.773791828959922], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[15.896360332347012, -0.013266223584548383, 2.3747331561928986e-05, -1.2730764101309729e-08, 2.290512623175143e-12, -6185.140884955092, -84.98120108238106], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5077,19 +5532,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.40376886767600445, 0.03434773773851405, -1.589336246930892e-05, -2.4397393198112853e-09, 3.409550419775087e-12, 8868.751638779748, -2.8137786594112715], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[19.778567406809294, -0.018507705596035758, 3.304254534572872e-05, -1.7651525659642544e-08, 3.1660737399852312e-12, 3461.3474161579325, -103.13119150373578], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.40376536967951093, 0.034347741809455025, -1.589337328818797e-05, -2.439734982430757e-09, 3.4095542131728e-12, -9397.817414808324, -2.8137595079379913], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[19.77856313212703, -0.018507699595861404, 3.3042539225048794e-05, -1.7651522931350595e-08, 3.1660732917247853e-12, -14805.222140823658, -103.1311696686628], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5107,19 +5565,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[2.7297147696519386, 0.008710513433113376, -1.2913175453546773e-05, 1.0729495025872316e-08, -3.3943334254438184e-12, -26181.02058153902, -6.044799612763292], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[5.854969755224983, -0.0032884838154521837, 5.569914961149535e-06, -2.7300853163986106e-09, 4.558987651233143e-13, -26872.958433607084, -21.351875463188136], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[2.7297138825671468, 0.008710514465497024, -1.291317819719363e-05, 1.0729496125819492e-08, -3.39433446606103e-12, -28756.073406058884, -6.044794752032761], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[5.854964676995411, -0.003288476727423586, 5.569907695763815e-06, -2.730082062056071e-09, 4.558982273494338e-13, -29448.009226725862, -21.35184628967326], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 62.1,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -5138,19 +5599,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.3087966439268551, 0.023227065095417408, -3.556983029780869e-05, 2.775356125764918e-08, -8.585455263387942e-12, 23742.554072009912, 2.811366711504294], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.115613052476612, -0.0028051889306885385, 5.132717569782909e-06, -2.8290128457275187e-09, 5.200085899533489e-13, 22208.89947582518, -30.609649770950455], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.30879427846626484, 0.023227067848325393, -3.556983761389428e-05, 2.7753564190724293e-08, -8.58545640929891e-12, 18804.86385559218, 2.8113796696926467], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.115602779295008, -0.0028051745981831867, 5.132702872236503e-06, -2.829006259459821e-09, 5.200075004342621e-13, 17271.212913240193, -30.60959130885633], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 88.08 and 88.09,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -5172,19 +5636,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.4742019619819957, 0.042144995536667125, -5.019755499211274e-05, 3.192281341306676e-08, -8.249907701429748e-12, 23016.544936048907, 6.3646605945007675], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.113333075018854, -0.009852181996058411, 1.760958052368724e-05, -9.414965035147297e-09, 1.690377726709007e-12, 19171.607686569932, -71.922418943132], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.4742062540575103, 0.04214500053175585, -5.019756826698666e-05, 3.1922818735063856e-08, -8.249905627795002e-12, 9760.425405263726, 6.364684098641106], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.11332271622567, -0.009852167524871164, 1.7609565696925904e-05, -9.414958396811886e-09, 1.6903766265120003e-12, 5915.490307430729, -71.92236187706696], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5204,19 +5671,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.5193148349166338, 0.023734401542306514, -2.1291541552457206e-05, 9.945549656770349e-09, -1.7005320762653042e-12, 2311.1793446082465, 7.353465918619756], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.145639013678018, -0.008751777752192158, 1.5480383746770106e-05, -8.152097424369403e-09, 1.4464151515511565e-12, -472.97096509119547, -46.971396464133335], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.5193172520442837, 0.023734404355342437, -2.1291549028341602e-05, 9.94555265390745e-09, -1.7005321482851575e-12, -6542.393302809386, 7.3534791576741245], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.145630696608784, -0.008751766131929682, 1.54803718423858e-05, -8.152092095089769e-09, 1.4464142686037081e-12, -9326.541060863998, -46.97134963735187], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 24.5 and 55.12,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -5238,19 +5708,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.0741274556154028, 0.022965576621378495, -1.2260547570099876e-05, -1.2460321254102096e-09, 2.540360283243004e-12, -29930.751909999097, 1.029548333678978], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[13.048629858122181, -0.009848436466281987, 1.7567229443068718e-05, -9.375556766452995e-09, 1.6816185962709e-12, -33236.710608743386, -60.86273230058802], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.0741251167856873, 0.022965579343290663, -1.2260554803817235e-05, -1.2460292253565517e-09, 2.5403566710368206e-12, -36159.26476490125, 1.0295611508796672], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[13.048614734292261, -0.009848415350408759, 1.7567207799851504e-05, -9.375547072388493e-09, 1.6816169905928739e-12, -39465.217172267585, -60.862645123248136], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 42 and 64.2,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -5273,19 +5746,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-4.808912278042515, 0.05371459353605084, -6.677816098958233e-05, 4.3278250548889796e-08, -1.1302327129758538e-11, 21133.328230280502, 17.84935288787215], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[14.066244577410863, -0.010480168414818717, 1.881927352100178e-05, -1.0130741835721841e-08, 1.8288358396851678e-12, 16549.089682331367, -76.61936010724799], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-4.808917748373903, 0.053714599902385717, -6.677817790865915e-05, 4.327825733184735e-08, -1.130233577297329e-11, 7877.209024203347, 17.849382866639438], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[14.066208846469156, -0.010480118559539833, 1.881922239694593e-05, -1.0130718926452086e-08, 1.828832046803562e-12, 3292.985392407525, -76.6191540700652], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5304,19 +5780,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[3.388779213631883, 0.014850706410940143, -1.8053000059341232e-05, 1.2700296345620905e-08, -3.7160309551698134e-12, -2489.5602654492313, -8.571580661198478], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.154633162229366, -0.004498769503700408, 8.014673958761491e-06, -4.261303331914661e-09, 7.615166703060956e-13, -3925.0105351386374, -37.550570154064005], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[3.3887777012256572, 0.014850708171068365, -1.8053004737031874e-05, 1.2700298220935e-08, -3.716030318814928e-12, -7237.587145623862, -8.57157237881663], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.154629319398145, -0.00449876413570766, 8.0146684604216e-06, -4.261300870858486e-09, 7.615162641286214e-13, -8673.036553199832, -37.55054890583075], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 46.11 and 61.53,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -5337,19 +5816,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.3738267893184363, 0.02339769200062538, -1.9573560022432125e-05, 7.627197853066382e-09, -7.421147030228781e-13, -18190.300221535006, 6.579102040857689], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.314149933698543, -0.008568719429804302, 1.5185530659546744e-05, -8.022793154085987e-09, 1.4272203295633218e-12, -21002.804044725915, -47.98962958885656], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.37382917215532696, 0.023397694773753867, -1.9573567392259445e-05, 7.627200807680551e-09, -7.421143739131525e-13, -25184.059541375143, 6.579115091304888], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.314142529124842, -0.00856870908864423, 1.5185520067013606e-05, -8.022788412750033e-09, 1.4272195483623104e-12, -27996.561277228066, -47.98958812415533], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 25.3 and 72.1,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -5371,19 +5853,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-4.541835805809122, 0.05160727391403616, -6.99488944443476e-05, 4.8515824081931226e-08, -1.345649286443873e-11, 26664.75476425432, 16.518000967056917], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.143041715945822, -0.007834179492609282, 1.4122672211551237e-05, -7.640534691801569e-09, 1.3848751382857308e-12, 22747.56448674413, -66.32293547709035], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-4.541841061529845, 0.05160728003060958, -6.994891069966049e-05, 4.85158305988308e-08, -1.3456497319240965e-11, 15078.785267431054, 16.518029762099676], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.143015074848885, -0.007834142324240255, 1.4122634097373617e-05, -7.640517612449328e-09, 1.3848723134761679e-12, 11161.605169075814, -66.32278300778111], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5401,19 +5886,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.6073983748266721, 0.024113459272879424, -3.6226375705033655e-05, 2.7097576274857764e-08, -7.934382317831279e-12, -3663.57466599349, -4.173499030987074], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.644644146453326, -0.0029201102305442955, 5.16968190751061e-06, -2.718904777923171e-09, 4.8236485420246e-13, -5211.950727967887, -38.614889737699016], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.6073959190950321, 0.024113462130844535, -3.622638330031743e-05, 2.7097579319862448e-08, -7.934381327464133e-12, -5663.044162083017, -4.173485582593109], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.644637833087604, -0.002920101421341297, 5.169672876049725e-06, -2.7189007316892194e-09, 4.823641859136411e-13, -7211.418781892696, -38.61485479394129], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5433,19 +5921,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.0343560218929917, 0.02954889213174962, -3.7388956403900184e-05, 2.5054277182663535e-08, -6.773304139784386e-12, 5152.036027340048, 2.7569531883392795], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.38499187571051, -0.0062701685659363425, 1.1163513168188612e-05, -5.931883768833952e-09, 1.0601000397067635e-12, 2637.921356526067, -49.30415707094812], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.0343590311726811, 0.029548895633929394, -3.738896571124078e-05, 2.505428091404425e-08, -6.7733044547221584e-12, -2031.3866862782447, 2.756969671164323], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.384981081689604, -0.0062701534989397616, 1.1163497723477089e-05, -5.931876850455135e-09, 1.0600988950662274e-12, -4545.4979397780735, -49.30409616407421], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5468,19 +5959,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.4078333893607506, 0.03381796177566529, -1.8236476569497745e-05, -2.1781846529770775e-10, 2.782378494270432e-12, 2456.669096131694, 3.0339536257089286], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[17.695307434024926, -0.01618740727690008, 2.8912158147894964e-05, -1.5456094995757705e-08, 2.774248536517414e-12, -2548.8036492699302, -90.50560326972989], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.4078368334046704, 0.03381796578381747, -1.8236487221509343e-05, -2.1781419481646084e-10, 2.782374927270981e-12, -14139.750199174416, 3.0339724962175385], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[17.695288648796936, -0.016187381050989588, 2.8912131274443475e-05, -1.545608296238792e-08, 2.7742465514950727e-12, -19145.215562242054, -90.5054955162382], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5496,19 +5990,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.0434374026493032, 0.017236903600525225, -3.068695772385649e-05, 2.538824345082357e-08, -8.015095531721528e-12, 7272.051631992745, 3.0546208304970115], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[2.8710250803063295, -0.000459583897810385, 8.695024882748882e-07, -4.943281589731255e-10, 9.304088132376496e-14, 6536.028447334573, -15.466780891576455], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.0434391580678266, 0.017236905643470923, -3.068696315315614e-05, 2.5388245627464015e-08, -8.015096461815905e-12, 6177.485244830273, 3.0546304469819057], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[2.871017301698067, -0.00045957304951942124, 8.694913605296623e-07, -4.94323170989376e-10, 9.30400561761373e-14, 5441.46485634589, -15.466736587844444], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5527,19 +6024,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.044452913308908576, 0.019436759636543545, -1.9102857378165163e-05, 1.1126926094899282e-08, -2.737358950621882e-12, 1233.9797412807775, -0.1733858789314926], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.657045298440448, -0.007903077857146142, 1.4010043902444632e-05, -7.4001607786229035e-09, 1.3151659242308404e-12, -1013.9667404170004, -44.33525482701773], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.04445489276185006, 0.01943676194021713, -1.9102863500374985e-05, 1.1126928549339282e-08, -2.7373609307351296e-12, -6525.026160136118, -0.1733750333071784], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.657034648985562, -0.007903062987556124, 1.4010028663218991e-05, -7.400153953696461e-09, 1.3151647947324833e-12, -8772.968478529481, -44.33519376803277], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5561,19 +6061,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.763419916108498, 0.021946448969719, -2.103316059025525e-05, 1.0462346509861043e-08, -2.00841426822862e-12, 3294.96709676331, -2.2565505771061716], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.110541682510993, -0.006805474008018404, 1.2093550174710639e-05, -6.412294549468917e-09, 1.1443172374703573e-12, 869.6838612669162, -49.79891523032214], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.7634176810672415, 0.021946451570843618, -2.1033167502967104e-05, 1.0462349281217349e-08, -2.0084145369249484e-12, -1469.2190936907161, -2.256538334973248], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.11053358784989, -0.006805462707882655, 1.2093538595183724e-05, -6.412289364227745e-09, 1.1443163823129447e-12, -3894.4997496468086, -49.79886953498589], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 18.68 and 56.21,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -5590,19 +6093,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.075699468841116, 0.017358077343272296, -2.609206412898108e-05, 1.8928216959216332e-08, -5.388359897162687e-12, -2423.6743040617907, 8.153606339477767], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[2.7224745129276777, -0.0010681624758273717, 1.9865280608509053e-06, -1.120480196821236e-09, 2.0981090637377155e-13, -3475.7189779226437, -15.320705237248276], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.075701236599891, 0.017358079400578773, -2.609206959644694e-05, 1.8928219151161522e-08, -5.388359243334392e-12, -4093.8235942318433, 8.153616020422866], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[2.7224698531980533, -0.001068155975828598, 1.986521394943791e-06, -1.1204772095332365e-09, 2.0981041257906194e-13, -5145.86716729868, -15.320679400956458], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5621,19 +6127,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.9423372093417675, 0.02493487343959535, -2.7919420506031866e-05, 1.5719571712970995e-08, -3.4902289391958163e-12, 2470.330501720496, -4.565914187237134], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.170222985061477, -0.004832591811848306, 8.689196070678313e-06, -4.688316791083182e-09, 8.486224638721293e-13, 157.50700488584516, -51.128817254636154], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.9423346699570359, 0.02493487639491411, -2.7919428360043676e-05, 1.571957486170818e-08, -3.4902263334995127e-12, -623.7058353809892, -4.565900283855495], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.170219610476307, -0.0048325870949339446, 8.689191240948876e-06, -4.688314630071139e-09, 8.4862210661604e-13, -2936.5295463853636, -51.12879978565127], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5651,19 +6160,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.48229906536793415, 0.02587155127531559, -3.9360365788694726e-05, 3.0462959888373194e-08, -9.365327957588931e-12, -9183.575648025739, -3.573773358707397], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[8.0708325244702, -0.0030085351441184282, 5.5154130366392516e-06, -3.0480644218682132e-09, 5.614704876502467e-13, -10898.262450676473, -40.86266658834928], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.4822964305908491, 0.02587155434165326, -3.936037393774588e-05, 3.0462963155377796e-08, -9.365331471877763e-12, -13915.442714992738, -3.5737589207601044], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[8.07081661266945, -0.0030085129494901177, 5.515390274181092e-06, -3.0480542204079653e-09, 5.614688010457989e-13, -15630.123032780248, -40.862575025965135], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5688,19 +6200,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-3.0278046479993272, 0.04868277469861659, -4.646973264049378e-05, 2.2875158469816263e-08, -4.2387759968676164e-12, 7656.330896206412, 11.50704836401261], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[17.77877011492434, -0.015532217068462958, 2.7689854090790898e-05, -1.4757543334478308e-08, 2.6427560802981618e-12, 2269.2588087014537, -94.26062897519923], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-3.0278096058865027, 0.04868278046857124, -4.646974797464267e-05, 2.2875164617387645e-08, -4.238776330984361e-12, -8940.087989920738, 11.507075519643987], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[17.778752685293135, -0.015532192728255128, 2.768982915049771e-05, -1.4757532167138965e-08, 2.6427542340485924e-12, -14327.154641275587, -94.260530730216], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5717,19 +6232,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-2.7556935991113143, 0.02931258322046972, -4.843786135235457e-05, 3.8446894497971926e-08, -1.1723805953822719e-11, 2098.8385749478566, 10.096496473865535], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[4.828393274330211, -0.0024595949286131567, 4.346762608100847e-06, -2.2753101158881143e-09, 4.018659752232502e-13, 561.3828902184414, -26.3700032711956], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-2.755696584325541, 0.02931258669464399, -4.84378705852652e-05, 3.844689819950921e-08, -1.1723809056491327e-11, -665.8772487932613, 10.096512830387793], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[4.828377003858721, -0.002459572235886796, 4.346739333449326e-06, -2.2752996842710652e-09, 4.018642509209477e-13, -2203.326535154355, -26.369909929000492], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5746,19 +6264,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[4.177331860342677, -0.0012986530515051672, 2.5984608392459963e-06, -9.710009093628354e-10, -9.263358309585801e-14, 2872.482400816355, -7.8361280056985745], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[4.407824912386021, -0.0015051356127564913, 2.6825671580396526e-06, -1.4261829223683117e-09, 2.5443162032394223e-13, 2761.577652368197, -9.19892716405165], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[4.177331992598396, -0.0012986532054234208, 2.5984612482967176e-06, -9.710010733545473e-10, -9.263379990534644e-14, 683.3486355619275, -7.836128729651465], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[4.407824922141336, -0.0015051356220845875, 2.6825671704148484e-06, -1.4261829291752541e-09, 2.5443162091545603e-13, 572.4439867678775, -9.198927094799298], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 9.93,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -5780,19 +6301,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.685978627729595, 0.025296468804795018, -3.4398724583518516e-05, 2.4726462848270053e-08, -7.1681376112575634e-12, 19937.574907728304, -8.130952558650874], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.122123532985963, -0.004680413880020813, 8.377743678764652e-06, -4.483216274102132e-09, 8.058110283909199e-13, 17938.67864344881, -50.07405596097429], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.6859760515195177, 0.025296471802971843, -3.4398732551427645e-05, 2.4726466042657776e-08, -7.168136846025081e-12, 13329.734979927138, -8.13093844993648], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.122116356278868, -0.004680403866579923, 8.377733415299198e-06, -4.483211677086074e-09, 8.058102717843452e-13, 11330.840527408804, -50.07401602772124], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5812,19 +6336,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-3.1209839650654505, 0.03948489337397223, -5.467134560713659e-05, 3.872997294685073e-08, -1.0891107460331284e-11, 9408.620957475357, 11.198399654770991], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.50733559911769, -0.0062944615865850465, 1.1259999982182603e-05, -6.0234545814607654e-09, 1.0820098750351573e-12, 6486.597092135711, -51.2967294712286], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-3.1209879862344923, 0.03948489805378244, -5.467135804412915e-05, 3.8729977932935336e-08, -1.0891099749414743e-11, 571.2082492144876, 11.19842166398584], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.507337417078714, -0.006294464106528833, 1.1260002579030159e-05, -6.023455750872429e-09, 1.082010068231787e-12, -2350.8198242402177, -51.296744183199266], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5849,19 +6376,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.14003259781996247, 0.03586162976285301, -1.11021364991019e-05, -8.973999424710427e-09, 5.916364620439651e-12, 5813.024055422382, -0.9771971470803091], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[21.506545750084097, -0.021538701603008723, 3.84134172767583e-05, -2.049047834779493e-08, 3.67104278562163e-12, -310.38910376948115, -113.46375175738402], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.1400362499920048, 0.03586163401322123, -1.1102147794825963e-05, -8.973994896167067e-09, 5.916366200757223e-12, -14123.69472474635, -0.977177146795837], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[21.50653652732509, -0.021538688697864905, 3.841340407827459e-05, -2.0490472449157003e-08, 3.671041814415652e-12, -20247.10583870476, -113.4637007990611], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5883,19 +6413,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.5930036410580237, 0.03571236960277976, -2.8891917695947535e-05, 1.0353989429743649e-08, -6.877484692857649e-13, 22864.693502064103, 4.071108868409096], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[15.859740958863316, -0.012892229650732454, 2.2989923173715027e-05, -1.2260637510722244e-08, 2.1968922551084385e-12, 18497.030162582316, -80.0996968777047], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.5930072780301965, 0.035712373835462545, -2.8891928944665743e-05, 1.0353993939432713e-08, -6.877535382356412e-13, 7938.424031049892, 4.071128798576763], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[15.859718536630805, -0.012892198355494286, 2.298989109372911e-05, -1.2260623140565328e-08, 2.1968898796633675e-12, 3570.7698854887312, -80.09956779067612], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5915,19 +6448,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.0485328055132175, 0.028672112331914735, -3.4822695375238e-05, 2.2596349194893594e-08, -5.960530680138021e-12, 9882.698630656403, 2.5065656904453557], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[9.414361625368064, -0.006532492926442659, 1.1674964208927885e-05, -6.240271609019632e-09, 1.1201413670854261e-12, 7315.907759098805, -49.97073415880129], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.048535725500923, 0.028672115730176494, -3.482270440640814e-05, 2.2596352815551332e-08, -5.960529024806645e-12, 2699.2758918850304, 2.5065816803148726], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[9.414355064771192, -0.0065324837634211244, 1.1674954821309034e-05, -6.2402674061796265e-09, 1.1201406725326385e-12, 132.48622180421444, -49.970698213619706], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -5947,19 +6483,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.3828187309797452, 0.031836903255905415, -4.013910077551464e-05, 2.761968717216655e-08, -7.788499012395533e-12, 25057.875949925943, 5.759655127568052], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.118039767476288, -0.0074059749629245735, 1.3261664190103652e-05, -7.105185250480473e-09, 1.2776281650071471e-12, 22246.194242526693, -51.83453946208235], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.3828219732720616, 0.03183690702926364, -4.013911080353506e-05, 2.7619691192472573e-08, -7.788500545993845e-12, 13471.905905487618, 5.759672889040027], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.118025751357365, -0.007405955399938974, 1.3261644135403257e-05, -7.1051762665016375e-09, 1.2776266786152328e-12, 10660.22916896846, -51.834459720299336], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 12 and 99.7,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -5980,19 +6519,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.7048343312416007, 0.028376201417515148, -3.7864509437051594e-05, 2.6544109758791067e-08, -7.541790109089064e-12, 45320.57864280307, -4.371824159907967], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[10.196869682854762, -0.004925420385461617, 8.881818762142402e-06, -4.805481378877049e-09, 8.710592807486574e-13, 43052.07269939644, -51.66537239982247], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.7048314413894516, 0.028376204780706408, -3.786451837501783e-05, 2.6544113342093204e-08, -7.541789535878568e-12, 35404.75827479113, -4.3718083329572766], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[10.19686106748589, -0.004925408360661187, 8.881806435863004e-06, -4.805475857370816e-09, 8.71058367975777e-13, 33136.25466818001, -51.66532426442821], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -6015,19 +6557,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.236169616951722, 0.0391192964347373, -3.594452974308101e-05, 1.7078239755369327e-08, -3.0713001586413213e-12, 9611.572788348096, 3.5450552454458464], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[15.907361423361152, -0.013048576275606832, 2.3318786109779613e-05, -1.2471542891601062e-08, 2.239508305499705e-12, 5122.823454501469, -83.81982158180084], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.2361736008876079, 0.039119301071213676, -3.594454206491473e-05, 1.707824469528317e-08, -3.0713012365748303e-12, -5314.696590416191, 3.545077068093097], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[15.907345799408459, -0.013048554459586291, 2.3318763754336694e-05, -1.2471532880957137e-08, 2.2395066509179553e-12, -9803.44068183456, -83.8197330615869], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -6051,19 +6596,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.0128277676926316, 0.039605453245976766, -2.4179579834566663e-05, 3.2356519006891704e-09, 1.993148701640024e-12, 8632.390868771594, 3.3418135904896475], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[19.5941142062787, -0.018498140954926762, 3.29579995577773e-05, -1.7553526856730535e-08, 3.1414002936479626e-12, 2999.0305687573746, -102.82843075468661], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.0128318011385724, 0.03960545794007049, -2.4179592309526814e-05, 3.2356569019992192e-09, 1.993147578264105e-12, -9634.178037233445, 3.3418356843999426], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[19.594098314175667, -0.018498118747171062, 3.2957976810558034e-05, -1.7553516674984645e-08, 3.141398607090435e-12, -15267.53299380782, -102.82834070762412], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -6083,19 +6631,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[0.2631703605638592, 0.02672958182700725, -2.8237311149280387e-05, 1.6164539099028483e-08, -3.69835412294961e-12, 14829.081196035084, -2.446254248524509], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[11.199486664560553, -0.008342041650362158, 1.4711414998931697e-05, -7.709954680296734e-09, 1.3627206815362359e-12, 12068.7430652532, -57.70149463482577], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[0.2631676384047204, 0.026729584995038004, -2.8237319568592716e-05, 1.6164542474389308e-08, -3.698356854365778e-12, 7629.498896216806, -2.446239333520934], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[11.19947200837146, -0.008342021193629449, 1.471139402890261e-05, -7.709945286671133e-09, 1.3627191279000461e-12, 4869.166498563962, -57.70141059634063], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -6116,19 +6667,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-1.2597947854333764, 0.042911061194315925, -6.112561275165806e-05, 4.481050517474996e-08, -1.3045467484040785e-11, 32974.07582186854, 3.5252823923395966], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.261909294145994, -0.006846950029475659, 1.2247928231585094e-05, -6.547805246035505e-09, 1.1756090977137418e-12, 29868.892648616034, -63.24393195054921], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-1.2597991555257857, 0.04291106628020105, -6.112562626782867e-05, 4.4810510593462616e-08, -1.30454831688958e-11, 21388.106090067944, 3.525306358870278], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.261863218894595, -0.006846885764862458, 1.2247862318925582e-05, -6.547775704184015e-09, 1.1756042126397042e-12, 18282.94430736579, -63.24366361646152], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",
@@ -6146,19 +6700,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[1.600791364726406, 0.014704845247362895, -1.4669740619650143e-05, 6.819304873825679e-09, -1.1479810158032677e-12, -11860.77434054251, -0.766296623165708], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[7.295792299031667, -0.0025855513420097, 4.764106999098455e-06, -2.6619189543733584e-09, 4.947908487145042e-13, -13346.7746022648, -29.782781634319207], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[1.6007898671749248, 0.014704846990202641, -1.4669745251396025e-05, 6.8193067307309135e-09, -1.14798047400528e-12, -11424.847852798026, -0.7662884219583095], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[7.295788322982971, -0.0025855457915561135, 4.764101310182035e-06, -2.661916406358756e-09, 4.947904274570403e-13, -12910.847167606094, -29.78275958089408], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 The two lowest frequencies, 31.35 and 43.35,where replaced by the 2D gas model.
 """,
     metal = "Pt",
@@ -6180,19 +6737,22 @@ entry(
 """,
     thermo = NASA(
         polynomials = [
-            NASAPolynomial(coeffs=[-0.6781890175202328, 0.03266563196550605, -3.482124141809595e-05, 1.9201333508215776e-08, -4.230282790729234e-12, -10648.760074232523, 1.4808105805832952], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
-            NASAPolynomial(coeffs=[12.110986738337399, -0.007888949731124329, 1.419017817690404e-05, -7.661299725244604e-09, 1.3863367885039082e-12, -13905.450454256494, -63.26475767863039], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
+            NASAPolynomial(coeffs=[-0.6781923442105725, 0.03266563583708485, -3.4821251707147723e-05, 1.920133763315766e-08, -4.230295518156721e-12, -18720.926488045658, 1.4808288264278042], Tmin=(298.0,'K'),Tmax=(1000.0, 'K')),
+            NASAPolynomial(coeffs=[12.110950086361376, -0.007888898601392046, 1.4190125740615599e-05, -7.66127622554861e-09, 1.3863329006911743e-12, -21977.599734393276, -63.26454408255799], Tmin=(1000.0,'K'), Tmax=(2000.0, 'K')),
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
     ),
 longDesc = u"""
-Calculated by [author] at [institution] using statistical mechanics methods within the class Adsorbate.
-Based on DFT calculations by [author] from [institution]. DFT calculations were performed with [dft_calculator]
-using [pseudopotentals] and [functional] for an optimized [supercell size] following the procedure outlined 
-by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
-kpoints=[], n layers (m bottom layers fixed), ecutwfc=[] Ry, smearing=[type], mixing_mode=[],
-fmax=2.5e-2.
+Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
+Franklin Goldsmith's thermo_kinetics_scripts repository in the new_workflow folder:
+
+https://github.com/franklingoldsmith/thermo_kinetics_scripts/tree/main/new_workflow
+
+DFT calculations were performed with Quantum Espresso using PAW pseudopotentals and the BEEF-vdW
+functional for an optimized 3x3x4 supercell with the bottom 2 layers fixed. The following settings
+were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
+smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.
 """,
     metal = "Pt",
     facet = "111",

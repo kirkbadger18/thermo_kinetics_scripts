@@ -1,3 +1,5 @@
+import textwrap
+
 Pt111_ads_data = [
     {
         "adsorbate_name": "XOC(OH)O",
@@ -774,7 +776,7 @@ Pt111_ads_data = [
             "eV"
         ],
         "frequencies": [
-            8.1,
+            68.1,
             130.4,
             183.2,
             375,
@@ -3199,24 +3201,24 @@ Pt111_ads_data = [
             "Pt": 1
         },
         "dft_energy": [
-            -378768.9838,
+            -378769.0291499427,
             "eV"
         ],
         "zpe": [
-            0.137,
+            0.132,
             "eV"
         ],
         "frequencies": [
-            113.6,
-            197.8,
-            295.5,
-            320.9,
-            456.5,
-            809.4,
+            92.2,
+            110.7,
+            209.0,
+            356.6,
+            518.6,
+            850.3,
             "cm-1"
         ],
         "sites_occupied": 2,
-        "connectivity": "1 X  u0 p0 c0 {3,S}\n2 X  u0 p0 c0 {4,S}\n3 O  u0 p2 c0 {1,S} {4,S}\n4 O  u0 p2 c0 {2,S} {3,S}\n"
+        "connectivity": "1 X  u0 p0 c0 {3,S}\n2 X  u0 p0 c0 {4,S}\n3 O  u0 p2 c0 {1,S} {4,S}\n4 O  u0 p2 c0 {2,S} {3,S}"
     },
     {
         "adsorbate_name": "CH3NXNOH",
@@ -5015,30 +5017,14 @@ Pt111_ads_data = [
             "Pt": 1
         },
         "dft_energy": [
-            -378501.801536356,
+            -378501.848393,
             "eV"
         ],
         "zpe": [
-            1.102,
+            1.08,
             "eV"
         ],
-        "frequencies": [
-            12,
-            12,
-            203.2,
-            285.1,
-            287.1,
-            305,
-            967.1,
-            1133.5,
-            1134.9,
-            1433.9,
-            1461.7,
-            1462,
-            2976.9,
-            3061.4,
-            3061.4,
-            "cm-1"
+        "frequencies": [51.1, 54.5, 96.5, 199.7, 238.2, 447.7, 981.5, 1110.3, 1111.0, 1412.8, 1422.4, 1448.4, 2901.1, 2948.7, 2992.5 ,"cm-1"
         ],
         "sites_occupied": 1,
         "connectivity": "1 X  u0 p0 c0 {3,S}\n2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}\n3 O  u0 p2 c0 {1,S} {2,S}\n4 H  u0 p0 c0 {2,S}\n5 H  u0 p0 c0 {2,S}\n6 H  u0 p0 c0 {2,S}\n"
@@ -7191,5 +7177,105 @@ Pt111_ads_data = [
         ],
         "sites_occupied": 2,
         "connectivity": "1 C u0 p0 c0 {2,D} {4,S} {6,S}\n2 C u0 p0 c0 {1,D} {3,S} {5,S}\n3 O u0 p2 c0 {2,S} {7,S}\n4 H u0 p0 c0 {1,S}\n5 H u0 p0 c0 {2,S}\n6 X u0 p0 c0 {1,S}\n7 X u0 p0 c0 {3,S}\n"
-    }
+    },
+    # {
+    #     "adsorbate_name": "XOC(OH)XO",
+    #     "atomic_composition": {
+    #         "H": 1,
+    #         "C": 1,
+    #         "N": 0,
+    #         "O": 3,
+    #         "Pt": 1
+    #     },
+    #     "dft_energy": [-379625.7837, "eV"],
+    #     "zpe": [0.763, "eV"],
+    #     "frequencies": [76.8,106.8,110.9,155.2,232.8,263.0,514.7,626.3,668.2,764.0,1006.0,1209.9,1363.2,1508.7,3709.1 ,"cm-1"],
+    #     "sites_occupied": 2,
+    #     "connectivity": textwrap.dedent(
+    #     '''
+    #     1 X u0 p0 c0 {3,S}
+    #     2 X u0 p0 c0 {4,vdW}
+    #     3 O u0 p2 c0 {1,S} {5,S}
+    #     4 O u0 p2 c0 {2,vdW} {5,D}
+    #     5 C u0 p0 c0 {3,S} {4,D} {6, S}
+    #     6 O u0 p2 c0 {5,S} {7,S}
+    #     7 H u0 p0 c0 {6,S}
+    #     '''
+    #     ),
+        
+    # },
+    # {
+    #     "adsorbate_name": "XOCHXO",
+    #     "atomic_composition": {
+    #         "H": 1,
+    #         "C": 1,
+    #         "N": 0,
+    #         "O": 2,
+    #         "Pt": 1
+    #     },
+    #     "dft_energy": [-379047.4516, "eV"],
+    #     "zpe": [0.636, "eV"],
+    #     "frequencies": [121.7,162.9,172.0,291.7,311.6,366.9,750.9,988.8,1282.9,1335.7,1487.4,2994.0, "cm-1"],
+    #     "sites_occupied": 2,
+    #     "connectivity": textwrap.dedent(
+    #     '''
+    #     1 X u0 p0 c0 {3,S}
+    #     2 X u0 p0 c0 {4,vdW}
+    #     3 O u0 p2 c0 {1,S} {5,S}
+    #     4 O u0 p2 c0 {2,vdW} {5,D}
+    #     5 C u0 p0 c0 {3,S} {4,D} {6, S}
+    #     6 H u0 p0 c0 {5,S}
+    #     '''
+    #     ),
+
+    # },
+    # {
+    #     "adsorbate_name": "XONXO",
+    #     "atomic_composition": {
+    #         "H": 0,
+    #         "C": 0,
+    #         "N": 1,
+    #         "O": 2,
+    #         "Pt": 1
+    #     },
+    #     "dft_energy": [-379163.0494, "eV"],
+    #     "zpe": [0.269, "eV"],
+    #     "frequencies": [75.63, 87.45, 108.32, 212.26, 293.91, 388.98, 784.3, 1137.63, 1242.84 ,"cm-1"],
+    #     "sites_occupied": 2,
+    #     "connectivity": textwrap.dedent(
+    #     '''
+    #     1 X u0 p0 c0 {3,S}
+    #     2 X u0 p0 c0 {4,vdW}
+    #     3 O u0 p2 c0 {1,S} {5,S}
+    #     4 O u0 p2 c0 {2,vdW} {5,D}
+    #     5 N u0 p1 c0 {3,S} {4,D}
+    #     '''
+    #     ),
+
+    # },
+    # {
+    #     "adsorbate_name": "XONOXO",
+    #     "atomic_composition": {
+    #         "H": 0,
+    #         "C": 0,
+    #         "N": 1,
+    #         "O": 3,
+    #         "Pt": 1
+    #     },
+    #     "dft_energy": [-379739.6155, "eV"],
+    #     "zpe": [0.388, "eV"],
+    #     "frequencies": [41.457786145826695, 68.56986436513426, 89.07789007791764, 131.6301325571402, 204.98702747323344, 246.77629409792831, 655.2976915352621, 690.1748162955713, 704.8482254118021, 935.0059647825084, 1015.1479153709548, 1476.9070724170426 ,"cm-1"],
+    #     "sites_occupied": 2,
+    #     "connectivity": textwrap.dedent(
+    #     '''
+    #     1 X u0 p0 c0 {3,S}
+    #     2 X u0 p0 c0 {4,vdW}
+    #     3 O u0 p2 c0 {1,S} {5,S}
+    #     4 O u0 p2 c0 {2,vdW} {5,D}
+    #     5 N u0 p0 c+1 {3,S} {4,D} {6,S}
+    #     6 O u0 p3 c-1 {5,S}
+    #     '''
+    #     ),
+
+    # },
 ]

@@ -246,8 +246,8 @@ group_data = {
         'gas_precursors': [],
         'adsorbates': [],
         'connectivity_string': textwrap.dedent("""
-        1 * X u0 {3,[S,D,T]}
-        2 X u0 {4,[S,D,T]}
+        1 * X u0 p0 c0 {3,[S,D,T]}
+        2 X u0 p0 c0 {4,[S,D,T]}
         3 C  u0 {1,[S,D,T]} {4,[S,D,T]}
         4 C  u0 {2,[S,D,T]} {3,[S,D,T]}
         """,)
@@ -390,7 +390,7 @@ group_data = {
         1 * X u0 p0 c0 {3,[S,D,T]}
         2 X u0 p0 c0 {4,[S,D]}
         3 C u0 p0 c0 {1,[S,D,T]} {4,[S,D]}
-        4 N u0 p[0,1] c[0,+1] {2,[S,D]} {3,[S,D]}
+        4 N u0 p1 c0 {2,[S,D]} {3,[S,D]}
         """,)
     },
     'inv(C=XRN=X)': {
@@ -449,7 +449,7 @@ group_data = {
         2 X u0 p0 c0 {5,S}
         3 C u0 p0 c0 {1,S} {4,S} {5,D}
         4 R u0 px c0 {3,S}
-        5 N u0 p2 c0 {2,S} {3,D}
+        5 N u0 p1 c0 {2,S} {3,D}
         """,)
     },
     'inv(C-XRN=X)': {
@@ -482,7 +482,7 @@ group_data = {
         1 X u0 p0 c0 {3,[S,D,T]}
         2 * X u0 p0 c0 {4,[S,D]}
         3 C u0 p0 c0 {1,[S,D,T]} {4,[S,D]}
-        4 N u0 p[0,1] c[0,+1] {2,[S,D]} {3,[S,D]}
+        4 N u0 p1 c0 {2,[S,D]} {3,[S,D]}
         """,)
     },
     'C=XRN=X': {
@@ -541,7 +541,7 @@ group_data = {
         2 * X u0 p0 c0 {5,S}
         3 C u0 p0 c0 {1,S} {4,S} {5,D}
         4 R u0 px c0 {3,S}
-        5 N u0 p2 c0 {2,S} {3,D}
+        5 N u0 p1 c0 {2,S} {3,D}
         """,)
     },
     'C-XRN=X': {
@@ -571,8 +571,8 @@ group_data = {
         'gas_precursors': [],
         'adsorbates': [],
         'connectivity_string': textwrap.dedent("""
-        1 * X u0 {3,[S,D,T]}
-        2 X u0 {4,S}
+        1 * X u0 p0 c0 {3,[S,D,T]}
+        2 X u0 p0 c0 {4,S}
         3 C  u0 {1,[S,D,T]} {4,S}
         4 O  u0 p2 {2,S} {3,S}
         """,)
@@ -615,8 +615,8 @@ group_data = {
         'gas_precursors': [],
         'adsorbates': [],
         'connectivity_string': textwrap.dedent("""
-        1 * X u0 {3,[S,D]}
-        2 X u0 {4,[S,D]}
+        1 * X u0 p0 c0 {3,[S,D]}
+        2 X u0 p0 c0 {4,[S,D]}
         3 N  u0 {1,[S,D]} {4,[S,D]}
         4 N  u0 {2,[S,D]} {3,[S,D]}
         """,)
@@ -673,17 +673,7 @@ group_data = {
         2 X u0 p0 c0 {4,S}
         3 N  u0 p0 c+1 {1,D} {4,S} {5,S}
         4 O  u0 p2 c0 {2,S} {3,S}
-        5 R u0 px c-1 {3,S}
-        """,)
-    },
-    'OXOX': {
-        'gas_precursors': ['O2'],
-        'adsorbates': ['XOXO'],
-        'connectivity_string': textwrap.dedent("""
-        1 * X u0 p0 c0 {3,S}
-        2 X u0 p0 c0 {4,S}
-        3 O  u0 p2 c0 {1,S} {4,S}
-        4 O  u0 p2 c0 {2,S} {3,S}
+        5 R!H u0 p[1,2,3] c-1 {3,S}
         """,)
     },
     'RXsingleChemisorbed': {
@@ -888,8 +878,8 @@ group_data = {
         """,)
     },
     'C-XR2': {
-        'gas_precursors': [],
-        'adsorbates': [],
+        'gas_precursors': ['CHCO'],
+        'adsorbates': ['XCHCO'],
         'connectivity_string': textwrap.dedent("""
         1 * X u0  p0 c0 {2,S}
         2 C  u0  p0 c0 {1,S} {3,D} {4,S}
@@ -898,8 +888,8 @@ group_data = {
         """,)
     },
     'C-XRO': {
-        'gas_precursors': ['HCO', 'COOH', 'CH3CO', 'CCHO', 'CH3CH2CO'],
-        'adsorbates': ['XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO'],
+        'gas_precursors': ['HCO', 'COOH', 'CH3CO', 'CH3CH2CO'],
+        'adsorbates': ['XCHO', 'XCOOH', 'CH3XCO', 'CH3CH2XCO'],
         'connectivity_string': textwrap.dedent("""
         1 * X u0  p0 c0 {2,S}
         2 C  u0  p0 c0 {1,S} {3,D} {4,S}
@@ -937,7 +927,7 @@ group_data = {
         1 * X u0  p0 c0 {2,S}
         2 C  u0  p0 c0 {1,S} {4,D} {3,S}
         3 N  u0  p1 c0 {2,S}
-        4 R  u0  px c0 {2,D}
+        4 R!H  u0  p[1,2,3] c0 {2,D}
         """,)
     },
     'NX': {
@@ -993,7 +983,7 @@ group_data = {
         1 * X u0 p0 c0 {2,D}
         2 N  u0 p1 c0 {1,D} {3,S}
         3 C  u0 p0 c0 {2,S} {4,T}
-        4 R  u0 px c0 {3,T}
+        4 R!H u0 px c0 {3,T}
         """,)
     },
     'N-XR2': {
@@ -1001,9 +991,9 @@ group_data = {
         'adsorbates': ['XNH2'],
         'connectivity_string': textwrap.dedent("""
         1 * X u0 p0 c0 {2,[S,D]}
-        2 N u0 px cx {1,[S,D]} {3,[S,D]} {4,S}
-        3 R u0 px c0 {2,[S,D]}
-        4 R u0 px cx {2,S}
+        2 N u0 px cx {1,[S,D]} {3,[S,D]} {4,[S,D]}
+        3 R!H u0 px cx {2,[S,D]}
+        4 R u0 px c0 {2,[S,D]}
         """,)
     },
     'N-XRCR3': {
@@ -1070,7 +1060,7 @@ group_data = {
         'connectivity_string': textwrap.dedent("""
         1 * X u0 p0 c0 {2,S}
         2 N  u0 p0 c+1 {1,S} {3,S} {4,D}
-        3 R!H  u0 px c-1 {2,S}
+        3 R!H  u0 p[1,2,3] c-1 {2,S}
         4 R!H  u0 px c0 {2,D}
         """,)
     },
@@ -1080,7 +1070,7 @@ group_data = {
         'connectivity_string': textwrap.dedent("""
         1 * X u0 p0 c0 {2,D}
         2 N  u0 p0 c+1 {1,D} {3,S} {4,S}
-        3 R!H  u0 px c-1 {2,S}
+        3 R!H  u0 p[1,2,3] c-1 {2,S}
         4 R  u0 px c0 {2,S}
         """,)
     },
@@ -1090,7 +1080,7 @@ group_data = {
         'connectivity_string': textwrap.dedent("""
         1 * X u0 p0 c0 {2,S}
         2 N  u0 p1 c0 {1,S} {3,D}
-        3 R  u0 px c0 {2,D}
+        3 R!H u0 px c0 {2,D}
         """,)
     },
     'N-XCR2': {
@@ -1279,8 +1269,8 @@ group_data = {
         """,)
     },
     '(CR2O)X': {
-        'gas_precursors': ['CH2CO', 'H2CO', 'OCO2H2', 'CH3CHO', 'HCOOH'],
-        'adsorbates': ['CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX'],
+        'gas_precursors': ['CH2CO', 'H2CO', 'OCO2H2', 'CH3CHO', 'HCOOH', 'OCHNH2'],
+        'adsorbates': ['CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'OCHNH2X'],
         'connectivity_string': textwrap.dedent("""
         1 * X u0 p0 c0
         2 C  u0 p0 c0 {3,D} {4,S} {5,S}
@@ -1336,8 +1326,10 @@ group_data = {
         'adsorbates': ['NH2NH2X', 'NH2NCH3CH3X'],
         'connectivity_string': textwrap.dedent("""
         1 * X u0 p0 c0
-        2 N  u0 p1 c0 {3,S}
+        2 N  u0 p1 c0 {3,S} {4,S} {5,S}
         3 N  u0 p1 c0 {2,S}
+        4 R  u0 px c0 {2,S}
+        5 R  u0 px c0 {2,S}
         """,)
     },
     '(NO)X': {
@@ -1345,36 +1337,42 @@ group_data = {
         'adsorbates': ['H2NOHX'],
         'connectivity_string': textwrap.dedent("""
         1 * X u0 p0 c0
-        2 N  u0 p1 c0 {3,S}
+        2 N  u0 p1 c0 {3,S} {4,S} {5,S}
         3 O  u0 p2 c0 {2,S}
+        4 R  u0 px c0 {2,S}
+        5 R  u0 px c0 {2,S}
         """,)
     },
-    '(NC)X': {
-        'gas_precursors': ['OCHNH2'],
-        'adsorbates': ['OCHNH2X'],
-        'connectivity_string': textwrap.dedent("""
-        1 * X u0 p0 c0
-        2 N  u0 p1 c0 {3,S}
-        3 C  u0 p0 c0 {2,S}
-        """,)
-    },
-    '(NR2)X': {
-        'gas_precursors': [],
-        'adsorbates': [],
-        'connectivity_string': textwrap.dedent("""
-        1 * X u0 p0 c0
-        2 N   u0 p1 c0 {3,D} {4,S}
-        3 R!H u0 px c0 {2,D}
-        4 R   u0 px c0 {2,S}
-        """,)
-    },
+#    '(NC)X': {
+#        'gas_precursors': ['OCHNH2'],
+#        'adsorbates': ['OCHNH2X'],
+#        'connectivity_string': textwrap.dedent("""
+#        1 * X u0 p0 c0
+#        2 N  u0 p1 c0 {3,S} {4,S} {5,S}
+#        3 C  u0 p0 c0 {2,S}
+#        4 R  u0 px c0 {2,S}
+#        5 R  u0 px c0 {2,S}
+#        """,)
+#    },
+#    '(NR2)X': {
+#        'gas_precursors': [],
+#        'adsorbates': [],
+#        'connectivity_string': textwrap.dedent("""
+#        1 * X u0 p0 c0
+#        2 N   u0 p1 c0 {3,D} {4,S}
+#        3 R!H u0 px c0 {2,D}
+#        4 R   u0 px c0 {2,S}
+#        """,)
+#    },
     '(N=C)X': {
         'gas_precursors': ['OCNH', 'NHCNH'],
         'adsorbates': ['OCNHX', 'NHCNHX'],
         'connectivity_string': textwrap.dedent("""
         1 * X u0 p0 c0
-        2 N  u0 p1 c0 {3,D}
-        3 C  u0 p0 c0 {2,D}
+        2 N  u0 p1 c0 {3,D} {4,S}
+        3 C  u0 p0 c0 {2,D} {5,D}
+        4 R  u0 p0 c0 {2,S}
+        5 R!H u0 p[1,2] c0 {3,D}
         """,)
     },
     '(OR2)X': {
@@ -1404,7 +1402,7 @@ group_data = {
         'connectivity_string': textwrap.dedent("""
         1 * X u0 p0 c0
         2 O u0 p2 c0 {3,D}
-        3 R u0 px c0 {2,D}
+        3 R!H u0 p1 c0 {2,D}
         """,)
     },
     '(ONR)X': {
@@ -1438,4 +1436,37 @@ group_data = {
         4 N u0 p2 c0 {3,S}
         """,)
     },
+    # 'RXvdWBidentate': {
+    #     'gas_precursors': [],
+    #     'adsorbates': [],
+    #     'connectivity_string': textwrap.dedent("""
+    #     1 * X u0 p0 c0 {3,S}
+    #     2 X u0 p0 c0 {3,vdW}
+    #     3 R!H u0 px c0 {1,S} {5,[S,D]}
+    #     4 R!H u0 px c0 {2,vdW} {5,D}
+    #     5 R!H u0 px cx {3,[S,D]} {4,D}
+    #     """,)
+    # },
+    # 'XOCRXO': {
+    #     'gas_precursors': ['HCO3', 'HCOO'],
+    #     'adsorbates': ['XOC(OH)XO', 'XOCHXO'],
+    #     'connectivity_string': textwrap.dedent("""
+    #     1 * X u0 p0 c0 {3,S}
+    #     2 X u0 p0 c0 {3,vdW}
+    #     3 O u0 p2 c0 {1,S} {5,S}
+    #     4 O u0 p2 c0 {2,vdW} {5,D}
+    #     5 C u0 p0 c0 {3,S} {4,D}
+    #     """,)
+    # },
+    # 'XONXO': {
+    #     'gas_precursors': ['NO2', 'NO3'],
+    #     'adsorbates': ['XONXO', 'XONOXO'],
+    #     'connectivity_string': textwrap.dedent("""
+    #     1 * X u0 p0 c0 {3,S}
+    #     2 X u0 p0 c0 {3,vdW}
+    #     3 O u0 p2 c0 {1,S} {5,S}
+    #     4 O u0 p2 c0 {2,vdW} {5,D}
+    #     5 N u0 px cx {3,S} {4,D}
+    #     """,)
+    # },
 }

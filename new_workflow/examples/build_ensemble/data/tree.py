@@ -66,8 +66,11 @@ RX = {
             'N-XRO-X': {},
             'N[+]=XR[-]O-X': {},
         },
-        'OXOX': {},
     },
+    #'RXvdWBidentate': {
+    #    'XOCRXO': {},
+    #    'XONXO': {},
+    #},
     'RXsingleChemisorbed': {
         'CX': {
            'C#XR': {
@@ -147,11 +150,9 @@ RX = {
       '(NR3)X': {
           '(NN)X': {},
           '(NO)X': {},
-          '(NC)X': {},
+#          '(NC)X': {},
       },
-      '(NR2)X': {
-          '(N=C)X': {},
-      },
+      '(N=C)X': {},
       '(OR2)X': {
           '(OROR)X': {},
       },

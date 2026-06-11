@@ -5,7 +5,7 @@ from functions import *
 fam_path = '/home/kirk/Projects/development/RMG/RMG-database/input/kinetics/families/'
 Delta_a = 0.1
 Delta_E0 = 15
-N_members = 40
+N_members = 20
 
 fam_lines, E0_list, E0_lines, a_list, a_lines = parse_rules(fam_path,fams) 
 make_directories(fams)
@@ -27,7 +27,7 @@ for k in range(N_members):
                 newline = '        E0 = ({}, \'kJ/mol\'),\n'.format(str(new_E0))
                 new_lines.append(newline)
                 n += 1
-            elif m < len(a_lines) and num == a_lines[m] and '    alpha' in line:
+            elif m < len(a_lines) and num == a_lines[m] and line.lstrip().startswith('alpha'):
                 a = a_list[m]
                 perturb = Delta_a - 2 * Delta_a * sobol[k,2*m+1]
                 if a == 0:

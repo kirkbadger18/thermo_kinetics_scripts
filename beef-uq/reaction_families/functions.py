@@ -15,8 +15,8 @@ def parse_rules(fam_path,reaction_families):
                     E0 *= 4.184
                 E0_list.append(E0)
                 E0_lines.append(num)
-            elif line.startswith('        alpha'):
-                a_list.append(float(line.split()[2].split(',')[0]))
+            elif line.lstrip().startswith('alpha'):
+                a_list.append(float(line.split('=', 1)[1].strip().split(',')[0].strip()))
                 a_lines.append(num)
     return fam_lines, E0_list, E0_lines, a_list, a_lines
 
