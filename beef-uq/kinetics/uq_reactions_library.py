@@ -9,7 +9,7 @@ name='reactions'
 
 N_reactions = 72
 stick_coeff_indices = [1, 3, 4, 33, 34, 35, 37]
-stick_arr_indices = [10, 13, 18, 19, 27, 38]
+stick_arr_indices = [10, 13, 18, 19, 27, 38, 73]
 no_data_indices = [31, 32, 36, 42, 50, 54, 69, 70]
 indices = []
 

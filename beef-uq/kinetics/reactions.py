@@ -1130,3 +1130,19 @@ entry(
     facet = "111",
 )
 
+entry(
+    index = 73,
+    label = "XNO + XN <=> NNOX + Pt",
+    kinetics = SurfaceArrhenius(
+        A = (4.03e21, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (118, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""https://doi.org/10.1021/cs500668k""",
+    longDesc = u""" decreases to 7 kJ/mol at 0.5 ML NO""
+""",
+    metal = "Pt",
+    facet = "111",
+)
