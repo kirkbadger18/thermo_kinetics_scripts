@@ -1065,8 +1065,39 @@ entry(
     facet = "111",
 )
 
+#entry(
+#    index = 69,
+#    label = "XOXO <=> XO + XO",
+#    kinetics = SurfaceArrhenius(
+#        A = (4.21e+12, '1/s'),
+#        n = 0.0,
+#        Ea = (59, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
+
+#entry(
+#    index = 70,
+#    label = "O2 + Pt + Pt <=> XOXO",
+#    kinetics = StickingCoefficient(
+#        A = 0.22,
+#        n = 0,
+#        Ea=(0, 'J/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Default""",
+#    longDesc = u"""  """
+#)
+
 entry(
-    index = 69,
+    index = 71,
     label = "XNO2 + XCCH3 <=> XNO + OXCCH3",
     kinetics = SurfaceArrhenius(
         A = (5.82e18, 'cm^2/(mol*s)'),
@@ -1099,19 +1130,3 @@ entry(
     facet = "111",
 )
 
-entry(
-    index = 73,
-    label = "XNO + XN <=> NNOX + Pt",
-    kinetics = SurfaceArrhenius(
-        A = (4.03e21, 'cm^2/(mol*s)'),
-        n = 0.0,
-        Ea = (118, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""https://doi.org/10.1021/cs500668k""",
-    longDesc = u""" decreases to 7 kJ/mol at 0.5 ML NO""
-""",
-    metal = "Pt",
-    facet = "111",
-)

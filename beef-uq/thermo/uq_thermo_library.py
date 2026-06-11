@@ -1,18 +1,21 @@
 import numpy as np
 import pandas as pd
 import os
+import glob
 
 Name='surfaceThermoPt111'
-N_members=2
-
+N_members=10
 
 key1 = 'NASAPolynomial(coeffs=[' 
 key2 = '        Tmin'
 labels=[]
 NASA_lines = []
 original_filename="".join((Name,".py"))
-with open(original_filename,'r') as f:
-    original_lines = f.readlines()
+
+f = open(original_filename,'r')
+original_lines = f.readlines()
+f.close()
+
 j=0
 for i, line in enumerate(original_lines):
     if line.startswith("    label"):
@@ -25,15 +28,24 @@ for i, line in enumerate(original_lines):
         if j % 2 == 0:
             NASA_lines.append(i)
         j += 1
-
+files = glob.glob('dft-data/*.dat')
+adsnames = []
+for file in files:
+    endfile = file.split('data/')[1]
+    adsnames.append(endfile.split('.dat')[0])
+missing = [ads for ads in adsnames if ads not in labels]
+assert missing == []
+ 
 beef_data = np.zeros([N_members,len(labels)])
 for i in range(len(labels)):
     filename='beef-ensembles/' + str(labels[i]) + '_bee.txt'
     data=pd.read_csv(filename, sep="\t", header=0)
     beef_data[:,i]=data.iloc[0:N_members,1]
-skip = []
+del data
+
 for i in range(N_members):
     new_lines = []
+    skip = []
     l = 0
     for j, line in enumerate(original_lines):
         if j in NASA_lines:
@@ -47,11 +59,13 @@ for i in range(N_members):
                 step += 1	
                 if original_lines[step].startswith(key2):
                     stop = True
+
             joint = ''.join(NASA_list)
             split1 = joint.split('[')[1].split(']')[0].split()
             split2 = joint.split('[')[2].split(']')[0].split()
             lowT = []
             highT = []
+
             for k in range(7):
                 if k == 5: 
                     beef = beef_data[i,l]/8.314e-3
@@ -75,5 +89,6 @@ for i in range(N_members):
         else:
             new_lines.append(original_lines[j])
     newname = Name + '_{}.py'.format(str(i))
-    with open(newname,'w') as f:
-        f.writelines(new_lines)
+    f = open(newname,'w')
+    f.writelines(new_lines)
+    f.close()

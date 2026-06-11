@@ -16,7 +16,7 @@ class Molecule:
         self.N_BEE = 2000
 
 def parse_input_file(inputfile, molecule):
-    script_dir = 'N-dft-data/'
+    script_dir = 'NOX-paper-dft-data/'
     abs_file_path = script_dir + str(inputfile)
 
     molecule.output_file = "".join((inputfile.strip('.dat'), '-bee.txt'))
@@ -29,6 +29,8 @@ def parse_input_file(inputfile, molecule):
     error_is_bee = True
     error_tst_bee = True
 
+    molecule.is_SPE=0
+    molecule.is_ZPE=0
     for line in lines:
         # start by looking for the name
         if line.strip().startswith("name"):
@@ -44,7 +46,7 @@ def parse_input_file(inputfile, molecule):
             is_SPE = float(is_SPE_info[0])
             units = is_SPE_info[1].strip().replace("'", "").replace('"', '')
             if units == 'eV':
-                molecule.is_SPE = is_SPE
+                molecule.is_SPE += is_SPE
                 molecule.is_SPE_units = units.strip()
                 error_is_SPE = False
             else:
@@ -58,7 +60,7 @@ def parse_input_file(inputfile, molecule):
             is_ZPE = float(is_ZPE_info[0])
             units = is_ZPE_info[1].strip().replace("'", "").replace('"', '')
             if units == 'eV':
-                molecule.is_ZPE = is_ZPE
+                molecule.is_ZPE += is_ZPE
                 molecule.is_ZPE_units = units.strip()
                 error_is_ZPE = False
             else:
@@ -168,7 +170,7 @@ def compute_ensemble(molecule):
 
     return
 
-for filename in glob.iglob('N-dft-data/*.dat'):
+for filename in glob.iglob('NOX-paper-dft-data/*.dat'):
     print(filename)
     test = Molecule()
     parse_input_file(filename.split('/')[1],test)
