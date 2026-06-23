@@ -1,5 +1,5 @@
 reaction_families = [
-    'Surface_Adsorption_Single',
+    #'Surface_Adsorption_Single',
     'Surface_Adsorption_vdW',
     'Surface_Adsorption_Dissociative',
     'Surface_Dissociation',
@@ -7,7 +7,7 @@ reaction_families = [
     'Surface_Dissociation_vdW',
     'Surface_Abstraction_vdW',
     'Surface_Dissociation_Beta',
-    'Surface_Adsorption_Bidentate',
+    #'Surface_Adsorption_Bidentate',
     'Surface_Bidentate_Dissociation',
     'Surface_Dissociation_to_Bidentate',
     'Surface_Abstraction_Beta',

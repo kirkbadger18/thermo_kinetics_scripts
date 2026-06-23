@@ -4,7 +4,7 @@ import os
 import pandas as pd
 from torch.quasirandom import SobolEngine
 
-N_members=20
+N_members=3
 name='reactions'
 
 N_reactions = 73
@@ -61,7 +61,7 @@ x_sobol = generate_sobol_set(N_members,8)
 x_sobol *= 30
 x_sobol -=15
 
-with open('rxn_files/reactions.py','r') as f:
+with open('reactions.py','r') as f:
     original_lines = f.readlines()
 ### Read beef data from files and store in array
 beef_data = np.zeros([N_members,len(beef_keys)])

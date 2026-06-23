@@ -385,7 +385,8 @@ Pt111_ads_data = [
             "cm-1"
         ],
         "sites_occupied": 1,
-        "connectivity": "1 X  u0  p0 c0 {2,D}\n2 C  u0  p0 c0 {1,D} {3,D}\n3 O  u0  p2 c0 {2,D}\n"
+        "connectivity": "1 X  u0  p0 c0 {2,D}\n2 C  u0  p0 c0 {1,D} {3,D}\n3 O  u0  p2 c0 {2,D}\n",
+        "coverage_effects": [-0.05, 0.8575, 0.0]
     },
     {
         "adsorbate_name": "HXNO",
@@ -794,7 +795,8 @@ Pt111_ads_data = [
             "cm-1"
         ],
         "sites_occupied": 1,
-        "connectivity": "1 X  u0 p0 c0 {3,T}\n2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}\n3 C  u0 p0 c0 {1,T} {2,S}\n4 H  u0 p0 c0 {2,S}\n5 H  u0 p0 c0 {2,S}\n6 H  u0 p0 c0 {2,S}\n"
+        "connectivity": "1 X  u0 p0 c0 {3,T}\n2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}\n3 C  u0 p0 c0 {1,T} {2,S}\n4 H  u0 p0 c0 {2,S}\n5 H  u0 p0 c0 {2,S}\n6 H  u0 p0 c0 {2,S}\n",
+        "coverage_effects": [-0.683, 4.269, 0.0],
     },
     {
         "adsorbate_name": "OHXCNH2",
@@ -3005,7 +3007,8 @@ Pt111_ads_data = [
             "cm-1"
         ],
         "sites_occupied": 1,
-        "connectivity": "1 X  u0 p0 c0 {2,D}\n2 O  u0 p2 c0 {1,D}\n"
+        "connectivity": "1 X  u0 p0 c0 {2,D}\n2 O  u0 p2 c0 {1,D}\n",
+        "coverage_effects": [-0.04, 1.04225839, 0.0],
     },
     {
         "adsorbate_name": "CH3XCO",
@@ -4531,7 +4534,9 @@ Pt111_ads_data = [
             "cm-1"
         ],
         "sites_occupied": 1,
-        "connectivity": "1 X  u0 p0 c0 {2,S}\n2 N  u0 p1 c0 {1,S} {3,D}\n3 O  u0 p2 c0 {2,D}\n"
+        "connectivity": "1 X  u0 p0 c0 {2,S}\n2 N  u0 p1 c0 {1,S} {3,D}\n3 O  u0 p2 c0 {2,D}\n",
+        "coverage_effects": [0.102, 0.599, 0],
+        
     },
     {
         "adsorbate_name": "CH3OCH2OHX",
@@ -7138,7 +7143,8 @@ Pt111_ads_data = [
             "cm-1"
         ],
         "sites_occupied": 1,
-        "connectivity": "1 X  u0  p0 c0  {2,S}\n2 N  u0  p0 c+1  {1,S} {3,D} {4,S}\n3 O  u0  p2 c0  {2,D}\n4 O  u0  p3 c-1  {2,S}\n"
+        "connectivity": "1 X  u0  p0 c0  {2,S}\n2 N  u0  p0 c+1  {1,S} {3,D} {4,S}\n3 O  u0  p2 c0  {2,D}\n4 O  u0  p3 c-1  {2,S}\n",
+        "coverage_effects": [0.908, -5.83, 9.26],
     },
     {
         "adsorbate_name": "XCHCHXO",

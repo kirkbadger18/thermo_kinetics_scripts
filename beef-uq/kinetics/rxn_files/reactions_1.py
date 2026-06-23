@@ -42,9 +42,11 @@ entry(
     kinetics = StickingCoefficient(
         A=0.06,
         n =0,
-        Ea=(0, 'kJ/mol'),
+        Ea=(-1.5, 'kcal/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
+        coverage_dependence = {'XO': {'a':0.0, 'm':0.0, 'E':(17, 'kcal/mol')},
+        },
     ),
     shortDesc = u"""Default""",
     longDesc = u"""O2 adsorption on Pt(111). From W. A. Brown, R. Kose, D. A. King, "Femtomole Adsorption Calorimetry on Single-Crystal Surfaces" Chem. Rev. 1998, 98, 797-831"""

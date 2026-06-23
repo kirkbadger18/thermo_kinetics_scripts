@@ -93,7 +93,7 @@ entry(
         H298=(-442.76, 'kJ/mol'),
         S298=(-204.353, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCCH2']""",
+shortDesc=u"""Averaged from: ['XCXCCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -118,7 +118,7 @@ entry(
         H298=(-438.941, 'kJ/mol'),
         S298=(-201.882, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCXCH2', 'XCXCHCH3', 'XCXCH2', 'XCXCHCH3']""",
+shortDesc=u"""Averaged from: ['XCXCH2', 'XCXCHCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -142,7 +142,7 @@ entry(
         H298=(-491.004, 'kJ/mol'),
         S298=(-152.622, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCXCCH3', 'XCXCCH3']""",
+shortDesc=u"""Averaged from: ['XCXCCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -165,7 +165,7 @@ entry(
         H298=(-617.066, 'kJ/mol'),
         S298=(-172.682, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCXC', 'XCXC']""",
+shortDesc=u"""Averaged from: ['XCXC']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -191,7 +191,7 @@ entry(
         H298=(-182.472, 'kJ/mol'),
         S298=(-191.92, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2XCCH2', 'XCH2XCCH2']""",
+shortDesc=u"""Averaged from: ['XCH2XCCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -218,7 +218,7 @@ entry(
         H298=(-126.568, 'kJ/mol'),
         S298=(-192.345, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH2', 'CH3XCHXCH2']""",
+shortDesc=u"""Averaged from: ['XCH2XCH2', 'CH3XCHXCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -244,8 +244,7 @@ entry(
         H298=(-333.29, 'kJ/mol'),
         S298=(-214.968, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3', 'XCH2XCH', 'XCH2XCOH',
-'XCHXCHCH3']""",
+shortDesc=u"""Averaged from: ['XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -270,7 +269,7 @@ entry(
         H298=(-230.06, 'kJ/mol'),
         S298=(-194.29, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXCCH3', 'XCHXCCH3']""",
+shortDesc=u"""Averaged from: ['XCHXCCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -294,7 +293,7 @@ entry(
         H298=(-444.24, 'kJ/mol'),
         S298=(-193.307, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXC', 'XCHXC']""",
+shortDesc=u"""Averaged from: ['XCHXC']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -319,7 +318,7 @@ entry(
         H298=(-400.07, 'kJ/mol'),
         S298=(-211.081, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXCO', 'XCHXCO']""",
+shortDesc=u"""Averaged from: ['XCHXCO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -344,7 +343,7 @@ entry(
         H298=(-224.989, 'kJ/mol'),
         S298=(-184.879, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXCH', 'XCHXCH']""",
+shortDesc=u"""Averaged from: ['XCHXCH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -394,7 +393,7 @@ entry(
         H298=(-108.027, 'kJ/mol'),
         S298=(-197.829, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XNH']""",
+shortDesc=u"""Averaged from: ['XCH2XNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -419,7 +418,7 @@ entry(
         H298=(-217.964, 'kJ/mol'),
         S298=(-193.314, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2XN', 'XCH2XN']""",
+shortDesc=u"""Averaged from: ['XCH2XN']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -443,7 +442,7 @@ entry(
         H298=(-99.595, 'kJ/mol'),
         S298=(-171.411, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXN', 'XCHXN']""",
+shortDesc=u"""Averaged from: ['XCHXN']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -468,7 +467,7 @@ entry(
         H298=(-127.548, 'kJ/mol'),
         S298=(-183.708, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO']""",
+shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -492,7 +491,7 @@ entry(
         H298=(-263.944, 'kJ/mol'),
         S298=(-188.758, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH']""",
+shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -517,7 +516,7 @@ entry(
         H298=(-316.863, 'kJ/mol'),
         S298=(-195.23, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH']""",
+shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -541,7 +540,7 @@ entry(
         H298=(-128.754, 'kJ/mol'),
         S298=(-175.675, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH']""",
+shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -589,7 +588,7 @@ entry(
         H298=(-63.513, 'kJ/mol'),
         S298=(-170.273, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2XO', 'XCH2XO']""",
+shortDesc=u"""Averaged from: ['XCH2XO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -613,7 +612,7 @@ entry(
         H298=(-50.787, 'kJ/mol'),
         S298=(-174.316, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOXCNH', 'XOXCNH']""",
+shortDesc=u"""Averaged from: ['XOXCNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -637,7 +636,7 @@ entry(
         H298=(-240.645, 'kJ/mol'),
         S298=(-167.729, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXO', 'XCHXO']""",
+shortDesc=u"""Averaged from: ['XCHXO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -687,7 +686,7 @@ entry(
         H298=(-108.027, 'kJ/mol'),
         S298=(-197.829, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XNH']""",
+shortDesc=u"""Averaged from: ['XCH2XNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -712,7 +711,7 @@ entry(
         H298=(-217.964, 'kJ/mol'),
         S298=(-193.314, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2XN', 'XCH2XN']""",
+shortDesc=u"""Averaged from: ['XCH2XN']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -736,7 +735,7 @@ entry(
         H298=(-99.595, 'kJ/mol'),
         S298=(-171.411, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXN', 'XCHXN']""",
+shortDesc=u"""Averaged from: ['XCHXN']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -761,7 +760,7 @@ entry(
         H298=(-127.548, 'kJ/mol'),
         S298=(-183.708, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO', 'NHXCXNH', 'XNHXCO']""",
+shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -785,7 +784,7 @@ entry(
         H298=(-263.944, 'kJ/mol'),
         S298=(-188.758, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH', 'XNXCO', 'XNXCNH']""",
+shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -810,7 +809,7 @@ entry(
         H298=(-316.863, 'kJ/mol'),
         S298=(-195.23, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH', 'XCHXNH', 'OHXCXNH']""",
+shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -834,7 +833,7 @@ entry(
         H298=(-128.754, 'kJ/mol'),
         S298=(-175.675, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH']""",
+shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -882,7 +881,7 @@ entry(
         H298=(-124.415, 'kJ/mol'),
         S298=(-159.55, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNHXNH', 'CH3XNXNOH', 'XNHXNH', 'CH3XNXNOH']""",
+shortDesc=u"""Averaged from: ['XNHXNH', 'CH3XNXNOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -906,7 +905,7 @@ entry(
         H298=(-194.851, 'kJ/mol'),
         S298=(-196.22, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNHXN', 'XNXNCH3', 'XNHXN', 'XNXNCH3']""",
+shortDesc=u"""Averaged from: ['XNHXN', 'XNXNCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -953,7 +952,7 @@ entry(
         H298=(-158.346, 'kJ/mol'),
         S298=(-186.753, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOXNH', 'XOXNH']""",
+shortDesc=u"""Averaged from: ['XOXNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -977,7 +976,7 @@ entry(
         H298=(-216.857, 'kJ/mol'),
         S298=(-141.494, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOXNO', 'XOXNO']""",
+shortDesc=u"""Averaged from: ['XOXNO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1000,7 +999,7 @@ entry(
         H298=(-110.925, 'kJ/mol'),
         S298=(-176.349, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOXO', 'XOXO']""",
+shortDesc=u"""Averaged from: ['XOXO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1076,7 +1075,7 @@ entry(
         H298=(-673.643, 'kJ/mol'),
         S298=(-243.646, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCCH2XC', 'XCCH2XC']""",
+shortDesc=u"""Averaged from: ['XCCH2XC']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1102,7 +1101,7 @@ entry(
         H298=(-479.679, 'kJ/mol'),
         S298=(-200.61, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCCH2XCH2', 'XCCH2XCH2']""",
+shortDesc=u"""Averaged from: ['XCCH2XCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1127,7 +1126,7 @@ entry(
         H298=(-459.783, 'kJ/mol'),
         S298=(-222.487, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCH2XC', 'XCHCH2XC']""",
+shortDesc=u"""Averaged from: ['XCHCH2XC']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1152,7 +1151,7 @@ entry(
         H298=(-404.809, 'kJ/mol'),
         S298=(-202.293, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCHXC', 'XCHCHXC']""",
+shortDesc=u"""Averaged from: ['XCHCHXC']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1178,7 +1177,7 @@ entry(
         H298=(-545.726, 'kJ/mol'),
         S298=(-217.923, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCCHXCH2', 'XCCHXCH2']""",
+shortDesc=u"""Averaged from: ['XCCHXCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1206,7 +1205,7 @@ entry(
         H298=(-391.619, 'kJ/mol'),
         S298=(-209.34, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2CH2XCH2', 'XCH2CH2XCH2']""",
+shortDesc=u"""Averaged from: ['XCH2CH2XCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1233,7 +1232,7 @@ entry(
         H298=(-429.229, 'kJ/mol'),
         S298=(-227.783, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCHXCH2', 'XCHCHXCH2']""",
+shortDesc=u"""Averaged from: ['XCHCHXCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1259,7 +1258,7 @@ entry(
         H298=(-373.265, 'kJ/mol'),
         S298=(-196.347, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCXCH', 'XCHCXCH']""",
+shortDesc=u"""Averaged from: ['XCHCXCH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1284,7 +1283,7 @@ entry(
         H298=(-436.651, 'kJ/mol'),
         S298=(-188.069, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCXC', 'XCHCXC']""",
+shortDesc=u"""Averaged from: ['XCHCXC']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1311,7 +1310,7 @@ entry(
         H298=(-529.006, 'kJ/mol'),
         S298=(-196.129, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCH2XCH2', 'XCHCH2XCH2']""",
+shortDesc=u"""Averaged from: ['XCHCH2XCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1337,7 +1336,7 @@ entry(
         H298=(-232.503, 'kJ/mol'),
         S298=(-203.938, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCH2XCH', 'XCHCH2XCH']""",
+shortDesc=u"""Averaged from: ['XCHCH2XCH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1363,7 +1362,7 @@ entry(
         H298=(-615.396, 'kJ/mol'),
         S298=(-200.988, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCHXCH', 'XCHCHXCH']""",
+shortDesc=u"""Averaged from: ['XCHCHXCH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1413,7 +1412,7 @@ entry(
         H298=(-448.966, 'kJ/mol'),
         S298=(-211.148, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCHXO', 'XCHCHXO']""",
+shortDesc=u"""Averaged from: ['XCHCHXO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1461,7 +1460,7 @@ entry(
         H298=(-357.096, 'kJ/mol'),
         S298=(-179.723, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOC(O)XO', 'H2C(XO)XO', 'XOC(O)XO', 'H2C(XO)XO']""",
+shortDesc=u"""Averaged from: ['XOC(O)XO', 'H2C(XO)XO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1509,11 +1508,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-8.017, -4.921, -2.931, -1.615, -0.092, 0.703, 1.567], 'J/(mol*K)'),
-        H298=(-354.771, 'kJ/mol'),
-        S298=(-169.455, 'J/(mol*K)'),
+        Cpdata=([-8.121, -4.991, -2.976, -1.644, -0.099, 0.71, 1.593], 'J/(mol*K)'),
+        H298=(-354.317, 'kJ/mol'),
+        S298=(-169.626, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCN', 'XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
+shortDesc=u"""Averaged from: ['XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
 'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2',
 'XCHCHCH3', 'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH',
 'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3',
@@ -1537,12 +1536,12 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-10.652, -6.967, -4.598, -3.039, -1.244, -0.287, 0.897], 'J/(mol*K)'),
-        H298=(-549.951, 'kJ/mol'),
-        S298=(-175.05, 'J/(mol*K)'),
+        Cpdata=([-9.667, -6.273, -4.067, -2.599, -0.891, 0.03, 1.184], 'J/(mol*K)'),
+        H298=(-541.831, 'kJ/mol'),
+        S298=(-175.086, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
-'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH']""",
+shortDesc=u"""Averaged from: ['XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH',
+'XCNO', 'XCNH2', 'XCOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1566,7 +1565,7 @@ entry(
         H298=(-568.221, 'kJ/mol'),
         S298=(-183.565, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCCHCH2', 'XCCHO', 'XCCHCH2', 'XCCHO']""",
+shortDesc=u"""Averaged from: ['XCCHCH2', 'XCCHO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1591,7 +1590,7 @@ entry(
         H298=(-597.38, 'kJ/mol'),
         S298=(-174.235, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCCH3', 'XCCH2CH3', 'XCCH2OH']""",
+shortDesc=u"""Averaged from: ['XCCH3', 'XCCH2CH3', 'XCCH2OH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1609,11 +1608,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-4.802, -2.781, -1.842, -1.37, -1.0, -0.884, -0.705], 'J/(mol*K)'),
+        Cpdata=([-4.802, -2.782, -1.842, -1.37, -1.0, -0.884, -0.705], 'J/(mol*K)'),
         H298=(-429.444, 'kJ/mol'),
         S298=(-161.835, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCNO', 'XCNH2', 'XCNO', 'XCNH2']""",
+shortDesc=u"""Averaged from: ['XCNO', 'XCNH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1636,7 +1635,7 @@ entry(
         H298=(-465.97, 'kJ/mol'),
         S298=(-187.544, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCOH', 'XCOH']""",
+shortDesc=u"""Averaged from: ['XCOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1686,8 +1685,7 @@ entry(
         H298=(-290.648, 'kJ/mol'),
         S298=(-182.514, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
-'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3']""",
+shortDesc=u"""Averaged from: ['CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1710,7 +1708,7 @@ entry(
         H298=(-299.043, 'kJ/mol'),
         S298=(-153.59, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['OXCNH2', 'NH2XCNH', 'OXCNH2', 'NH2XCNH']""",
+shortDesc=u"""Averaged from: ['OXCNH2', 'NH2XCNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1734,7 +1732,7 @@ entry(
         H298=(-288.87, 'kJ/mol'),
         S298=(-151.565, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH']""",
+shortDesc=u"""Averaged from: ['XCHNH', 'OHXCNH', 'NH2XCNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1757,8 +1755,7 @@ entry(
         H298=(-336.396, 'kJ/mol'),
         S298=(-164.4, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO', 'XCHO',
-'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO']""",
+shortDesc=u"""Averaged from: ['XCHO', 'XCOOH', 'CH3XCO', 'XCCHO', 'CH3CH2XCO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1810,8 +1807,7 @@ entry(
         H298=(-216.941, 'kJ/mol'),
         S298=(-192.287, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH',
-'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH']""",
+shortDesc=u"""Averaged from: ['XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1835,7 +1831,7 @@ entry(
         H298=(-231.326, 'kJ/mol'),
         S298=(-143.176, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2NH2', 'XCH2NH2']""",
+shortDesc=u"""Averaged from: ['XCH2NH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1860,7 +1856,7 @@ entry(
         H298=(-228.049, 'kJ/mol'),
         S298=(-157.564, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2OH', 'CH3XCHOH', 'XCH2OH', 'CH3XCHOH']""",
+shortDesc=u"""Averaged from: ['XCH2OH', 'CH3XCHOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1904,7 +1900,7 @@ entry(
         H298=(-432.678, 'kJ/mol'),
         S298=(-171.763, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCCO', 'XCCCH2', 'XCCH2', 'XCCO', 'XCCCH2', 'XCCH2']""",
+shortDesc=u"""Averaged from: ['XCCO', 'XCCCH2', 'XCCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1927,7 +1923,7 @@ entry(
         H298=(-206.367, 'kJ/mol'),
         S298=(-166.816, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCNH', 'XCNH']""",
+shortDesc=u"""Averaged from: ['XCNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1946,11 +1942,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-7.731, -4.344, -2.287, -0.973, 0.53, 1.334, 2.269], 'J/(mol*K)'),
-        H298=(-355.755, 'kJ/mol'),
-        S298=(-165.599, 'J/(mol*K)'),
+        Cpdata=([-7.263, -4.167, -2.297, -1.096, 0.291, 1.044, 1.921], 'J/(mol*K)'),
+        H298=(-352.634, 'kJ/mol'),
+        S298=(-164.709, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
+shortDesc=u"""Averaged from: ['XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
 'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH']""",
 longDesc=u"""
 """,
@@ -1976,7 +1972,7 @@ entry(
         H298=(-381.649, 'kJ/mol'),
         S298=(-179.047, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCHCH2', 'XCHCHO', 'XCHCHCH2', 'XCHCHO']""",
+shortDesc=u"""Averaged from: ['XCHCHCH2', 'XCHCHO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2002,8 +1998,7 @@ entry(
         H298=(-374.707, 'kJ/mol'),
         S298=(-179.041, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'CH3XCCH3',
-'CH3XCOH', 'XCHCH2CH3', 'XCHCH3']""",
+shortDesc=u"""Averaged from: ['CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2026,8 +2021,7 @@ entry(
         H298=(-306.517, 'kJ/mol'),
         S298=(-144.277, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHNH2', 'OHXCNH2',
-'NH2XCNH2']""",
+shortDesc=u"""Averaged from: ['XCHNH2', 'OHXCNH2', 'NH2XCNH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2047,11 +2041,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-8.363, -5.498, -3.838, -2.789, -1.537, -0.826, -0.079], 'J/(mol*K)'),
+        Cpdata=([-8.363, -5.498, -3.838, -2.79, -1.538, -0.826, -0.079], 'J/(mol*K)'),
         H298=(-328.365, 'kJ/mol'),
         S298=(-146.569, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHOH', 'CH3XCOH', 'XCHOH', 'CH3XCOH']""",
+shortDesc=u"""Averaged from: ['XCHOH', 'CH3XCOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2092,11 +2086,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-5.612, -2.994, -1.557, -0.731, 0.066, 0.407, 0.755], 'J/(mol*K)'),
-        H298=(-212.616, 'kJ/mol'),
-        S298=(-165.284, 'J/(mol*K)'),
+        Cpdata=([-5.514, -2.968, -1.574, -0.768, 0.034, 0.402, 0.82], 'J/(mol*K)'),
+        H298=(-215.369, 'kJ/mol'),
+        S298=(-163.05, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNO', 'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3']""",
+shortDesc=u"""Averaged from: ['XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2119,7 +2113,7 @@ entry(
         H298=(-272.152, 'kJ/mol'),
         S298=(-145.417, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNCNH', 'XNCO', 'XNCNH', 'XNCO']""",
+shortDesc=u"""Averaged from: ['XNCNH', 'XNCO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2143,7 +2137,7 @@ entry(
         H298=(-213.18, 'kJ/mol'),
         S298=(-180.636, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNCH2', 'XNCH2']""",
+shortDesc=u"""Averaged from: ['XNCH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2166,7 +2160,7 @@ entry(
         H298=(-169.315, 'kJ/mol'),
         S298=(-164.071, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNNH', 'XNNCH3', 'XNNH', 'XNNCH3']""",
+shortDesc=u"""Averaged from: ['XNNH', 'XNNCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2185,12 +2179,12 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-3.272, 0.246, 2.345, 3.646, 5.068, 5.797, 6.65], 'J/(mol*K)'),
-        H298=(-219.998, 'kJ/mol'),
-        S298=(-171.405, 'J/(mol*K)'),
+        Cpdata=([-2.47, 0.767, 2.688, 3.875, 5.176, 5.85, 6.65], 'J/(mol*K)'),
+        H298=(-220.012, 'kJ/mol'),
+        S298=(-171.136, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNH2', 'XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH',
-'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH']""",
+shortDesc=u"""Averaged from: ['XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2',
+'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2214,7 +2208,7 @@ entry(
         H298=(-334.011, 'kJ/mol'),
         S298=(-216.907, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNHCHO', 'XNHCHO']""",
+shortDesc=u"""Averaged from: ['XNHCHO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2240,7 +2234,7 @@ entry(
         H298=(-356.67, 'kJ/mol'),
         S298=(-167.995, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNHCH3', 'XNHCH3']""",
+shortDesc=u"""Averaged from: ['XNHCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2264,7 +2258,7 @@ entry(
         H298=(-271.605, 'kJ/mol'),
         S298=(-189.56, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNHNO', 'XNHNO']""",
+shortDesc=u"""Averaged from: ['XNHNO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2289,7 +2283,7 @@ entry(
         H298=(-172.993, 'kJ/mol'),
         S298=(-188.5, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNHNH2', 'XNHNH2']""",
+shortDesc=u"""Averaged from: ['XNHNH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2313,7 +2307,7 @@ entry(
         H298=(-184.483, 'kJ/mol'),
         S298=(-189.451, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNHOH', 'XNHOH']""",
+shortDesc=u"""Averaged from: ['XNHOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2336,7 +2330,7 @@ entry(
         H298=(-218.965, 'kJ/mol'),
         S298=(-163.298, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNO2', 'OXNNH', 'XNO2', 'OXNNH']""",
+shortDesc=u"""Averaged from: ['XNO2', 'OXNNH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2359,7 +2353,7 @@ entry(
         H298=(-147.529, 'kJ/mol'),
         S298=(-143.039, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['HXNO', 'CH3NXNOH', 'CH3XNNOH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH']""",
+shortDesc=u"""Averaged from: ['HXNO', 'CH3NXNOH', 'CH3XNNOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2377,11 +2371,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-8.824, -4.476, -2.143, -0.868, 0.283, 0.764, 1.399], 'J/(mol*K)'),
-        H298=(-328.269, 'kJ/mol'),
-        S298=(-168.676, 'J/(mol*K)'),
+        Cpdata=([-6.626, -2.68, -0.666, 0.371, 1.212, 1.524, 1.998], 'J/(mol*K)'),
+        H298=(-319.988, 'kJ/mol'),
+        S298=(-168.387, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH']""",
+shortDesc=u"""Averaged from: ['XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2404,7 +2398,7 @@ entry(
         H298=(-332.074, 'kJ/mol'),
         S298=(-142.031, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNCN', 'XNCN']""",
+shortDesc=u"""Averaged from: ['XNCN']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2427,7 +2421,7 @@ entry(
         H298=(-353.431, 'kJ/mol'),
         S298=(-176.565, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNCH3', 'XNCH3']""",
+shortDesc=u"""Averaged from: ['XNCH3']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2449,7 +2443,7 @@ entry(
         H298=(-250.227, 'kJ/mol'),
         S298=(-174.51, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNNH2', 'XNNH2']""",
+shortDesc=u"""Averaged from: ['XNNH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2472,7 +2466,7 @@ entry(
         H298=(-294.53, 'kJ/mol'),
         S298=(-178.708, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNOH', 'XNOH']""",
+shortDesc=u"""Averaged from: ['XNOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2512,12 +2506,12 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-5.27, -3.412, -2.328, -1.644, -0.868, -0.448, 0.09], 'J/(mol*K)'),
-        H298=(-192.597, 'kJ/mol'),
-        S298=(-151.553, 'J/(mol*K)'),
+        Cpdata=([-3.886, -2.127, -1.125, -0.5, 0.209, 0.597, 1.11], 'J/(mol*K)'),
+        H298=(-191.097, 'kJ/mol'),
+        S298=(-155.727, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOH', 'XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3',
-'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH']""",
+shortDesc=u"""Averaged from: ['XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3',
+'XOCH2OH', 'XONH2', 'XOOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2541,8 +2535,7 @@ entry(
         H298=(-230.516, 'kJ/mol'),
         S298=(-194.234, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCHCH2', 'HC(O)XO',
-'XOC(OH)O']""",
+shortDesc=u"""Averaged from: ['XOCHCH2', 'HC(O)XO', 'XOC(OH)O']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2567,7 +2560,7 @@ entry(
         H298=(-185.03, 'kJ/mol'),
         S298=(-149.812, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XOCH3', 'XOCH2CH3', 'XOCH2OH']""",
+shortDesc=u"""Averaged from: ['XOCH3', 'XOCH2CH3', 'XOCH2OH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2590,7 +2583,7 @@ entry(
         H298=(-130.622, 'kJ/mol'),
         S298=(-134.71, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XONH2', 'XONH2']""",
+shortDesc=u"""Averaged from: ['XONH2']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2613,7 +2606,7 @@ entry(
         H298=(-136.519, 'kJ/mol'),
         S298=(-120.712, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOOH', 'XOOH']""",
+shortDesc=u"""Averaged from: ['XOOH']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2681,11 +2674,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-8.706, -8.504, -8.378, -8.256, -7.929, -7.499, -6.43], 'J/(mol*K)'),
+        Cpdata=([-8.706, -8.504, -8.378, -8.256, -7.93, -7.499, -6.43], 'J/(mol*K)'),
         H298=(-62.68, 'kJ/mol'),
         S298=(-119.645, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X', 'CHCHX', 'CHCCH3X']""",
+shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2708,7 +2701,7 @@ entry(
         H298=(-99.884, 'kJ/mol'),
         S298=(-122.254, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['NCOHX', 'NCOHX']""",
+shortDesc=u"""Averaged from: ['NCOHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2758,8 +2751,7 @@ entry(
         H298=(-79.219, 'kJ/mol'),
         S298=(-143.863, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2CH2X', 'CH3CHCH2X',
-'CH2CCH2X']""",
+shortDesc=u"""Averaged from: ['CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2783,7 +2775,7 @@ entry(
         H298=(-58.642, 'kJ/mol'),
         S298=(-135.288, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CH2NHX', 'CH2NHX']""",
+shortDesc=u"""Averaged from: ['CH2NHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2807,8 +2799,7 @@ entry(
         H298=(-75.558, 'kJ/mol'),
         S298=(-122.364, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'CH2COX',
-'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX']""",
+shortDesc=u"""Averaged from: ['CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2829,11 +2820,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.627, 0.38, 0.901, 1.19, 1.469, 1.59, 1.685], 'J/(mol*K)'),
-        H298=(-46.964, 'kJ/mol'),
-        S298=(-118.627, 'J/(mol*K)'),
+        Cpdata=([-0.611, 0.464, 1.02, 1.329, 1.626, 1.755, 1.861], 'J/(mol*K)'),
+        H298=(-50.674, 'kJ/mol'),
+        S298=(-127.608, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CH4X', 'CH4X', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X',
+shortDesc=u"""Averaged from: ['CH4X', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X',
 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX']""",
 longDesc=u"""
 """,
@@ -2862,8 +2853,7 @@ entry(
         H298=(-32.083, 'kJ/mol'),
         S298=(-137.338, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3CH3X', 'CH3CH2CH3X',
-'CH3CH2OHX']""",
+shortDesc=u"""Averaged from: ['CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2888,7 +2878,7 @@ entry(
         H298=(-106.092, 'kJ/mol'),
         S298=(-141.215, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CH3NH2X', 'CH3NH2X']""",
+shortDesc=u"""Averaged from: ['CH3NH2X']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2914,8 +2904,7 @@ entry(
         H298=(-60.04, 'kJ/mol'),
         S298=(-139.363, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX', 'CH3OHX',
-'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX']""",
+shortDesc=u"""Averaged from: ['CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2956,11 +2945,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-1.773, -1.224, -0.874, -0.625, -0.309, -0.136, 0.025], 'J/(mol*K)'),
+        Cpdata=([-1.774, -1.224, -0.874, -0.625, -0.309, -0.136, 0.025], 'J/(mol*K)'),
         H298=(-109.75, 'kJ/mol'),
         S298=(-122.197, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['OCNHX', 'NHCNHX', 'OCNHX', 'NHCNHX']""",
+shortDesc=u"""Averaged from: ['OCNHX', 'NHCNHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -2980,11 +2969,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-4.613, -2.128, -0.623, 0.333, 1.405, 1.947, 2.484], 'J/(mol*K)'),
-        H298=(-95.524, 'kJ/mol'),
-        S298=(-136.79, 'J/(mol*K)'),
+        Cpdata=([-4.937, -2.682, -1.327, -0.473, 0.481, 0.961, 1.433], 'J/(mol*K)'),
+        H298=(-99.581, 'kJ/mol'),
+        S298=(-139.272, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['NH3X', 'NH3X', 'OCHNH2X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX']""",
+shortDesc=u"""Averaged from: ['NH3X', 'OCHNH2X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -3006,7 +2995,7 @@ entry(
         H298=(-101.157, 'kJ/mol'),
         S298=(-138.501, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['OCHNH2X', 'OCHNH2X']""",
+shortDesc=u"""Averaged from: ['OCHNH2X']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -3028,7 +3017,7 @@ entry(
         H298=(-119.234, 'kJ/mol'),
         S298=(-150.696, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['NH2NH2X', 'NH2NCH3CH3X', 'NH2NH2X', 'NH2NCH3CH3X']""",
+shortDesc=u"""Averaged from: ['NH2NH2X', 'NH2NCH3CH3X']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -3050,7 +3039,7 @@ entry(
         H298=(-83.038, 'kJ/mol'),
         S298=(-132.089, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['H2NOHX', 'H2NOHX']""",
+shortDesc=u"""Averaged from: ['H2NOHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -3118,7 +3107,7 @@ entry(
         H298=(-143.729, 'kJ/mol'),
         S298=(-139.884, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONNH2X', 'ONNCH3CH3X']""",
+shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -3142,7 +3131,7 @@ entry(
         H298=(-131.932, 'kJ/mol'),
         S298=(-144.387, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['ONOHX', 'ONOHX']""",
+shortDesc=u"""Averaged from: ['ONOHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -3161,11 +3150,11 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-3.913, -2.311, -1.477, -0.988, -0.437, -0.138, 0.148], 'J/(mol*K)'),
-        H298=(-36.933, 'kJ/mol'),
-        S298=(-98.276, 'J/(mol*K)'),
+        Cpdata=([-3.434, -2.005, -1.266, -0.832, -0.334, -0.054, 0.209], 'J/(mol*K)'),
+        H298=(-44.072, 'kJ/mol'),
+        S298=(-101.295, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['H2OX', 'H2OX', 'HOOHX']""",
+shortDesc=u"""Averaged from: ['H2OX', 'HOOHX']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -3189,7 +3178,7 @@ entry(
         H298=(-65.492, 'kJ/mol'),
         S298=(-110.352, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['HOOHX', 'HOOHX']""",
+shortDesc=u"""Averaged from: ['HOOHX']""",
 longDesc=u"""
 """,
     metal = "Pt",

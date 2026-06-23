@@ -24,7 +24,7 @@ were applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after)
 smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF', conv_thr=1e-12, fmax=1e-3.'''
 
 
-N_members = 20
+N_members = 100
 
 ads_list = AdsorbatesEnsemble(Pt111_ads_data,
                               reference_dict,

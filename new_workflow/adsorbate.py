@@ -69,7 +69,8 @@ class Adsorbate:
         self.sites_occupied = adsorbate_dict['sites_occupied']
         if 'connectivity' in adsorbate_dict:
             self.connectivity = adsorbate_dict['connectivity']
-
+        if 'coverage_effects' in adsorbate_dict:
+            self.coverage_effects = adsorbate_dict['coverage_effects']
         self.reference_compositions = reference_dict['reference_compositions']
         self.reference_energies = reference_dict['reference_energies']
         self.reference_EOF = reference_dict['reference_EOF']
@@ -152,6 +153,19 @@ class Adsorbate:
         if np.max(freq[0:2]) <= cutoff:
             self.twoD_gas = True
         return
+
+    def _get_coverage_string(self):
+        vals = self.coverage_effects
+        coverage_string = '        thermo_coverage_dependence = {\n'
+        coverage_string += '\"\"\"\n'
+        coverage_string += self.connectivity
+        coverage_string += '\"\"\": {\n'
+        coverage_string += '               \'model\': \'polynomial\',\n'
+        coverage_string += '               \'enthalpy-coefficients\': [({}, \'eV/molecule\'), ({}, \'eV/molecule\'), ({}, \'eV/molecule\')],\n'.format(str(vals[0]), str(vals[1]), str(vals[2]))
+        coverage_string += '               \'entropy-coefficients\': [(0.0, \'eV/(molecule*K)\'), (0.0, \'eV/(molecule*K)\'), (0.0, \'eV/(molecule*K)\')],\n'
+        coverage_string += '         }\n'
+        coverage_string += '    },\n'
+        return coverage_string
 
     def get_enthalpy_of_formation_at_0K(self):
 
@@ -515,6 +529,9 @@ class Adsorbate:
         line += '        ],\n'
         line += '        Tmin = (298.0,\'K\'),\n'
         line += '        Tmax = (2000.0,\'K\'),\n'
+        if hasattr(self, "coverage_effects"):
+            cov_string = self._get_coverage_string()
+            line += cov_string
         line += '    ),\n'
         line += 'longDesc = u\"\"\"'
         line += self.long_description + '\n'
